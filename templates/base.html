@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta block -->
+    {% block meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="FundPIN" content="Supporting NGO Projects Worldwide" />
+    <meta name="author" content="Jim Morel">
+    {% endblock %}
+
+    <!-- Extra Meta block -->
+    {% block extra_meta %}
+    {% endblock %}
+
+    <!-- CSS block -->
+    {% block corecss %}
+    <!-- Bootstrap5 -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+    <!-- FontAwesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    {% endblock %}
+
+    <!-- JavaScript block -->
+    {% block corejs %}
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"
+        integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g=="
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"
+        integrity="sha512-BmM0/BQlqh02wuK5Gz9yrbe7VyIVwOzD1o40yi1IsTjriX/NGF37NyXHfmFzIlMmoSIBXgqDiG1VNU6kB5dBbA=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.js"></script>
+    {% endblock %}
+
+    <!-- Page title -->
+    <title>FundPIN {% block extra_title %}{% endblock %}</title>
+
+</head>
+
+<body>
+
+    <header class="container-fluid fixed-top"></header>
+
+    <!-- display messages from Django block -->
+    {% if messages %}
+    {% endif %}
+
+    <!-- Page Header block -->
+    {% block page_header %}
+    {% endblock %}
+
+    <!-- Additional page content block -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- JS load end of body block -->
+    {% block postloadjs %}
+    {% endblock %}
+
+</body>
+
+</html>
