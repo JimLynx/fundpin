@@ -4,8 +4,6 @@
 <img src="readme-assets/logos/logo-banner.png" alt="main title logo"/>
 </div>
 
-<img src="------------------------------" alt="responsive screens"/>
-
 ## Table of Contents
 
 > - [Overview](#overview)
@@ -25,6 +23,8 @@
 > - [Support](#support)
 
 Site deployed on Heroku [HERE](https://channel-lead-resources.herokuapp.com/)
+
+<img src="https://cdn.shopify.com/s/files/1/0613/1313/collections/coming_soon_Banner.jpg?v=1521126755" alt="responsive screens"/>
 
 **Please note: To open any links in this document in a new browser tab, please press `CTRL + Click`.**
 
@@ -102,22 +102,29 @@ The overall structure is for ease of navigation to each section
 
 ### 5. Surface
 
-The overall UX
+The overall UX needs to align with the aesthetics of a Donation type site, yet with a mode modern approach to avoid it being too generic and 'stuffy'. The overall feel needs to exude professionalism, giving confidence to users that they are donating to a trustworthy source. The focal point is on providing vivid imagery, easy to read text and  to 
 
 #### Colours
 
-Colour palette has been chosen to align with ------------------
+Colour palette has been chosen to align with a fresher look to the generic charity/fundraising/NGO sites out there.
 
-[Colour Palette - Coolors.co](----------------)
-![Image](----------------)
+Colour Palette generated on [Coolors.co](https://coolors.co/44444e-b71234-d55c19-00675a-53284f-55601c-006983)
+
+![Image](readme-assets/logos/palette.png)
 
 #### Typography
 
--
+- Headings - "Quicksand" font (with fall-back font of Serif). This font was chosen for its environmental feel with slightly rounded features, alternating between font-weights from 500 & 700 for visual impact.
+
+![Quicksand font example](readme-assets/logos/quicksand-font.png)
+
+- Content - "Jost" font (with fall-back font of Sans-Serif), clean and balances well with the Headings. 
+
+![Jost font example](readme-assets/logos/jost-font.png)
 
 #### Images
 
--
+Imagery for this project is vital and I've selected media that captures attention and gives the user an immediate association with the project, before reading deails on it.
 
 #### Design Choices
 
