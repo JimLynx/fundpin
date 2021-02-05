@@ -1,7 +1,7 @@
 # FundPIN
 
 <div align="center">
-<img src="wireframes/img/logo-banner.png" alt="main title logo"/>
+<img src="readme-assets/logos/logo-banner.png" alt="main title logo"/>
 </div>
 
 <img src="------------------------------" alt="responsive screens"/>
