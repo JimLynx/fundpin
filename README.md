@@ -1,7 +1,7 @@
-# GiveTu
+# FundPIN
 
 <div align="center">
-<img src="------------------------------" alt="main title logo"/>
+<img src="wireframes/img/logo-banner.png" alt="main title logo"/>
 </div>
 
 <img src="------------------------------" alt="responsive screens"/>
@@ -30,9 +30,49 @@ Site deployed on Heroku [HERE](https://channel-lead-resources.herokuapp.com/)
 
 ## Overview
 
+Around the world, there are incredible endevours, which work tirelessly and selflessly towards supporting imporverished communities, protecting natural wildlife and sustaining environmental resources.
+
+One of the main sources of income for these projects has been from the International Volunteer platform, which grew rapidly in popularity in the mid-90's. Volunteer Organisations offered a structured way for people to travel to far-out destinations for a set fee, which enabled the orginations to thrive and grow. The knock-on effect was that these organisations were able to assist more projects as they grew by provinding funding to them for each volunteer they send. The immense benefit to the projects was not only in the form of fnancial support, but provided physical presence of volunteers to assist with various tasks, which the projects could otherwise not afford to hire staff for.
+
+The onset of the COVID crisis in early 2020 brought international travel to an abrupt halt, and as a result, a huge majority of Volunteer Organisations stopped operating. This, of course, meant that the projects' main source of income ceased almost immediately and significantly impeded the projects' ability to run effectively.
+
+FundPIN (Fund Projects In Need) is dedicated to networking, supporting, and raising funds for non-profit organisations worldwide by providing an online platform, whereby users can find projects they are interested in supporting, donate to them directly through the site, and get updates on the progression and status of each.
+
 > [Back to Top](#table-of-contents)  
 
 ## User Stories
+
+| Relevant Section |      As a/an...      |                         I want the ability to...                         |                      So that I can...                     |
+|------------------|:--------------------:|:------------------------------------------------------------------------:|:---------------------------------------------------------:|
+|                  |                      |                                                                          |                                                           |
+|                  |          ---         |                                    ---                                   |                            ---                            |
+|                  | Anonymous user       | easily navigate the site;                                                | find what I am looking for quickly                        |
+|                  | Anonymous user       | view the site on all screen sizes;                                       | visit the site using my mobile and/or tablet device       |
+|                  | Anonymous user       | read about the company details,goals and aims;                           | gain confidence that I am supporting a viable endeavour   |
+|                  | Anonymous user       | search for projects;                                                     | quickly browse which projects are available to support    |
+|                  | Anonymous user       | filter my search results;                                                | search by country and/or project type                     |
+|                  | Anonymous user       | read details about projects;                                             | understand the history, details and needs of the project  |
+|                  | Anonymous user       | read details of what percentage of donations the projects receive        | feel confident, knowing where my donation will end up     |
+|                  | Anonymous user       | access contact details;                                                  | get in touch with any questions                           |
+|                  | Anonymous user       | access social media of the company;                                      | join social media forums for news and updates             |
+|                  | Anonymous user       | register for a user profile account by choosing a username and password; | store details of my saved projects and donation history   |
+|                  | Anonymous user       | register for a user profile account using my social media login details; | store details of my saved projects and donation history   |
+|                  |          ---         |                                    ---                                   |                            ---                            |
+|                  | Registered user      | log in and log out of my profile account;                                | Safeguard my information whilst not active on the site    |
+|                  | Registered user      | store my address for later use;                                          | avoid having to retype it every time I make a donation    |
+|                  | Registered user      | store my donation history;                                               | access my previous donation payments                      |
+|                  | Registered user      | enter a custom amount to donate to a particular project;                 | enter my own amount that I'd like to donate               |
+|                  | Registered user      | select an amount from a drop-down list;                                  | quickly make a donation from pre-defined choices          |
+|                  | Registered user      | review my donation choices at checkout;                                  | decide whether to add or edit donations before confirming |
+|                  | Registered user      | store my choices in checkout;                                            | go back to the site in case I wish to add more options    |
+|                  |          ---         |                                    ---                                   |                            ---                            |
+|                  | Site admin/superuser | add new projects and category listings;                                  | continuously make new projects available for support      |
+|                  | Site admin/superuser | update project listings;                                                 | update new info from projects                             |
+|                  | Site admin/superuser | delete existing project listings;                                        | delete projects that may cease to exist                   |
+|                  | Site admin/superuser | create blogs;                                                            | inform users on project developments                      |
+|                  | Site admin/superuser | update blog entries;                                                     | update users on new project developments                  |
+|                  | Site admin/superuser | delete blog entries;                                                     | remove blog details in case they become irrelevant        |
+|                  |                      |                                                                          |                                                           |
 
 > [Back to Top](#table-of-contents)  
 
@@ -41,6 +81,8 @@ Site deployed on Heroku [HERE](https://channel-lead-resources.herokuapp.com/)
 This website project
 
 ### 1. Strategy
+
+The audience target demographic is all-encompassing in terms of cultures and ages, so the prime strategy is to keep the site easy to use, yet fresh, uplifting and current. From experience, people do want to get involved and need to feel confident that the support that they are providing is going to the correct source. Supporters who donate are provided with factual information regarding the amount donated, the amount that reaches the project itself and the amount that FundPIN retains as a small percentage to enable the project to be sustainable. This detailed information is excluded from majority 'donation' type sites, so users never really know where their donation has ended up.
 
 #### Project and User Goals
 
