@@ -1,10 +1,8 @@
-# FundPIN
-
 <div align="center">
 <img src="readme-assets/logos/logo-banner.png" alt="main title logo"/>
 </div>
 
-## Table of Contents
+# Table of Contents
 
 > - [Overview](#overview)
 > - [User Stories](#user-stories)
@@ -82,27 +80,41 @@ This website project
 
 ### 1. Strategy
 
-The audience target demographic is all-encompassing in terms of cultures and ages, so the prime strategy is to keep the site easy to use, yet fresh, uplifting and current. From experience, people do want to get involved and need to feel confident that the support that they are providing is going to the correct source. Supporters who donate are provided with factual information regarding the amount donated, the amount that reaches the project itself and the amount that FundPIN retains as a small percentage to enable the project to be sustainable. This detailed information is excluded from majority 'donation' type sites, so users never really know where their donation has ended up.
+With 18 years experience in the field, I am well-versed with the target demographic, being all-encompassing in terms of cultures and ages, so the prime strategy is to keep the site easy to use, yet fresh, uplifting and current. From experience, people do want to get involved and need to feel confident that the support that they are providing is going to the correct source.
 
-#### Project and User Goals
+Supporters who donate are provided with factual information regarding the amount donated, the amount that reaches the project itself and the amount that FundPIN retains as a small percentage to enable the project to be sustainable. This detailed information is excluded from majority 'donation' type sites, so users never really know where their donation has ended up. The main strategy is to be transparent and maintain trust and integrity with users.
+
+#### Project Goals
+
+Increased visibility to the general public on the plight of NGO's operating in today's uncertain climate, and endeavouring to support and raise funds for them.
+
+#### User Goals
+
+Users can find projects in their relevant interest field, read details on the projects and choose which they wish to donate to.
 
 ### 2. Scope
 
 - Fits in with my current skill-set of HTML, CSS, JavaScript, Python and Django
+- Provide MVP with relevant categories, project listings and detail pages, with plenty of room for expansion
+- y
 
 ### 3. Structure
 
+#### Interaction Design
+
+#### Information Architecture
 The overall structure is for ease of navigation to each section
 
 ### 4. Skeleton
 
-- Navigation bar - Menu with links pointing to each page.
+- Top Navigation bar - Menu with links pointing to each page, inluding:
+  - y
 
-- Footer
+- Footer with social media links, quick links for additional information and contact details
 
 ### 5. Surface
 
-The overall UX needs to align with the aesthetics of a Donation type site, yet with a mode modern approach to avoid it being too generic and 'stuffy'. The overall feel needs to exude professionalism, giving confidence to users that they are donating to a trustworthy source. The focal point is on providing vivid imagery, easy to read text and  to 
+The overall UX needs to align with the aesthetics of a Donation type site, yet with a mode modern approach to avoid it being too generic and 'stuffy'. The overall feel needs to exude professionalism, giving confidence to users that they are donating to a trustworthy source. The focal point is on providing vivid imagery, easy to read text and intuitive navigation and search functions.
 
 #### Colours
 
@@ -269,7 +281,7 @@ Testing documentation can be found on a separate document [HERE](static/testing/
 - The code can be run locally through clone or download from the repository on [GitHub](https://github.com/JimLynx/givetu).
 - You can do this by opening the repository, clicking on the Code' button and selecting either 'clone or download'.
 
-    ![Image](-----)
+    ![Image](readme-assets/logos/clone.png)
 - The Clone option provides a URL, which you can use on your CLI with `git clone <paste url>`.
 - The Download ZIP option provides a link to download a ZIP file which can be unzipped on your local machine. The files can then be uploaded to your IDE.
 
