@@ -1,88 +1,145 @@
 <div align="center">
 <img src="readme-assets/logos/logo-banner.png" alt="main title logo"/>
+<br>
+SUPPORTING PROJECTS IN NEED
 </div>
 
-# Table of Contents
+## Project Overview
 
-> - [Overview](#overview)
-> - [User Stories](#user-stories)
-> - [UX](#ux)
-> - [Features](#features)
-> - [Technologies Used](#technologies-used)
-> - [References for learning](#references-for-learning)
-> - [Testing](#testing)
-> - [Project barriers and solutions](#project-barriers-and-solutions)
-> - [Known Issues](#known-issues)
-> - [Code validity](#code-validity)
-> - [Version Control](#version-control)
-> - [Deployment](#deployment)
-> - [Credits](#credits)
-> - [Acknowledgments](#acknowledgments)
-> - [Support](#support)
+Around the world there are groups and individuals who work tirelessly and selflessly towards supporting impoverished communities, protecting natural wildlife and sustaining our environmental resources.
 
-Site deployed on Heroku [HERE](https://channel-lead-resources.herokuapp.com/)
-
-<img src="https://cdn.shopify.com/s/files/1/0613/1313/collections/coming_soon_Banner.jpg?v=1521126755" alt="responsive screens"/>
-
-**Please note: To open any links in this document in a new browser tab, please press `CTRL + Click`.**
-
-## Overview
-
-Around the world, there are incredible endevours, which work tirelessly and selflessly towards supporting imporverished communities, protecting natural wildlife and sustaining environmental resources.
-
-One of the main sources of income for these projects has been from the International Volunteer platform, which grew rapidly in popularity in the mid-90's. Volunteer Organisations offered a structured way for people to travel to far-out destinations for a set fee, which enabled the orginations to thrive and grow. The knock-on effect was that these organisations were able to assist more projects as they grew by provinding funding to them for each volunteer they send. The immense benefit to the projects was not only in the form of fnancial support, but provided physical presence of volunteers to assist with various tasks, which the projects could otherwise not afford to hire staff for.
+One of the main sources of income for these incredible endeavours has been from the International Volunteer platform, which grew rapidly in popularity in the mid-90's. Volunteer Organisations offered a structured way for people to travel to far-out destinations for a set fee, which enabled the orginations to thrive and grow. The knock-on effect was that these organisations were able to assist more projects as they grew by provinding funding to them for each volunteer they send. The immense benefit to the projects was not only in the form of fnancial support, but provided physical presence of volunteers to assist with various tasks, which the projects could otherwise not afford to hire staff for.
 
 The onset of the COVID crisis in early 2020 brought international travel to an abrupt halt, and as a result, a huge majority of Volunteer Organisations stopped operating. This, of course, meant that the projects' main source of income ceased almost immediately and significantly impeded the projects' ability to run effectively.
 
 FundPIN (Fund Projects In Need) is dedicated to networking, supporting, and raising funds for non-profit organisations worldwide by providing an online platform, whereby users can find projects they are interested in supporting, donate to them directly through the site, and get updates on the progression and status of each.
 
-> [Back to Top](#table-of-contents)  
+---
+<img src="https://res.cloudinary.com/jimlynx/image/upload/v1592513512/LIONS/Untitled_Design_sonyub.jpg" alt="responsive screens"/>
 
-## User Stories
+[Live Site](------------------)
 
-| Relevant Section |      As a/an...      |                         I want the ability to...                         |                      So that I can...                     |
-|------------------|:--------------------:|:------------------------------------------------------------------------:|:---------------------------------------------------------:|
-|                  |                      |                                                                          |                                                           |
-|                  |          ---         |                                    ---                                   |                            ---                            |
-|                  | Anonymous user       | easily navigate the site;                                                | find what I am looking for quickly                        |
-|                  | Anonymous user       | view the site on all screen sizes;                                       | visit the site using my mobile and/or tablet device       |
-|                  | Anonymous user       | read about the company details,goals and aims;                           | gain confidence that I am supporting a viable endeavour   |
-|                  | Anonymous user       | search for projects;                                                     | quickly browse which projects are available to support    |
-|                  | Anonymous user       | filter my search results;                                                | search by country and/or project type                     |
-|                  | Anonymous user       | read details about projects;                                             | understand the history, details and needs of the project  |
-|                  | Anonymous user       | read details of what percentage of donations the projects receive        | feel confident, knowing where my donation will end up     |
-|                  | Anonymous user       | access contact details;                                                  | get in touch with any questions                           |
-|                  | Anonymous user       | access social media of the company;                                      | join social media forums for news and updates             |
-|                  | Anonymous user       | register for a user profile account by choosing a username and password; | store details of my saved projects and donation history   |
-|                  | Anonymous user       | register for a user profile account using my social media login details; | store details of my saved projects and donation history   |
-|                  |          ---         |                                    ---                                   |                            ---                            |
-|                  | Registered user      | log in and log out of my profile account;                                | Safeguard my information whilst not active on the site    |
-|                  | Registered user      | store my address for later use;                                          | avoid having to retype it every time I make a donation    |
-|                  | Registered user      | store my donation history;                                               | access my previous donation payments                      |
-|                  | Registered user      | enter a custom amount to donate to a particular project;                 | enter my own amount that I'd like to donate               |
-|                  | Registered user      | select an amount from a drop-down list;                                  | quickly make a donation from pre-defined choices          |
-|                  | Registered user      | review my donation choices at checkout;                                  | decide whether to add or edit donations before confirming |
-|                  | Registered user      | store my choices in checkout;                                            | go back to the site in case I wish to add more options    |
-|                  |          ---         |                                    ---                                   |                            ---                            |
-|                  | Site admin/superuser | add new projects and category listings;                                  | continuously make new projects available for support      |
-|                  | Site admin/superuser | update project listings;                                                 | update new info from projects                             |
-|                  | Site admin/superuser | delete existing project listings;                                        | delete projects that may cease to exist                   |
-|                  | Site admin/superuser | create blogs;                                                            | inform users on project developments                      |
-|                  | Site admin/superuser | update blog entries;                                                     | update users on new project developments                  |
-|                  | Site admin/superuser | delete blog entries;                                                     | remove blog details in case they become irrelevant        |
-|                  |                      |                                                                          |                                                           |
+**Please note**: To open any links in this document in a new browser tab, please press `CTRL + Click`.
 
-> [Back to Top](#table-of-contents)  
+---
 
-## UX
+# Table of Contents
 
-This website project
+<!-- - Project Overview -->
 
-### 1. Strategy
+- **[Project Overview](#project-overview)**
 
-With 18 years experience in the field, I am well-versed with the target demographic, being all-encompassing in terms of cultures and ages, so the prime strategy is to keep the site easy to use, yet fresh, uplifting and current. From experience, people do want to get involved and need to feel confident that the support that they are providing is going to the correct source.
+- **<details><summary>[User Experience (UX)](#ux)</summary>**
 
-Supporters who donate are provided with factual information regarding the amount donated, the amount that reaches the project itself and the amount that FundPIN retains as a small percentage to enable the project to be sustainable. This detailed information is excluded from majority 'donation' type sites, so users never really know where their donation has ended up. The main strategy is to be transparent and maintain trust and integrity with users.
+  - [User Stories](#user-stories)
+  - [Strategy](#strategy)
+  - [Scope](#scope)
+    - [Existing Features](#existing-features)
+    - [Features Left to Implement](#features-left-to-implement)
+  - [Structure](#structure)
+  - [Database](#database)
+  - [Data Schema](#data-schema)
+  - [Skeleton](#skeleton)
+  - [Wireframes](#wireframes)
+  - [Surface](#surface)
+    - [Colours](#colours)
+    - [Typography](#typography)
+    - [Animations](#animations)
+
+</details>
+
+- **<details><summary>[Technologies Used](#technologies-used)</summary>**
+
+  - [Languages](#languages)
+  - [Integration](#integration)
+  - [Dependencies](#dependencies)
+  - [Workflow](#workflow)
+  - [IDE Extensions](#ide-extensions)
+  - [Code Validity](#code-validity)
+
+</details>
+
+- **<details><summary>[Bugs/Issues](#bugs)</summary>**
+
+  - [Project barriers and solutions](#project-barriers-and-solutions)
+  - [Known Issues](#known-issues)
+
+</details>
+
+- **[Version Control](#version-control)**
+
+- **[Deployment](#deployment)**
+
+- **[Testing](#testing)**
+
+</details>
+
+- **<details><summary>[Credits](#credits)</summary>**
+
+  - [Resources](#resources)
+  - [Media](#media)
+  - [Content](#content)
+  - [Code Snippets](#code-snippets)
+  - [Acknowledgments](#acknowledgments)
+
+</details>
+
+- **[Support](#support)**
+
+</details>
+
+## User Experience (UX)
+
+### User Stories
+
+| Relevant Section |      As a/an...      |                         I want the ability to...                         |                        So that I can...                       |
+|------------------|:--------------------:|:------------------------------------------------------------------------:|:-------------------------------------------------------------:|
+|                  |                      |                                                                          |                                                               |
+|                  |          ---         |                                    ---                                   |                              ---                              |
+|                  | Anonymous user       | easily navigate the site;                                                | find what I am looking for quickly                            |
+|                  | Anonymous user       | view the site on all screen sizes;                                       | visit the site using my mobile and/or tablet device           |
+|                  | Anonymous user       | read about the company details,goals and aims;                           | gain confidence that I am supporting a viable endeavour       |
+|                  | Anonymous user       | search for projects;                                                     | quickly browse which projects are available to support        |
+|                  | Anonymous user       | filter my search results;                                                | search by country and/or project type                         |
+|                  | Anonymous user       | read details about projects;                                             | understand the history, details and needs of the project      |
+|                  | Anonymous user       | read details of what percentage of donations the projects receive        | feel confident, knowing where my donation will end up         |
+|                  | Anonymous user       | access contact details;                                                  | get in touch with any questions                               |
+|                  | Anonymous user       | access social media of the company;                                      | join social media forums for news and updates                 |
+|                  | Anonymous user       | register for a user profile account by choosing a username and password; | store details of my saved projects and donation history       |
+|                  | Anonymous user       | register for a user profile account using my social media login details; | store details of my saved projects and donation history       |
+|                  |          ---         |                                    ---                                   |                              ---                              |
+|                  | Registered user      | log in and log out of my profile account;                                | Safeguard my information whilst not active on the site        |
+|                  | Registered user      | update my details                                                        | update address and other details in case they change          |
+|                  | Registered user      | store my address for later use;                                          | avoid having to retype it every time I make a donation        |
+|                  | Registered user      | store my donation history;                                               | access my previous donation payments                          |
+|                  | Registered user      | enter a custom amount to donate to a particular project;                 | enter my own amount that I'd like to donate                   |
+|                  | Registered user      | select an amount from a drop-down list;                                  | quickly make a donation from pre-defined choices              |
+|                  | Registered user      | review my donation choices at checkout;                                  | decide whether to add or edit donations before confirming     |
+|                  | Registered user      | store my choices in checkout;                                            | go back to the site in case I wish to add more options        |
+|                  | Registered user      | Make secure payments                                                     | ensure my payments are securely handled                       |
+|                  | Registered user      | Receive email confirmation of my donation payment                        | confirm that my payment was made and keep track of accounting |
+|                  |          ---         |                                    ---                                   |                              ---                              |
+|                  | Site admin/superuser | add new projects and category listings;                                  | continuously make new projects available for support          |
+|                  | Site admin/superuser | update project listings;                                                 | update new info from projects                                 |
+|                  | Site admin/superuser | delete existing project listings;                                        | delete projects that may cease to exist                       |
+|                  | Site admin/superuser | create blogs;                                                            | inform users on project developments                          |
+|                  | Site admin/superuser | update blog entries;                                                     | update users on new project developments                      |
+|                  | Site admin/superuser | delete blog entries;                                                     | remove blog details in case they become irrelevant            |
+|                  |                      |                                                                          |                                                               |
+
+### Strategy
+
+With 18 years’ experience working with International NGO and non-profit organisations, I’ve gained a large perspective on the needs of these projects and the growing number of people that want to support them.
+
+The target demographic is vast, and attracts all ‘earning’ ages from 18-. The highest region-specific interest groups mainly from Western cultures, including the UK & Europe, US & Canada, Australia and New Zealand.
+
+The site should be easy to use for the older generations, yet captivating and fresh for the younger generations. A current visual approach is implemented to demand attention and relatability in line with modern websites and progress away from the traditionally ‘stuffy’ donation-type sites.
+
+From experience, people are yearning to help and assist, and want to get actively involved, however also need to feel confident that the support that they are providing is going to the correct source. Majority of 'donation' type sites are very general on their approach to fundraising, and users never really know exactly where their donation has ended up.
+
+FundPIN provides factual information regarding the amount donated, the amount that reaches the project itself and the amount that FundPIN retains as a small percentage to enable the project to be sustainable.
+
+The main strategy of this site to provide accurate information about projects, make it easy and intuitive to navigate and transparent with information to maintain trust and integrity with users.
 
 #### Project Goals
 
@@ -92,29 +149,84 @@ Increased visibility to the general public on the plight of NGO's operating in t
 
 Users can find projects in their relevant interest field, read details on the projects and choose which they wish to donate to.
 
-### 2. Scope
+### Scope
 
-- Fits in with my current skill-set of HTML, CSS, JavaScript, Python and Django
-- Provide MVP with relevant categories, project listings and detail pages, with plenty of room for expansion
-- y
+Fits in with my current skill-set of HTML, CSS, JavaScript, Python and Django.
 
-### 3. Structure
+Provide MVP with relevant categories, project listings and detail pages, with plenty of room for expansion
+
+#### Existing Features
+
+- Fully responsive website across all popular devices, using Bootstrap Grid and custom media queries.
+- Vivid and emotive images in interative carousels to elicit a positive response.
+- Intuitive and responsive Navigation menu.
+- About section on Home page to read company details and donation policies.
+- Search function with filtering.
+- Project detail pages.
+- Login page with form
+- Login with Social Media options
+- Profile/account page.
+- Checkout page
+- Footer element with quick links, social media icon links and company contact details.
+- Newsletter Subscription link from footer.
+- Project management page for adding, updating and deleting projects.
+- Blog management page for adding, updating and deleting blog entries.
+
+TBA =========>
+
+#### Features Left to Implement
+
+TBA =========>
+
+### Structure
+
+The overall structure is aimed at ease of navigation to each section and provides progressive disclosure on each page, hinting for further reading and thus drawing the user in to remain engaged.
 
 #### Interaction Design
 
-#### Information Architecture
-The overall structure is for ease of navigation to each section
+The content has been laid out in an intuiitive way, providing a good flow of information, with the main landing page diving clear direction to browsing the projects on the projects page.
 
-### 4. Skeleton
+Clear feedback is provided to the user after each interaction, using the messages function in Django (success messages, error pages, clear direction)
+
+#### Information Architecture
+
+TBA =========> navigational SCHEMA. ![Site Info Schema]()  
+
+The main organising principle for the user is the type of project, yet the Country that the project is based in is an important factor so this has been incporporated as a top-level category in the search function.
+
+- Search by Keyword
+- Search by Project Type
+- Search by Country
+
+#### Database
+
+TBA =========>
+
+#### Data Schema
+
+TBA =========>
+
+### Skeleton
+
+TBA =========> #### [Wireframes](readme-assets/wireframes/wireframes.pdf)
+
+The layout has been kept consistent throughout site by visually grouping elements in order of importance.
 
 - Top Navigation bar - Menu with links pointing to each page, inluding:
-  - y
+  - Searching via keywords/phrases
+  - Searching by Country filter
+  - Searching by Project Type filter  
+  - Pagination
 
+- Navigation convention has been incorporated to give the user a sense of familiarity and avoid confusion.
+- Navigation elements are visible and easily findable.
+- Progressive disclosure in the form of progress pagination has been incorporated throughout, with the use of carousels, indicating providing the user with information of where they are in that section at any given point.
+- Cognitive icons have been used consistently to communicate navigation to keep it simple for the user.
 - Footer with social media links, quick links for additional information and contact details
 
-### 5. Surface
+### Surface
 
-The overall UX needs to align with the aesthetics of a Donation type site, yet with a mode modern approach to avoid it being too generic and 'stuffy'. The overall feel needs to exude professionalism, giving confidence to users that they are donating to a trustworthy source. The focal point is on providing vivid imagery, easy to read text and intuitive navigation and search functions.
+The overall UX needs to align with the aesthetics of a Donation type site, yet with a more modern approach to avoid it being too generic. The overall feel needs to exude professionalism, giving confidence to users that they are donating to a trustworthy source. A large focal point is on providing vivid imagery and easy to read text o keep the user engaged.
 
 #### Colours
 
@@ -130,7 +242,7 @@ Colour Palette generated on [Coolors.co](https://coolors.co/44444e-b71234-d55c19
 
 ![Quicksand font example](readme-assets/logos/quicksand-font.png)
 
-- Content - "Jost" font (with fall-back font of Sans-Serif), clean and balances well with the Headings. 
+- Content - "Jost" font (with fall-back font of Sans-Serif), clean and balances well with the Headings. A consistent font-weight of 300 Light and Normal has been used throughout.
 
 ![Jost font example](readme-assets/logos/jost-font.png)
 
@@ -138,27 +250,19 @@ Colour Palette generated on [Coolors.co](https://coolors.co/44444e-b71234-d55c19
 
 Imagery for this project is vital and I've selected media that captures attention and gives the user an immediate association with the project, before reading deails on it.
 
-#### Design Choices
+README icons are hosted on [Cloudinary](https://cloudinary.com/), a cloud-based service that provides an end-to-end image and video management solutions.
 
--
+#### Animations
 
-> [Back to Top](#table-of-contents)  
-
-## Features
-
-### Existing Features
-
-- Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
-
-### Features Left to Implement
-
--
+To ensure the site is uncluttered, a minimalistic approach has been taken in terms of animation. The carousels have been given a delay for soft transitions, navigation with smooth scroll effect and buttons have very subtle hover and click effects.
 
 > [Back to Top](#table-of-contents)  
 
 ## Technologies Used
 
-### 1. Languages
+Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
+
+### Languages
 
 ![Image](https://res.cloudinary.com/jimlynx/image/upload/v1593529419/Logos/html5-50_groo6o.png) [HTML5](https://en.wikipedia.org/wiki/HTML5)
 
@@ -168,7 +272,7 @@ Imagery for this project is vital and I've selected media that captures attentio
 
 ![Image](https://res.cloudinary.com/jimlynx/image/upload/v1605958609/Logos/python50.png) [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-### 2. Integration
+### Integration
 
 ![Image](https://res.cloudinary.com/jimlynx/image/upload/v1593528776/Logos/Bootstrap-50_khpj57.png) [Bootstrap](https://getbootstrap.com/) - by linking via [Bootstrap CDN](https://www.bootstrapcdn.com/) to HTML Doc
 
@@ -180,35 +284,27 @@ Imagery for this project is vital and I've selected media that captures attentio
 
 ![Image](https://res.cloudinary.com/jimlynx/image/upload/c_scale,w_50/v1612384871/Logos/django50.png) [Django](----------------------) Micro web framework written in Python
 
+### Dependencies
 
-### 3. Dependencies
-
-- [autopep8](https://pypi.org/project/autopep8/) Python Code formatter
+- [Autopep8](https://pypi.org/project/autopep8/) Python Code formatter
 - [MarkupSafe](https://pypi.org/project/MarkupSafe/) Implements a text object that escapes characters so it is safe to use in HTML and XML
 
-### 4. Workspace, Version Control, Repository storage and Deployment
+### Workflow
 
-![Image](https://res.cloudinary.com/jimlynx/image/upload/v1600764509/Logos/VS-50.png) [VSCode](https://code.visualstudio.com/) - Main workspace IDE (Integrated Development Environment)
+![VSCode logo](https://res.cloudinary.com/jimlynx/image/upload/v1600764509/Logos/VS-50.png) [VSCode](https://code.visualstudio.com/) - Main workspace IDE (Integrated Development Environment)
 
-![Image](https://res.cloudinary.com/jimlynx/image/upload/v1593518772/Logos/git-50_znskan.png) [Git](https://git-scm.com/) - Distributed Version Control tool to store versions of files and track changes
+![Git logo](https://res.cloudinary.com/jimlynx/image/upload/v1593518772/Logos/git-50_znskan.png) [Git](https://git-scm.com/) - Distributed Version Control tool to store versions of files and track changes
 
-![Image](https://res.cloudinary.com/jimlynx/image/upload/v1593518773/Logos/github-50_ixwpch.png) [GitHub](https://github.com/) - A cloud-based hosting service to manage Git repositories
+![GitHub logo](https://res.cloudinary.com/jimlynx/image/upload/v1593518773/Logos/github-50_ixwpch.png) [GitHub](https://github.com/) - A cloud-based hosting service to manage Git repositories
 
-![Image](https://res.cloudinary.com/jimlynx/image/upload/v1605957602/Logos/heroku50.png) [Heroku](https://heroku.com) - Container-based cloud platform for deployment and running of apps
+![Heroku logo](https://res.cloudinary.com/jimlynx/image/upload/v1605957602/Logos/heroku50.png) [Heroku](https://heroku.com) - Container-based cloud platform for deployment and running of apps
 
-### 5. Other
+![AWS logo](https://res.cloudinary.com/jimlynx/image/upload/v1612882299/Logos/aws.png) [AWS S3](https://aws.amazon.com/s3/) - Cloud storage for static and media files
 
-- [Autoprefixer](https://autoprefixer.github.io/) Parses CSS and adds vendor prefixes.
-- [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly) Mobile-friendly check on site.
-- [Website Page Test](https://www.webpagetest.org/) Runs a website speed test from multiple locations around the globe using real browsers (IE and Chrome) and at real consumer connection speeds.
-- [Online-Spellcheck](https://www.online-spellcheck.com/) Online spelling and grammar checks.
-
-### 6. IDE Extensions used in VSCode
+### IDE Extensions
 
 - Auto Close Tag
-- Auto Rename Nametag
 - Bracket Pair Colorizer
-- Code Spellchecker
 - Beautify - Code Formatter
 - Indent-Rainbow
 - Bootstrap 4 CDN Snippet
@@ -216,47 +312,31 @@ Imagery for this project is vital and I've selected media that captures attentio
 - Python
 - JSHint
 
-> [Back to Top](#table-of-contents)  
-
-## Resources
-
-- [Code Institute Course Content](https://courses.codeinstitute.net/) - Main source of fundamental knowledge.
-- Code Institute **SLACK Community** - Main source of assistance
-- [Stack Overflow](https://stackoverflow.com/) - General resource.
-- [Youtube](https://www.youtube.com/) - General resource.
-- [CSS-Tricks](https://css-tricks.com/) - General resource.
-- [W3.CSS](https://www.w3schools.com/w3css/4/w3.css) - General resource.
-- [CommonMark](https://commonmark.org/help/) - For Markdown language reference.
-- [Colour Palette - Coolors.co](https://coolors.co)
-- [TinyPNG](https://tinypng.com/) - Efficient compression of images for site.
-- [Am I Responsive](http://ami.responsivedesign.is/) - Responsive website mockup image generator.
-- [Balsamiq](https://balsamiq.com/wireframes/) - Wireframing design tool.
-
-> [Back to Top](#table-of-contents)  
-
-## Testing
-
-Testing documentation can be found on a separate document [HERE](static/testing/TESTING.md)
-
-## Project barriers and solutions
-
--
-
-> [Back to Top](#table-of-contents)  
-
-## Known Issues
-
--
-
-> [Back to Top](#table-of-contents)  
-
-## Code validity
+### Code Validity
 
 - HTML - [W3C](https://validator.w3.org/) - Markup Validation
 - CSS - [W3C](https://jigsaw.w3.org/css-validator/) - Jigsaw CSS Validation
 - JavaScript - [JSHINT](https://jshint.com/) - JavaScript code warning & error check
 - Python - [Pyton Tester](https://extendsclass.com/python-tester.html) Python code syntax checker
-- TAGS - [Closing Tag Checker for HTML5](https://www.aliciaramirez.com/closing-tags-checker/) - Validates all tags are opening and closing correctly.
+- [Autoprefixer](https://autoprefixer.github.io/) Parses CSS and adds vendor prefixes.
+- [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly) Mobile-friendly check on site.
+- [Website Page Test](https://www.webpagetest.org/) Runs a website speed test from multiple locations around the globe using real browsers (IE and Chrome) and at real consumer connection speeds.
+- [Online-Spellcheck](https://www.online-spellcheck.com/) Online spelling and grammar checks for site and README content.
+- [Closing Tag Checker for HTML5](https://www.aliciaramirez.com/closing-tags-checker/) - Validates all tags are opening and closing correctly.
+
+> [Back to Top](#table-of-contents)  
+
+## Bugs
+
+### Project barriers and solutions
+
+TBA =========>
+
+### Known Issues
+
+TBA =========>
+
+> [Back to Top](#table-of-contents)  
 
 ## Version Control
 
@@ -297,6 +377,8 @@ In the Terminal window:
 
 #### 3. Create Environmental Variables
 
+TBA =========>
+
 #### 4. Create a .gitignore file
 
 - Create a file called **.gitignore** in the root directory and ensure it contains the following git exclusions:
@@ -318,32 +400,49 @@ In the Terminal window:
 
 - Install project requirements by typing `pip install -r requirements.txt`
 
-#### 6. --------------
-
--
-![database Entity Relational Diagram](----------------)
-
-#### 7. Deploy locally
+#### 6. Deploy locally
 
 - To run the project locally, in the terminal type `python manage.py runserver`
 - This will open a localhost address, which is provided in the CLI.
 - Either copy and paste the url shown below into a new browser tab, or hover over it and click *follow link*
 
-#### 8. Remote Deployment on Heroku
+#### 7. Remote Deployment on Heroku
 
 > [Back to Top](#table-of-contents)  
 
+## Testing
+
+TBA =========> Testing documentation can be found on a separate document [HERE](static/testing/TESTING.md)
+
 ## Credits
+
+### Resources
+
+- [Code Institute Course Content](https://courses.codeinstitute.net/) - Main source of fundamental knowledge, particularly the Boutique Ado mini-project.
+- Code Institute **SLACK Community** - Main source of assistance
+- [Stack Overflow](https://stackoverflow.com/) - General resource.
+- [Youtube](https://www.youtube.com/) - General resource.
+- [CSS-Tricks](https://css-tricks.com/) - General resource.
+- [W3.CSS](https://www.w3schools.com/w3css/4/w3.css) - General resource.
+- [CommonMark](https://commonmark.org/help/) - For Markdown language reference.
+- [Colour Palette - Coolors.co](https://coolors.co)
+- [TinyPNG](https://tinypng.com/) - Efficient compression of images for site.
+- [Am I Responsive](http://ami.responsivedesign.is/) - Responsive website mockup image generator.
+- [Balsamiq](https://balsamiq.com/wireframes/) - Wireframing design tool.
 
 ### Media
 
-#### Content
+- All site photographs used are owned by site creator.
+- Site logo designed by site creator using.
+- Icons used in the Technologies Used section of this document are taken from various sources (mainly Wikipeadia).
 
-#### Bootstrap 4 CDN Boilerplate
+### Content
 
-- I've taken advantage of _Simen Daehlin's_ HTML template boilerplate from his [Marketplace](https://marketplace.visualstudio.com/items?itemName=eventyret.bootstrap-4-cdn-snippet)
+All content is self-written by site creator
 
-#### Code Snippets
+### Code Snippets
+
+TBA =========>
 
 ## Acknowledgments
 
