@@ -1,10 +1,10 @@
 <div align="center">
-<img src="readme-assets/logos/logo-banner.png" alt="main title logo"/>
+<img src="static/images/logo-banner.png" alt="main title logo"/>
 <br>
 SUPPORTING PROJECTS IN NEED
 </div>
 
-## Project Overview
+# Project Overview
 
 Around the world there are groups and individuals who work tirelessly and selflessly towards supporting impoverished communities, protecting natural wildlife and sustaining our environmental resources.
 
@@ -25,107 +25,109 @@ FundPIN (Fund Projects In Need) is dedicated to networking, supporting, and rais
 
 # Table of Contents
 
-<!-- - Project Overview -->
+**<details><summary>[User Experience (UX)](#user-experience-ux)</summary>**
 
-- **[Project Overview](#project-overview)**
-
-- **<details><summary>[User Experience (UX)](#ux)</summary>**
-
-  - [User Stories](#user-stories)
-  - [Strategy](#strategy)
-  - [Scope](#scope)
-    - [Existing Features](#existing-features)
-    - [Features Left to Implement](#features-left-to-implement)
-  - [Structure](#structure)
-  - [Database](#database)
-  - [Data Schema](#data-schema)
-  - [Skeleton](#skeleton)
-  - [Wireframes](#wireframes)
-  - [Surface](#surface)
-    - [Colours](#colours)
-    - [Typography](#typography)
-    - [Animations](#animations)
+- [User Stories](#user-stories)
+- [Strategy](#strategy)
+- [Scope](#scope)
+  - [Existing Features](#existing-features)
+  - [Features Left to Implement](#features-left-to-implement)
+- [Structure](#structure)
+- [Database](#database)
+- [Data Schema](#data-schema)
+- [Skeleton](#skeleton)
+- [Wireframes](#wireframes)
+- [Surface](#surface)
+  - [Colours](#colours)
+  - [Typography](#typography)
+  - [Animations](#animations)
 
 </details>
 
-- **<details><summary>[Technologies Used](#technologies-used)</summary>**
+**<details><summary>[Technologies Used](#technologies-used)</summary>**
 
-  - [Languages](#languages)
-  - [Integration](#integration)
-  - [Dependencies](#dependencies)
-  - [Workflow](#workflow)
-  - [IDE Extensions](#ide-extensions)
-  - [Code Validity](#code-validity)
-
-</details>
-
-- **<details><summary>[Bugs/Issues](#bugs)</summary>**
-
-  - [Project barriers and solutions](#project-barriers-and-solutions)
-  - [Known Issues](#known-issues)
+- [Languages](#languages)
+- [Integration](#integration)
+- [Dependencies](#dependencies)
+- [Tools](#tools)
+- [IDE Extensions](#ide-extensions)
+- [Code Validity](#code-validity)
 
 </details>
 
-- **[Version Control](#version-control)**
+**<details><summary>[Bugs/Issues](#bugs)</summary>**
 
-- **[Deployment](#deployment)**
-
-- **[Testing](#testing)**
-
-</details>
-
-- **<details><summary>[Credits](#credits)</summary>**
-
-  - [Resources](#resources)
-  - [Media](#media)
-  - [Content](#content)
-  - [Code Snippets](#code-snippets)
-  - [Acknowledgments](#acknowledgments)
+- [Project barriers and solutions](#project-barriers-and-solutions)
+- [Known Issues](#known-issues)
 
 </details>
 
-- **[Support](#support)**
+**<details><summary>[Workflow](#workflow)</summary>**
+
+- [Version Control](#version-control)
+- [Development Environment](#development-environment)
 
 </details>
+
+**<details><summary>[Deployment](#deployment)</summary>**
+</details>
+
+**<details><summary>[Testing](#testing)</summary>**
+</details>
+
+**<details><summary>[Credits](#credits)</summary>**
+
+- [Resources](#resources)
+- [Media](#media)
+- [Content](#content)
+- [Code Snippets](#code-snippets)
+- [Acknowledgments](#acknowledgments)
+
+</details>
+
+**<details><summary>[Support](#support)</summary>**
+</details>
+
+---
 
 ## User Experience (UX)
 
 ### User Stories
 
-| Relevant Section |      As a/an...      |                         I want the ability to...                         |                        So that I can...                       |
-|------------------|:--------------------:|:------------------------------------------------------------------------:|:-------------------------------------------------------------:|
-|                  |                      |                                                                          |                                                               |
-|                  |          ---         |                                    ---                                   |                              ---                              |
-|                  | Anonymous user       | easily navigate the site;                                                | find what I am looking for quickly                            |
-|                  | Anonymous user       | view the site on all screen sizes;                                       | visit the site using my mobile and/or tablet device           |
-|                  | Anonymous user       | read about the company details,goals and aims;                           | gain confidence that I am supporting a viable endeavour       |
-|                  | Anonymous user       | search for projects;                                                     | quickly browse which projects are available to support        |
-|                  | Anonymous user       | filter my search results;                                                | search by country and/or project type                         |
-|                  | Anonymous user       | read details about projects;                                             | understand the history, details and needs of the project      |
-|                  | Anonymous user       | read details of what percentage of donations the projects receive        | feel confident, knowing where my donation will end up         |
-|                  | Anonymous user       | access contact details;                                                  | get in touch with any questions                               |
-|                  | Anonymous user       | access social media of the company;                                      | join social media forums for news and updates                 |
-|                  | Anonymous user       | register for a user profile account by choosing a username and password; | store details of my saved projects and donation history       |
-|                  | Anonymous user       | register for a user profile account using my social media login details; | store details of my saved projects and donation history       |
-|                  |          ---         |                                    ---                                   |                              ---                              |
-|                  | Registered user      | log in and log out of my profile account;                                | Safeguard my information whilst not active on the site        |
-|                  | Registered user      | update my details                                                        | update address and other details in case they change          |
-|                  | Registered user      | store my address for later use;                                          | avoid having to retype it every time I make a donation        |
-|                  | Registered user      | store my donation history;                                               | access my previous donation payments                          |
-|                  | Registered user      | enter a custom amount to donate to a particular project;                 | enter my own amount that I'd like to donate                   |
-|                  | Registered user      | select an amount from a drop-down list;                                  | quickly make a donation from pre-defined choices              |
-|                  | Registered user      | review my donation choices at checkout;                                  | decide whether to add or edit donations before confirming     |
-|                  | Registered user      | store my choices in checkout;                                            | go back to the site in case I wish to add more options        |
-|                  | Registered user      | Make secure payments                                                     | ensure my payments are securely handled                       |
-|                  | Registered user      | Receive email confirmation of my donation payment                        | confirm that my payment was made and keep track of accounting |
-|                  |          ---         |                                    ---                                   |                              ---                              |
-|                  | Site admin/superuser | add new projects and category listings;                                  | continuously make new projects available for support          |
-|                  | Site admin/superuser | update project listings;                                                 | update new info from projects                                 |
-|                  | Site admin/superuser | delete existing project listings;                                        | delete projects that may cease to exist                       |
-|                  | Site admin/superuser | create blogs;                                                            | inform users on project developments                          |
-|                  | Site admin/superuser | update blog entries;                                                     | update users on new project developments                      |
-|                  | Site admin/superuser | delete blog entries;                                                     | remove blog details in case they become irrelevant            |
-|                  |                      |                                                                          |                                                               |
+|      As a/an...      |                         I want the ability to...                         |                        So that I can...                       |
+|:--------------------:|:------------------------------------------------------------------------:|:-------------------------------------------------------------:|
+|                      |                                                                          |                                                               |
+|          ---         |                                    ---                                   |                              ---                              |
+| Anonymous user       | easily navigate the site;                                                | find what I am looking for quickly                            |
+| Anonymous user       | view the site on all screen sizes;                                       | visit the site using my mobile and/or tablet device           |
+| Anonymous user       | read about the company details,goals and aims;                           | gain confidence that I am supporting a viable endeavour       |
+| Anonymous user       | search for projects;                                                     | quickly browse which projects are available to support        |
+| Anonymous user       | filter my search results;                                                | search by country and/or project type                         |
+| Anonymous user       | read details about projects;                                             | understand the history, details and needs of the project      |
+| Anonymous user       | read details of what percentage of donations the projects receive        | feel confident, knowing where my donation will end up         |
+| Anonymous user       | access contact details;                                                  | get in touch with any questions                               |
+| Anonymous user       | access social media of the company;                                      | join social media forums for news and updates                 |
+| Anonymous user       | register for a user profile account by choosing a username and password; | store details of my saved projects and donation history       |
+| Anonymous user       | register for a user profile account using my social media login details; | store details of my saved projects and donation history       |
+|          ---         |                                    ---                                   |                              ---                              |
+| Registered user      | log in and log out of my profile account;                                | Safeguard my information whilst not active on the site        |
+| Registered user      | update my details                                                        | update address and other details in case they change          |
+| Registered user      | store my address for later use;                                          | avoid having to retype it every time I make a donation        |
+| Registered user      | store my donation history;                                               | access my previous donation payments                          |
+| Registered user      | enter a custom amount to donate to a particular project;                 | enter my own amount that I'd like to donate                   |
+| Registered user      | select an amount from a drop-down list;                                  | quickly make a donation from pre-defined choices              |
+| Registered user      | review my donation choices at checkout;                                  | decide whether to add or edit donations before confirming     |
+| Registered user      | store my choices in checkout;                                            | go back to the site in case I wish to add more options        |
+| Registered user      | Make secure payments                                                     | ensure my payments are securely handled                       |
+| Registered user      | Receive email confirmation of my donation payment                        | confirm that my payment was made and keep track of accounting |
+|          ---         |                                    ---                                   |                              ---                              |
+| Site admin/superuser | add new projects and category listings;                                  | continuously make new projects available for support          |
+| Site admin/superuser | update project listings;                                                 | update new info from projects                                 |
+| Site admin/superuser | delete existing project listings;                                        | delete projects that may cease to exist                       |
+| Site admin/superuser | create blogs;                                                            | inform users on project developments                          |
+| Site admin/superuser | update blog entries;                                                     | update users on new project developments                      |
+| Site admin/superuser | delete blog entries;                                                     | remove blog details in case they become irrelevant            |
+|                      |                                                                          |                                                               |
 
 ### Strategy
 
@@ -171,8 +173,9 @@ Provide MVP with relevant categories, project listings and detail pages, with pl
 - Newsletter Subscription link from footer.
 - Project management page for adding, updating and deleting projects.
 - Blog management page for adding, updating and deleting blog entries.
+- Loyalty app to earn PINS in profiles
 
-TBA =========>
+##### Stretch Goals
 
 #### Features Left to Implement
 
@@ -208,7 +211,7 @@ TBA =========>
 
 ### Skeleton
 
-TBA =========> #### [Wireframes](readme-assets/wireframes/wireframes.pdf)
+TBA =========> #### [Wireframes](static/wireframes/wireframes.pdf)
 
 The layout has been kept consistent throughout site by visually grouping elements in order of importance.
 
@@ -234,17 +237,17 @@ Colour palette has been chosen to align with a fresher look to the generic chari
 
 Colour Palette generated on [Coolors.co](https://coolors.co/44444e-b71234-d55c19-00675a-53284f-55601c-006983)
 
-![Image](readme-assets/logos/palette.png)
+![Image](static/images/palette.png)
 
 #### Typography
 
 - Headings - "Quicksand" font (with fall-back font of Serif). This font was chosen for its environmental feel with slightly rounded features, alternating between font-weights from 500 & 700 for visual impact.
 
-![Quicksand font example](readme-assets/logos/quicksand-font.png)
+![Quicksand font example](static/images/quicksand-font.png)
 
 - Content - "Jost" font (with fall-back font of Sans-Serif), clean and balances well with the Headings. A consistent font-weight of 300 Light and Normal has been used throughout.
 
-![Jost font example](readme-assets/logos/jost-font.png)
+![Jost font example](static/images/jost-font.png)
 
 #### Images
 
@@ -289,7 +292,7 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 - [Autopep8](https://pypi.org/project/autopep8/) Python Code formatter
 - [MarkupSafe](https://pypi.org/project/MarkupSafe/) Implements a text object that escapes characters so it is safe to use in HTML and XML
 
-### Workflow
+### Tools
 
 ![VSCode logo](https://res.cloudinary.com/jimlynx/image/upload/v1600764509/Logos/VS-50.png) [VSCode](https://code.visualstudio.com/) - Main workspace IDE (Integrated Development Environment)
 
@@ -323,6 +326,7 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 - [Website Page Test](https://www.webpagetest.org/) Runs a website speed test from multiple locations around the globe using real browsers (IE and Chrome) and at real consumer connection speeds.
 - [Online-Spellcheck](https://www.online-spellcheck.com/) Online spelling and grammar checks for site and README content.
 - [Closing Tag Checker for HTML5](https://www.aliciaramirez.com/closing-tags-checker/) - Validates all tags are opening and closing correctly.
+- [Favicon](https://favicon.io/favicon-converter/) - Favicon Generator
 
 > [Back to Top](#table-of-contents)  
 
@@ -338,13 +342,15 @@ TBA =========>
 
 > [Back to Top](#table-of-contents)  
 
-## Version Control
+## Workflow
+
+### Version Control
 
 - Used Git for version control.
 - User-confirmation branch for implementing and testing confirmation modal dialogues.
 - The branch was then merged with the main branch after any conflicts were addressed.
 
-### IDE
+### Development Environment
 
 - All code was written on [Visual Studio Code](https://code.visualstudio.com/), a local IDE (Integrated Development Environment).
 - A virtual environment was created on VSCode to ensure that the packages installed are only installed in the virtual environment folder.
@@ -433,7 +439,7 @@ TBA =========> Testing documentation can be found on a separate document [HERE](
 ### Media
 
 - All site photographs used are owned by site creator.
-- Site logo designed by site creator using.
+- Site logo designed using [Hatchful Shopify](https://hatchful.shopify.com/), a free online logo maker.
 - Icons used in the Technologies Used section of this document are taken from various sources (mainly Wikipeadia).
 
 ### Content
