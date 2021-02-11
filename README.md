@@ -211,7 +211,9 @@ TBA =========>
 
 ### Skeleton
 
-TBA =========> #### [Wireframes](static/wireframes/wireframes.pdf)
+#### Wireframes
+
+- [HOME Page - Anonymous User](static/wireframes/home-anon-wireframe.pdf)
 
 The layout has been kept consistent throughout site by visually grouping elements in order of importance.
 
@@ -237,7 +239,7 @@ Colour palette has been chosen to align with a fresher look to the generic chari
 
 Colour Palette generated on [Coolors.co](https://coolors.co/44444e-b71234-d55c19-00675a-53284f-55601c-006983)
 
-![Image](static/images/palette.png)
+![Colour palette](static/images/palette.png)
 
 #### Typography
 
