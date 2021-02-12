@@ -29,6 +29,7 @@
 
 /* --- GENERAL ---*/
 body {
+    color: var(--p-dark-grey);
     font-family: 'Jost', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
@@ -45,10 +46,37 @@ h6 {
     letter-spacing: 2px;
 }
 
-
+h1 {
+    padding-top: 120px
+}
 /* --- NAVIGATION --- */
 
+#navbar {
+    font-weight: 400;
+    font-size: 1.1rem;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    padding: 5px 0 0 0;
+    width: 100vw;
+    transition: top 0.5s;
+    box-shadow: var(--box-shadow);
+}
 
+.navbar-light .navbar-nav .nav-link {
+    color: var(--p-dark-grey);
+}
+.mobile.logo {
+    height: 60px;
+}
+.banner-logo {
+    height: 90px;
+}
+
+.navbar-collapse {
+    width: 31%;
+    margin: 0px 5px 0px auto;
+}
 
 /* --- SECTIONS --- */
 
@@ -207,14 +235,23 @@ form.subscribe-form button:hover {
     .subscribe-form {
         width: 50%;
     }
+    .navbar-collapse {
+        width: 100%;
+        margin: 0;
+    }
 
     footer h6 {
         margin: 15px 0;
         letter-spacing: 3px;
     }
+    h1 {
+        padding-top: 150px
+    }
 }
 
-@media (min-width: 992px) {}
+/* @media (min-width: 992px) {
+
+} */
 
 @media (min-width: 1200px) {
     .subscribe-form {
