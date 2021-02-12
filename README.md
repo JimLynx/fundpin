@@ -450,7 +450,8 @@ All content is self-written by site creator
 
 ### Code Snippets
 
-TBA =========>
+- CSS Radial gradient for instagram colours from [CodePen by Thomas Rye](https://codepen.io/thomasrye/pen/VaRoYv)
+- Inspiration for Navbar hide on scroll from [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_hide_scroll)
 
 ## Acknowledgments
 
