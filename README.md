@@ -327,8 +327,11 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 - [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly) Mobile-friendly check on site.
 - [Website Page Test](https://www.webpagetest.org/) Runs a website speed test from multiple locations around the globe using real browsers (IE and Chrome) and at real consumer connection speeds.
 - [Online-Spellcheck](https://www.online-spellcheck.com/) Online spelling and grammar checks for site and README content.
-- [Closing Tag Checker for HTML5](https://www.aliciaramirez.com/closing-tags-checker/) - Validates all tags are opening and closing correctly.
+
+### Other
+
 - [Favicon](https://favicon.io/favicon-converter/) - Favicon Generator
+- [Adobe Photoshop CS6](https://www.adobe.com/ie/products/photoshop.html) - Image manipulation and colour corrections
 
 > [Back to Top](#table-of-contents)  
 
@@ -442,6 +445,7 @@ TBA =========> Testing documentation can be found on a separate document [HERE](
 
 - All site photographs used are owned by site creator.
 - Site logo designed using [Hatchful Shopify](https://hatchful.shopify.com/), a free online logo maker.
+- Hamburger mobile-menu icon png taken from [Hiclipart](https://www.hiclipart.com/) and edited in Photoshop for site colour match.
 - Icons used in the Technologies Used section of this document are taken from various sources (mainly Wikipeadia).
 
 ### Content
@@ -451,7 +455,9 @@ All content is self-written by site creator
 ### Code Snippets
 
 - CSS Radial gradient for instagram colours from [CodePen by Thomas Rye](https://codepen.io/thomasrye/pen/VaRoYv)
-- Inspiration for Navbar hide on scroll from [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_hide_scroll)
+- Inspiration for Navbar mobile side menu from [W3Schools](https://www.w3schools.com/howto/howto_js_sidenav.asp)
+- CSS for hiding scrollbars on all browsers from [W3Schools](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
+- Help with JS storing CTA banner in local storage after close [Sean Murphy](https://github.com/nazarja)
 
 ## Acknowledgments
 
