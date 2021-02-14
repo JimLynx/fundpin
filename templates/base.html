@@ -45,7 +45,7 @@
         <nav id="navBar" class="navbar-expand-lg navbar-light p-0">
             <div class="navbar">
                 <!-- Nav logos  -->
-                <div class="col-3 col-sm-2 col-md-3 p-0">
+                <div class="col-2 col-lg-3 p-0">
                     <a class="navbar-brand m-0 p-2" href="#">
                         <img class="mobile-logo d-lg-none p-0" src="static/images/logo-mobile.png" alt="mobile logo">
                         <img class="desktop-logo d-none d-lg-flex m-0" src="static/images/logo-desktop.png"
@@ -87,7 +87,7 @@
                 </div>
 
                 <!-- Main nav icons -->
-                <div class="nav-icons col-6 col-lg-4 order-lg-12 d-flex align-items-center justify-content-around">
+                <div class="nav-icons col-8 col-sm-9 col-lg-4 d-flex align-items-center justify-content-end">
 
                     <!-- Search -->
                     <li class="list-inline-item">
@@ -143,8 +143,8 @@
                     <!-- <a href="#" type="button" class="nav-donate-btn btn btn-warning d-none d-sm-block">Donate</a> -->
                 </div>
 
-                <!-- Mobile Menu -->
-                <div class="mobile-icon d-lg-none col-2 order-lg-1 d-flex justify-content-end">
+                <!-- Mobile nav menu Icon-->
+                <div class="mobile-icon d-lg-none col-2 col-sm-1 d-flex justify-content-end">
                     <span style="cursor:pointer" onclick="openNav()"><img src="static/images/hamburger-icon.png"
                             alt="mobile-menu-icon"></span>
                 </div>
@@ -159,6 +159,13 @@
                 </div>
             </div>
         </nav>
+        <!-- CTA banner -->
+        <div id="ctaBanner" class="row justify-content-center m-0">
+            <a href="#">
+                * Find a Project! *
+            </a>
+            <i id="closeBanner" class="d-flex far fa-times-circle text-muted"></i>
+        </div>
     </header>
 
     <!-- display messages from Django block -->

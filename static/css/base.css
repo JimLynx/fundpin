@@ -105,6 +105,7 @@ h1 {
     height: 30px;
 }
 
+/* mobile-side-menu */
 .sidenav {
     height: fit-content;
     width: 0;
@@ -137,6 +138,33 @@ h1 {
     left: 0;
     font-size: 2rem;
 }
+
+/* CTA banner */
+#ctaBanner {
+    height: 30px;
+    letter-spacing: 2px;
+    background-color: #fdf497;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-shadow: var(--box-shadow);
+}
+
+#ctaBanner i {
+    position: absolute;
+    right: 10px;
+    align-self: center;
+    color: var(--p-dark-grey);
+}
+
+#ctaBanner a {
+    color: var(--p-warn);
+    font-weight: 500;
+    text-transform: uppercase;
+    align-self: center;
+    text-decoration: none;
+}
+
 
 /* --- SECTIONS --- */
 
