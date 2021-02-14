@@ -28,30 +28,10 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <!-- FontAwesome 5 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-
-    {% endblock %}
-
-    <!-- JavaScript block -->
-    {% block corejs %}
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
-    </script>
-
     <!-- FontAwesome Kit -->
     <script src="https://kit.fontawesome.com/b466eddf3f.js" crossorigin="anonymous"></script>
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     <!-- Page title -->
@@ -62,69 +42,124 @@
 <body>
     <header>
         <!-- Navbar -->
-        <div class="container-fluid p-0">
-            <div class="row">
-                <!-- <div class="col-12"> -->
-                    <nav id="navbar" class="navbar navbar-expand-md navbar-light">
+        <nav id="navBar" class="navbar-expand-lg navbar-light p-0">
+            <div class="navbar">
+                <!-- Nav logos  -->
+                <div class="col-3 col-sm-2 col-md-3 p-0">
+                    <a class="navbar-brand m-0 p-2" href="#">
+                        <img class="mobile-logo d-lg-none p-0" src="static/images/logo-mobile.png" alt="mobile logo">
+                        <img class="desktop-logo d-none d-lg-flex m-0" src="static/images/logo-desktop.png"
+                            alt="desktop logo">
+                    </a>
+                </div>
 
-                        <div class="col-3 col-md-4 col-xl-3 p-0">
-                            <a class="navbar-brand m-0 p-2 w-100" href="#">
-                                <img class="mobile-logo d-flex d-md-none ml-4" style="height: 50px;" src="static/images/logo-mobile.png" alt="">
-                                <img class="banner-logo d-none d-md-flex m-0" src="static/images/logo-banner.png" alt="">
+                <!-- Desktop nav menu  -->
+
+                <div class="d-none d-lg-flex col-5">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-home d-lg-none" aria-hidden="true"></i>
+                                <i class="d-none d-lg-block fas fa-home fa-lg" aria-hidden="true"></i>
                             </a>
-                        </div>
-        
-                        <!-- icons -->
-                        <div class="col-6 col-md-3 order-md-12 d-flex align-items-center justify-content-around p-0">
-                            <i class="fas fa-user"></i>
-                            <i class="fas fa-shopping-cart"></i>
-                            <i class="fas fa-search"></i>
-                            <a href="#" type="button" class="btn btn-warning">Donate</a>
-                        </div>
-
-                        <div class="d-md-none col-3 order-md-1 d-flex justify-content-end">
-                            <!-- Collapse button -->
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav"
-                                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
-
-                        <!-- Links -->
-                        <div class="col-md-5 col-xl-6">
-                            <div class="collapse navbar-collapse" id="mainNav">
-                                <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Home
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Projects
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href class="nav-link">
-                                            Blog
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Contact
-                                        </a>
-                                    </li>
-                                </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Projects</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">by Type</a>
+                                <a class="dropdown-item" href="#">by Country</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">All Projects</a>
                             </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href class="nav-link">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Main nav icons -->
+                <div class="nav-icons col-6 col-lg-4 order-lg-12 d-flex align-items-center justify-content-around">
+
+                    <!-- Search -->
+                    <li class="list-inline-item">
+                        <a class="nav-link" href="#" id="site-search" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <div class="text-center">
+                                <i class="fas fa-search d-lg-none" aria-hidden="true"></i>
+                                <i class="d-none d-lg-block fas fa-search fa-lg" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="site-search">
+                            <form class="form" method="" action="">
+                                <div class="input-group w-100 px-2">
+                                    <input class="form-control" type="text" name="" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button class="form-control btn btn-primary" type="submit">
+                                            <span class="icon">
+                                                <i class="fas fa-search" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <!-- </div> -->
-                    </nav>
-                <!-- </div> -->
+                    </li>
+
+                    <!-- profile  -->
+                    <li class="list-inline-item">
+                        <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <div class="text-center">
+                                <i class="fas fa-user d-lg-none" aria-hidden="true"></i>
+                                <i class="d-none d-lg-block fas fa-user fa-lg" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="user-options">
+                            <a href="" class="dropdown-item">Register</a>
+                            <a href="" class="dropdown-item">Login</a>
+                        </div>
+                    </li>
+
+                    <!-- basket  -->
+                    <li class="list-inline-item">
+                        <a class="nav-link" href="">
+                            <div class="text-center">
+                                <i class="fas fa-shopping-cart d-lg-none" aria-hidden="true"></i>
+                                <i class="d-none d-lg-block fas fa-shopping-cart fa-lg" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- donate button -->
+                    <!-- <a href="#" type="button" class="nav-donate-btn btn btn-warning d-none d-sm-block">Donate</a> -->
+                </div>
+
+                <!-- Mobile Menu -->
+                <div class="mobile-icon d-lg-none col-2 order-lg-1 d-flex justify-content-end">
+                    <span style="cursor:pointer" onclick="openNav()"><img src="static/images/hamburger-icon.png"
+                            alt="mobile-menu-icon"></span>
+                </div>
+
+                <!-- Mobile nav menu -->
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">About</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
-
-
 
     <!-- display messages from Django block -->
     {% if messages %}
@@ -230,21 +265,25 @@
         </div>
     </footer>
 
+    <!-- JavaScript block -->
+    {% block corejs %}
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
+    </script>
+    {% endblock %}
+
     <!-- JS load end of body block -->
     {% block postloadjs %}
-    <script>
-        let prevScrollpos = window.pageYOffset;
 
-        window.onscroll = function () {
-            let currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-117px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    </script>
     {% endblock %}
 
 </body>
