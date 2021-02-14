@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-/* --- SITE COLOURS ---*/
+/* --- SITE COLOUR VARIABLES ---*/
 :root {
     --logo-green: #419a1c;
     --p-light-grey: #f5f5f5;
@@ -14,17 +14,18 @@
     --bg-grey: #262626;
     --foot-text: #888;
     --links: #4682bf;
+
     /* --buttons:  */
-
-
     --p-donate: #ffc107;
     --p-warn: #b71234;
 
+    /* project categories */
     --p-envir: #00675a;
     --p-wild: #55601c;
     --p-edu: #006983;
     --p-commun: #53284f;
 
+    /* shadow */
     --box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -87,13 +88,8 @@ h1 {
     width: 200px;
 }
 
-.navbar-collapse {
-    width: 30%;
-    margin: 0px 5px 0px auto;
-}
-
-.dropdown-menu {
-    left: inherit;
+.nav-item {
+    margin-right: 20px;
 }
 
 .nav-icons i {
@@ -345,5 +341,10 @@ form.subscribe-form button:hover {
 @media (min-width: 1200px) {
     .subscribe-form {
         width: 75%;
+    }
+
+    .nav-item {
+        margin-right: 40px;
+        font-size: 1.3rem;
     }
 }
