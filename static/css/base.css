@@ -225,26 +225,26 @@ text-align: justify;
 /* FEATURED PROJECTS SECTION */
 
 #featured-section {
-    height: 200px;
-    background: lightblue;
+    height: fit-content;
+    background: var(--bg-grey);
 }
 
 /* BLOG SECTION */
 
 #blog-section {
-    height: 200px;
+    height: fit-content;
     background: tan;
 }
 
 /* SUPPORTERS SECTION */
 #supporters-section {
-    height: 200px;
+    height: fit-content;
     background: pink;
 }
 
 /* ABOVE FOOTER SECTION */
 #above-footer {
-    height: 200px;
+    height: fit-content;
     background: indianred;
 }
 
@@ -494,12 +494,6 @@ form.subscribe-form button:hover {
     }
     #lead-in-section {
         padding: 50px 0;
-    }
-    .swiper-container2 {
-        width: 275px;
-        height: 275px;
-        float: left;
-        margin: 5px 20px 20px 0;
     }
     .about-wrapper p {
         font-size: 1.1rem;

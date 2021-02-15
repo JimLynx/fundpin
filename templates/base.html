@@ -277,6 +277,11 @@
             </div>
         </div>
     </footer>
+    <a href="#" id="back-to-top">
+        <i class="fas fa-sort-up"></i>
+        <i class="fab fa-octopus-deploy fa-2x"></i>
+        <small>to top</small>
+    </a>
 
     {% block corejs %}
     <!-- == JavaScript block == -->
@@ -298,31 +303,7 @@
 
     <!-- == JS load end of body block == -->
     {% block postloadjs %}
-    <!-- Initialize Swiper -->
-    <script>
-        let swiper = new Swiper('.swiper-container', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            loop: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-            // autoplay: {
-            //     delay: 4500,
-            //     disableOnInteraction: false,
-            // },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    </script>
+
     {% endblock %}
 
 </body>
