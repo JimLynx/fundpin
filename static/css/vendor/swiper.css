@@ -1,3 +1,5 @@
+@import "../base.css";
+
 .swiper-container {
     width: 100%;
     padding-top: 30px;
@@ -9,17 +11,53 @@
     background-size: cover;
     width: 100%;
     height: 60vh;
+    border: 1px solid #fafafa;
+    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
-.home-swiper-text {
-    padding: 25% 10%;
-    color: white;
-    width: fit-content;
+.swiper-pagination-bullet {
+    background-color:var(--links);
 }
 
 @media (min-width: 768px) {
     .swiper-slide {
         width: 80%;
         height: 70vh;
+    }
+}
+
+.slide-text-wrapper{
+    width: fit-content;
+    background: #000000bd;
+    color: #fafafa;
+    align-self: center;
+    padding: 20px;
+    margin: auto 5% 20px;
+    border-radius: 5px;
+}
+
+.home-swiper-text p {
+    font-size: 1.1rem;
+}
+
+@media (min-width: 375px) {
+    .home-swiper-text {
+
+    }
+}
+
+@media (min-width: 768px) {
+    .home-swiper-text {
+
+    }
+
+    #lead-in-section {
+        padding: 50px 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-swiper-text {
+
     }
 }
