@@ -1,6 +1,9 @@
+// ========= SWIPER JS CAROUSELS ========
+
 // <!-- Initialize Swiperjs -->
-// home page main carousel
-let swiper = new Swiper('.swiper-container', {
+// home page 
+// main carousel
+let homeSwiper = new Swiper('.swiper-container.main-swiper', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
@@ -22,8 +25,8 @@ let swiper = new Swiper('.swiper-container', {
         clickable: true,
     },
 });
-// home page about section carousel
-let swiper2 = new Swiper('.swiper-container2', {
+// about section carousel
+let aboutSwiper = new Swiper('.swiper-container.about-swiper', {
     effect: 'cube',
     grabCursor: true,
     loop: true,
@@ -33,8 +36,38 @@ let swiper2 = new Swiper('.swiper-container2', {
         shadowOffset: 20,
         shadowScale: 0.94,
     },
+    //     autoplay: {
+    //     delay: 2000,
+    //     disableOnInteraction: false,
+    // },
     pagination: false,
 });
+// featured projects carousel
+let featureSwiper = new Swiper('.swiper-container.feature-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    init: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    loop: true,
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+        },
+    }
+});
+// END SWIPER JS CAROUSELS
 
 // function to open and close side navigation
 function openNav() {
@@ -54,6 +87,13 @@ const setScrollListener = () => {
             cta.style.position = 'fixed'
         } else {
             cta.style.position = 'static';
+        }
+        // show back-to-top button on scroll
+        const btt = document.querySelector('#back-to-top');
+        if (window.scrollY >= 300) {
+            btt.style.display = 'grid';
+        } else {
+            btt.style.display = 'none';
         }
     });
 }

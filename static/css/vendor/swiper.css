@@ -1,18 +1,18 @@
 @import "../base.css";
 
-.swiper-container {
+/* main slider */
+#mainCarousel .swiper-container {
     width: 100%;
     padding-top: 30px;
     padding-bottom: 50px;
 }
 
-.swiper-slide {
+#mainCarousel .swiper-slide {
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 60vh;
     border: 1px solid #fafafa;
-    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
 .swiper-pagination-bullet {
@@ -22,7 +22,7 @@
 .slide-text-wrapper {
     width: fit-content;
     background: #000000bd;
-    color: #fafafa;
+    color: var(--off-white);
     align-self: center;
     padding: 20px;
     margin: auto 5% 20px;
@@ -33,16 +33,49 @@
     font-size: 1.1rem;
 }
 
-.swiper-container2 {
+/* about slider */
+.about-swiper {
     width: 250px;
     height: 250px;
     position: relative;
     margin: 20px auto 50px;
 }
 
-.swiper-slide2 {
+.about-swiper .swiper-slide {
     background-position: center;
-    background-size: contain;
+    background-size: cover;
+    border: 4px solid var(--off-white);
+}
+
+/* feature slider */
+#featured-section .swiper-container {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+#featured-section .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#featured-section .swiper-slide img {
+    width: 100%;
 }
 
 @media (min-width: 375px) {
@@ -52,12 +85,20 @@
 }
 
 @media (min-width: 768px) {
-    .swiper-slide {
+    #mainCarousel .swiper-slide {
         width: 80%;
         height: 70vh;
     }
+
     .home-swiper-text {
         font-size: 1.1rem;
+    }
+
+    .about-swiper {
+        width: 275px;
+        height: 275px;
+        float: left;
+        margin: 5px 20px 20px 0;
     }
 }
 
@@ -65,7 +106,8 @@
     .home-swiper-text {
         font-size: 1.2rem;
     }
-    .swiper-container2 {
+
+    .about-swiper {
         width: 300px;
         margin: 5px 30px 25px 0;
     }
