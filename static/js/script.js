@@ -1,3 +1,41 @@
+// <!-- Initialize Swiperjs -->
+// home page main carousel
+let swiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    // autoplay: {
+    //     delay: 4500,
+    //     disableOnInteraction: false,
+    // },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+// home page about section carousel
+let swiper2 = new Swiper('.swiper-container2', {
+    effect: 'cube',
+    grabCursor: true,
+    loop: true,
+    cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+    },
+    pagination: false,
+});
+
 // function to open and close side navigation
 function openNav() {
     document.getElementById("mySidenav").style.width = "200px";
@@ -7,12 +45,11 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
-// function to listen for scroll event and change
-// donation banner to fixed after 100px Y-axis
+// function to listen for scroll events 
 const setScrollListener = () => {
     document.addEventListener('scroll', event => {
+        // change donation banner to fixed after 100px Y-axis
         const cta = document.querySelector('#ctaBanner');
-
         if (window.scrollY >= 100) {
             cta.style.position = 'fixed'
         } else {
@@ -35,6 +72,7 @@ const closeBanner = () => {
 
 // check local storage and if banner close instance is there,
 // keep until page refresh
+// NB - This function MUST come last
 function init() {
     const cta = document.querySelector('#ctaBanner');
 
