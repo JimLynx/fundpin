@@ -240,9 +240,28 @@ section {
 
 /* FEATURED PROJECTS SECTION */
 
-#featured-section {
+/* #featured-section {
     height: fit-content;
     background: var(--bg-grey);
+} */
+
+.feature-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--p-dark-grey);
+    background: transparent;
+    height: 120px;
+    width: 120px;
+    margin: auto;
+}
+
+.feature-block img {
+    width: 100%;
+    height: inherit;
+    padding: 10px;
+    border: 1px solid #fafafa;
 }
 
 /* BLOG SECTION */
@@ -253,10 +272,10 @@ section {
 }
 
 /* SUPPORTERS SECTION */
-#supporters-section {
+/* #supporters-section {
     height: fit-content;
     background: pink;
-}
+} */
 
 /* ABOVE FOOTER SECTION */
 #above-footer {
@@ -501,7 +520,8 @@ form.subscribe-form button:hover {
         width: 50%;
     }
 
-    .lead-in-block {
+    .lead-in-block,
+    .feature-block {
         height: 100px;
         width: 100px;
     }
@@ -540,7 +560,8 @@ form.subscribe-form button:hover {
 } */
 
 @media (min-width: 1024px) {
-    .lead-in-block {
+    .lead-in-block,
+    .feature-block {
         height: 120px;
         width: 120px;
     }
@@ -559,7 +580,8 @@ form.subscribe-form button:hover {
         padding: 20px 0;
     }
 
-    .lead-in-block {
+    .lead-in-block,
+    .feature-block {
         height: 150px;
         width: 150px;
     }
