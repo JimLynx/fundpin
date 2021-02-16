@@ -232,20 +232,15 @@ section {
     height: fit-content;
 }
 
-/* .about-wrapper p,
-.about-wrapper h5 {
-    text-align: justify;
-    padding: 15px;
-} */
+/* BLOG SECTION */
 
-/* FEATURED PROJECTS SECTION */
+#blog-section {
+    color: var(--p-dark-grey);
+    background-color: var(--p-light-grey);
+}
 
-/* #featured-section {
-    height: fit-content;
-    background: var(--bg-grey);
-} */
-
-.feature-block {
+/* SUPPORTERS SECTION */
+.support-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -257,109 +252,31 @@ section {
     margin: auto;
 }
 
-.feature-block img {
+.support-block img {
     width: 100%;
     height: inherit;
     padding: 10px;
     border: 1px solid #fafafa;
 }
 
-/* BLOG SECTION */
-
-#blog-section {
-    height: fit-content;
-    background: tan;
+/* ABOVE FOOTER SECTION */
+#base-grid {
+    background-color: var(--p-light-grey);
+    padding: 15px 0;
+    
 }
 
-/* SUPPORTERS SECTION */
-/* #supporters-section {
-    height: fit-content;
-    background: pink;
-} */
+.base-wrap {
+    float: left;
+    position: relative;
+    width: 20%;
+}
 
-/* ABOVE FOOTER SECTION */
-#above-footer {
-    height: fit-content;
-    background: indianred;
+.base-img {
+    max-width: 100%;
 }
 
 /* === END HOME PAGE === */
-
-
-
-/* ====== back to top button ====== */
-#back-to-top {
-    display: none;
-    position: fixed;
-    right: 10px;
-    bottom: 10vh;
-    color: darkred;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    background: bisque;
-    padding: 8px;
-    border-radius: 15px;
-    opacity: .7;
-    z-index: 2;
-}
-
-#back-to-top:hover {
-    /* Start the shake animation and make the animation last for 0.5 seconds */
-    animation: shake .5s;
-
-    /* When the animation is finished, start again */
-    animation-iteration-count: initial;
-}
-
-@keyframes shake {
-    0% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
-
-    10% {
-        transform: translate(-1px, -2px) rotate(-1deg);
-    }
-
-    20% {
-        transform: translate(-3px, 0px) rotate(1deg);
-    }
-
-    30% {
-        transform: translate(3px, 2px) rotate(0deg);
-    }
-
-    40% {
-        transform: translate(1px, -1px) rotate(1deg);
-    }
-
-    50% {
-        transform: translate(-1px, 2px) rotate(-1deg);
-    }
-
-    60% {
-        transform: translate(-3px, 1px) rotate(0deg);
-    }
-
-    70% {
-        transform: translate(3px, 1px) rotate(-1deg);
-    }
-
-    80% {
-        transform: translate(-1px, -1px) rotate(1deg);
-    }
-
-    90% {
-        transform: translate(1px, 2px) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(1px, -2px) rotate(-1deg);
-    }
-}
-
-/* ====== end back to top button ====== */
-
 
 /* --- FOOTER --- */
 
@@ -473,7 +390,6 @@ footer .social-icons {
 }
 
 /* subscribe form */
-
 .subscribe-form {
     display: flex;
     width: 100%;
@@ -499,6 +415,80 @@ form.subscribe-form button:hover {
     background-color: var(--p-donate);
 }
 
+/* ====== BACK TO TOP BUTTON ====== */
+#back-to-top {
+    display: none;
+    position: fixed;
+    right: 10px;
+    bottom: 10vh;
+    color: darkred;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    background: bisque;
+    padding: 8px;
+    border-radius: 15px;
+    opacity: .7;
+    z-index: 2;
+}
+
+#back-to-top:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake .5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: initial;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/* ====== end back to top button ====== */
+
+
 /* --- MEDIA QUERIES --- */
 
 @media (min-width: 576px) {
@@ -521,7 +511,7 @@ form.subscribe-form button:hover {
     }
 
     .lead-in-block,
-    .feature-block {
+    .support-block {
         height: 100px;
         width: 100px;
     }
@@ -561,7 +551,7 @@ form.subscribe-form button:hover {
 
 @media (min-width: 1024px) {
     .lead-in-block,
-    .feature-block {
+    .support-block {
         height: 120px;
         width: 120px;
     }
@@ -581,7 +571,7 @@ form.subscribe-form button:hover {
     }
 
     .lead-in-block,
-    .feature-block {
+    .support-block {
         height: 150px;
         width: 150px;
     }
