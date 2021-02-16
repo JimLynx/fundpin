@@ -3,8 +3,6 @@
 /* main slider */
 #mainCarousel .swiper-container {
     width: 100%;
-    padding-top: 30px;
-    padding-bottom: 50px;
 }
 
 #mainCarousel .swiper-slide {
