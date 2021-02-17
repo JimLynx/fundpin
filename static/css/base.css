@@ -192,16 +192,14 @@ section {
 /* === HOME PAGE === */
 
 #mainCarousel {
-    background-color: var(--bg-grey);
-    height: 75vh;
-    padding-top: 30px;
-    padding-bottom: 50px;
+    height: 70vh;
 }
 
 /* LEAD-IN SECTION */
 
 #lead-in-section {
-    background-color: var(--bg-grey);
+    padding-top: .75rem;
+    /* background-color: var(--bg-grey); */
 }
 
 .lead-in-block {
@@ -491,6 +489,12 @@ form.subscribe-form button:hover {
 
 /* --- MEDIA QUERIES --- */
 
+@media (min-width: 375px) {
+    #lead-in-section {
+        padding: 25px 0;
+    }
+}
+
 @media (min-width: 576px) {
     .subscribe-form {
         width: 75%;
@@ -501,53 +505,40 @@ form.subscribe-form button:hover {
     section {
         padding: 2rem 1rem;
     }
-
     #navbar {
         font-size: 1.2rem;
     }
-
+    #mainCarousel {
+        height: 80vh;
+    }
     .subscribe-form {
         width: 50%;
     }
-
     .lead-in-block,
     .support-block {
         height: 100px;
         width: 100px;
     }
-
-    #mainCarousel {
-        height: 80vh;
-    }
-
     footer h6 {
         margin: 15px 0;
         letter-spacing: 3px;
     }
-
     h1 {
         padding-top: 50px;
     }
-
     h2 {
         text-align: left;
         padding-top: 15px;
         margin-bottom: 15px;
         font-size: 2.5rem;
     }
-
     #lead-in-section {
-        padding: 50px 0;
+        padding: 35px 0;
     }
-
     section p {
         font-size: 1.1rem;
     }
 }
-
-/* @media (min-width: 992px) {
-
-} */
 
 @media (min-width: 1024px) {
     .lead-in-block,
@@ -555,7 +546,6 @@ form.subscribe-form button:hover {
         height: 120px;
         width: 120px;
     }
-
     .about-wrapper p {
         font-size: 1.2rem;
     }

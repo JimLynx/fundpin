@@ -1,17 +1,26 @@
 @import "../base.css";
 
-/* main slider */
+/* main carousel container */
 #mainCarousel .swiper-container {
     width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
+/* main carousel slides */
 #mainCarousel .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 100%;
+    width: 95%;
     height: 60vh;
-    border: 1px solid #fafafa;
 }
+
+#mainCarousel .swiper-container-horizontal>.swiper-pagination-bullets, 
+#mainCarousel.swiper-pagination-custom, 
+#mainCarousel.swiper-pagination-fraction {
+    bottom: 0;
+}
+
 
 .swiper-pagination-bullet {
     background-color: var(--links);
@@ -76,13 +85,22 @@
     width: 100%;
 }
 
+/* ==== MEDIA QUERIES ==== */
+
 @media (min-width: 375px) {
     .home-swiper-text {
         font-size: 1rem;
     }
+    #mainCarousel .swiper-container {
+        padding: 40px 0;
+    }
 }
 
 @media (min-width: 768px) {
+    #mainCarousel .swiper-container {
+        padding: 50px 0;
+    }
+
     #mainCarousel .swiper-slide {
         width: 80%;
         height: 70vh;
