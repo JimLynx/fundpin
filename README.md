@@ -8,7 +8,7 @@ SUPPORTING PROJECTS IN NEED
 
 Around the world there are groups and individuals who work tirelessly and selflessly towards supporting impoverished communities, protecting natural wildlife and sustaining our environmental resources.
 
-One of the main sources of income for these incredible endeavours has been from the International Volunteer platform, which grew rapidly in popularity in the mid-90's. Volunteer Organisations offered a structured way for people to travel to far-out destinations for a set fee, which enabled the orginations to thrive and grow. The knock-on effect was that these organisations were able to assist more projects as they grew by provinding funding to them for each volunteer they send. The immense benefit to the projects was not only in the form of fnancial support, but provided physical presence of volunteers to assist with various tasks, which the projects could otherwise not afford to hire staff for.
+One of the main sources of income for these incredible endeavours has been from the International Volunteer platform, which grew rapidly in popularity in the mid-90's. Volunteer Organisations offered a structured way for people to travel to far-out destinations for a set fee, which enabled the orginations to thrive and grow. The knock-on effect was that these organisations were able to assist more projects as they grew by provinding funding to them for each volunteer they send. The immense benefit to the projects was not only in the form of financial support, but provided physical presence of volunteers to assist with various tasks, which the projects could otherwise not afford to hire staff for.
 
 The onset of the COVID crisis in early 2020 brought international travel to an abrupt halt, and as a result, a huge majority of Volunteer Organisations stopped operating. This, of course, meant that the projects' main source of income ceased almost immediately and significantly impeded the projects' ability to run effectively.
 
@@ -448,6 +448,7 @@ TBA =========> Testing documentation can be found on a separate document [HERE](
 - Site logo designed using [Hatchful Shopify](https://hatchful.shopify.com/), a free online logo maker.
 - Hamburger mobile-menu icon png taken from [Hiclipart](https://www.hiclipart.com/) and edited in Photoshop for site colour match.
 - Icons used in the Technologies Used section of this document are taken from various sources (mainly Wikipeadia).
+- Home page lead-in icons downloaded as svg from [Material Icons](https://material.io/resources/icons/)
 
 ### Content
 
