@@ -1,13 +1,14 @@
 @import "../base.css";
 
-/* main carousel container */
+/* ====== CUSTOME SWIPER JS SETTINGS ====== */
+
+/* MAIN CAROUSEL */
 #mainCarousel .swiper-container {
     width: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-/* main carousel slides */
 #mainCarousel .swiper-slide {
     background-position: center;
     background-size: cover;
@@ -21,26 +22,11 @@
     bottom: 0;
 }
 
-
 .swiper-pagination-bullet {
     background-color: var(--links);
 }
 
-.slide-text-wrapper {
-    width: fit-content;
-    background: #000000bd;
-    color: var(--off-white);
-    align-self: center;
-    padding: 20px;
-    margin: auto 5% 20px;
-    border-radius: 5px;
-}
-
-.home-swiper-text p {
-    font-size: 1.1rem;
-}
-
-/* about slider */
+/* ABOUT SECTION CAROUSEL */
 .about-swiper {
     width: 250px;
     height: 250px;
@@ -54,7 +40,7 @@
     border: 4px solid var(--off-white);
 }
 
-/* feature slider */
+/* FEATURE SECTION CAROUSEL */
 #featured-section .swiper-container {
     width: 100%;
     height: 100%;
@@ -65,19 +51,8 @@
     text-align: center;
     font-size: 18px;
     background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
 }
 
@@ -88,9 +63,6 @@
 /* ==== MEDIA QUERIES ==== */
 
 @media (min-width: 375px) {
-    .home-swiper-text {
-        font-size: 1rem;
-    }
     #mainCarousel .swiper-container {
         padding: 40px 0;
     }
@@ -100,16 +72,10 @@
     #mainCarousel .swiper-container {
         padding: 50px 0;
     }
-
     #mainCarousel .swiper-slide {
         width: 80%;
         height: 70vh;
     }
-
-    .home-swiper-text {
-        font-size: 1.1rem;
-    }
-
     .about-swiper {
         width: 275px;
         height: 275px;
@@ -119,10 +85,6 @@
 }
 
 @media (min-width: 1024px) {
-    .home-swiper-text {
-        font-size: 1.2rem;
-    }
-
     .about-swiper {
         width: 300px;
         margin: 5px 30px 25px 0;
