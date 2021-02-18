@@ -285,7 +285,7 @@ section {
     background: url(../images/logo-square.png);
 }
 
-.about-slide div{
+.about-slide div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,6 +296,7 @@ section {
     color: var(--logo-green);
 
 }
+
 /* BLOG SECTION */
 
 #blog-section {
@@ -303,13 +304,40 @@ section {
     background-color: var(--off-white);
 }
 
+/* CONTACT SECTION */
+#contact-section {
+    color: var(--off-white);
+    background-color: var(--bg-grey);
+}
+
+#contact-section p {
+    color: var(--p-dark-grey);
+}
+
+.contact-btn {
+    color: var(--p-light-grey);
+    background-color: var(--logo-green);
+}
+
+.contact-btn:hover {
+    color: var(--logo-green);
+    background-color: var(--p-light-grey);
+    border: 1px solid var(--logo-green);
+}
+
 /* SUPPORTERS SECTION */
+
+#support-section {
+    color: var(--p-dark-grey);
+    background-color: var(--off-white);
+}
+
 .support-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--p-dark-grey);
+    color: var(--p-light-grey);
     background: transparent;
     height: 120px;
     width: 120px;
@@ -320,7 +348,8 @@ section {
     width: 100%;
     height: inherit;
     padding: 10px;
-    border: 1px solid #fafafa;
+    border: 1px solid var(--logo-green);
+    box-shadow: var(--box-shadow);
 }
 
 /* ABOVE FOOTER SECTION */
