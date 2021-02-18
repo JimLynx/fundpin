@@ -37,7 +37,6 @@
 .about-swiper .swiper-slide {
     background-position: center;
     background-size: cover;
-    border: 4px solid var(--off-white);
 }
 
 /* FEATURE SECTION CAROUSEL */

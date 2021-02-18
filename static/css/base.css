@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Quicksand:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Englebert&family=Jost:wght@300;400;500&family=Quicksand:wght@500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -224,8 +224,6 @@ section {
     background: url(https://images.unsplash.com/photo-1459183885421-5cc683b8dbba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
 }
 
-
-
 .slide-text-wrapper {
     width: fit-content;
     background: #0000009C;
@@ -261,7 +259,7 @@ section {
     align-items: center;
     border: 1px solid red;
     color: var(--p-dark-grey);
-    background-color: #fafafa;
+    background-color: var(--off-white);
     height: 120px;
     width: 120px;
     margin: auto;
@@ -271,18 +269,38 @@ section {
 
 #about-section {
     color: var(--p-dark-grey);
-    background-color: var(--p-light-grey);
+    background-color: var(--off-white);
 }
 
 .about-wrapper {
     height: fit-content;
 }
 
+.about-swiper .swiper-slide {
+    background-color: #fafafa;
+    border: 2px solid var(--logo-green);
+}
+
+.about-slide-logo {
+    background: url(../images/logo-square.png);
+}
+
+.about-slide div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #fafafa;
+    font-family: 'Englebert', sans-serif;
+    font-size: 350%;
+    color: var(--logo-green);
+
+}
 /* BLOG SECTION */
 
 #blog-section {
     color: var(--p-dark-grey);
-    background-color: var(--p-light-grey);
+    background-color: var(--off-white);
 }
 
 /* SUPPORTERS SECTION */
@@ -635,7 +653,7 @@ form.subscribe-form button:hover {
     }
 
     #lead-in-section {
-        padding: 20px 0;
+        padding: 40px 0;
     }
 
     .lead-in-block,
