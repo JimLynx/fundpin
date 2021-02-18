@@ -191,16 +191,68 @@ section {
 
 /* === HOME PAGE === */
 
+/* MAIN CAROUSEL */
 #mainCarousel {
     height: 70vh;
 }
 
-/* LEAD-IN SECTION */
-
-#lead-in-section {
-    padding-top: .75rem;
-    /* background-color: var(--bg-grey); */
+.hero-slide {
+    background: url(https://images.unsplash.com/photo-1588442025058-dffe84001858?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1196&q=80);
 }
+
+.eco-slide {
+    background: url(https://images.unsplash.com/photo-1420745981456-b95fe23f5753?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+}
+
+.community-slide {
+    background: url(https://images.unsplash.com/photo-1473605768212-7e1f2c756179?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+}
+
+.wildlife-slide {
+    background: url(https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80);
+}
+
+.education-slide {
+    background: url(https://images.unsplash.com/photo-1473649085228-583485e6e4d7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1489&q=80);
+}
+
+.marine-slide {
+    background: url(https://images.unsplash.com/photo-1602587557695-9fa83da489c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+}
+
+.health-slide {
+    background: url(https://images.unsplash.com/photo-1459183885421-5cc683b8dbba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+}
+
+
+
+.slide-text-wrapper {
+    width: fit-content;
+    background: #0000009C;
+    color: var(--off-white);
+    align-self: center;
+    padding: 1rem;
+    margin: auto .5rem;
+    border-radius: 8px;
+}
+
+.home-slide-btn span {
+    font-weight: 400;
+}
+
+.home-slide-btn a {
+    background-color: var(--p-warn);
+    padding: 6px;
+    color: var(--p-light-grey);
+}
+
+.home-slide-btn a:hover {
+    background-color: var(--p-light-grey);
+    color: var(--p-warn);
+    ;
+}
+
+/* LEAD-IN SECTION */
 
 .lead-in-block {
     display: flex;
@@ -213,10 +265,6 @@ section {
     height: 120px;
     width: 120px;
     margin: auto;
-}
-
-.lead-in-block img {
-    height: 50%;
 }
 
 /* ABOUT SECTION */
@@ -260,8 +308,8 @@ section {
 /* ABOVE FOOTER SECTION */
 #base-grid {
     background-color: var(--p-light-grey);
-    padding: 15px 0;
-    
+    /* padding: 15px 0; */
+
 }
 
 .base-wrap {
@@ -496,6 +544,11 @@ form.subscribe-form button:hover {
 }
 
 @media (min-width: 576px) {
+    .slide-text-wrapper {
+        padding: 2rem;
+        margin: auto 1rem;
+    }
+
     .subscribe-form {
         width: 75%;
     }
@@ -505,47 +558,67 @@ form.subscribe-form button:hover {
     section {
         padding: 2rem 1rem;
     }
-    #navbar {
-        font-size: 1.2rem;
-    }
-    #mainCarousel {
-        height: 80vh;
-    }
-    .subscribe-form {
-        width: 50%;
-    }
-    .lead-in-block,
-    .support-block {
-        height: 100px;
-        width: 100px;
-    }
-    footer h6 {
-        margin: 15px 0;
-        letter-spacing: 3px;
-    }
+
     h1 {
         padding-top: 50px;
     }
+
     h2 {
         text-align: left;
         padding-top: 15px;
         margin-bottom: 15px;
         font-size: 2.5rem;
     }
+
+    section p {
+        font-size: 1.1rem;
+    }
+
+    #navbar {
+        font-size: 1.2rem;
+    }
+
+    #mainCarousel {
+        height: 80vh;
+    }
+
+    .slide-text-wrapper {
+        margin: auto 25px 25px;
+        font-size: 1.1rem;
+    }
+
     #lead-in-section {
         padding: 35px 0;
     }
-    section p {
-        font-size: 1.1rem;
+
+    .lead-in-block,
+    .support-block {
+        height: 100px;
+        width: 100px;
+    }
+
+    footer h6 {
+        margin: 15px 0;
+        letter-spacing: 3px;
+    }
+
+    .subscribe-form {
+        width: 50%;
     }
 }
 
 @media (min-width: 1024px) {
+    .slide-text-wrapper {
+        margin: auto auto 25px 25px;
+        font-size: 1.2rem;
+    }
+
     .lead-in-block,
     .support-block {
         height: 120px;
         width: 120px;
     }
+
     .about-wrapper p {
         font-size: 1.2rem;
     }
@@ -554,6 +627,11 @@ form.subscribe-form button:hover {
 @media (min-width: 1200px) {
     section {
         padding: 2.8rem 1.5rem;
+    }
+
+    .nav-item {
+        margin-right: 40px;
+        font-size: 1.3rem;
     }
 
     #lead-in-section {
@@ -568,10 +646,5 @@ form.subscribe-form button:hover {
 
     .subscribe-form {
         width: 75%;
-    }
-
-    .nav-item {
-        margin-right: 40px;
-        font-size: 1.3rem;
     }
 }
