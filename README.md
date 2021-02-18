@@ -444,10 +444,11 @@ TBA =========> Testing documentation can be found on a separate document [HERE](
 
 ### Media
 
-- All site photographs used are owned by site creator.
+- Project photographs used are owned by site creator.
 - Site logo designed using [Hatchful Shopify](https://hatchful.shopify.com/), a free online logo maker.
 - Hamburger mobile-menu icon png taken from [Hiclipart](https://www.hiclipart.com/) and edited in Photoshop for site colour match.
 - Icons used in the Technologies Used section of this document are taken from various sources (mainly Wikipeadia).
+- Carousel and images above footer taken from various contributers on [Unsplash](https://unsplash.com/)
 - Home page lead-in icons downloaded as svg from [Material Icons](https://material.io/resources/icons/)
 
 ### Content
