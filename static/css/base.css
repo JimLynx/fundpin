@@ -486,20 +486,21 @@ footer .social-icons {
     background-color: #00aced
 }
 
-/* subscribe form */
-.subscribe-form {
+/* mailing list form */
+.mailing-form,
+.mailing-text {
     display: flex;
     width: 100%;
 }
 
-.subscribe-form input[type=text] {
+.mailing-form input[type=text] {
     padding: 10px;
     border: 1px solid var(--foot-text);
     width: 100%;
     background: var(--p-light-grey);
 }
 
-.subscribe-form button {
+.mailing-form button {
     width: 20%;
     padding: 10px;
     background: var(--p-envir);
@@ -508,7 +509,7 @@ footer .social-icons {
     cursor: pointer;
 }
 
-form.subscribe-form button:hover {
+form.mailing-form button:hover {
     background-color: var(--p-donate);
 }
 
@@ -600,7 +601,8 @@ form.subscribe-form button:hover {
         margin: auto 1rem;
     }
 
-    .subscribe-form {
+    .mailing-form,
+    .mailing-text {
         width: 75%;
     }
 }
@@ -653,7 +655,8 @@ form.subscribe-form button:hover {
         letter-spacing: 3px;
     }
 
-    .subscribe-form {
+    .mailing-form,
+    .mailing-text {
         width: 50%;
     }
 }
@@ -695,7 +698,8 @@ form.subscribe-form button:hover {
         width: 150px;
     }
 
-    .subscribe-form {
+    .mailing-form,
+    .mailing-text {
         width: 75%;
     }
 }
