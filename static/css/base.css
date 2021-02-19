@@ -375,6 +375,16 @@ section {
 
 /* === END HOME PAGE === */
 
+/* === CONTACT PAGE === */
+
+#contact {
+    min-height: 80vh;
+    background-color: var(--off-white);
+    color: var(--p-dark-grey);
+}
+
+/* === END CONTACT PAGE === */
+
 /* --- FOOTER --- */
 
 footer {
