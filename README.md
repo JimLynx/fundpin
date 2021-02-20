@@ -203,7 +203,8 @@ The main organising principle for the user is the type of project, yet the Count
 
 #### Database
 
-TBA =========>
+Development - SQLite3
+Production - Heroku Postgres
 
 #### Data Schema
 
@@ -211,9 +212,33 @@ TBA =========>
 
 ### Skeleton
 
+#### Page Structure
+
+![page structure diagram](static/wireframes/page-structure.png)
+
 #### Wireframes
 
-- [HOME Page - Anonymous User](static/wireframes/home-wireframe.pdf)
+##### Anonymous Users
+
+- [HOME Page](static/wireframes/home-wireframe.pdf)
+- [PROJECTS Page](-------------------------)
+- [PROJECT DETAILS Page](-------------------------)
+- [REGISTER Page](static/wireframes/register-wireframe.pdf)
+- [LOGIN Page](static/wireframes/login-wireframe.pdf)
+- [BLOG Page](-------------------------)
+- [BLOG DETAILS Page](-------------------------)
+- [CONTACT Page](static/wireframes/contact-wireframe.pdf)
+
+##### Registered Users
+
+- [PROFILE Page](-------------------------)
+- [DONATION CART Page](-------------------------)
+- [DONATION CONFIRMATION Page](-------------------------)
+
+##### SuperUser
+
+- [PROJECT MANAGEMENT Page](-------------------------)
+- [BLOG MANAGEMENT Page](-------------------------)
 
 The layout has been kept consistent throughout site by visually grouping elements in order of importance.
 
@@ -373,7 +398,7 @@ TBA =========>
 - The code can be run locally through clone or download from the repository on [GitHub](https://github.com/JimLynx/givetu).
 - You can do this by opening the repository, clicking on the Code' button and selecting either 'clone or download'.
 
-    ![Image](readme-assets/logos/clone.png)
+    ![Image](static/images/clone.png)
 - The Clone option provides a URL, which you can use on your CLI with `git clone <paste url>`.
 - The Download ZIP option provides a link to download a ZIP file which can be unzipped on your local machine. The files can then be uploaded to your IDE.
 
@@ -461,6 +486,7 @@ All content is self-written by site creator
 - Inspiration for Navbar mobile side menu from [W3Schools](https://www.w3schools.com/howto/howto_js_sidenav.asp)
 - CSS for hiding scrollbars on all browsers from [W3Schools](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
 - Help with JS storing CTA banner in local storage after close [Sean Murphy](https://github.com/nazarja)
+- Contact page form adapted from [MDBootstrap](https://mdbootstrap.com/docs/b4/jquery/forms/basic/) template
 
 ## Acknowledgments
 
