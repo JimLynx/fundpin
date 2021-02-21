@@ -299,7 +299,7 @@ section {
 
 /* BLOG SECTION */
 
-#blog-section {
+#featured-blogs {
     color: var(--p-dark-grey);
     background-color: var(--off-white);
 }
@@ -371,16 +371,26 @@ section {
 
 .base-wrap:nth-child(odd) {
     filter: grayscale(100%);
-  }
+}
 
 /* === END HOME PAGE === */
 
 /* === CONTACT PAGE === */
 
 #contact {
-    min-height: 80vh;
+    /* min-height: 80vh; */
     background-color: var(--off-white);
     color: var(--p-dark-grey);
+    padding: 0;
+}
+
+#contact .container {
+    padding: 1rem;
+}
+
+.contact-image {
+    object-fit: cover;
+    height: 120px;
 }
 
 /* === END CONTACT PAGE === */
@@ -601,7 +611,15 @@ form.mailing-form button:hover {
 
 @media (min-width: 375px) {
     #lead-in-section {
-        padding: 25px 0;
+        padding: 1.6rem 0;
+    }
+
+    .contact-image {
+        height: 160px;
+    }
+
+    #contact {
+        padding: .65rem 0;
     }
 }
 
@@ -614,6 +632,20 @@ form.mailing-form button:hover {
     .mailing-form,
     .mailing-text {
         width: 75%;
+    }
+
+    #contact {
+        padding: 1rem 0;
+    }
+
+    #contact .row {
+    padding: 1rem;
+        box-shadow: 0 6px 13px -2px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-image {
+        height: 200px;
+        padding: 1rem;
     }
 }
 
@@ -628,8 +660,8 @@ form.mailing-form button:hover {
 
     h2 {
         text-align: left;
-        padding-top: 15px;
-        margin-bottom: 15px;
+        padding-top: 1rem;
+        margin-bottom: 1rem;
         font-size: 2.5rem;
     }
 
@@ -669,6 +701,30 @@ form.mailing-form button:hover {
     .mailing-text {
         width: 50%;
     }
+
+    #contact {
+        padding: 2rem 0;
+    }
+
+    .contact-image {
+        height: 250px;
+    }
+}
+
+@media (min-width: 992px) {
+    #contact .col-12 {
+        padding: 0;
+    }
+
+    #contact form,
+    .contact-image {
+        padding: 1rem 0;
+    }
+
+    .contact-image {
+        height: 100%;
+    }
+
 }
 
 @media (min-width: 1024px) {
@@ -685,6 +741,10 @@ form.mailing-form button:hover {
 
     .about-wrapper p {
         font-size: 1.2rem;
+    }
+
+    #contact {
+        padding: 3rem 0;
     }
 }
 
@@ -711,5 +771,9 @@ form.mailing-form button:hover {
     .mailing-form,
     .mailing-text {
         width: 75%;
+    }
+
+    #contact {
+        padding: 4rem 0;
     }
 }
