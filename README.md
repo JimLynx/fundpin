@@ -221,24 +221,26 @@ TBA =========>
 ##### Anonymous Users
 
 - [HOME Page](static/wireframes/home-wireframe.pdf)
-- [PROJECTS Page](-------------------------)
-- [PROJECT DETAILS Page](-------------------------)
+- [PROJECTS Page](static/wireframes/project-list-wireframe.pdf)
+- [PROJECT DETAILS Page](static/wireframes/project-detail-wireframe.pdf)
 - [REGISTER Page](static/wireframes/register-wireframe.pdf)
 - [LOGIN Page](static/wireframes/login-wireframe.pdf)
-- [BLOG Page](-------------------------)
-- [BLOG DETAILS Page](-------------------------)
+- [BLOG Page](static/wireframes/blog-list-wireframe.pdf)
+- [BLOG DETAILS Page](static/wireframes/blog-detail-wireframe.pdf)
 - [CONTACT Page](static/wireframes/contact-wireframe.pdf)
 
-##### Registered Users
+##### Registered Users (including all above)
 
-- [PROFILE Page](-------------------------)
-- [DONATION CART Page](-------------------------)
-- [DONATION CONFIRMATION Page](-------------------------)
+- [PROFILE Page](static/wireframes/profile-wireframe.pdf)
+- [DONATION BASKET Page](static/wireframes/basket-wireframe.pdf)
+- [DONATION CONFIRMATION Page](static/wireframes/donation-confirmation-wireframe.pdf)
 
-##### SuperUser
+##### SuperUser (including all above)
 
-- [PROJECT MANAGEMENT Page](-------------------------)
-- [BLOG MANAGEMENT Page](-------------------------)
+- [ADD PROJECT Page](static/wireframes/add-project-wireframe.pdf)
+- [EDIT PROJECT Page](static/wireframes/edit-project-wireframe.pdf)
+- [ADD BLOG Page](static/wireframes/add-blog-wireframe.pdf)
+- [EDIT BLOG Page](static/wireframes/edit-blog-wireframe.pdf)
 
 The layout has been kept consistent throughout site by visually grouping elements in order of importance.
 
