@@ -77,8 +77,16 @@ section {
     padding-bottom: 25px;
 }
 
-.break-line {
+.hr-light {
     background-color: var(--off-white);
+    opacity: 50%;
+    width: 75%;
+    height: 1px;
+    margin: 10px auto;
+}
+
+.hr-dark {
+    background-color: var(--p-dark-grey);
     opacity: 50%;
     width: 75%;
     height: 1px;
@@ -299,15 +307,15 @@ section {
 
 /* BLOG SECTION */
 
-#featured-blogs {
+/* #featured-blogs {
     color: var(--p-dark-grey);
     background-color: var(--off-white);
-}
+} */
 
 /* CONTACT SECTION */
 #contact-section {
-    color: var(--off-white);
-    background-color: var(--bg-grey);
+    background-color: var(--off-white);
+    color: var(--bg-grey);
 }
 
 #contact-section p {
