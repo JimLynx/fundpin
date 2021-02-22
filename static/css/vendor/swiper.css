@@ -57,6 +57,17 @@
     align-items: center;
 }
 
+#featured-projects .swiper-slide {
+    display: flex;
+}
+
+#featured-blogs .swiper-slide {
+    display: block;
+    background-color: #fafafa;
+    color: darkgrey;
+    padding: 1.6rem;
+}
+
 #featured-projects .swiper-slide img, 
 #featured-blogs .swiper-slide img {
     width: 100%;

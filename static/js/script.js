@@ -1,8 +1,7 @@
 // ========= SWIPER JS CAROUSELS ========
 
-// <!-- Initialize Swiperjs -->
-// home page 
-// main carousel
+// <!-- Initialize Swiperjs --> 
+// home-page: main carousel
 let homeSwiper = new Swiper('.swiper-container.main-swiper', {
     effect: 'coverflow',
     grabCursor: true,
@@ -25,7 +24,7 @@ let homeSwiper = new Swiper('.swiper-container.main-swiper', {
         clickable: true,
     },
 });
-// about section carousel
+// home-page: about section carousel
 let aboutSwiper = new Swiper('.swiper-container.about-swiper', {
     effect: 'cube',
     grabCursor: true,
@@ -42,8 +41,33 @@ let aboutSwiper = new Swiper('.swiper-container.about-swiper', {
     // },
     pagination: false,
 });
-// featured projects carousel
-let featureSwiper = new Swiper('.swiper-container.feature-swiper', {
+// home-page: featured projects carousel
+let featuredProjectSwiper = new Swiper('.swiper-container.featured-project-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    init: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    loop: true,
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+        },
+    }
+});
+// home-page: featured blogs carousel
+let featuredBlogSwiper = new Swiper('.swiper-container.featured-blog-swiper', {
     slidesPerView: 1,
     spaceBetween: 10,
     init: true,
