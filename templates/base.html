@@ -106,9 +106,9 @@
                             </div>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="site-search">
-                            <form class="form" method="" action="">
+                            <form class="form" method="GET" action="">
                                 <div class="input-group w-100 px-2">
-                                    <input class="form-control" type="text" name="" placeholder="Search">
+                                    <input class="form-control" type="text" name="q" placeholder="Search">
                                     <div class="input-group-append">
                                         <button class="form-control btn btn-primary" type="submit">
                                             <span class="icon">
@@ -131,8 +131,18 @@
                             </div>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="user-options">
-                            <a href="" class="dropdown-item">Register</a>
-                            <a href="" class="dropdown-item">Login</a>
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="" class="dropdown-item">Project Management</a>
+                                    <a href="" class="dropdown-item">Blog Management</a>
+                                    <div class="hr-dark"></div>
+                                {% endif %}
+                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
                         </div>
                     </li>
 
@@ -211,10 +221,10 @@
                     <div class="row">
                         <div class="col-4">
                             <ul class="footer-links">
-                                <li><a href="#">Home</a></li>
+                                <li><a href="{% url 'home' %}">Home</a></li>
                                 <li><a href="#">Projects</a></li>
                                 <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
                             </ul>
                         </div>
 
@@ -242,7 +252,7 @@
                     </form>
                 </div>
             </div>
-            <hr>
+            <div class="hr-light"></div>
         </div>
         <div class="container-fluid">
             <div class="row">
