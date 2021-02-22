@@ -51,8 +51,7 @@
         <!-- Navbar -->
         <nav id="navBar" class="navbar-expand-lg navbar-light p-0">
             <div class="navbar">
-
-                <!-- Nav logos  -->
+                <!-- Nav logos -->
                 <div class="col-2 col-lg-3 col-xl-2 p-0">
                     <a class="navbar-brand m-0 p-2" href="{% url 'home' %}">
                         <img class="mobile-logo d-lg-none p-0" src="{% static 'images/logo-mobile.png' %}"
@@ -61,41 +60,10 @@
                             alt="desktop logo">
                     </a>
                 </div>
-
-                <!-- Desktop nav menu  -->
-                <div class="d-none d-lg-flex col-lg-5 col-xl-6">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="{% url 'home' %}" class="nav-link">
-                                Home
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                                aria-haspopup="true" aria-expanded="false">Projects</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">by Type</a>
-                                <a class="dropdown-item" href="#">by Country</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">All Projects</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a href class="nav-link">
-                                Blog
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'contact' %}" class="nav-link">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
+                <!-- desktop nav -->
+                {% include 'includes/desktop_nav.html' %}
                 <!-- Main nav icons -->
                 <div class="nav-icons col-8 col-sm-9 col-lg-4 col-xl-3 d-flex align-items-center justify-content-end">
-
                     <!-- Search -->
                     <li class="list-inline-item">
                         <a class="nav-link" href="#" id="site-search" data-toggle="dropdown" aria-haspopup="true"
@@ -120,7 +88,6 @@
                             </form>
                         </div>
                     </li>
-
                     <!-- profile  -->
                     <li class="list-inline-item">
                         <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
@@ -132,20 +99,19 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Project Management</a>
-                                    <a href="" class="dropdown-item">Blog Management</a>
-                                    <div class="hr-dark"></div>
-                                {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% if request.user.is_superuser %}
+                            <a href="" class="dropdown-item">Project Management</a>
+                            <a href="" class="dropdown-item">Blog Management</a>
+                            <div class="hr-dark"></div>
+                            {% endif %}
+                            <a href="" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
                     </li>
-
                     <!-- basket  -->
                     <li class="list-inline-item">
                         <a class="nav-link" href="">
@@ -155,26 +121,11 @@
                             </div>
                         </a>
                     </li>
-
                     <!-- donate button -->
                     <a href="#" type="button" class="nav-donate-btn btn btn-warning d-none d-sm-block">Donate</a>
                 </div>
-
-                <!-- Mobile nav menu Icon-->
-                <div class="mobile-icon d-lg-none col-2 col-sm-1 d-flex justify-content-end">
-                    <span style="cursor:pointer" onclick="openNav()">
-                        <img src="{% static 'images/hamburger-icon.png' %}" alt="mobile-menu-icon">
-                    </span>
-                </div>
-
-                <!-- Mobile nav menu -->
-                <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">About</a>
-                    <a href="#">Projects</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Contact</a>
-                </div>
+                <!-- mobile nav -->
+                {% include 'includes/mobile_nav.html' %}
             </div>
         </nav>
         <!-- CTA banner -->

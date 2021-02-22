@@ -25,6 +25,8 @@
     --p-wild: #55601c;
     --p-edu: #006983;
     --p-commun: #53284f;
+    --p-marine: #1277db;
+    --p-health: #53284f;
 
     /* shadow */
     --box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.1);
@@ -131,34 +133,52 @@ section {
 }
 
 .dropdown-menu {
+    background-color: var(--off-white);
     left: auto;
+    padding: 1rem;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-item img {
+    width: 30px;
+    margin-right: 1rem;
 }
 
 /* mobile-side-menu */
 .sidenav {
-    height: fit-content;
-    width: 0;
+    height: 100%;
+    width: 0px;
     position: fixed;
     z-index: 2;
     top: 0;
     right: 0;
-    background-color: var(--off-white);
+    background-color: var(--bg-grey);
     overflow-x: hidden;
     transition: 0.5s;
     padding: 75px 0;
-    box-shadow: var(--box-shadow);
+    border-top: 2px solid var(--logo-green);
+    border-bottom: 2px solid var(--logo-green);
 }
 
 .sidenav a {
-    color: var(--p-dark-grey);
-    padding: 5px 5px 30px;
+    color: var(--p-light-grey);
+    padding: 1rem 1.2rem;
     text-decoration: none;
     display: block;
     transition: 0.5s;
+    width: 80%;
 }
 
-.sidenav a:hover {
-    color: #f1f1f1;
+.sidenav a:hover,
+.sidenav a:focus, 
+.sidenav a:active {
+    font-weight: 500;
+    color: var(--logo-green);
+    background-color: var(--p-light-grey);
 }
 
 .sidenav .closebtn {
@@ -166,6 +186,15 @@ section {
     top: 0;
     left: 0;
     font-size: 2rem;
+}
+
+.project-sub-menu {
+    width: 80%;
+    color: var(--p-dark-grey);
+    background: var(--p-light-grey);
+}
+.project-sub-menu a {
+    color: var(--p-dark-grey);
 }
 
 /* CTA banner */

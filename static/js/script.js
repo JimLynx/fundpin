@@ -95,11 +95,11 @@ let featuredBlogSwiper = new Swiper('.swiper-container.featured-blog-swiper', {
 
 // function to open and close side navigation
 function openNav() {
-    document.getElementById("mySidenav").style.width = "200px";
+    document.getElementById("sideNav").style.width = "75%";
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("sideNav").style.width = "0";
 }
 
 // function to listen for scroll events 
