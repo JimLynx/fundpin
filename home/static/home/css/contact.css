@@ -1,0 +1,57 @@
+/* === CONTACT PAGE === */
+
+#contact {
+    background-color: var(--off-white);
+    color: var(--p-dark-grey);
+    padding: 0;
+}
+
+#contact .container {
+    padding: 1rem;
+}
+
+.contact-image {
+    object-fit: cover;
+    height: 120px;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (min-width: 768px) {
+    #contact {
+        padding: 2rem 0;
+    }
+
+    .contact-image {
+        height: 250px;
+    }
+}
+
+@media (min-width: 992px) {
+    #contact .col-12 {
+        padding: 0;
+    }
+
+    #contact form,
+    .contact-image {
+        padding: 1rem 0;
+    }
+
+    .contact-image {
+        height: 100%;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    #contact {
+        padding: 3rem 0;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    #contact {
+        padding: 4rem 0;
+    }
+}
