@@ -21,17 +21,16 @@
     <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
     {% endblock %}
 
+    <!-- FontAwesome Kit -->
+    {% block fontkit %}
+    <script src="https://kit.fontawesome.com/b466eddf3f.js" crossorigin="anonymous"></script>
+    {% endblock %}
+
     <!-- == CSS block == -->
     {% block corecss %}
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <!-- FontAwesome Kit -->
-    <script src="https://kit.fontawesome.com/b466eddf3f.js" crossorigin="anonymous"></script>
-
-    <!-- Swiper -->
-    <link rel="stylesheet" href="{% static 'css/vendor/swiper.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/vendor/swiper.css' %}" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -263,8 +262,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
     </script>
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
     <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
 
