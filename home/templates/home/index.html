@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+    <!-- Swiper -->
+    <link rel="stylesheet" href="{% static 'home/css/vendor/swiper.min.css' %}" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
+{% endblock %}
+
 {% block content %}
 
 <div id="mainCarousel">
@@ -582,4 +589,11 @@
     </div>
 </div>
 
+{% block postloadjs %}
+
+{% endblock %}
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{% static 'home/js/home.js' %}"></script>
 {% endblock %}
