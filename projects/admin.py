@@ -1,6 +1,35 @@
 from django.contrib import admin
 from .models import Project, Category, Country
 
-admin.site.register(Project)
-admin.site.register(Category)
-admin.site.register(Country)
+
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = (
+        'country',
+        'pin_id',
+        'name',
+        'category',
+        'location',        
+        'lead_in',
+        'image',
+    )
+
+    ordering = ('country',)
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+
+class CountryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+
+admin.site.register(Project, ProjectAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Country, CountryAdmin)
