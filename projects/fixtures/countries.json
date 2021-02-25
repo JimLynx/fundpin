@@ -1,0 +1,154 @@
+[{
+    "pk": 1,
+    "model": "projects.country",
+    "fields": {
+        "name": "argentina",
+        "friendly_name": "Argentina"
+    }
+}, {
+    "pk": 2,
+    "model": "projects.country",
+    "fields": {
+        "name": "australia",
+        "friendly_name": "Australia"
+    }
+}, {
+    "pk": 3,
+    "model": "projects.country",
+    "fields": {
+        "name": "bali",
+        "friendly_name": "Bali"
+    }
+}, {
+    "pk": 4,
+    "model": "projects.country",
+    "fields": {
+        "name": "brazil",
+        "friendly_name": "Brazil"
+    }
+}, {
+    "pk": 5,
+    "model": "projects.country",
+    "fields": {
+        "name": "cambodia",
+        "friendly_name": "Cambodia"
+    }
+}, {
+    "pk": 6,
+    "model": "projects.country",
+    "fields": {
+        "name": "china",
+        "friendly_name": "China"
+    }
+}, {
+    "pk": 7,
+    "model": "projects.country",
+    "fields": {
+        "name": "costa-rica",
+        "friendly_name": "Costa Rica"
+    }
+}, {
+    "pk": 8,
+    "model": "projects.country",
+    "fields": {
+        "name": "ecuador",
+        "friendly_name": "Ecuador"
+    }
+}, {
+    "pk": 9,
+    "model": "projects.country",
+    "fields": {
+        "name": "ghana",
+        "friendly_name": "ghana"
+    }
+}, {
+    "pk": 10,
+    "model": "projects.country",
+    "fields": {
+        "name": "india",
+        "friendly_name": "India"
+    }
+}, {
+    "pk": 11,
+    "model": "projects.country",
+    "fields": {
+        "name": "madagascar",
+        "friendly_name": "Madagascar"
+    }
+}, {
+    "pk": 12,
+    "model": "projects.country",
+    "fields": {
+        "name": "malaysia",
+        "friendly_name": "Malaysia"
+    }
+}, {
+    "pk": 13,
+    "model": "projects.country",
+    "fields": {
+        "name": "morocco",
+        "friendly_name": "Morocco"
+    }
+}, {
+    "pk": 14,
+    "model": "projects.country",
+    "fields": {
+        "name": "nepal",
+        "friendly_name": "Nepal"
+    }
+}, {
+    "pk": 15,
+    "model": "projects.country",
+    "fields": {
+        "name": "new-zealand",
+        "friendly_name": "New Zealand"
+    }
+}, {
+    "pk": 16,
+    "model": "projects.country",
+    "fields": {
+        "name": "peru",
+        "friendly_name": "Peru"
+    }
+}, {
+    "pk": 17,
+    "model": "projects.country",
+    "fields": {
+        "name": "south-africa",
+        "friendly_name": "South Africa"
+    }
+}, {
+    "pk": 18,
+    "model": "projects.country",
+    "fields": {
+        "name": "sri-lanka",
+        "friendly_name": "Morocco"
+    }
+}, {
+    "pk": 19,
+    "model": "projects.country",
+    "fields": {
+        "name": "thailand",
+        "friendly_name": "Thailand"
+    }
+}, {
+    "pk": 20,
+    "model": "projects.country",
+    "fields": {
+        "name": "usa",
+        "friendly_name": "USA"
+    }
+}, {
+    "pk": 21,
+    "model": "projects.country",
+    "fields": {
+        "name": "zambia",
+        "friendly_name": "Zambia"
+    }
+}
+
+
+
+
+
+]
