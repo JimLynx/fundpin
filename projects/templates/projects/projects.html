@@ -1,5 +1,72 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'projects/css/projects.css' %}" />
+{% endblock %}
+
 {% block content %}
+<section id="all-projects">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2>Projects</h2>
+                <hr class="my-3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="project-wrapper col-10 offset-1">
+
+                <!-- search -->
+                <div class="row mt-1 mb-2">
+
+                </div>
+
+                <!-- project cards -->
+                <div class="row">
+                    {% for project in projects %}
+                    <!-- CREDIT: Project Cards customized from Codepen @https://codepen.io/tgaychey/pen/PROMVy -->
+                    <div class="col-12 col-md-6 col-lg-4 p-0">
+                        <div class="project-card m-3">
+                            {% if project.image %}
+                            <a href="" class="project-link"></a>
+                                <img src="{{ project.image.url }}" class="project-card-img"
+                                    alt="{{ project.name }}">
+                            
+                            {% else %}
+                            <a href="" class="project-link"></a>
+                                <img src="{{ MEDIA_URL }}noimage.png" class="project-card-img"
+                                    alt="{{ project.name }}">
+                            
+                            {% endif %}
+                            <div class="project-text-wrapper">
+                                <h5 class="project-card-title">{{ project.name }}</h5>
+                                <ul class="list-unstyled mb-2 ml-3">
+                                    <!-- Country -->
+                                    <li>
+                                        <i class="fas fa-globe-europe fa-fw mr-2"></i>{{ project.country.friendly_name }}
+                                    </li>
+                                    <!-- location -->
+                                    <li>
+                                        <i class="fas fa-map-marker-alt fa-fw mr-2"></i>{{ project.location }}
+                                    </li>
+                                    <!-- Category -->
+                                    <li>
+                                        <i class="fas fa-bullseye mr-2 fa-fw mr-2"></i>{{ project.category.friendly_name }}
+                                    </li>
+                                </ul>
+                                <div class="project-details-wrapper">
+                                    <p class="project-card_excerpt">{{ project.lead_in|truncatewords:30 }}</p>
+                                    <a href="#" class="btn project-card-btn">Read more <i
+                                            class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
