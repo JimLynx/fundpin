@@ -9,7 +9,6 @@ class ProjectAdmin(admin.ModelAdmin):
         'name',
         'category',
         'location',        
-        'lead_in',
         'image',
     )
 
