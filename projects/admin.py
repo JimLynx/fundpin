@@ -22,12 +22,16 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
+    ordering = ('friendly_name',)
+
 
 class CountryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
+
+    ordering = ('friendly_name',)
 
 
 admin.site.register(Project, ProjectAdmin)
