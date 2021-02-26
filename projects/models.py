@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 class Category(models.Model):
@@ -51,8 +52,7 @@ class Project(models.Model):
     location = models.CharField(max_length=254)
     pin_id = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
-    lead_in = models.TextField()
-    description = models.TextField()
+    description = RichTextField(blank=True, null=True)
     needs = models.TextField()
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
