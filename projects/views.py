@@ -1,13 +1,19 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Project
+from .models import Project, Category
 
 def all_projects(request):
     """ A view to show all projects """
 
     projects = Project.objects.all()
     query = None
+    categories = None
+
+    if 'category' in request.GET:
+        categories = request.GET['category'].split(',')
+        projects = projects.filter(category__name__in=categories)
+        categories = Category.objects.filter(name__in=categories)
 
     if request.GET:
         if 'q' in request.GET:
@@ -25,6 +31,7 @@ def all_projects(request):
     context = {
         'projects': projects,
         'search_term': query,
+        'current_categories': categories,
     }
     return render(request, 'projects/projects.html', context)
 

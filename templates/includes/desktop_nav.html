@@ -19,22 +19,22 @@
                     <img src="{% static 'images/svg/globe-icon.svg' %}" alt="globe icon">All Projects
                 </a>
                 <div class="hr-dark w-100"></div>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{% url 'projects' %}?category=environment">
                     <img src="{% static 'images/svg/eco-icon.svg' %}" alt="eco leaf icon">Environment
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{% url 'projects' %}?category=wildlife">
                     <img src="{% static 'images/svg/paw-icon.svg' %}" alt="paw icon">Wildlife
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{% url 'projects' %}?category=marine">
                     <img src="{% static 'images/svg/marine-icon.svg' %}" alt="waves icon">Marine
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{% url 'projects' %}?category=community">
                     <img src="{% static 'images/svg/vol-icon.svg' %}" alt="hand and heart icon">Community
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{% url 'projects' %}?category=education">
                     <img src="{% static 'images/svg/edu-icon.svg' %}" alt="education hat icon">Education
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{% url 'projects' %}?category=health">
                     <img src="{% static 'images/svg/health-icon.svg' %}" alt="medical bag icon">Health
                 </a>
             </div>
