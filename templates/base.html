@@ -47,9 +47,33 @@
 
 <body>
     <header>
+
+        <!-- Search Form -->
+        <div class="collapse position-absolute w-100" id="navSearchCollapse">
+            <form method="GET" action="{% url 'projects' %}" id="navSearchForm">
+                <!-- search input -->
+                <input id="navSearchInput" name="q" type="text" class="form-control flex-grow-1"
+                    placeholder="Search Projects" />
+                <!-- search button -->
+                <a onclick="document.getElementById('navSearchForm').submit()"
+                    class="nav-link d-flex justify-content-center align-items-center py-2" type="submit">
+                    <i class="fas fa-search d-lg-none" aria-hidden="true"></i>
+                    <i class="d-none d-lg-flex fas fa-search fa-lg" aria-hidden="true"></i>
+                </a>
+                <!-- close button -->
+                <a class="nav-link closeNavSearch d-flex justify-content-center align-items-center py-2"
+                    data-target="#navSearchCollapse" data-toggle="collapse">
+                    <i class="fas fa-window-close d-lg-none" aria-hidden="true"></i>
+                    <i class="d-none d-lg-flex fas fa-window-close" aria-hidden="true"></i>
+                </a>
+            </form>
+        </div>
+
+
         <!-- Navbar -->
         <nav id="navBar" class="navbar-expand-lg navbar-light p-0">
             <div class="navbar">
+
                 <!-- Nav logos -->
                 <div class="col-2 col-lg-3 col-xl-2 p-0">
                     <a class="navbar-brand m-0 p-2" href="{% url 'home' %}">
@@ -59,34 +83,23 @@
                             alt="desktop logo">
                     </a>
                 </div>
+
                 <!-- desktop nav -->
                 {% include 'includes/desktop_nav.html' %}
+
                 <!-- Main nav icons -->
                 <div class="nav-icons col-8 col-sm-9 col-lg-4 col-xl-3 d-flex align-items-center justify-content-end">
-                    <!-- Search -->
+
+                    <!-- search icon -->
                     <li class="list-inline-item">
-                        <a class="nav-link" href="#" id="site-search" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
+                        <a class="nav-link" href="#navSearchCollapse" data-toggle="collapse">
                             <div class="text-center">
                                 <i class="fas fa-search d-lg-none" aria-hidden="true"></i>
                                 <i class="d-none d-lg-block fas fa-search fa-lg" aria-hidden="true"></i>
                             </div>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="site-search">
-                            <form class="form" method="GET" action="">
-                                <div class="input-group w-100 px-2">
-                                    <input class="form-control" type="text" name="q" placeholder="Search">
-                                    <div class="input-group-append">
-                                        <button class="form-control btn btn-primary" type="submit">
-                                            <span class="icon">
-                                                <i class="fas fa-search" aria-hidden="true"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                     </li>
+
                     <!-- profile  -->
                     <li class="list-inline-item">
                         <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
@@ -127,6 +140,7 @@
                 {% include 'includes/mobile_nav.html' %}
             </div>
         </nav>
+
         <!-- CTA banner -->
         <div id="ctaBanner" class="row justify-content-center m-0">
             <a href="#">
@@ -134,6 +148,7 @@
             </a>
             <i id="closeBanner" class="d-flex far fa-times-circle text-muted"></i>
         </div>
+
     </header>
 
     <!-- display messages from Django block -->
@@ -160,7 +175,8 @@
                         sustain and progress in their endeavours.
                     </p>
                     <p>
-                        Help us grow by <a href="{% url 'projects' %}"><strong>donating</strong></a> to a worthwhile cause.
+                        Help us grow by <a href="{% url 'projects' %}"><strong>donating</strong></a> to a worthwhile
+                        cause.
                     </p>
                 </div>
 
