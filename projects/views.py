@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Project, Category, Country
 
 def all_projects(request):
@@ -56,8 +57,10 @@ def all_projects(request):
         'projects': projects,
         'search_term': query,
         'current_categories': categories,
-        'current_country': countries,
+        'current_countries': countries,
+        'current_sorting': current_sorting,
     }
+    
     return render(request, 'projects/projects.html', context)
 
 

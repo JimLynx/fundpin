@@ -8,20 +8,55 @@
 {% block content %}
 <section id="all-projects">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2>Projects</h2>
-                <hr class="my-3">
-            </div>
-        </div>
+
         <div class="row">
             <div class="project-wrapper col-10 offset-1">
-
-                <!-- search -->
                 <div class="row mt-1 mb-2">
+                    <div
+                        class="col-12 col-md-5 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector"
+                                class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}> Name (Z-A)</option>
+                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Project Type (A-Z)</option>
+                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Project Type (Z-A)</option>
+                                <option value="country_asc" {% if current_sorting == 'country_asc' %}selected{% endif %}>Country (A-Z)</option>
+                                <option value="country_desc" {% if current_sorting == 'country_desc' %}selected{% endif %}>Country (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2 text-center mt-3">
+                        <!-- show current project type -->
+                        {% for c in current_categories %}
+                        <a class="btn btn-outline-dark" href="{% url 'projects' %}?category={{ c.name }}">
+                            <span class="p-3 mt-2"><strong>{{ c.friendly_name }}</strong> Projects</span>
+                        </a>
+                        {% endfor %}
+                        <!-- show current country -->
+                        {% for c in current_countries %}
+                        <a class="btn btn-outline-dark" href="{% url 'projects' %}?country={{ c.name }}">
+                            <span class="p-3 mt-2">Projects in <strong>{{ c.friendly_name }}</strong></span>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    <div class="col-12 col-md-5 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {% if search_term or current_categories or current_countries or current_sorting != 'None_None' %}
+                            <span class="small"><a href="{% url 'projects' %}">All Projects</a> | </span>
+                            {% endif %}
+                            {{ projects|length }} projects{% if search_term %} found for
+                            <strong>"{{ search_term }}"</strong>{% endif %}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <h2 class="pl-0">Projects</h2>
+                </div>
+                <div class="row">
 
                 </div>
-
                 <!-- project cards -->
                 <div class="row">
                     {% for project in projects %}
@@ -30,34 +65,40 @@
                         <div class="project-card m-3">
                             {% if project.image %}
                             <a href="{% url 'project_description' project.id %}" class="project-link"></a>
-                                <img src="{{ project.image.url }}" class="project-card-img"
-                                    alt="{{ project.name }}">
-                            
+                            <img src="{{ project.image.url }}" class="project-card-img" alt="{{ project.name }}">
+
                             {% else %}
                             <a href="{% url 'project_description' project.id %}" class="project-link"></a>
-                                <img src="{{ MEDIA_URL }}noimage.png" class="project-card-img"
-                                    alt="{{ project.name }}">
-                            
+                            <img src="{{ MEDIA_URL }}noimage.png" class="project-card-img" alt="{{ project.name }}">
+
                             {% endif %}
                             <div class="project-text-wrapper">
                                 <h5 class="project-card-title">{{ project.name }}</h5>
                                 <ul class="list-unstyled mb-2 ml-3">
                                     <!-- Country -->
                                     <li>
-                                        <i class="fas fa-globe-europe fa-fw mr-2"></i>{{ project.country.friendly_name }}
+                                        <i
+                                            class="fas fa-globe-europe fa-fw mr-2"></i>{{ project.country.friendly_name }}
                                     </li>
                                     <!-- location -->
                                     <li>
                                         <i class="fas fa-map-marker-alt fa-fw mr-2"></i>{{ project.location }}
                                     </li>
                                     <!-- Category -->
+                                    {% if project.category %}
                                     <li>
-                                        <i class="fas fa-bullseye mr-2 fa-fw mr-2"></i>{{ project.category.friendly_name }}
+                                        <a href="{% url 'projects' %}?category={{ project.category.name }}">
+                                            <i class="fas fa-bullseye mr-2 fa-fw mr-2"></i>
+                                            {{ project.category.friendly_name }}
+                                        </a>
                                     </li>
+                                    {% endif %}
                                 </ul>
                                 <div class="project-details-wrapper">
-                                    <div class="project-card_excerpt">{{ project.description|truncatewords:30|safe }}</div>
-                                    <a href="{% url 'project_description' project.id %}" class="btn project-card-btn">Read more <i
+                                    <div class="project-card_excerpt">{{ project.description|truncatewords:30|safe }}
+                                    </div>
+                                    <a href="{% url 'project_description' project.id %}"
+                                        class="btn project-card-btn">Read more <i
                                             class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
@@ -69,4 +110,28 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block postloadjs%}
+    {{ block.super }}
+    <script type="text/javascript">
+        // capture the change event from the source selector 
+        $('#sort-selector').change(function () {
+
+            let selector = $(this)
+            let currentUrl = new URL(window.location)
+            let selectedVal = selector.val();
+
+            if (selectedVal != 'reset') {
+                let sort = selectedVal.split('_')[0];
+                let direction = selectedVal.split('_')[1];
+                currentUrl.searchParams.set('sort', sort);
+                currentUrl.searchParams.set('direction', direction);
+                window.location.replace(currentUrl)
+            } else {
+                currentUrl.searchParams.delete('sort', sort);
+                currentUrl.searchParams.delete('direction', direction);
+            }
+        })
+    </script>
 {% endblock %}
