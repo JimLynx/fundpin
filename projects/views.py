@@ -10,6 +10,24 @@ def all_projects(request):
     query = None
     categories = None
     countries = None
+    sort = None
+    direction = None
+
+    if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                projects = projects.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if sortkey == 'country':
+                sortkey = 'country__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            projects = projects.order_by(sortkey)
 
     if 'category' in request.GET:
         categories = request.GET['category'].split(',')
@@ -32,7 +50,7 @@ def all_projects(request):
                 description__icontains=query)
             projects = projects.filter(queries)
 
-
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'projects': projects,
