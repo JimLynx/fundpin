@@ -8,6 +8,8 @@
                 Home
             </a>
         </li>
+        
+        <!-- Project dropdown -->
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                 aria-expanded="false">
@@ -36,6 +38,58 @@
                 </a>
                 <a class="dropdown-item" href="{% url 'projects' %}?category=health">
                     <img src="{% static 'images/svg/health-icon.svg' %}" alt="medical bag icon">Health
+                </a>
+            </div>
+        </li>
+
+        <!-- Country dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                Countries
+            </a>
+            <div class="dropdown-menu country-dropdown rounded-0 border-0 m-0">
+                <a class="dropdown-item" href="{% url 'projects' %}?country=argentina">Argentina
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=australia">Australia
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=bali">Bali
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=brazil">Brazil
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=cambodia">Cambodia
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=china">China
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=cost-arica">Costa Rica
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=ecuador">Ecuador
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=ghana">Ghana
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=india">India
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=madagascar">Madagascar
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=malaysia">Malaysia
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=morocco">Morocco
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=nepal">Nepal
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=new-zealand">New Zealand
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=peru">Peru
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=south-africa">South Africa
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=sri-lanka">Sri Lanka
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=thailand">Thailand
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=usa">USA
+                </a>
+                <a class="dropdown-item" href="{% url 'projects' %}?country=zambia">Zambia
                 </a>
             </div>
         </li>
