@@ -1,5 +1,51 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'projects/css/projects.css' %}" />
+{% endblock %}
+
 {% block content %}
+
+<section id="project_description">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                {% if project.image %}
+                <a href="{{ project.image.url }}" target="_blank" class="">
+                    <img src="{{ project.image.url }}" class="pd-img" alt="{{ project.name }}">
+                </a>
+                {% else %}
+                <a href="" class="project-link">
+                    <img src="{{ MEDIA_URL }}noimage.png" class="pd-img" alt="{{ project.name }}">
+                </a>
+                {% endif %}
+            </div>
+            <div class="col-12 col-sm-6">
+
+                <h4>{{ project.name }}</h4>
+                <ul class="list-unstyled mb-2 ml-3">
+                    <!-- Country -->
+                    <li>
+                        <i class="fas fa-globe-europe fa-fw mr-2"></i>{{ project.country.friendly_name }}
+                    </li>
+                    <!-- location -->
+                    <li>
+                        <i class="fas fa-map-marker-alt fa-fw mr-2"></i>{{ project.location }}
+                    </li>
+                    <!-- Category -->
+                    <li>
+                        <i class="fas fa-bullseye mr-2 fa-fw mr-2"></i>{{ project.category.friendly_name }}
+                    </li>
+                </ul>
+                <form action=""></form>
+            </div>
+        </div>
+            <div class="row">
+            <div class="col-12">
+                <p>{{ project.description|safe }}</p>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

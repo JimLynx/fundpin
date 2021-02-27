@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Project
 
-# Create your views here.
 def all_projects(request):
     """ A view to show all projects """
 
@@ -11,3 +10,14 @@ def all_projects(request):
         'projects': projects,
     }
     return render(request, 'projects/projects.html', context)
+
+
+def project_description(request, project_id):
+    """ A view to show individual projects """
+
+    project = get_object_or_404(Project, pk=project_id)
+
+    context = {
+        'project': project,
+    }
+    return render(request, 'projects/project_description.html', context)

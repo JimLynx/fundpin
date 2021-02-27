@@ -3,10 +3,19 @@
     color: var(--p-dark-grey);
 }
 
+#project_description {
+    background-color: var(--p-light-grey);
+    color: var(--bg-grey);
+}
+
+.pd-img {
+    width: 100%;
+    height: auto;
+}
+
 /* CREDIT: Project Cards customized from Codepen @https://codepen.io/tgaychey/pen/PROMVy */
 .content-wrapper {
     margin: 0 auto;
-    /* max-width: 1200px; */
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
