@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<section id="donation-cart">
+
+    <div class="row">
+        <div class="col">   
+            {% if cart_items %}
+                <div class="table-responsive">
+
+                </div>
+            {% else %}
+            <h6>Sorry you have not chosen a project to donate to yet.</h6>
+            <a href="{% url 'projects' %}">Have another look</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

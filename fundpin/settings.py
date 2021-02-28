@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'projects',
+    'cart',
     'ckeditor',
 ]
 
