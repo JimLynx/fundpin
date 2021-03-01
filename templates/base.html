@@ -124,9 +124,9 @@
                             {% endif %}
                         </div>
                     </li>
-                    <!-- basket  -->
+                    <!-- Donation cart  -->
                     <li class="list-inline-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="{% url 'view_cart' %}">
                             <div class="text-center">
                                 <i class="fas fa-shopping-cart d-lg-none" aria-hidden="true"></i>
                                 <i class="d-none d-lg-block fas fa-shopping-cart fa-lg" aria-hidden="true"></i>
@@ -198,8 +198,8 @@
                             <ul class="footer-links">
                                 <li><a href="#">Register/Login</a></li>
                                 <li><a href="#">Account</a></li>
-                                <li><a href="#">Basket</a></li>
-                                <li><a href="#">Donate</a></li>
+                                <li><a href="{% url 'view_cart' %}">Donation Cart</a></li>
+                                <li><a href="#">-----</a></li>
                             </ul>
                         </div>
                     </div>
