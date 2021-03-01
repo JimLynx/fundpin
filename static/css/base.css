@@ -75,6 +75,7 @@ h2 {
 }
 
 section {
+    min-height: 60vh;
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -120,7 +121,7 @@ section {
 }
 
 .nav-item {
-    margin-right: 20px;
+    margin-right: 12px;
 }
 
 .nav-icons i {
@@ -136,6 +137,7 @@ section {
     background-color: var(--off-white);
     left: auto;
     padding: 1rem;
+    width: 300px;
 }
 
 .dropdown-item {
@@ -195,8 +197,6 @@ section {
     border-radius: 10px; */
 }
 
-
-
 .form-control:focus,
 .form-control:active {
     border-color: var(--logo-green);
@@ -222,6 +222,8 @@ section {
 }
 
 .sidenav a {
+    display: flex;
+    align-items: center;
     color: var(--p-light-grey);
     padding: 1rem 1.2rem;
     text-decoration: none;
@@ -245,14 +247,21 @@ section {
     font-size: 2rem;
 }
 
-.project-sub-menu {
+.project-sub-menu,
+.country-sub-menu {
     width: 80%;
     color: var(--p-dark-grey);
     background: var(--p-light-grey);
 }
 
-.project-sub-menu a {
+.project-sub-menu a,
+.country-sub-menu a {
     color: var(--p-dark-grey);
+}
+
+.project-sub-menu .dropdown-item,
+.country-sub-menu .dropdown-item {
+    padding: 5px 0 5px 10px;
 }
 
 /* CTA banner */
