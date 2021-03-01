@@ -1,16 +1,14 @@
-#all-projects {
+#all-projects,
+#project_description,
+#map-donation-section{
     background-color: var(--p-light-grey);
     color: var(--p-dark-grey);
 }
 
-#project_description {
-    background-color: var(--p-light-grey);
-    color: var(--bg-grey);
-}
-
 .pd-img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
 }
 
 /* CREDIT: Project Cards customized from Codepen @https://codepen.io/tgaychey/pen/PROMVy */
@@ -131,6 +129,7 @@
     .project-card {
         height: 28rem
     }
+
     .project-details-wrapper {
         max-height: 0;
         opacity: 0;
@@ -162,6 +161,7 @@
         height: 26rem
     }
 }
+
 @media (min-width: 1200px) {
 
     .project-card {
