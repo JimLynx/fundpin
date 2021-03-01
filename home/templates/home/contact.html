@@ -4,7 +4,7 @@
 {% block content %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'home/css/contact.css' %}" />
+<link rel="stylesheet" href="{% static 'home/css/contact.css' %}" />
 {% endblock %}
 
 <section id="contact">
@@ -23,7 +23,9 @@
                     <!-- Name -->
                     <input type="text" id="ContactFormName" class="form-control mb-4" placeholder="Name" required />
                     <!-- Email -->
-                    <input type="email" id="ContactFormEmail" class="form-control mb-4" placeholder="E-mail" required />
+                    <input type="email" id="ContactFormEmail" class="form-control mb-4"
+                        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                        placeholder="E-mail" required />
                     <!-- Subject -->
                     <input type="text" id="ContactFormSubject" class="form-control mb-4" placeholder="Subject"
                         required />
