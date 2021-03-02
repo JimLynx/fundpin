@@ -1,18 +1,51 @@
 #all-projects,
 #project_description,
-#map-donation-section{
+#map-donation-section {
     background-color: var(--p-light-grey);
     color: var(--p-dark-grey);
 }
 
-.pd-img {
+/* project image */
+.p-detail-img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
+    border: 1px solid var(--logo-green);
+    box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
 }
- /* MAP */
- /* placeholder values */
- #projectMap {
+
+.border-outer,
+.border-inner,
+.border-wrap-img {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid var(--logo-green);
+}
+
+.border-outer,
+.border-inner {
+    display: flex;
+}
+
+.border-outer,
+.border-wrap-img {
+    padding: 15px;
+}
+
+.border-inner {
+    box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
+}
+
+.p-detail-wrapper {
+    margin: 10px auto;
+}
+
+/* MAP */
+/* placeholder values */
+#projectMap {
     width: 100%;
     height: 500px;
     background: burlywood;
