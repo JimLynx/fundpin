@@ -10,7 +10,26 @@
     height: 200px;
     object-fit: cover;
 }
+ /* MAP */
+ /* placeholder values */
+ #projectMap {
+    width: 100%;
+    height: 500px;
+    background: burlywood;
+}
 
+/* DONATION FORM - Project Description page */
+
+form {
+    width: 100%;
+}
+
+#map-donation-section h4 {
+    color: var(--logo-green);
+    font-size: 1.5rem;
+}
+
+/* PROJECT CARDS */
 /* CREDIT: Project Cards customized from Codepen @https://codepen.io/tgaychey/pen/PROMVy */
 .content-wrapper {
     margin: 0 auto;
