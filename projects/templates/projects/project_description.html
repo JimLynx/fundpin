@@ -71,23 +71,61 @@
 
     <div class="container">
         <div class="row">
-
             <!-- map col -->
             <div class="col-12 col-md-6 mt-3">
                 <h4 class="pl-0 text-center">Location</h4>
-                <h6 class="text-center my-5">placeholder - MAP</h6>
+                <div id="projectMap">placeholder - MAP</div>
             </div>
 
             <!-- Donation form col -->
             <div class="col-12 col-md-6 mt-3">
-                <h4 class="pl-0 text-center">Fund this project</h4>
+                <!-- pre-determined options -->
+                <h4>Fund this project</h4>
+                <div class="mb-2 p-3">
 
-                <form action="">
-                    <h6 class="text-center my-5">placeholder - donation form</h6>
-                </form>
+                    <!-- ===== Amount Options ===== -->
+                    <!-- preset amounts -->
+                    <label class="font-weight-bold" for="presetAmount">Choose an amount (&euro;)</label>
+                    <select class="form-control" id="presetAmount">
+                        <option value="Choose an amount" selected>Choose..</option>
+                        <option value="10">&euro; 10</option>
+                        <option value="50">&euro; 50</option>
+                        <option value="100">&euro; 100</option>
+                        <option value="250">&euro; 250</option>
+                    </select>
+
+                    <div class="my-3"><strong>~ OR ~</strong></div>
+
+                    <!-- user amount input -->
+                    <label class="font-weight-bold" for="userAmount">Enter own amount (&euro;)</label>
+                    <input class="form-control" id="userAmount" type="number" step="10" value=""
+                        placeholder="0" />
+
+                    <!-- display amount total -->
+                    <!-- NOTE - TBA - CURRENTLY ONLY RETURNING userAmount -->
+                    <!-- <p id="displayAmount" style="color: black;"></p> -->
+
+                    <div class="hr-dark my-5"></div>
+                    <form id="DonationOptionForm" action="" method="POST">
+                        {% csrf_token %}
+                        <!-- Total -->
+                        <label class="font-weight-bold" for="donationTotal">Total to Donate (&euro;)</label>
+                        <input class="form-control mb-3" id="donationTotal" name="donation_amount" type="number" value=""
+                            data-item_id="{{ project.id }}" placeholder="0" readonly />
+
+                        <!-- submit buttons -->
+                        <div class="col-12">
+                            <!-- back to projects button -->
+                            <a href="{% url 'projects' %}" class="btn btn-outline-dark my-2">
+                                <= Back to Projects</a> <!-- submit donation button -->
+                                    <input type="submit" class="btn btn-primary my-2" value="Confirm Donation">
+                        </div>
+                        <!-- request.path attribute to submit redirect_url to current URL -->
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 </section>
 
 {% endblock %}
