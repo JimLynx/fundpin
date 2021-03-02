@@ -2,23 +2,29 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}" />
+<link rel="stylesheet" href="{% static 'cart/css/cart.css' %}" />
 {% endblock %}
 
 {% block content %}
 
 <section id="donation-cart">
-
-    <div class="row">
-        <div class="col">   
-            {% if cart_items %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h2>Donation Cart</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center mt-5">
+                {% if cart_items %}
                 <div class="table-responsive">
 
                 </div>
-            {% else %}
-            <h6>Sorry you have not chosen a project to donate to yet.</h6>
-            <a href="{% url 'projects' %}">Have another look</a>
-            {% endif %}
+                {% else %}
+                <p>Sorry you have not chosen a project to donate to yet.</p>
+                <a class="btn btn-outline-success my-2" href="{% url 'projects' %}"><i class="fas fa-chevron-left mr-2"></i>Back to Projects</a>
+                {% endif %}
+            </div>
         </div>
     </div>
 </section>
