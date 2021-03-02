@@ -106,11 +106,11 @@
                     <!-- <p id="displayAmount" style="color: black;"></p> -->
 
                     <div class="hr-dark my-5"></div>
-                    <form id="DonationOptionForm" action="" method="POST">
+                    <form id="DonationOptionForm" action="{% url 'add_to_cart' project.id %}" method="POST">
                         {% csrf_token %}
                         <!-- Total -->
-                        <label class="font-weight-bold" for="donationTotal">Total to Donate (&euro;)</label>
-                        <input class="form-control mb-3" id="donationTotal" name="donation_amount" type="number" value=""
+                        <label class="font-weight-bold" for="donation_amount">Total to Donate (&euro;)</label>
+                        <input class="donationTotal form-control mb-3" id="donation_amount_{{ project.id }} " name="donation_amount" type="number" value=""
                             data-item_id="{{ project.id }}" placeholder="0" readonly />
 
                         <!-- submit buttons -->

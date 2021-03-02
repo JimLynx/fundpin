@@ -3,7 +3,7 @@ const presetAmount = document.querySelector('#presetAmount');
 // get user-entered input 
 const userAmount = document.querySelector('#userAmount');
 // get donation total input
-const donationTotal = document.querySelector('#donationTotal');
+const donationTotal = document.querySelector('.donationTotal');
 
 // change user entered amount to none if preset amount selected
 presetAmount.onchange = (e) => {
