@@ -24,6 +24,10 @@ form {
     width: 100%;
 }
 
+.display-amount-wrapper span {
+    color: var(--logo-green);
+}
+
 #map-donation-section h4 {
     color: var(--logo-green);
     font-size: 1.5rem;
