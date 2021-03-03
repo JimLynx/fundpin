@@ -1,72 +1,6 @@
-#all-projects,
-#project_description,
-#map-donation-section {
-    background-color: var(--p-light-grey);
-    color: var(--p-dark-grey);
-}
+/* === ALL PROJECTS PAGE === */
 
-/* project image */
-.p-detail-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 1px solid var(--logo-green);
-    box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
-}
-
-.border-outer,
-.border-inner,
-.border-wrap-img {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    border: 1px solid var(--logo-green);
-}
-
-.border-outer,
-.border-inner {
-    display: flex;
-}
-
-.border-outer,
-.border-wrap-img {
-    padding: 15px;
-}
-
-.border-inner {
-    box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
-}
-
-.p-detail-wrapper {
-    margin: 10px auto;
-}
-
-/* MAP */
-/* placeholder values */
-#projectMap {
-    width: 100%;
-    height: 500px;
-    background: burlywood;
-}
-
-/* DONATION FORM - Project Description page */
-
-form {
-    width: 100%;
-}
-
-.display-amount-wrapper span {
-    color: var(--logo-green);
-}
-
-#map-donation-section h4 {
-    color: var(--logo-green);
-    font-size: 1.5rem;
-}
-
-/* PROJECT CARDS */
+/* Project Cards */
 /* CREDIT: Project Cards customized from Codepen @https://codepen.io/tgaychey/pen/PROMVy */
 .content-wrapper {
     margin: 0 auto;
@@ -180,6 +114,103 @@ form {
     color: var(--logo-green);
 }
 
+/* End All Projects page */
+
+/* === PROJECT DESCRIPTION PAGE === */
+
+#allProjects,
+#projectDescription,
+#projectDonation,
+#projectMap {
+    background-color: var(--p-light-grey);
+    color: var(--bg-grey);
+}
+
+#projectDonation h4,
+#projectMap h4 {
+    color: var(--logo-green);
+    font-size: 1.5rem;
+}
+
+/* project image */
+.p-detail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%); */
+}
+
+.border-outer,
+.border-inner,
+.border-wrap-img {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid var(--logo-green);
+}
+
+.border-outer,
+.border-inner {
+    display: flex;
+}
+
+.border-outer,
+.border-wrap-img {
+    padding: 12px;
+}
+
+.border-inner {
+    /* box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%); */
+}
+
+.p-detail-wrapper {
+    margin: 10px auto;
+}
+
+.info-icon {
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 19px;
+}
+
+
+/* Map */
+/* ============= placeholder values ============= TBA */
+#map {
+    width: 100%;
+    height: 12.5rem;
+    background: cadetblue;
+}
+
+/* Donation form */
+
+form {
+    width: 100%;
+}
+
+.display-amount-wrapper span {
+    color: var(--logo-green);
+}
+
+
+/* End Project Description page */
+
+/* === MEDIA QUERIES === */
+
+@media (min-width: 576px) {
+    #map {
+        height: 16.5rem;
+    }
+
+    .info-icon {
+        width: 50px;
+        right: 15px;
+    }
+
+}
 
 @media (min-width: 768px) {
     .project-card {
@@ -209,12 +240,31 @@ form {
         transform: scale(1.2);
         z-index: -1;
     }
+
+    .info-icon {
+        width: 65px;
+    }
+
+    #map {
+        height: 18rem;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .p-detail-mh {
+        max-height: 21rem;
+    }
 }
 
 @media (min-width: 1024px) {
 
     .project-card {
         height: 26rem
+    }
+
+    #map {
+        height: 20rem;
     }
 }
 
