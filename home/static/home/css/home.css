@@ -1,3 +1,7 @@
+body {
+    background-color: var(--bg-grey);
+}
+
 /* MAIN CAROUSEL */
 #mainCarousel .swiper-container {
     width: 100%;
@@ -52,7 +56,7 @@
 
 .slide-text-wrapper {
     width: fit-content;
-    background: #0000009C;
+    background: #0000009c;
     color: var(--off-white);
     align-self: center;
     padding: 1rem;
@@ -119,7 +123,7 @@
 }
 
 .about-swiper .swiper-slide {
-    background-color: #fafafa;
+    background-color: var(--off-white);
     border: 2px solid var(--logo-green);
 }
 
@@ -132,7 +136,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: #fafafa;
+    background-color: var(--off-white);
     font-family: 'Englebert', sans-serif;
     font-size: 350%;
     color: var(--logo-green);
@@ -150,7 +154,6 @@
 #featured-blogs .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,7 +165,7 @@
 
 #featured-blogs .swiper-slide {
     display: block;
-    background-color: #fafafa;
+    background-color: var(--off-white);
     color: darkgrey;
     padding: 1.6rem;
 }
@@ -174,10 +177,6 @@
 
 /* BLOG SECTION */
 
-/* #featured-blogs {
-    color: var(--p-dark-grey);
-    background-color: var(--off-white);
-} */
 
 /* CONTACT SECTION */
 #contact-section {
@@ -258,7 +257,7 @@
         padding: 40px 0;
     }
 
-    #lead-in-section {
+    #lead-in {
         padding: 1.6rem 0;
     }
 
@@ -317,7 +316,7 @@
         font-size: 1.1rem;
     }
 
-    #lead-in-section {
+    #lead-in {
         padding: 35px 0;
     }
 
@@ -363,7 +362,7 @@
         padding: 2.8rem 1.5rem;
     }
 
-    #lead-in-section {
+    #lead-in {
         padding: 40px 0;
     }
 

@@ -1,11 +1,5 @@
 /* === CONTACT PAGE === */
 
-#contact {
-    background-color: var(--off-white);
-    color: var(--p-dark-grey);
-    padding: 0;
-}
-
 #contact .container {
     padding: 1rem;
 }

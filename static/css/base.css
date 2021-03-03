@@ -34,8 +34,8 @@
 
 /* --- GENERAL ---*/
 body {
-    color: var(--p-light-grey);
-    background-color: var(--bg-grey);
+    background-color: var(--off-white);
+    color: var(--bg-grey);
     font-family: 'Jost', sans-serif;
     font-size: 1rem;
     font-weight: 300;
@@ -75,7 +75,6 @@ h2 {
 }
 
 section {
-    min-height: 60vh;
     padding-top: 25px;
     padding-bottom: 25px;
 }
