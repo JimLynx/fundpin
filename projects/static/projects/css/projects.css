@@ -59,6 +59,7 @@
 
 .project-text-wrapper {
     position: absolute;
+    min-height: 50%;
     bottom: 0rem;
     padding: 1rem;
     color: var(--p-light-grey);

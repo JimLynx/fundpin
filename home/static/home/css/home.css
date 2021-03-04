@@ -143,6 +143,11 @@ body {
 }
 
 /* FEATURE (Project & Blog) CAROUSEL */
+
+#featured-projects h2 {
+    color: var(--p-light-grey);
+}
+
 #featured-projects .swiper-container,
 #featured-blogs .swiper-container {
     width: 100%;
@@ -168,6 +173,10 @@ body {
 #featured-projects .swiper-slide img,
 #featured-blogs .swiper-slide img {
     width: 100%;
+}
+
+.project-card-excerpt p {
+    text-align: left;
 }
 
 /* BLOG SECTION */

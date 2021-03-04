@@ -24,16 +24,13 @@
             </li>
             <!-- Category -->
             {% if project.category %}
-            <li>
-                <a href="{% url 'projects' %}?category={{ project.category.name }}">
-                    <i class="fas fa-bullseye mr-2 fa-fw mr-2"></i>
-                    {{ project.category.friendly_name }}
-                </a>
+            <li><i class="fas fa-tag fa-fw mr-1"></i>
+                {{ project.category.friendly_name }}
             </li>
             {% endif %}
         </ul>
         <div class="project-details-wrapper">
-            <div class="project-card_excerpt">{{ project.description|truncatewords:30|safe }}
+            <div class="project-card-excerpt">{{ project.description|truncatewords:20|safe }}
             </div>
             <a href="{% url 'project_description' project.id %}" class="btn project-card-btn">Read more <i
                     class="fas fa-long-arrow-alt-right"></i></a>

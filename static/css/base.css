@@ -40,7 +40,6 @@ body {
     font-size: 1rem;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
-    letter-spacing: 1px;
     height: 100vh;
 
     /* Hide scrollbar for IE, Edge and Firefox */
@@ -63,15 +62,17 @@ h5,
 h6 {
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 h1 {
-    padding-top: 30px
+    padding-top: 30px;
+    letter-spacing: 3px;
 }
 
 h2 {
     padding: 1.4rem .6rem;
+    letter-spacing: 2px;
 }
 
 section {
