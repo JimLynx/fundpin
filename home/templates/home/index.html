@@ -2,10 +2,11 @@
 {% load static %}
 
 {% block extra_css %}
-    <!-- Swiper -->
-    <link rel="stylesheet" href="{% static 'home/css/vendor/swiper.min.css' %}" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
+<!-- Swiper -->
+<link rel="stylesheet" href="{% static 'home/css/vendor/swiper.min.css' %}" />
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
+<link rel="stylesheet" href="{% static 'projects/css/projects.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -67,7 +68,8 @@
                             <!-- donate button -->
                             <div class="home-slide-btn">
                                 <span>---</span>
-                                <a href="{% url 'projects' %}?category=environment" class="badge badge-pill text-uppercase mx-2">
+                                <a href="{% url 'projects' %}?category=environment"
+                                    class="badge badge-pill text-uppercase mx-2">
                                     donate
                                     <i class="ml-1 fas fa-hand-holding-heart"></i>
                                 </a>
@@ -98,7 +100,8 @@
                             <!-- donate button -->
                             <div class="home-slide-btn">
                                 <span>---</span>
-                                <a href="{% url 'projects' %}?category=wildlife" class="badge badge-pill text-uppercase mx-2">
+                                <a href="{% url 'projects' %}?category=wildlife"
+                                    class="badge badge-pill text-uppercase mx-2">
                                     donate
                                     <i class="ml-1 fas fa-hand-holding-heart"></i>
                                 </a>
@@ -129,7 +132,8 @@
                             <!-- donate button -->
                             <div class="home-slide-btn">
                                 <span>---</span>
-                                <a href="{% url 'projects' %}?category=marine" class="badge badge-pill text-uppercase mx-2">
+                                <a href="{% url 'projects' %}?category=marine"
+                                    class="badge badge-pill text-uppercase mx-2">
                                     donate
                                     <i class="ml-1 fas fa-hand-holding-heart"></i>
                                 </a>
@@ -160,7 +164,8 @@
                             <!-- donate button -->
                             <div class="home-slide-btn">
                                 <span>---</span>
-                                <a href="{% url 'projects' %}?category=community" class="badge badge-pill text-uppercase mx-2">
+                                <a href="{% url 'projects' %}?category=community"
+                                    class="badge badge-pill text-uppercase mx-2">
                                     donate
                                     <i class="ml-1 fas fa-hand-holding-heart"></i>
                                 </a>
@@ -192,7 +197,8 @@
                             <!-- donate button -->
                             <div class="home-slide-btn">
                                 <span>---</span>
-                                <a href="{% url 'projects' %}?category=education" class="badge badge-pill text-uppercase mx-2">
+                                <a href="{% url 'projects' %}?category=education"
+                                    class="badge badge-pill text-uppercase mx-2">
                                     donate
                                     <i class="ml-1 fas fa-hand-holding-heart"></i>
                                 </a>
@@ -225,7 +231,8 @@
                             <!-- donate button -->
                             <div class="home-slide-btn">
                                 <span>---</span>
-                                <a href="{% url 'projects' %}?category=health" class="badge badge-pill text-uppercase mx-2">
+                                <a href="{% url 'projects' %}?category=health"
+                                    class="badge badge-pill text-uppercase mx-2">
                                     donate
                                     <i class="ml-1 fas fa-hand-holding-heart"></i>
                                 </a>
@@ -241,7 +248,7 @@
     </div>
 </div>
 
-<section id="lead-in-section">
+<section id="lead-in">
     <div class="container">
         <div class="row">
             <div class="col-6 col-sm-4 col-md-2 p-2">
@@ -346,46 +353,17 @@
         <h2>Featured Projects</h2>
     </div>
     <div class="container-fluid">
-        <!-- Swiper -->
         <div class="swiper-container featured-project-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img
-                        src="https://images.unsplash.com/photo-1505649118510-a5d934d3af17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                        alt=""></div>
-                <div class="swiper-slide"><img
-                        src="https://images.unsplash.com/photo-1505649118510-a5d934d3af17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                        alt=""></div>
-                <div class="swiper-slide"><img
-                        src="https://images.unsplash.com/photo-1505649118510-a5d934d3af17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                        alt=""></div>
-                <div class="swiper-slide"><img
-                        src="https://images.unsplash.com/photo-1505649118510-a5d934d3af17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                        alt=""></div>
-                <div class="swiper-slide"><img
-                        src="https://images.unsplash.com/photo-1505649118510-a5d934d3af17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                        alt=""></div>
-                <div class="swiper-slide"><img
-                        src="https://images.unsplash.com/photo-1505649118510-a5d934d3af17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                        alt=""></div>
-                <div class="swiper-slide"><img
-                        src="https://images.unsplash.com/photo-1505649118510-a5d934d3af17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                        alt=""></div>
-                <div class="swiper-slide"><img
-                        src="https://images.unsplash.com/photo-1505649118510-a5d934d3af17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                        alt=""></div>
-                <div class="swiper-slide"><img
-                        src="https://images.unsplash.com/photo-1505649118510-a5d934d3af17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                        alt=""></div>
-                <div class="swiper-slide"><img
-                        src="https://images.unsplash.com/photo-1505649118510-a5d934d3af17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                        alt=""></div>
+                {% for project in projects %}
+                <div class="swiper-slide">
+                    {% include 'includes/project_cards.html' %}
+                </div>
+                {% endfor %}
             </div>
-            <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
         </div>
-    </div>
 </section>
-
 
 <section id="support-section">
     <div class="container mb-3">
@@ -430,7 +408,6 @@
         <h2>Featured Blog Posts</h2>
     </div>
     <div class="container-fluid">
-        <!-- Swiper -->
         <div class="swiper-container featured-blog-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -478,9 +455,7 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eius natus</p>
                     <a class="btn btn-primary">Read More...</a>
                 </div>
-
             </div>
-            <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
         </div>
     </div>
@@ -592,8 +567,8 @@
 {% block postloadjs %}
 
 {% endblock %}
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="{% static 'home/js/home.js' %}"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="{% static 'home/js/home.js' %}"></script>
 {% endblock %}

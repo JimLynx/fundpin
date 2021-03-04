@@ -1,0 +1,42 @@
+{% load static %}
+
+<!-- CREDIT: Project Cards customized from Codepen @https://codepen.io/tgaychey/pen/PROMVy -->
+<div class="project-card m-3">
+    {% if project.image %}
+        <a href="{% url 'project_description' project.id %}" class="project-link"></a>
+        <img src="{{ project.image.url }}" class="project-card-img" alt="{{ project.name }}">
+
+    {% else %}
+        <a href="{% url 'project_description' project.id %}" class="project-link"></a>
+        <img src="{{ MEDIA_URL }}noimage.png" class="project-card-img" alt="{{ project.name }}">
+
+    {% endif %}
+    <div class="project-text-wrapper">
+        <h5 class="project-card-title">{{ project.name }}</h5>
+        <ul class="list-unstyled mb-2 ml-3">
+            <!-- Country -->
+            <li>
+                <i class="fas fa-globe-europe fa-fw mr-2"></i>{{ project.country.friendly_name }}
+            </li>
+            <!-- location -->
+            <li>
+                <i class="fas fa-map-marker-alt fa-fw mr-2"></i>{{ project.location }}
+            </li>
+            <!-- Category -->
+            {% if project.category %}
+            <li>
+                <a href="{% url 'projects' %}?category={{ project.category.name }}">
+                    <i class="fas fa-bullseye mr-2 fa-fw mr-2"></i>
+                    {{ project.category.friendly_name }}
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+        <div class="project-details-wrapper">
+            <div class="project-card_excerpt">{{ project.description|truncatewords:30|safe }}
+            </div>
+            <a href="{% url 'project_description' project.id %}" class="btn project-card-btn">Read more <i
+                    class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+    </div>
+</div>
