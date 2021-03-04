@@ -24,6 +24,7 @@ let homeSwiper = new Swiper('.swiper-container.main-swiper', {
         clickable: true,
     },
 });
+
 // home-page: about section carousel
 let aboutSwiper = new Swiper('.swiper-container.about-swiper', {
     effect: 'cube',
@@ -41,31 +42,37 @@ let aboutSwiper = new Swiper('.swiper-container.about-swiper', {
     // },
     pagination: false,
 });
+
 // home-page: featured projects carousel
 let featuredProjectSwiper = new Swiper('.swiper-container.featured-project-swiper', {
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 0,
     init: true,
     pagination: {
         el: '.swiper-pagination',
-        clickable: true,
+        clickable: false,
     },
     loop: true,
     breakpoints: {
-        640: {
+        576: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            // spaceBetween: 10,
         },
         768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 3,
+            // spaceBetween: 10,
         },
         1024: {
-            slidesPerView: 5,
-            spaceBetween: 50,
+            slidesPerView: 4,
         },
-    }
+        1200: {
+            slidesPerView: 5,
+            // spaceBetween: 10,
+        },
+    },
+    // pagination: true,
 });
+
 // home-page: featured blogs carousel
 let featuredBlogSwiper = new Swiper('.swiper-container.featured-blog-swiper', {
     slidesPerView: 1,
