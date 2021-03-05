@@ -367,7 +367,8 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 ### Project barriers and solutions
 
-TBA =========>
+- On setting the RichText editor for the project descriptions to 'justify text', this was applying an inline style to the rendered paragraph text from the database, which meant that the paragraphs could not be text-aligned with with css. Overcame this by leaving all paragraph text as default and custom to allow ability to align from custom css styling.
+- .
 
 ### Known Issues
 
@@ -387,7 +388,7 @@ TBA =========>
 
 - All code was written on [Visual Studio Code](https://code.visualstudio.com/), a local IDE (Integrated Development Environment).
 - A virtual environment was created on VSCode to ensure that the packages installed are only installed in the virtual environment folder.
-- The code was then pushed to GitHub where it is stored in my [Repository](https://github.com/JimLynx/givetu).
+- The code was then pushed to GitHub where it is stored in my [Repository](https://github.com/JimLynx/fundpin).
 
 > [Back to Top](#table-of-contents)  
 
@@ -397,7 +398,7 @@ TBA =========>
 
 #### 1. Cloning the project
 
-- The code can be run locally through clone or download from the repository on [GitHub](https://github.com/JimLynx/givetu).
+- The code can be run locally through clone or download from the repository on [GitHub](https://github.com/JimLynx/fundpin).
 - You can do this by opening the repository, clicking on the Code' button and selecting either 'clone or download'.
 
     ![Image](static/images/clone.png)
@@ -490,6 +491,7 @@ All content is self-written by site creator
 - Help with JS storing CTA banner in local storage after close [Sean Murphy](https://github.com/nazarja)
 - Contact page form adapted from [MDBootstrap](https://mdbootstrap.com/docs/b4/jquery/forms/basic/) template
 - Project cards, on Projects page, customized from Codepen by [Tenzing Gaychey](https://codepen.io/tgaychey/pen/PROMVy)
+- Assistance from [Sean Murphy](https://github.com/nazarja) and [John Traas](https://github.com/Jays-T) with the JavaScript for the donation form functionality on the project description page.
 
 ## Acknowledgments
 
