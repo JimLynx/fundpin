@@ -8,22 +8,31 @@
 {% block content %}
 <section id="allProjects">
     <div class="container-fluid">
-
         <div class="row">
             <div class="project-wrapper col-10 offset-1">
+                <h2 class="">Projects</h2>
                 <div class="row mt-1 mb-2">
                     <div
                         class="col-12 col-md-5 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector"
                                 class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}> Name (Z-A)</option>
-                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Project Type (A-Z)</option>
-                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Project Type (Z-A)</option>
-                                <option value="country_asc" {% if current_sorting == 'country_asc' %}selected{% endif %}>Country (A-Z)</option>
-                                <option value="country_desc" {% if current_sorting == 'country_desc' %}selected{% endif %}>Country (Z-A)</option>
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort
+                                    by...</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name
+                                    (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>
+                                    Name (Z-A)</option>
+                                <option value="category_asc"
+                                    {% if current_sorting == 'category_asc' %}selected{% endif %}>Project Type (A-Z)
+                                </option>
+                                <option value="category_desc"
+                                    {% if current_sorting == 'category_desc' %}selected{% endif %}>Project Type (Z-A)
+                                </option>
+                                <option value="country_asc"
+                                    {% if current_sorting == 'country_asc' %}selected{% endif %}>Country (A-Z)</option>
+                                <option value="country_desc"
+                                    {% if current_sorting == 'country_desc' %}selected{% endif %}>Country (Z-A)</option>
                             </select>
                         </div>
                     </div>
@@ -46,22 +55,18 @@
                             {% if search_term or current_categories or current_countries or current_sorting != 'None_None' %}
                             <span class="small"><a href="{% url 'projects' %}">All Projects</a> | </span>
                             {% endif %}
-                            {{ projects|length }} projects{% if search_term %} found for
+                            {{ projects|length }} projects{% if search_term %} found containing
                             <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
                     </div>
                 </div>
-                <div class="row">
-                    <h2 class="pl-0">Projects</h2>
-                </div>
-                <div class="row">
 
-                </div>
+
                 <!-- project cards -->
                 <div class="row">
                     {% for project in projects %}
                     <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-0">
-                        {% include 'includes/project_cards.html' %}
+                        {% include 'projects/project_cards.html' %}
                     </div>
                     {% endfor %}
                 </div>
@@ -72,25 +77,25 @@
 {% endblock %}
 
 {% block postloadjs%}
-    {{ block.super }}
-    <script type="text/javascript">
-        // capture the change event from the source selector 
-        $('#sort-selector').change(function () {
+{{ block.super }}
+<script type="text/javascript">
+    // capture the change event from the source selector 
+    $('#sort-selector').change(function () {
 
-            let selector = $(this)
-            let currentUrl = new URL(window.location)
-            let selectedVal = selector.val();
+        let selector = $(this)
+        let currentUrl = new URL(window.location)
+        let selectedVal = selector.val();
 
-            if (selectedVal != 'reset') {
-                let sort = selectedVal.split('_')[0];
-                let direction = selectedVal.split('_')[1];
-                currentUrl.searchParams.set('sort', sort);
-                currentUrl.searchParams.set('direction', direction);
-                window.location.replace(currentUrl)
-            } else {
-                currentUrl.searchParams.delete('sort', sort);
-                currentUrl.searchParams.delete('direction', direction);
-            }
-        })
-    </script>
+        if (selectedVal != 'reset') {
+            let sort = selectedVal.split('_')[0];
+            let direction = selectedVal.split('_')[1];
+            currentUrl.searchParams.set('sort', sort);
+            currentUrl.searchParams.set('direction', direction);
+            window.location.replace(currentUrl)
+        } else {
+            currentUrl.searchParams.delete('sort', sort);
+            currentUrl.searchParams.delete('direction', direction);
+        }
+    })
+</script>
 {% endblock %}
