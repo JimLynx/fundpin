@@ -1,0 +1,48 @@
+
+<div class="row">
+    <div class="col-8">
+        <h4>Project Details</h4>
+    </div>
+    <div class="col-4 text-right">
+        <h4>Donated amount</h4>
+    </div>
+</div>
+<!-- project details -->
+{% for item in cart_items %}
+<div class="row my-3 donated-project">
+    <div class="col-3 col-lg-2 p-0">
+        {% include "cart/project-img.html" %}
+    </div>
+    <div class="col-5 col-lg-6">
+        <div><strong>{{ item.project.name }} in {{ item.project.country|capfirst  }}</strong></div>
+        <div><small class="text-muted"><i class="fas fa-tag fa-fw mr-2"></i> {{ item.project.category }}</small></div>
+        <div><small class="text-muted">PIN: {{ item.project.pin_id }}</small></div>
+    </div>
+    <div class="col-4 text-right ">
+        <strong>&euro;{{ item.donation_amount|floatformat:2 }}</strong>
+    </div>
+</div>
+{% endfor %}
+
+<!-- Total  -->
+<div class="row">
+    <div class="col-12 text-right my-4">
+        <h5>Donation Total: <strong>&euro;{{ total|floatformat:2 }}</strong></h5>
+    </div>
+</div>
+
+<!-- Buttons -->
+<div class="row">
+    <div class="col-6">
+        <a class="btn btn-outline-success my-2" href="{% url 'projects' %}">
+            <i class="fas fa-chevron-left mr-2"></i>
+            Back to Projects
+        </a>
+    </div>
+    <div class="col-6 text-right">
+        <a class="btn btn-warning my-2" href="">
+            Secure Payment
+            <i class="fas fa-lock"></i>
+        </a>
+    </div>
+</div>

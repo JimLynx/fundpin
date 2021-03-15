@@ -1,0 +1,5 @@
+{% if item.project.image %}
+<img class="w-100" src="{{ item.project.image.url }}" alt="{{ item.project.name }}">
+{% else %}
+<img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.project.name }}">
+{% endif %}

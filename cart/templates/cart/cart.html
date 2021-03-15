@@ -9,67 +9,28 @@
 
 <section id="donation-cart">
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2>Donation Cart</h2>
-            </div>
+        <h2>Donation Cart</h2>
+
+
+        {% if cart_items %}
+        <div class="d-md-none">
+            {% include "cart/cart_mobile.html" %}
+        </div>
+        <div class="d-none d-md-block">
+            {% include "cart/cart_desktop.html" %}
         </div>
 
+        <!-- if no donation -->
+        {% else %}
         <div class="row">
-            <div class="col">
-                {% if cart_items %}
-                <div class="row">
-                    <div class="col-8 p-0">
-                        <h4>Project Details</h4>
-                    </div>
-                    <div class="col-4 p-0">
-                        <h4>Donated amount</h4>
-                    </div>
-                </div>
-                {% for item in cart_items %}
-                <div class="row my-3">
-                    <div class="d-none d-md-block col-2"> <img class="w-100" src="{{ item.project.image.url }}" alt="">
-                    </div>
-                    <div class="col-6">
-                        <p>{{ item.project.name }} in {{ item.project.country|capfirst  }}</p>
-
-                        <p>{{ item.project.pin_id }}</p>
-
-                    </div>
-                    <div class="col-4">&euro;{{ item.donation_amount|floatformat:2 }}</div>
-                </div>
-                {% endfor %}
-
-                <div class="row">
-                    <div class="col-6"></div>
-                    <div class="col-2">TOTAL:</div>
-                    <div class="col-4">
-                        <h6><strong>&euro;{{ total|floatformat:2 }}</strong></h6>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-6">
-                        <a class="btn btn-outline-success my-2" href="{% url 'projects' %}">
-                            <i class="fas fa-chevron-left mr-2"></i>
-                            Back to Projects
-                        </a>
-                    </div>
-
-                    <div class="col-6">
-                        <a class="btn btn-warning my-2" href="">
-                            Secure Checkout
-                        </a>
-                    </div>
-                </div>
-
-                {% else %}
-                <p>Sorry you have not chosen a project to donate to yet.</p>
-                <a class="btn btn-outline-success my-2" href="{% url 'projects' %}">
-                    <i class="fas fa-chevron-left mr-2"></i>Back to Projects</a>
-                {% endif %}
-            </div>
+            <p>Sorry you have not chosen a project to donate to yet.</p>
+            <a class="btn btn-outline-success my-2" href="{% url 'projects' %}">
+                <i class="fas fa-chevron-left mr-2"></i>
+                Back to Projects
+            </a>
         </div>
+        {% endif %}
     </div>
 </section>
+
 {% endblock %}
