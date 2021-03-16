@@ -44,8 +44,11 @@
         <div><small class="text-muted">PIN: {{ item.project.pin_id }}</small></div>
     </div>
     <div class="hr-dark w-100 my-3"></div>
+
+    <!-- donation amount -->
     <div class="col-12 text-right ">
-        <strong>Amount Donated: &euro;{{ item.donation_amount|floatformat:2 }}</strong>
+        <div class="my-3">Amount to Donate: <strong>&euro;{{ item.donation_amount|floatformat:2 }}</strong></div>
+        {% include "cart/update_remove_donation.html" %}
     </div>
 </div>
 {% endfor %}

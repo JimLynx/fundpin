@@ -10,3 +10,17 @@
     padding: 10px;
     box-shadow: var(--box-shadow);
 }
+
+.remove-donation {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out
+}
+
+.remove-donation:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    font-weight: 500;
+}

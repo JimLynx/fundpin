@@ -1,0 +1,8 @@
+<form class="update-form" method="POST" action="{% url 'remove_from_cart' item.item_id %}">
+    {% csrf_token %}
+
+    <!-- remove donation -->
+    <div class="mt-2">
+        <a class="remove-donation text-danger" id="remove_{{ item.item_id }}">Remove Donation</a>
+    </div>
+</form>
