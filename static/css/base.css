@@ -492,12 +492,17 @@ form.mailing-form button:hover {
 
 /* ====== end back to top button ====== */
 
+.toast-wrapper {
+    position: relative; 
+}
+
+.toast {
+    position: absolute; 
+    top: 0; 
+    right: 0;
+}
 
 /* --- MEDIA QUERIES --- */
-
-@media (min-width: 375px) {}
-
-@media (min-width: 576px) {}
 
 @media (min-width: 768px) {
     section {

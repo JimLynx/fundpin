@@ -17,6 +17,7 @@ def add_to_cart(request, item_id):
     cart = request.session.get('cart', {})
 
     cart[item_id] = donation_amount
+    messages.success(request, f'Your donation of \u20ac{donation_amount} for the {project.name} project has been added to your donation cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -30,7 +31,7 @@ def remove_from_cart(request, item_id):
         cart = request.session.get('cart', {})
 
         cart.pop(item_id)
-
+        messages.success(request, f'You\'ve removed your donation for the {project.name} project')
         request.session['cart'] = cart
         return HttpResponse(status=200)
 
