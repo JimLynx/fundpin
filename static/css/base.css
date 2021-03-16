@@ -41,17 +41,7 @@ body {
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     height: 100vh;
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-    display: none;
+    overflow-x: hidden;
 }
 
 h1,
@@ -185,7 +175,7 @@ section {
     cursor: pointer;
     align-self: center;
     text-align: center;
-    transition: all .2s ease-in-out; 
+    transition: all .2s ease-in-out;
 }
 
 #navSearchForm .closeNavSearch {
