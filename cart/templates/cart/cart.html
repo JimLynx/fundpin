@@ -10,8 +10,6 @@
 <section id="donation-cart">
     <div class="container">
         <h2>Donation Cart</h2>
-
-
         {% if cart_items %}
         <div class="d-md-none">
             {% include "cart/cart_mobile.html" %}
@@ -19,15 +17,22 @@
         <div class="d-none d-md-block">
             {% include "cart/cart_desktop.html" %}
         </div>
-
         <!-- if no donation -->
         {% else %}
         <div class="row">
-            <p>Sorry you have not chosen a project to donate to yet.</p>
-            <a class="btn btn-outline-success my-2" href="{% url 'projects' %}">
-                <i class="fas fa-chevron-left mr-2"></i>
-                Back to Projects
-            </a>
+            <div class="col-12 col-sm-4 mt-3">
+                <img class="w-100 shadow"
+                    src="https://images.unsplash.com/photo-1593331170803-e40e8f728c6f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fG1lZXJrYXR8ZW58MHwwfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+            </div>
+            <div class="col-12 col-sm-8 mt-3">
+                <p>Sorry, you have not chosen a project to donate to yet.</p>
+                <p>Why not take another look.</p>
+                <a class="btn btn-outline-success my-2" href="{% url 'projects' %}">
+                    <i class="fas fa-chevron-left mr-2"></i>
+                    Browse Projects
+                </a>
+            </div>
         </div>
         {% endif %}
     </div>
