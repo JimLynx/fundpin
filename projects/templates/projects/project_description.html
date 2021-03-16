@@ -96,11 +96,11 @@
             <div class="col">
                 <div class="border-outer">
                     <div class="border-inner">
-                        <div class="d-none d-md-block col-md-6">
+                        <div class="d-none d-md-block col-md-5">
                             <img class="w-100" src="{% static 'images/donate-form.png' %}" alt="donation form image">
                         </div>
                         <!-- Donation form col -->
-                        <div class="col-12 col-md-6 mt-3">
+                        <div class="col-12 col-md-7 mt-3">
                             <div class="donation-wrapper mx-auto py-3">
                                 <!-- pre-determined options -->
                                 <h4 id="donateProject" class="text-center my-3">Fund this project</h4>
@@ -142,14 +142,14 @@
 
                                         <!-- submit buttons -->
                                         <div class="row">
-                                            <div class="col-6">
+                                            <div class="col-12 col-sm-6 order-2 order-sm-1">
                                                 <!-- back to projects button -->
-                                                <a href="{% url 'projects' %}" class="btn btn-outline-dark my-2">Back to
+                                                <a href="{% url 'projects' %}" class="w-100 btn btn-outline-dark my-2">Back to
                                                     Projects</a>
                                             </div>
-                                            <div class="col-6">
+                                            <div class="col-12 col-sm-6 order-1 order-sm-2">
                                                 <!-- submit donation button -->
-                                                <input type="submit" class="btn btn-primary my-2" value="Confirm Amount" />
+                                                <input type="submit" class="w-100 btn btn-primary my-2" value="Confirm Amount" />
                                             </div>
                                         </div>
                                         <!-- request.path attribute to submit redirect_url to current URL -->
