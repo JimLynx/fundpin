@@ -1,9 +1,8 @@
 <div class="toast-wrapper" aria-live="polite" aria-atomic="true">
-    <div class="toast" data-autohide="false">
+    <div class="toast rounded-0" data-autohide="false">
 
         <!-- toast header -->
-        <div class="toast-header bg-success">
-            <img src="..." class="rounded mr-2" alt="...">
+        <div class="toast-header bg-success rounded-0">
             <strong class="mr-auto text-white">Success!</strong>
 
             <!-- close button -->
@@ -14,8 +13,39 @@
 
         <!-- toast body -->
         <div class="toast-body bg-white">
-            {{ message }}
-        </div>
+            <div class="row">
+                <div class="col toast-msg-text">
+                    {{ message }}
+                    <div class="hr-dark"></div>
+                </div>
+            </div>
+            {% if total %}
+            <p>Your Donation Items</p>
 
+            <div class="cart-notification-wrapper">
+                {% for item in cart_items %}
+                <div class="row my-2">
+                    <div class="col-4 my-1">{% include "cart/project-img.html" %}</div>
+                    <div class="col-8 my-1">
+                        <div><strong>{{ item.project.name }}</strong></div>
+                        <div><small class="text-muted"><i class="fas fa-globe fa-fw mr-2"></i>{{ item.project.country.friendly_name }}</small></div>
+                        <div><small class="text-muted"><i class="fas fa-tag fa-fw mr-2"></i>{{ item.project.category.friendly_name }}</small></div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="row w-100 my-3 mx-auto justify-content-center">
+                <strong>
+                    <p class="my-3 h5">
+                        Total: &euro;{{ total|floatformat:2 }}
+                    </p>
+                </strong>
+                <a href="{% url 'view_cart' %}" class="btn btn-primary btn-block">
+                    <span class="text-uppercase">Secure Checkout</span>
+                </a>
+            </div>
+            {% endif %}
+        </div>
     </div>
 </div>
+

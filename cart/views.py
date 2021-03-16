@@ -17,7 +17,7 @@ def add_to_cart(request, item_id):
     cart = request.session.get('cart', {})
 
     cart[item_id] = donation_amount
-    messages.success(request, f'Your donation of \u20ac{donation_amount} for the {project.name} project has been added to your donation cart')
+    messages.success(request, f'Your donation of \u20ac{donation_amount} for the {project.name} project has been added!')
 
     request.session['cart'] = cart
     return redirect(redirect_url)

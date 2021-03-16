@@ -500,6 +500,23 @@ form.mailing-form button:hover {
     position: absolute; 
     top: 0; 
     right: 0;
+    z-index: 999;
+    border: 1px solid var(--logo-green);
+}
+
+.toast-msg-text {
+    font-weight: 400;
+}
+
+.cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.toast-total {
+    width: fit-content;
+    margin: 1rem auto;
 }
 
 /* --- MEDIA QUERIES --- */
