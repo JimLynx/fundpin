@@ -119,6 +119,10 @@
 
 /* === PROJECT DESCRIPTION PAGE === */
 
+#allProjects {
+    min-height: 60vh;
+}
+
 #allProjects,
 #projectDescription,
 #projectDonation,
@@ -160,10 +164,6 @@
 .border-outer,
 .border-wrap-img {
     padding: 12px;
-}
-
-.border-inner {
-    /* box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%); */
 }
 
 .p-detail-wrapper {
