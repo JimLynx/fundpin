@@ -472,16 +472,15 @@ TBA =========> Testing documentation can be found on a separate document [HERE](
 
 ### Media
 
-- Project photographs used are owned by site creator.
+- Site images used are from various contributors on [Unsplash](https://unsplash.com/), and online source of freely-usable images.
 - Site logo designed using [Hatchful Shopify](https://hatchful.shopify.com/), a free online logo maker.
 - Hamburger mobile-menu icon png taken from [Hiclipart](https://www.hiclipart.com/) and edited in Photoshop for site colour match.
 - Icons used in the Technologies Used section of this document are taken from various sources (mainly Wikipeadia).
-- Carousel and images above footer taken from various contributers on [Unsplash](https://unsplash.com/)
 - Home page lead-in icons downloaded as svg from [Material Icons](https://material.io/resources/icons/)
 
 ### Content
 
-All content is self-written by site creator
+All content is self-written by site creator.
 
 ### Code Snippets
 
@@ -491,7 +490,7 @@ All content is self-written by site creator
 - Help with JS storing CTA banner in local storage after close [Sean Murphy](https://github.com/nazarja)
 - Contact page form adapted from [MDBootstrap](https://mdbootstrap.com/docs/b4/jquery/forms/basic/) template
 - Project cards, on Projects page, customized from Codepen by [Tenzing Gaychey](https://codepen.io/tgaychey/pen/PROMVy)
-- Assistance from [Sean Murphy](https://github.com/nazarja) and [John Traas](https://github.com/Jays-T) with the JavaScript for the donation form functionality on the project description page.
+- Assistance from [Sean Murphy](https://github.com/nazarja) and [John Traas](https://github.com/Jays-T), for helping me to refactor my JavaScript to get a total from inputs on the donation form.
 
 ## Acknowledgments
 
