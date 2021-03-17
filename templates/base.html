@@ -130,6 +130,9 @@
                             <div class="text-center">
                                 <i class="fas fa-shopping-cart d-lg-none" aria-hidden="true"></i>
                                 <i class="d-none d-lg-block fas fa-shopping-cart fa-lg" aria-hidden="true"></i>
+                                {% if cart_items %}
+                                <span class="badge badge-danger" id='cartCount'>{{ request.session.cart.keys|length }}</span>
+                                {% endif %}
                             </div>
                         </a>
                     </li>

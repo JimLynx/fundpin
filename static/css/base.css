@@ -140,6 +140,14 @@ section {
     margin-right: 1rem;
 }
 
+#cartCount {
+    position: absolute;
+    top: 2px;
+    font-size: 10px;
+    margin-left: -5px;
+    border-radius: 10px;
+}
+
 /* SEARCH FIELD  */
 
 #navSearchCollapse {
@@ -493,12 +501,12 @@ form.mailing-form button:hover {
 /* ====== end back to top button ====== */
 
 .toast-wrapper {
-    position: relative; 
+    position: relative;
 }
 
 .toast {
-    position: absolute; 
-    top: 0; 
+    position: absolute;
+    top: 0;
     right: 0;
     z-index: 999;
     border: 1px solid var(--logo-green);
@@ -556,7 +564,13 @@ form.mailing-form button:hover {
     }
 }
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    #cartCount {
+        top: 0;
+        margin-left: 0;
+        font-size: 12px;
+    }
+}
 
 @media (min-width: 1024px) {}
 

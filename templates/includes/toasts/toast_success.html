@@ -20,7 +20,7 @@
                 </div>
             </div>
             {% if total %}
-            <p>Your Donation Items</p>
+            <p>You have ({{ request.session.cart.keys|length }}) projects in your cart</p>
 
             <div class="cart-notification-wrapper">
                 {% for item in cart_items %}
