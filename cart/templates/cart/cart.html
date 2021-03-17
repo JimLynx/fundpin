@@ -20,15 +20,15 @@
         <!-- if no donation -->
         {% else %}
         <div class="row">
-            <div class="col-12 col-sm-4 mt-3">
-                <img class="w-100 shadow"
+            <div class="col-12 col-sm-6 col-md-5 mt-3">
+                <img class="no-donation-img w-100 shadow"
                     src="https://images.unsplash.com/photo-1593331170803-e40e8f728c6f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fG1lZXJrYXR8ZW58MHwwfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                     alt="">
             </div>
-            <div class="col-12 col-sm-8 mt-3">
+            <div class="col-12 col-sm-6 col-md-7 mt-3">
                 <p>Sorry, you have not chosen a project to donate to yet.</p>
                 <p>Why not take another look.</p>
-                <a class="btn btn-outline-success my-2" href="{% url 'projects' %}">
+                <a class="btn btn-outline-success browse-btn" href="{% url 'projects' %}">
                     <i class="fas fa-chevron-left mr-2"></i>
                     Browse Projects
                 </a>
