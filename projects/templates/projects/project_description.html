@@ -138,18 +138,21 @@
 
                                         <input class="donationTotal form-control mb-3"
                                             id="donation_amount_{{ project.id }}" name="donation_amount" type="hidden"
-                                            value="" data-item_id="{{ project.id }}" placeholder="0" readonly />
+                                            value="" data-item_id="{{ project.id }}" readonly/>
 
                                         <!-- submit buttons -->
                                         <div class="row">
                                             <div class="col-12 col-sm-6 order-2 order-sm-1">
                                                 <!-- back to projects button -->
-                                                <a href="{% url 'projects' %}" class="w-100 btn btn-outline-dark my-2">Back to
-                                                    Projects</a>
+                                                <a href="{% url 'projects' %}" class="w-100 btn btn-outline-dark my-2">
+                                                    Back to Projects
+                                                </a>
                                             </div>
                                             <div class="col-12 col-sm-6 order-1 order-sm-2">
                                                 <!-- submit donation button -->
-                                                <input type="submit" class="w-100 btn btn-primary my-2" value="Confirm Amount" />
+                                                <input id="donationSubmit" type="submit"
+                                                    class="w-100 btn btn-primary my-2" value="Confirm Amount"
+                                                    disabled />
                                             </div>
                                         </div>
                                         <!-- request.path attribute to submit redirect_url to current URL -->

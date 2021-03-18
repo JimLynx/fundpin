@@ -196,6 +196,9 @@ form {
     color: var(--logo-green);
 }
 
+#donationSubmit {
+    cursor: not-allowed;
+}
 
 /* End Project Description page */
 
