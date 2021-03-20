@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'projects',
     'cart',
     'ckeditor',
+    'django_countries',
+    'checkout',
 ]
 
 MIDDLEWARE = [
