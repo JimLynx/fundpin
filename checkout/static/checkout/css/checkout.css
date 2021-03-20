@@ -1,0 +1,13 @@
+#checkout {
+    background-color: var(--p-light-grey);
+    color: var(--p-dark-grey);
+    min-height: 60vh;
+}
+
+.donated-project {
+    border: 1px solid var(--logo-green);
+    margin: 0px;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+}
+
