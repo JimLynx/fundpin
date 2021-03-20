@@ -20,7 +20,7 @@
     cursor: pointer;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 10px;
     transition: all 0.3s ease-in-out
 }
 
@@ -41,7 +41,15 @@
         position: absolute;
         bottom: 0;
     }
+    .remove-donation {
+        right: 18px;
+    }
+
     .no-donation-img {
         max-height: fit-content;
     }
 }
+
+
+
+
