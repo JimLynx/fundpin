@@ -2,6 +2,7 @@ import uuid
 from django.db import models
 from django.conf import settings
 from django_countries.fields import CountryField
+from django.db.models import Sum
 from projects.models import Project
 
 
@@ -59,7 +60,7 @@ class OrderLineItem(models.Model):
         Override original save method to set 
         lineitem total & update order total.
         """
-        self.lineitem_total = self.donation_amount
+        self.lineitem_total = self.order.total
         super().save(*args, **kwargs)
 
     def __str__(self):
