@@ -9,7 +9,6 @@ def cart_contents(request):
     cart_items = []
     donation_amount = 0
     total = 0
-    project_count = 0
 
     cart = request.session.get('cart', {})
 
@@ -25,7 +24,6 @@ def cart_contents(request):
     context = {
         'cart_items': cart_items,
         'total': total,
-        'project_count': project_count,
     }
 
     return context
