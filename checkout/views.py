@@ -45,7 +45,8 @@ def checkout(request):
                         project=project,
                         lineitem_total=donation_amount,
                     )
-
+                    order_line_item.save()
+                    order_line_item.order.total += order_line_item.lineitem_total
                     order_line_item.save()
 
                 except Project.DoesNotExist:

@@ -43,7 +43,8 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+    order = models.ForeignKey(Order, null=False, blank=False,
+                              on_delete=models.CASCADE, related_name='lineitems')
     project = models.ForeignKey(
         Project, null=False, blank=False, on_delete=models.CASCADE)
     lineitem_total = models.DecimalField(
@@ -54,9 +55,7 @@ class OrderLineItem(models.Model):
         Override original save method to set 
         lineitem total & update order total.
         """
-        self.order.total += self.lineitem_total
         self.order.save()
-
         super().save(*args, **kwargs)
 
     def __str__(self):
