@@ -83,8 +83,7 @@ form.addEventListener('submit', function (ev) {
                         country: $.trim(form.country.value),
                         state: $.trim(form.county.value),
                     }
-                },
-                currency: eur,
+                }
             },
         }).then(function (result) {
             if (result.error) {
