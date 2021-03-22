@@ -1,4 +1,11 @@
 from django.http import HttpResponse
+from django.conf import settings
+
+from .models import Order, OrderLineItem
+from projects.models import Project
+
+import json
+import time
 
 
 class StripeWH_Handler:
@@ -24,40 +31,52 @@ class StripeWH_Handler:
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
 
-        billing_info = intent.charges.data[0].billing_info
-        total = round(intent.data.charges[0].amount / 100, 2)
+        billing_details = intent.charges.data[0].billing_details
+        total = round(intent.charges.data[0].amount / 100, 2)
 
         order_exists = False
-        try:
-            order = Order.object.get(
-                full_name__iexact=billing_info.name,
-                email__iexact=billing_info.email,
-                phone_number__iexact=billing_info.phone,
-                country__iexact=billing_info.country,
-                postcode__iexact=billing_info.postal_code,
-                town_or_city__iexact=billing_info.city,
-                street_address1__iexact=billing_info.line1,
-                street_address2__iexact=billing_info.line2,
-                county__iexact=billing_info.state,
-                total__iexact=billing_info.total,
-            )
-            order_exists = True
+        attempt = 1
+        while attempt <= 5:
+            try:
+                order = Order.objects.get(
+                    full_name__iexact=billing_details.name,
+                    email__iexact=billing_details.email,
+                    phone_number__iexact=billing_details.phone,
+                    country__iexact=billing_details.address.country,
+                    postcode__iexact=billing_details.address.postal_code,
+                    town_or_city__iexact=billing_details.address.city,
+                    street_address1__iexact=billing_details.address.line1,
+                    street_address2__iexact=billing_details.address.line2,
+                    county__iexact=billing_details.address.state,
+                    total__iexact=billing_details.total,
+                    original_cart=cart,
+                    stripe_pid=pid,
+                )
+                order_exists = True
+                break
+            except Order.DoesNotExist:
+                attempt += 1
+                time.sleep(1)
 
+        if order_exists:
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
                 status=200)
-        except Order.DoesNotExist:
+        else:
+            order = None
             try:
                 order = Order.objects.create(
-                    full_name=billing_info.name,
-                    email=billing_info.email,
-                    phone_number=billing_info.phone,
-                    country=billing_info.country,
-                    postcode=billing_info.postal_code,
-                    town_or_city=billing_info.city,
-                    street_address1=billing_info.line1,
-                    street_address2=billing_info.line2,
-                    county=billing_info.state,
+                    full_name=billing_details.name,
+                    email=billing_details.email,
+                    phone_number=billing_details.phone,
+                    country=billing_details.country,
+                    postcode=billing_details.postal_code,
+                    town_or_city=billing_details.city,
+                    street_address1=billing_details.line1,
+                    street_address2=billing_details.line2,
+                    county=billing_details.state,
+                    original_cart=cart,
+                    stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(cart).items():
                     project = Project.objects.get(id=item_id)
@@ -84,10 +103,8 @@ class StripeWH_Handler:
 
     def handle_payment_intent_payment_failed(self, event):
         """
-        Handle the payment_intent.failed webhook from Stripe
+        Handle the payment_intent.payment_failed webhook from Stripe
         """
-        intent = event.data.object
-        print(intent)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            content=f'Webhook received: {event["type"]}',
             status=200)
