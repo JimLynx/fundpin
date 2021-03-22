@@ -77,15 +77,35 @@
                                 Complete Payment
                                 <i class="fas fa-lock"></i>
                             </button>
-                            <p class="my-3">Your card will be charged: <strong>&euro;{{ total|floatformat:2 }}</strong></p>
+                            <p class="my-3">Your card will be charged: <strong>&euro;{{ total|floatformat:2 }}</strong>
+                            </p>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
 </section>
+
+<!-- Payment processing loading overlay -->
+<div id="loading-overlay">
+    <div class="flex-container">
+        <div class="unit">
+            <div class="heart">
+                <div class="heart-piece-0"></div>
+                <div class="heart-piece-1"></div>
+                <div class="heart-piece-2"></div>
+                <div class="heart-piece-3"></div>
+                <div class="heart-piece-4"></div>
+                <div class="heart-piece-5"></div>
+                <div class="heart-piece-6"></div>
+                <div class="heart-piece-7"></div>
+                <div class="heart-piece-8"></div>
+            </div>
+            <p>Thank you!<br><br>Your Donation Payment is being processed.<br><br>Please be patient.</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}

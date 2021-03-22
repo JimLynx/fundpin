@@ -487,10 +487,9 @@ All content is self-written by site creator.
 - CSS Radial gradient for instagram colours from [CodePen by Thomas Rye](https://codepen.io/thomasrye/pen/VaRoYv)
 - Inspiration for Navbar mobile side menu from [W3Schools](https://www.w3schools.com/howto/howto_js_sidenav.asp)
 - CSS for hiding scrollbars on all browsers from [W3Schools](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
-- Help with JS storing CTA banner in local storage after close [Sean Murphy](https://github.com/nazarja)
 - Contact page form adapted from [MDBootstrap](https://mdbootstrap.com/docs/b4/jquery/forms/basic/) template
 - Project cards, on Projects page, customized from Codepen by [Tenzing Gaychey](https://codepen.io/tgaychey/pen/PROMVy)
-- Assistance from [Sean Murphy](https://github.com/nazarja) and [John Traas](https://github.com/Jays-T), for helping me to refactor my JavaScript to get a total from inputs on the donation form.
+- Checkout payment overlay animation customised from [Codepen](https://codepen.io/yumeeeei/pen/BQPmpX) by [@yumeeeei](https://codepen.io/yumeeeei)
 
 ## Acknowledgments
 
@@ -498,6 +497,8 @@ I would like to thank:
 
 - My mentor, **Aaron Sinnott** for his guidance and advice.
 - **[Tim Nelson](https://github.com/TravelTimN)**, **[Bim Williams](https://github.com/mrbim)**, **[John Traas](https://github.com/Jays-T)**, **[Anthony O'Brien](https://github.com/auxfuse)** and **[Sean Murphy](https://github.com/nazarja)** for always being open to discussing, helping and generally being awesome people.
+- Help with JS storing CTA banner in local storage after close [Sean Murphy](https://github.com/nazarja)
+- Assistance from [Sean Murphy](https://github.com/nazarja) and [John Traas](https://github.com/Jays-T), for helping me to refactor my JavaScript to get a total from inputs on the donation form.
 - Everyone in Tutor support for always being patient and friendly when approaching with assistance during course material.
 - **CI staff** and **Slack Community** for always being on-hand with questions posted and assistance requests.
 - Everyone that takes part in the Slack calls, specifically from the **#In-It-Together** and **#Study-Group** channels.
