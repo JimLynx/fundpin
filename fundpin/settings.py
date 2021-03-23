@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'projects',
     'cart',
     'checkout',
+    'profiles',
 
     #other
     'ckeditor',
