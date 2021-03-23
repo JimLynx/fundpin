@@ -1,0 +1,5 @@
+#userProfile {
+    background-color: var(--p-light-grey);
+    color: var(--p-dark-grey);
+    min-height: 60vh;
+}
