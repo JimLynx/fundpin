@@ -163,17 +163,25 @@
         </div>
 
         <div class="row">
-            <!-- back to projects -->
             <div class="col-6">
+                <!-- back to profile  -->
+                {% if from_profile %}
+                <a class="btn btn-outline-success my-2" href="{% url 'profile' %}">
+                    <i class="fas fa-chevron-left mr-2"></i>
+                    Back to Profile
+                </a>
+                {% else %}
+                <!-- back to projects -->
                 <a class="btn btn-outline-success my-2" href="{% url 'projects' %}">
                     <i class="fas fa-chevron-left mr-2"></i>
                     Back to Projects
                 </a>
+                {% endif %}
             </div>
             <!-- blog -->
             <div class="col-6">
                 <a class="btn btn-outline-success my-2" href="">
-                    <i class="fas fa-chevron-left mr-2"></i>
+                    <i class="fas fa-chevron-right mr-2"></i>
                     Checkout Blog
                 </a>
             </div>
