@@ -195,6 +195,10 @@ section {
     border-radius: 10px; */
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 .form-control:focus,
 .form-control:active {
     border-color: var(--logo-green);
@@ -428,7 +432,7 @@ form.mailing-form button:hover {
 }
 
 /* ====== BACK TO TOP BUTTON ====== */
-#back-to-top {
+/* #back-to-top {
     display: none;
     position: fixed;
     right: 10px;
@@ -442,7 +446,7 @@ form.mailing-form button:hover {
     border-radius: 15px;
     opacity: .7;
     z-index: 2;
-}
+} */
 
 #back-to-top:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
