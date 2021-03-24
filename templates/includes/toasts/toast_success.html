@@ -19,7 +19,7 @@
                     <div class="hr-dark"></div>
                 </div>
             </div>
-            {% if total %}
+            {% if total and not on_profile %}
             <p>You have ({{ request.session.cart.keys|length }}) projects in your cart</p>
 
             <div class="cart-notification-wrapper">
