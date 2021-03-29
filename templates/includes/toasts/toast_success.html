@@ -1,51 +1,52 @@
-<div class="toast-wrapper" aria-live="polite" aria-atomic="true">
-    <div class="toast rounded-0" data-autohide="false">
+<div class="toast rounded-0" data-autohide="false">
 
-        <!-- toast header -->
-        <div class="toast-header bg-success rounded-0">
-            <strong class="mr-auto text-white">Success!</strong>
+    <!-- toast header -->
+    <div class="toast-header bg-success rounded-0">
+        <strong class="mr-auto text-white">Success!</strong>
 
-            <!-- close button -->
-            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+        <!-- close button -->
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
 
-        <!-- toast body -->
-        <div class="toast-body bg-white">
-            <div class="row">
-                <div class="col toast-msg-text">
-                    {{ message }}
-                    <div class="hr-dark"></div>
-                </div>
+    <!-- toast body -->
+    <div class="toast-body bg-white">
+        <div class="row">
+            <div class="col toast-msg-text">
+                {{ message }}
+                <div class="hr-dark"></div>
             </div>
-            {% if total and not on_profile %}
-            <p>You have ({{ request.session.cart.keys|length }}) projects in your cart</p>
+        </div>
+        {% if total and not on_profile %}
+        <p>You have ({{ request.session.cart.keys|length }}) projects in your cart</p>
 
-            <div class="cart-notification-wrapper">
-                {% for item in cart_items %}
-                <div class="row my-2">
-                    <div class="col-4 my-1">{% include "cart/project-img.html" %}</div>
-                    <div class="col-8 my-1">
-                        <div><strong>{{ item.project.name }}</strong></div>
-                        <div><small class="text-muted"><i class="fas fa-globe fa-fw mr-2"></i>{{ item.project.country.friendly_name }}</small></div>
-                        <div><small class="text-muted"><i class="fas fa-tag fa-fw mr-2"></i>{{ item.project.category.friendly_name }}</small></div>
+        <div class="cart-notification-wrapper">
+            {% for item in cart_items %}
+            <div class="row my-2">
+                <div class="col-4 my-1">{% include "cart/project-img.html" %}</div>
+                <div class="col-8 my-1">
+                    <div><strong>{{ item.project.name }}</strong></div>
+                    <div><small class="text-muted"><i
+                                class="fas fa-globe fa-fw mr-2"></i>{{ item.project.country.friendly_name }}</small>
+                    </div>
+                    <div><small class="text-muted"><i
+                                class="fas fa-tag fa-fw mr-2"></i>{{ item.project.category.friendly_name }}</small>
                     </div>
                 </div>
-                {% endfor %}
             </div>
-            <div class="row w-100 my-3 mx-auto justify-content-center">
-                <strong>
-                    <p class="my-3 h5">
-                        Total: &euro;{{ total|floatformat:2 }}
-                    </p>
-                </strong>
-                <a href="{% url 'view_cart' %}" class="btn btn-primary btn-block">
-                    <span class="text-uppercase">Secure Checkout</span>
-                </a>
-            </div>
-            {% endif %}
+            {% endfor %}
         </div>
+        <div class="row w-100 my-3 mx-auto justify-content-center">
+            <strong>
+                <p class="my-3 h5">
+                    Total: &euro;{{ total|floatformat:2 }}
+                </p>
+            </strong>
+            <a href="{% url 'view_cart' %}" class="btn btn-primary btn-block">
+                <span class="text-uppercase">Secure Checkout</span>
+            </a>
+        </div>
+        {% endif %}
     </div>
 </div>
-
