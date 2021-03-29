@@ -3,6 +3,7 @@ from django.conf import settings
 
 from .models import Order, OrderLineItem
 from projects.models import Project
+from profiles.models import UserProfile
 
 import json
 import time
@@ -18,6 +19,7 @@ class StripeWH_Handler:
         """
         Handle a generic/unknown/unexpected webhook event
         """
+        print('unhandled webhook')
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
             status=200)
@@ -34,12 +36,28 @@ class StripeWH_Handler:
         billing_details = intent.charges.data[0].billing_details
         total = round(intent.charges.data[0].amount / 100, 2)
 
+        # Update profile information if save_info was checked
+        profile = None
+        username = intent.metadata.username
+        if username != 'AnonymousUser':
+            profile = UserProfile.objects.get(user__username=username)
+            if save_info:
+                profile.default_phone_number = billing_details.phone
+                profile.default_street_address1 = billing_details.address.line1
+                profile.default_street_address2 = billing_details.address.line2
+                profile.default_town_or_city = billing_details.address.city
+                profile.default_county = billing_details.address.state
+                profile.default_postcode = billing_details.address.postal_code
+                profile.default_country = billing_details.address.country
+                profile.save()
+
         order_exists = False
         attempt = 1
         while attempt <= 5:
             try:
                 order = Order.objects.get(
                     full_name__iexact=billing_details.name,
+                    user_profile=profile,
                     email__iexact=billing_details.email,
                     phone_number__iexact=billing_details.phone,
                     country__iexact=billing_details.address.country,
@@ -96,7 +114,7 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-
+        print('webhook succeeded')
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
@@ -105,6 +123,5 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.payment_failed webhook from Stripe
         """
-        return HttpResponse(
-            content=f'Webhook received: {event["type"]}',
-            status=200)
+        print('webhook failed')
+        return HttpResponse(content=f'Webhook received: {event["type"]}', status=200)
