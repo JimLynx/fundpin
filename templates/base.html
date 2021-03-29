@@ -156,7 +156,7 @@
 
     <!-- display messages from Django block -->
     {% if messages %}
-    <div class="message-container">
+    <div class="toast-wrapper" aria-live="polite" aria-atomic="true">
         {% for message in messages %}
             {% with message.level as level %}
             <!-- level 40 = error  -->
