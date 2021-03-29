@@ -368,7 +368,9 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 ### Project barriers and solutions
 
 - On setting the RichText editor for the project descriptions to 'justify text', this was applying an inline style to the rendered paragraph text from the database, which meant that the paragraphs could not be text-aligned with with css. Overcame this by leaving all paragraph text as default and custom to allow ability to align from custom css styling.
-- .
+- Toasts were not showing up from django-allauth, but fine on the site for custom alerts. Created branch *allauth-toasts* to try and resolve this issue. Narrowed this down to the jQuery show/hide not being called for defauly django toasts. => IN PROGRESS
+- Webhooks and signals not working as they should. Created branch *webhooks* to work on a resolve. => IN PROGRESS
+- Although a users billing details are saved correctly on the profile, and update as expected, the checkout form is not pre-populating the saved info. Created a branch *save-info* to work on a resolve. => IN PROGRESS
 
 ### Known Issues
 
