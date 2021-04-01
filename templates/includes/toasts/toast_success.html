@@ -1,26 +1,20 @@
 <div class="toast rounded-0" data-autohide="false">
-
-    <!-- toast header -->
     <div class="toast-header bg-success rounded-0">
+        <i class="fas fa-check-circle mr-3 text-white"></i>
         <strong class="mr-auto text-white">Success!</strong>
-
-        <!-- close button -->
         <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-
-    <!-- toast body -->
     <div class="toast-body bg-white">
         <div class="row">
             <div class="col toast-msg-text">
                 {{ message }}
-                <div class="hr-dark"></div>
             </div>
         </div>
         {% if total and not on_profile %}
-        <p>You have ({{ request.session.cart.keys|length }}) projects in your cart</p>
-
+        <div class="hr-dark"></div>
+        <p>You have <strong>{{ request.session.cart.keys|length }}</strong> project donation(s) in your cart.</p>
         <div class="cart-notification-wrapper">
             {% for item in cart_items %}
             <div class="row my-2">
