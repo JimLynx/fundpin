@@ -431,7 +431,7 @@ form.subscribe-form button:hover {
     background-color: var(--p-donate);
 }
 
-/* ====== BACK TO TOP BUTTON ====== */
+/* === BACK TO TOP BUTTON === */
 #back-to-top {
     display: none;
     position: fixed;
@@ -502,9 +502,9 @@ form.subscribe-form button:hover {
     }
 }
 
-/* ====== end back to top button ====== */
+/* === end back to top button === */
 
-/* ====== toast messages ====== */
+/* === toast messages === */
 .toast-wrapper {
     position: relative;
 }
@@ -533,7 +533,38 @@ form.subscribe-form button:hover {
     margin: 1rem auto;
 }
 
-/* ====== end toast messages ====== */
+/* === end toast messages === */
+
+/* === allauth form formatting === */
+
+.allauth-template-wrapper {
+    min-height: 60vh;
+}
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: var(--p-dark-grey)
+}
+
+.allauth-form-inner-content input {
+    border-color: var(--logo-green);
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content a {
+    color: var(--links);
+    font-weight: 400;
+}
+
+.btn.btn-secondary {
+    color: #fff;
+}
 
 /* --- MEDIA QUERIES --- */
 
@@ -583,9 +614,16 @@ form.subscribe-form button:hover {
         margin-left: 0;
         font-size: 12px;
     }
+    footer {
+        padding: 2rem 3rem;
+    }
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    footer {
+        padding: 2rem 4rem;
+    }
+}
 
 @media (min-width: 1200px) {
     section {
@@ -595,5 +633,8 @@ form.subscribe-form button:hover {
     .nav-item {
         margin-right: 40px;
         font-size: 1.3rem;
+    }
+    footer {
+        padding: 2rem 4rem;
     }
 }
