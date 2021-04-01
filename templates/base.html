@@ -181,7 +181,7 @@
     <footer>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-7 col-lg-5 ">
+                <div class="col-12 col-sm-6 col-md-7 col-lg-4">
                     <h6>About</h6>
                     <p class="text-justify">
                         FundPIN is dedicated to networking, supporting, and raising funds for
@@ -194,12 +194,12 @@
                     </p>
                 </div>
 
-                <!-- <div class="d-none d-xl-block col-xl-1"></div> -->
+                <div class="d-none d-sm-block col-sm-1"></div>
 
-                <div class="col-12 col-sm-6 col-md-5 col-lg-3">
+                <div class="col-12 col-sm-5 col-md-4 col-lg-3">
                     <h6>Quick Links</h6>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col">
                             <ul class="footer-links">
                                 <li><a href="{% url 'home' %}">Home</a></li>
                                 <li><a href="{% url 'projects' %}">Projects</a></li>
@@ -212,23 +212,25 @@
                             <ul class="footer-links">
                                 {% if request.user.is_authenticated %}
                                 <li><a href="{% url 'profile' %}">Profile</a></li>
+                                <li><a href="{% url 'view_cart' %}">Cart</a></li>
                                 {% else %}
                                 <li><a href="{% url 'account_signup' %}">Register</a></li>
                                 <li><a href="{% url 'account_login' %}">Login</a></li>
                                 {% endif %}
-                                <li><a href="{% url 'view_cart' %}">Donation Cart</a></li>
                                 <li><a href="#">-----</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-7 col-lg-4">
+                <div class="d-none d-lg-block col-lg-1"></div>
+
+                <div class="col-12 col-sm-6 col-md-7 col-lg-3">
                     <h6>Subscribe</h6>
                     <p class="subscribe-text">
                         Join our mailing list for project updates!
                     </p>
-                    <form class="subscribe-form" action="">
+                    <form class="subscribe-form mb-3" action="">
                         <input type="text" placeholder="Email Address..." name="subscribe">
                         <button type="submit">
                             <i class="fa fa-envelope"></i>
@@ -237,9 +239,9 @@
                 </div>
             </div>
         </div>
-        </div>
+
         <div class="hr-light"></div>
-        </div>
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-md-5 order-md-12 d-md-flex justify-content-center align-items-center my-2">
