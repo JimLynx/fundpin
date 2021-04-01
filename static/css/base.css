@@ -297,7 +297,7 @@ input[name='q']::placeholder {
 
 footer {
     background-color: var(--bg-grey);
-    padding: 45px 30px 20px;
+    padding: 2rem .5rem;
     font-size: 1rem;
     line-height: 24px;
     color: var(--foot-text);
@@ -404,21 +404,21 @@ footer .social-icons {
     background-color: #00aced
 }
 
-/* mailing list form */
-.mailing-form,
-.mailing-text {
+/* subscribe list form */
+.subscribe-form,
+.subscribe-text {
     display: flex;
     width: 100%;
 }
 
-.mailing-form input[type=text] {
+.subscribe-form input[type=text] {
     padding: 10px;
     border: 1px solid var(--foot-text);
     width: 100%;
     background: var(--p-light-grey);
 }
 
-.mailing-form button {
+.subscribe-form button {
     width: 20%;
     padding: 10px;
     background: var(--p-envir);
@@ -427,12 +427,12 @@ footer .social-icons {
     cursor: pointer;
 }
 
-form.mailing-form button:hover {
+form.subscribe-form button:hover {
     background-color: var(--p-donate);
 }
 
 /* ====== BACK TO TOP BUTTON ====== */
-/* #back-to-top {
+#back-to-top {
     display: none;
     position: fixed;
     right: 10px;
@@ -446,7 +446,7 @@ form.mailing-form button:hover {
     border-radius: 15px;
     opacity: .7;
     z-index: 2;
-} */
+}
 
 #back-to-top:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
@@ -504,6 +504,7 @@ form.mailing-form button:hover {
 
 /* ====== end back to top button ====== */
 
+/* ====== toast messages ====== */
 .toast-wrapper {
     position: relative;
 }
@@ -531,7 +532,15 @@ form.mailing-form button:hover {
     margin: 1rem auto;
 }
 
+/* ====== end toast messages ====== */
+
 /* --- MEDIA QUERIES --- */
+
+@media (min-width: 576px) {
+    footer {
+        padding: 2rem 1.5rem;
+    }
+}
 
 @media (min-width: 768px) {
     section {
@@ -557,14 +566,13 @@ form.mailing-form button:hover {
         font-size: 1.2rem;
     }
 
+    footer {
+        padding: 2rem 1.8rem;
+     }
+
     footer h6 {
         margin: 15px 0;
         letter-spacing: 3px;
-    }
-
-    .mailing-form,
-    .mailing-text {
-        width: 50%;
     }
 }
 
@@ -586,10 +594,5 @@ form.mailing-form button:hover {
     .nav-item {
         margin-right: 40px;
         font-size: 1.3rem;
-    }
-
-    .mailing-form,
-    .mailing-text {
-        width: 75%;
     }
 }
