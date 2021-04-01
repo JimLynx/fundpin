@@ -374,7 +374,7 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 ### Known Issues
 
-TBA =========>
+- On user logout, cart data does not persist and session is cleared on logging back in. On further investigating, allowing the persistent data could cause security vulnerabilities so this has been excluded from this project.
 
 > [Back to Top](#table-of-contents)  
 
