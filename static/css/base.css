@@ -431,6 +431,13 @@ form.subscribe-form button:hover {
     background-color: var(--p-donate);
 }
 
+/* order confirmation form */
+
+.order-confirmation-wrapper p {
+    color: var(--logo-green);
+    font-weight: 400;
+}
+
 /* === BACK TO TOP BUTTON === */
 #back-to-top {
     display: none;
