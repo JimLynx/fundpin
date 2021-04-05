@@ -97,8 +97,9 @@ def add_project(request):
 
     return render(request, template, context)
 
+
 def edit_project(request, project_id):
-    """ Edit an exisint project """
+    """ Edit an existing project """
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only site admin can do that.')
@@ -125,3 +126,12 @@ def edit_project(request, project_id):
     }
 
     return render(request, template, context)
+
+
+def delete_project(request, project_id):
+    """ Delete an existing project """
+
+    project = get_object_or_404(Project, pk=project_id)
+    project.delete()
+    messages.success(request, 'The selected Project has been deleted!')
+    return redirect(reverse('projects'))

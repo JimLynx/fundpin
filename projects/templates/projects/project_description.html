@@ -9,12 +9,21 @@
 
 <section id="projectDescription">
     <div class="container">
-        <h2 class="text-center">Project Description</h2>
-        <div class="hr-dark"></div>
-        <h4 class="my-4 text-center"><strong>{{ project.name|upper }}</strong></h4>
+        <h2>Project Description</h2>
+        <div class="row">
+            <div class="col-12">
+                <h4 class="my-4 text-center"><strong>{{ project.name|upper }}</strong></h4>
+            </div>
+            <div class="col-12 text-center">
+                {% if request.user.is_superuser %}
+                <a class="btn btn-info mr-2" href="{% url 'edit_project' project.id %}">Update</a>
+                <a class="btn btn-danger ml-2" href="{% url 'delete_project' project.id %}">Delete</a>
+                {% endif %}
+            </div>
+        </div>
 
-        <div class="row my-3 mx-auto">
-            <!-- project image -->
+        <!-- project image -->
+        <div class="row my-3">
             <div class="p-detail-mh col-12 col-md-7 col-lg-8 mt-3">
                 <div class="border-wrap-img">
                     {% if project.image %}
@@ -29,7 +38,7 @@
                 </div>
             </div>
 
-            <!-- project categories -->
+            <!-- project details -->
             <div class="p-detail-mh col-12 col-md-5 col-lg-4 mt-3">
                 <div class="border-outer">
                     <div class="border-inner">
@@ -69,16 +78,16 @@
             </div>
 
         </div>
-        <div class="container">
-            <div class="row">
-                <!-- project description -->
-                <div class="col-12">
-                    <p>{{ project.description|safe }}</p>
-                </div>
+
+        <!-- project description -->
+        <div class="row">
+            <div class="col-12">
+                <p>{{ project.description|safe }}</p>
             </div>
-            <div class="hr-dark"></div>
         </div>
 
+        <div class="hr-dark"></div>
+    </div>
 </section>
 
 <!-- location map -->
@@ -90,10 +99,9 @@
 
 <!-- donation form section -->
 <section id="projectDonation" class="pt-2">
-
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-12">
                 <div class="border-outer">
                     <div class="border-inner">
                         <div class="d-none d-md-block col-md-5">
@@ -138,7 +146,7 @@
 
                                         <input class="donationTotal form-control mb-3"
                                             id="donation_amount_{{ project.id }}" name="donation_amount" type="hidden"
-                                            value="" data-item_id="{{ project.id }}" readonly/>
+                                            value="" data-item_id="{{ project.id }}" readonly />
 
                                         <!-- submit buttons -->
                                         <div class="row">
