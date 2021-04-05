@@ -207,6 +207,12 @@ form {
 .django-ckeditor-widget {
     width: 100%;
 }
+
+#add_project h5,
+#edit_project h5 {
+    color: var(--logo-green);
+}
+
 /* === MEDIA QUERIES === */
 
 @media (min-width: 576px) {

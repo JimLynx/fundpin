@@ -68,7 +68,6 @@ def all_projects(request):
 
 def project_description(request, project_id):
     """ A view to show individual projects """
-
     project = get_object_or_404(Project, pk=project_id)
 
     context = {
@@ -79,7 +78,6 @@ def project_description(request, project_id):
 
 def add_project(request):
     """ Add a new project """
-
     if request.method == 'POST':
         form = ProjectForm(request.POST, request.FILES)
         if form.is_valid():
@@ -95,6 +93,35 @@ def add_project(request):
     template = 'projects/add_project.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+def edit_project(request, project_id):
+    """ Edit an exisint project """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site admin can do that.')
+        return redirect(reverse('home'))
+
+    project = get_object_or_404(Project, pk=project_id)
+    if request.method == 'POST':
+        form = ProjectForm(request.POST, request.FILES, instance=project)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated the project!')
+            return redirect(reverse('project_description', args=[project.id]))
+        else:
+            messages.error(
+                request, 'Failed to update the project. Please ensure the form is valid.')
+    else:
+        form = ProjectForm(instance=project)
+        messages.info(request, f'You are editing {project.name}')
+
+    template = 'projects/edit_project.html'
+    context = {
+        'form': form,
+        'project': project,
     }
 
     return render(request, template, context)
