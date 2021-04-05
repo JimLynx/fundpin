@@ -80,7 +80,18 @@ def project_description(request, project_id):
 def add_project(request):
     """ Add a new project """
 
-    form = ProjectForm()
+    if request.method == 'POST':
+        form = ProjectForm(request.POST, request.FILES)
+        if form.is_valid():
+            project = form.save()
+            messages.success(request, 'Successfully added a new project!')
+            return redirect(reverse('project_description', args=[project.id]))
+        else:
+            messages.error(
+                request, 'Failed to add a project. Please ensure the form is valid.')
+    else:
+        form = ProjectForm()
+
     template = 'projects/add_project.html'
     context = {
         'form': form,

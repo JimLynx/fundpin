@@ -10,18 +10,20 @@ from checkout.models import Order
 def profile(request):
     """ Display user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
-    form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Profile updated successfully')
+            messages.success(request, 'Your profile has been successfully updated.')
         else:
             messages.error(
-                request, 'Update failed. Please ensure the form is valid.')
+                request, 'Profile update failed. Please ensure the form is valid.')
 
+    else:
+        form = UserProfileForm(instance=profile)
+
+    orders = profile.orders.all()
     template = 'profiles/profile.html'
     context = {
         'form': form,
