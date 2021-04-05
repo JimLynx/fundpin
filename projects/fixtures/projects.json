@@ -1,16 +1,113 @@
 [{
-    "pk": 1,
     "model": "projects.project",
+    "pk": 1,
     "fields": {
         "category": 6,
         "country": 1,
         "location": "Buenos Aires",
         "pin_id": "arg-med-001",
-        "name": "Primary Care",
-        "lead_in": "Help community healthcare",
-        "description": "Primary care or \"salitas\" - as we call it in Spanish - are the first level of access for the residents in poor neighbourhoods. This is why they are strategically located within these neighbourhoods, to be closer to the people. They are also the first place to go when you have a health problem and need professional assistance. In primary care centres there are family doctors, paediatricians, nurses, psychologists, dentists and social workers among other specialties. It is also worth mentioning that in Argentina, Primary Care Centres are free to all.",
-        "needs": "medical equiment, food",
-        "image_url": "https://images.unsplash.com/photo-1542736667-069246bdbc6d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bWVkaWNhbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        "image": "image3.jpg"
+        "name": "Healthcare Centre for the Underprivileged",
+        "description": "<p>Primary care or &quot;salitas&quot; - in Spanish - are the first level of access for the residents in poor neighbourhoods. This is why they are strategically located within these neighbourhoods, to be closer to the people. They are also the first place to go when you have a health problem and need professional assistance. In primary care centres there are family doctors, paediatricians, nurses, psychologists, dentists and social workers among other specialties.</p>\r\n\r\n<p>This health centre has many medical specialties, but they also give a lot of importance to preventive medicine and the promotion of health in the neighbourhood. The doctors and nurses organize campaigns and workshops for the community; visit their homes in order to understand the social and economic root of health issues, and to help more effectively. The &ldquo;Centro de Atenci&oacute;n Primaria&rdquo; (Basic Health Care Centre) has a comprehensive health concept that goes beyond the biological fact of the illness. Health is understood as a process affected by various causes, including poverty.&nbsp;Therefore, the doctors mainly promote community participation in preventing and finding solutions.</p>\r\n\r\n<p>This health centre was founded in 1941 by a group of neighbors of the town of Ramos Mejia, in the outskirts of Buenos Aires city. They realized about of the lack of medical attention and started to work only by donations and little fees charged to the patients. During the last economic crisis in Argentina the centre was about to close, if it wasn&rsquo;t for the commitment of the neighbors. Today the medical centre keeps working in the same way. The doctors work there for a minimal salary and they are committed and very aware of the importance of their help.</p>\r\n\r\n<p>The centre provides professionals in several medical specialties: pediatrics, gynecology, dentistry, orthopedics, kinesiology, orthopedics, cardiology, clinical medicine, psychiatry and psychology. Also two nurses of the town help the doctors and the volunteers that go there interested in knowing their way of working.</p>",
+        "needs": "medical equipment, food parcels, emergency equipment",
+        "image_url": null,
+        "image": "arg-med-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 2,
+    "fields": {
+        "category": 2,
+        "country": 1,
+        "location": "La Cumbre",
+        "pin_id": "arg-wil-001",
+        "name": "Monkey and Primate Rescue",
+        "description": "<p>This&nbsp;Centre has been successfully running the monkey rehabilitation programme for over 20 years and it is the first and only centre for rehabilitation of primates in Argentina; and the only one which works to rehabilitate howler monkeys in the world. The centre consists of various stages of physical, psychological and social rehabilitation or as they say &ldquo;We teach the monkeys to be monkeys again&rdquo;. The centre works with orphaned monkeys turned &ldquo;mistakenly&rdquo; into pets. All have been taken from their natural habitats to satisfy the pet trade and to be held as exhibits in zoos. All the monkeys have come from voluntary hand-ins, seizures by the government, zoo&rsquo;s etc from all over the country.</p>\r\n\r\n<p>Unfortunately, the pet trade still exits in South America and although howler monkeys are a protected species in Argentina, enforcement of this status is not effective. It is now listed in CITES (Convention on International Trade in Endangered Species) as &lsquo;vulnerable&rsquo;. Continued hunting for the bush meat and pet trades and habitat destruction ensure that numbers in the wild are still declining rapidly. The &ldquo;Refugio Del Caraya&rdquo; was the first place in Argentina where the Black Howler Monkeys bred successfully outside their native habitat. This species is considered worldwide &ldquo;difficult to maintain in captivity&rdquo; &ndash; generally it does not survive and/or reproduce in zoos. There are more than 100 monkeys which live free in 9 sectors within the refuge.</p>\r\n\r\n<p>There are also a few monkeys that cannot live with other monkeys or prefer to be alone or with humans.</p>\r\n\r\n<p>There are three key challenges facing Howler Monkeys in Argentina at present, all of which are sadly contributing to their decline:</p>\r\n\r\n<ul style=\"margin-left:40px\">\r\n\t<li>Their <strong>natural environment is declining</strong> at an alarming rate due to forestry and agricultural activities. This reduces the natural habitat in which they can live.</li>\r\n\t<li><strong>Poaching </strong>is also widespread, with many baby monkeys being illegally separated from their mothers and sold on as pets. It is estimated that, sadly, only one baby out of every six that are captured survives.</li>\r\n\t<li>Out of the <strong>monkeys that are kept as pets</strong>, many are mistreated and eventually abandoned &ndash; leaving them extremely vulnerable in the wild.</li>\r\n</ul>\r\n\r\n<p>The monkeys that are fortunate enough to be rescued are brought into the Centre, often in a terrible condition. Many are malnourished, and unable to fend for themselves after being separated from their mother. The work of this project is absolutely vital in ensuring the monkey population in Argentina does not decline any further.</p>\r\n\r\n<p>The project has <strong>three main aims</strong> &ndash; to <strong>rescue</strong>, <strong>rehabilitate </strong>and eventually <strong>release </strong>the monkeys back into the wild, so that they are self-sufficient. Some monkeys are unfortunately unable to be rehabilitated due to their condition and, because of this they are cared for permanently at the Centre.</p>\r\n\r\n<p>&nbsp;</p>",
+        "needs": "food, fencing, equipment",
+        "image_url": null,
+        "image": "arg-wil-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 3,
+    "fields": {
+        "category": 2,
+        "country": 2,
+        "location": "New South Wales",
+        "pin_id": "au-wil-001",
+        "name": "Wildlife Rehabilitation Sanctuary",
+        "description": "<p>This sanctuary provides a refuge for rehabilitated but un-releasable injured and orphaned animals. It also protects an ancient Aboriginal landscape where you can see Aboriginal sites that show evidence of Australia&rsquo;s original people, including hand-stencilled caves and sandstone engravings. The Sanctuary was established to protect animals that come into care, breed endangered animals for release back into the wild and to provide an experiential learning space for students. This is a place where visitors can immerse themselves in the animals&#39; world and understand why and how to save their homes, food and wildlife corridors. The project is based on Darkinjung and Guringai land in a rich Aboriginal landscape. Ancient knowledge teaches how to care for the country. Animals can look after themselves, as long as their habitat is healthy.</p>\r\n\r\n<p>The project&nbsp;was started, owned and&nbsp;run by a husband and wife team with a passion for the native wildlife.&nbsp; Along with their fantastic team of Rangers, they help protect the wildlife and ancient land where their sanctuary is situated.&nbsp;</p>",
+        "needs": "veterinary equipment, food, fencing equipment to keep out foxes",
+        "image_url": null,
+        "image": "au-wil-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 4,
+    "fields": {
+        "category": 3,
+        "country": 2,
+        "location": "Bunbury",
+        "pin_id": "au-mar-001",
+        "name": "Dolphin Conservation",
+        "description": "<p>This is a non-profit organisation committed to dolphin research, education, conservation and tourism. &nbsp;Facing Koombana Bay to the North. the centre enables people to interact with Bottlenose dolphins in a variety of ways. There are up to 100 dolphins living in the Bay and groups of them regularly visit the shallow waters in front of the DDC (known as the Interactive Zone). It was opened in 1994, and is the first of its kind dedicated entirely to dolphin research.</p>\r\n\r\n<p>During the mid-1960&rsquo;s, a local resident, began feeding the dolphins from a small jetty near her home on the Leschenault Inlet (directly south of the centre). Unfortunately, she passed away in the early 70&#39;s ceasing any regular feeding of the dolphins she befriended. Some dolphins continued to be fed by the public from areas nearby. However, it wasn&#39;t until 1989 that a dolphin specialist was hired by the newly established&nbsp;Trust to continue this tradition and begin feeding and studying the local dolphins of Koombana Bay.</p>\r\n\r\n<p>From this work came the establishment of the Interaction Zone in 1990, and the Centre in 1994, to allow tourists and members of the community to interact, understand and enjoy the group of five to six dolphins that regularly visit this zone. Direct interaction with these magnificent creatures is a very positive way to encourage continued marine awareness and education.</p>\r\n\r\n<p>It is not clear why the dolphins continue to visit the Zone today however research does suggest that the small amount of food they receive as a reward for their visit is not the only attraction. There are many dolphins that visit the Zone regularly that do not receive any fish and many of them stay for extended periods of time for interaction with the human visitors. Sick and injured dolphins also treat the beach as a haven, with some repeatedly visiting during periods of illness or injury.</p>",
+        "needs": "food, boating supplies, education materials",
+        "image_url": null,
+        "image": "au-mar-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 5,
+    "fields": {
+        "category": 5,
+        "country": 2,
+        "location": "Perth",
+        "pin_id": "au-edu-001",
+        "name": "School for Refugee Children",
+        "description": "<p>The Intensive English Centre&rsquo;s exist at various schools within Perth and were set up to allow refugee children from war-torn countries (such as Sudan, Somalia, Afghanistan and Iraq) the opportunity to adapt to the Australian schooling system and learn English. As well as teaching children from the IEC Centre, they also support continued Education and integration of these childre into mainstream education, which is a mixture of previous IEC students and Australian children.<br />\r\n<br />\r\nThe standard of the children&rsquo;s English in the IEC Centre is mixed depending on background and age. Some children will have a very basic knowledge of English, so this programme&#39;s&nbsp;integration process is vital to their future&#39;s.<br />\r\n<br />\r\nAt all schools there are a number of teachers or assistant teachers who originate from the same countries as the children involved in the IEC programme. The advantage of such teaching assistants is that they speak the children&rsquo;s native language which is very beneficial in the classroom situation as many of the children are learning the basics.</p>",
+        "needs": "School supplies, reading materials, stationary",
+        "image_url": null,
+        "image": "au-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 6,
+    "fields": {
+        "category": 2,
+        "country": 2,
+        "location": "Newcastle",
+        "pin_id": "au-wil-002",
+        "name": "Wildlife Rescue Centre",
+        "description": "<p>This project makes a real contribution to the conservation of Australia&rsquo;s distinct and wonderful wildlife. The centre takes part in many breeding programs of some of the most endangered Australian native animals, releasing them into the wild to ensure the survival of these rare and beautiful animals.</p>\r\n\r\n<p>This centre also provides a refuge for rehabilitated but un-releasable injured and orphaned animals. Park rangers take care of general animal care to help with the crucial maintenance of the enclosures to keep the animals safe from predators; and also general park care work to preserve the healthy habitat for the animals.&nbsp;</p>\r\n\r\n<p>Much of the animal care work they do involves cleaning, feeding and maintaining the animals&rsquo; enclosures and their natural habitats, as well as vital veterinary services for sick or injured animals that are rescued.</p>\r\n\r\n<p>The Park was established in 1979 and has remained family owned and run for more than 39 years. &nbsp;It is a registered member of the &ldquo;Zoo Aquarium Association&rdquo; which means that they cooperate to plan and manage the populations of wildlife that they hold in ways that improve their sustainability and their conservation value. &nbsp;This is important as part of their ongoing commitment to a sustainable future and they are also &ldquo;Eco Certified in Ecotourism&rdquo;.</p>",
+        "needs": "Fencing equipment, animal food",
+        "image_url": null,
+        "image": "au-wil-002.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 7,
+    "fields": {
+        "category": 2,
+        "country": 2,
+        "location": "Perth",
+        "pin_id": "au-wil-003",
+        "name": "Animal Rehabilitation Centre",
+        "description": "<p>The project houses a wildlife veterinary hospital and wildlife rehabilitation centre, and as such, is off-limits to the general public. Minimum exposure to human beings ensures that the animals in care recover more swiftly, suffer less stress and are less susceptible to human conditioning and dependence.</p>\r\n\r\n<p>Unlike zoos or wildlife parks (which are stocked with domesticated, permanent animals) wildlife rehabilitation centres generally offer a &#39;hands off&#39; wildlife experience. Staff and volunteers&nbsp;help nurture sick and injured wildlife and return them to the wild. This process is crucial for their long-term survival and a privilege to experience.</p>\r\n\r\n<p><span style=\"color:black\">The centre operates from a converted house situated south of Perth in the suburbs.</span></p>\r\n\r\n<p><span style=\"color:black\">The organisation has two important priorities.</span></p>\r\n\r\n<ol>\r\n\t<li><span style=\"color:black\">The first is the provision of medical care and rehabilitation services for over 3350 injured, sick, orphaned native wildlife each year. Located in the south metropolitan region of Perth WA, Native ARC receives injured wildlife from a variety of sources including the public, veterinarian clinics, local councils, rangers and other wildlife centres.</span></li>\r\n\t<li><span style=\"color:black\">The second is the provision of information/education on the importance of biodiversity and environmental sustainability to support the conservation of native flora and fauna. These services are provided to the general public, schools, tertiary and training institutions.</span></li>\r\n</ol>\r\n\r\n<p><span style=\"color:black\">The Centre is a registered charity, and licensed in Western Australia under the Charitable Collections Act 1946.</span></p>",
+        "needs": "veterinary equipment, food, staff, fencing",
+        "image_url": null,
+        "image": "au-wil-003.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 8,
+    "fields": {
+        "category": 2,
+        "country": 2,
+        "location": "Bunbury",
+        "pin_id": "au-wild-004",
+        "name": "Wildlife Rehabilitation Sanctuary",
+        "description": "<p>This&nbsp;community-based, volunteer-run organisation is dedicated to educating the community about wildlife and ecosystems. Their mission&nbsp;is to provide a partnership with the community, promoting understanding of the flora and fauna of the Australian South West,&nbsp; and an integrated resource centre showcasing environmental stewardship and sustainability.</p>\r\n\r\n<p>The park has over 60 varieties of Australian native birds and marsupials. A popular activity in the park is hand feeding the free range kangaroos that are roaming and entering into the large free flight aviary (for the brave) to hand feed the parrots.&nbsp;The park is an asset to Bunbury and the South West as it is a great tourist attraction as well as benefiting the community and schools.</p>\r\n\r\n<p>It also attracts visitors from all over the world so by hosting international volunteers. They hope to provide an opportunity to enhance their knowledge and awareness of&nbsp;cultural differences, exchange ideas and in turn, make the place more culturally sensitive and an enjoyable environment in which to work and visit.&nbsp;</p>\r\n\r\n<p>They also participates in a variety of structured workplace learning programmes including, disability services and other community work programmes.</p>",
+        "needs": "Food, Fencing equipment, veterinary equipment",
+        "image_url": null,
+        "image": "au-wil-004.png"
     }
 }]
