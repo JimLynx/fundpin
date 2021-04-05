@@ -12,11 +12,12 @@
             <div class="project-wrapper col-10 offset-1">
                 <h2>Projects</h2>
                 <div class="row mt-1 mb-2">
+                    <!-- sort selector -->
                     <div
-                        class="col-12 col-md-5 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                        <div class="sort-select-wrapper w-50">
+                        class="col-12 col-md-4 order-md-last d-flex justify-content-center justify-content-md-end mb-2">
+                        <div class="sort-select-wrapper mb-2">
                             <select id="sort-selector"
-                                class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort
                                     by...</option>
                                 <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name
@@ -36,26 +37,33 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-12 col-md-2 text-center mt-3">
+
+                    <div class="col-12 col-md-4 text-center d-flex justify-content-center mb-2">
                         <!-- show current project type -->
                         {% for c in current_categories %}
-                        <a class="btn btn-outline-dark" href="{% url 'projects' %}?category={{ c.name }}">
-                            <span class="p-3 mt-2"><strong>{{ c.friendly_name }}</strong> Projects</span>
-                        </a>
+                        <div class="country_category_display mb-2">
+                            <div>
+                                <span class=""><strong>{{ c.friendly_name }}</strong> Projects</span>
+                            </div>
+                        </div>
                         {% endfor %}
                         <!-- show current country -->
                         {% for c in current_countries %}
-                        <a class="btn btn-outline-dark" href="{% url 'projects' %}?country={{ c.name }}">
-                            <span class="p-3 mt-2">Projects in <strong>{{ c.friendly_name }}</strong></span>
-                        </a>
+                        <div class="country_category_display mb-2">
+                            <div>
+                                <span class="mt-2">Projects in <strong>{{ c.friendly_name }}</strong></span>
+                            </div>
+                        </div>
                         {% endfor %}
                     </div>
-                    <div class="col-12 col-md-5 order-md-first">
-                        <p class="text-muted mt-3 text-center text-md-left">
+
+                    <div class="col-12 col-md-4 order-md-first mb-2">
+                        <p class="text-muted text-center text-md-left">
                             {% if search_term or current_categories or current_countries or current_sorting != 'None_None' %}
-                            <span class="small"><a href="{% url 'projects' %}">All Projects</a> | </span>
+                            <a href="{% url 'projects' %}">View All Projects |</a>
                             {% endif %}
-                            {{ projects|length }} projects{% if search_term %} found containing
+                            <strong>{{ projects|length }}</strong> projects found{% if search_term %} containing your
+                            search for
                             <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
                     </div>
