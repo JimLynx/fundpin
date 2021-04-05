@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Project, Category, Country
+from .forms import ProjectForm
+
 
 def all_projects(request):
     """ A view to show all projects, including search function"""
@@ -15,20 +17,20 @@ def all_projects(request):
     direction = None
 
     if 'sort' in request.GET:
-            sortkey = request.GET['sort']
-            sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                projects = projects.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
-                sortkey = 'category__name'
-            if sortkey == 'country':
-                sortkey = 'country__name'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            projects = projects.order_by(sortkey)
+        sortkey = request.GET['sort']
+        sort = sortkey
+        if sortkey == 'name':
+            sortkey = 'lower_name'
+            projects = projects.annotate(lower_name=Lower('name'))
+        if sortkey == 'category':
+            sortkey = 'category__name'
+        if sortkey == 'country':
+            sortkey = 'country__name'
+        if 'direction' in request.GET:
+            direction = request.GET['direction']
+            if direction == 'desc':
+                sortkey = f'-{sortkey}'
+        projects = projects.order_by(sortkey)
 
     if 'category' in request.GET:
         categories = request.GET['category'].split(',')
@@ -46,7 +48,7 @@ def all_projects(request):
             if not query:
                 messages.error(request, "Please enter a search item")
                 return redirect(reverse('home'))
-            
+
             queries = Q(name__icontains=query) | Q(
                 description__icontains=query)
             projects = projects.filter(queries)
@@ -60,7 +62,7 @@ def all_projects(request):
         'current_countries': countries,
         'current_sorting': current_sorting,
     }
-    
+
     return render(request, 'projects/projects.html', context)
 
 
@@ -73,3 +75,15 @@ def project_description(request, project_id):
         'project': project,
     }
     return render(request, 'projects/project_description.html', context)
+
+
+def add_project(request):
+    """ Add a new project """
+
+    form = ProjectForm()
+    template = 'projects/add_project.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
