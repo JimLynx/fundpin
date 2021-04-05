@@ -13,7 +13,7 @@
 
 @media (min-width: 768px) {
     #contact {
-        padding: 2rem 0;
+        padding-bottom: 2rem;
     }
 
     .contact-image {
@@ -34,18 +34,16 @@
     .contact-image {
         height: 100%;
     }
-
 }
 
 @media (min-width: 1024px) {
     #contact {
-        padding: 3rem 0;
+        padding-bottom: 3rem;
     }
 }
 
 @media (min-width: 1200px) {
-
     #contact {
-        padding: 4rem 0;
+        padding-bottom: 4rem;
     }
 }
