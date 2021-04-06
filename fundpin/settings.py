@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # social accounts
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
 
     # custom apps
     'home',
@@ -134,6 +135,15 @@ SOCIALACCOUNT_PROVIDERS = {
         'LOCALE_FUNC': lambda request: 'kr_KR',
         'VERIFIED_EMAIL': False,
         'VERSION': 'v2.4'
+    },
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
     }
 }
 
