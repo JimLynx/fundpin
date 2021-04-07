@@ -492,6 +492,7 @@ All content is self-written by site creator.
 - Contact page form adapted from [MDBootstrap](https://mdbootstrap.com/docs/b4/jquery/forms/basic/) template
 - Project cards, on Projects page, customized from Codepen by [Tenzing Gaychey](https://codepen.io/tgaychey/pen/PROMVy)
 - Checkout payment overlay animation customised from [Codepen](https://codepen.io/yumeeeei/pen/BQPmpX) by [@yumeeeei](https://codepen.io/yumeeeei)
+- Google Login button from [Stack Overflow](https://stackoverflow.com/a/59119994)
 
 ## Acknowledgments
 
