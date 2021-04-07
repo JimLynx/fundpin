@@ -23,20 +23,28 @@
 <div class="socialaccount_ballot">
 
     <div class="socialaccount_providers">
+        <div class="row">
+        <!-- github login -->
+        <div class="col-12 my-2">
+            <a id="github-button" href="{% provider_login_url "github" %}" class="btn btn-block btn-github mx-auto text-left">
+                <i class="fa fa-github fa-lg mr-2"></i> Login with GitHub
+            </a>
+        </div>
         <!-- facebook login -->
-        <div class="col">
-            <a href="{% provider_login_url "facebook" method="oauth2" %}" class="btn btn-block btn-social btn-facebook mx-auto my-2 text-center">
-                <span class="fa fa-facebook"></span>
-                             Login with Facebook
-               </a>
+        <div class="col-12 my-2">
+            <a href="{% provider_login_url "facebook" method="oauth2" %}" class="btn btn-block btn-facebook mx-auto text-left">
+                <i class="fa fa-facebook fa-lg mr-2"></i>
+                Login with Facebook
+            </a>
         </div>
         <!-- google login -->
-        <div class="col text-center my-2">
-            <a title="Google" class="socialaccount_provider google btn btn-outline-dark my-2" role="button" href="/accounts/google/login/?process=login">
+        <div class="col-12 my-2 text-center">
+            <a title="Google" href="/accounts/google/login/?process=login" class="google btn btn-outline-dark mx-auto text-left">
                 <img alt="Google sign-in"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
                 Login with Google
             </a>
+        </div>
         </div>
     </div>
 
@@ -44,8 +52,8 @@
     <div class="login-or my-3 text-center font-weight-bold">{% trans '- OR -' %}</div>
     {% blocktrans with site.name as site_name %}
     <div class="mb-3">
-        <a href="{{ signup_url }}">SIGN UP</a><span> for a {{ site_name }} account and sign in below:</span>
-        
+        <a href="{{ signup_url }}">SIGN UP</a><span> for a <strong>{{ site_name }}</strong> account and sign in below:</span>
+
     </div>
     {% endblocktrans %}
 </div>
