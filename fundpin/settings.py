@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['fundpin.herokuapp.com', 'localhost',
-                 '127.0.0.1', 'b22a16f91f26.ngrok.io', '127.0.0.1:8000']
+                 '127.0.0.1', 'localhost:8000', 'https://localhost:8000']
 
 
 # Application definition
@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'django_countries',
     'crispy_forms',
+    'django_extensions',
 
 ]
 
@@ -110,6 +111,7 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
+    
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
