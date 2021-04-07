@@ -1,8 +1,9 @@
 {% extends "account/base.html" %}
 
 {% load i18n %}
-{% load account socialaccount %}
+
 {% load socialaccount %}
+{% providers_media_js %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
@@ -23,13 +24,16 @@
 
     <div class="socialaccount_providers">
         <!-- facebook login -->
-
+        <div class="col">
+            <a href="{% provider_login_url "facebook" method="oauth2" %}" class="btn btn-block btn-social btn-facebook mx-auto my-2 text-center">
+                <span class="fa fa-facebook"></span>
+                             Login with Facebook
+               </a>
         </div>
         <!-- google login -->
         <div class="col text-center my-2">
-            <a title="Google" class="socialaccount_provider google btn btn-outline-dark my-2" role="button"
-                style="text-transform:none; width: 240px;;" href="/accounts/google/login/?process=login">
-                <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in"
+            <a title="Google" class="socialaccount_provider google btn btn-outline-dark my-2" role="button" href="/accounts/google/login/?process=login">
+                <img alt="Google sign-in"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
                 Login with Google
             </a>
