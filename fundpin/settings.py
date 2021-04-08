@@ -30,8 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['fundpin.herokuapp.com', 'localhost',
-                 '127.0.0.1', 'localhost:8000', 'https://localhost:8000']
+ALLOWED_HOSTS = ['fundpin.herokuapp.com', 'localhost', '127.0.0.1', 'localhost:8000', 'https://localhost:8000']
 
 
 # Application definition
@@ -155,7 +154,10 @@ SOCIALACCOUNT_PROVIDERS = {
         ],
     }
 }
+
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
+
 SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -165,8 +167,10 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
+
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+LOGLOUT_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'fundpin.wsgi.application'
 
