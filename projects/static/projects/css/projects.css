@@ -171,6 +171,10 @@
     margin: 10px auto;
 }
 
+.p-details-wrapper img {
+    width: 20px;
+}
+
 .info-icon {
     width: 40px;
     position: absolute;
