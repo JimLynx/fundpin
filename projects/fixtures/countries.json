@@ -59,7 +59,7 @@
     "model": "projects.country",
     "fields": {
         "name": "ghana",
-        "friendly_name": "ghana"
+        "friendly_name": "Ghana"
     }
 }, {
     "pk": 10,
