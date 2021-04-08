@@ -76,16 +76,28 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
         <!-- project description -->
         <div class="row">
-            <div class="col-12">
+            <div class="col-12  my-3">
+
                 <p>{{ project.description|safe }}</p>
             </div>
         </div>
+        <div class="hr-dark"></div>
 
+        <!-- project needs -->
+        <div class="row">
+            <div class="col-12 my-3">
+                <div class="h5 text-center my-3">
+                    Just <strong>some</strong> of the ways that your donation will help!
+                </div>
+                <div class="needs-wrapper">
+                    {{ project.needs|safe }}
+                </div>
+            </div>
+        </div>
         <div class="hr-dark"></div>
     </div>
 </section>

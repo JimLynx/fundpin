@@ -52,8 +52,8 @@ class Project(models.Model):
     location = models.CharField(max_length=254)
     pin_id = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
-    description = RichTextField(blank=True, null=True)
-    needs = models.TextField()
+    description = RichTextField(blank=False, null=True)
+    needs = RichTextField(blank=False, null=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 

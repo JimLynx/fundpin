@@ -178,6 +178,10 @@
     right: 19px;
 }
 
+.needs-wrapper {
+    width: fit-content;
+    margin: auto;
+}
 
 /* Map */
 /* ============= placeholder values ============= TBA */
