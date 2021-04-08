@@ -103,15 +103,15 @@
                         <div class="dropdown-menu" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_project' %}" class="dropdown-item">Project Management</a>
-                            <a href="" class="dropdown-item">Blog Management</a>
-                            <div class="hr-dark"></div>
+                                <a href="{% url 'add_project' %}" class="dropdown-item">Project Management</a>
+                                <a href="" class="dropdown-item">Blog Management</a>
+                                <div class="hr-dark"></div>
                             {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
                     </li>
@@ -122,8 +122,9 @@
                                 <i class="fas fa-shopping-cart d-lg-none" aria-hidden="true"></i>
                                 <i class="d-none d-lg-block fas fa-shopping-cart fa-lg" aria-hidden="true"></i>
                                 {% if cart_items %}
-                                <span class="badge badge-danger"
-                                    id='cartCount'>{{ request.session.cart.keys|length }}</span>
+                                    <span class="badge badge-danger"
+                                        id='cartCount'>{{ request.session.cart.keys|length }}
+                                    </span>
                                 {% endif %}
                             </div>
                         </a>
@@ -150,21 +151,21 @@
     {% if messages %}
     <div class="toast-wrapper" aria-live="polite" aria-atomic="true">
         {% for message in messages %}
-        {% with message.level as level %}
-        <!-- level 40 = error  -->
-        {% if level == 40 %}
-        {% include 'includes/toasts/toast_error.html' %}
-        <!-- level 30 = warning  -->
-        {% elif level == 30 %}
-        {% include 'includes/toasts/toast_warning.html' %}
-        <!-- level 25 = success  -->
-        {% elif level == 25 %}
-        {% include 'includes/toasts/toast_success.html' %}
-        <!-- default to info toast for everything else -->
-        {% else %}
-        {% include 'includes/toasts/toast_info.html' %}
-        {% endif %}
-        {% endwith %}
+            {% with message.level as level %}
+            <!-- level 40 = error  -->
+                {% if level == 40 %}
+                    {% include 'includes/toasts/toast_error.html' %}
+                <!-- level 30 = warning  -->
+                {% elif level == 30 %}
+                    {% include 'includes/toasts/toast_warning.html' %}
+                <!-- level 25 = success  -->
+                {% elif level == 25 %}
+                    {% include 'includes/toasts/toast_success.html' %}
+                <!-- default to info toast for everything else -->
+                {% else %}
+                    {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+            {% endwith %}
         {% endfor %}
     </div>
     {% endif %}
@@ -210,13 +211,13 @@
                         <div class="col-6">
                             <ul class="footer-links">
                                 {% if request.user.is_authenticated %}
-                                <li><a href="{% url 'profile' %}">Profile</a></li>
-                                <li><a href="{% url 'view_cart' %}">Cart</a></li>
+                                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                                    <li><a href="{% url 'view_cart' %}">Cart</a></li>
                                 {% else %}
-                                <li><a href="{% url 'account_signup' %}">Register</a></li>
-                                <li><a href="{% url 'account_login' %}">Login</a></li>
+                                    <li><a href="{% url 'account_signup' %}">Register</a></li>
+                                    <li><a href="{% url 'account_login' %}">Login</a></li>
                                 {% endif %}
-                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
                             </ul>
                         </div>
                     </div>
