@@ -8,7 +8,7 @@
         "pin_id": "arg-med-001",
         "name": "Healthcare Centre for the Underprivileged",
         "description": "<p>Primary care or &quot;salitas&quot; - in Spanish - are the first level of access for the residents in poor neighbourhoods. This is why they are strategically located within these neighbourhoods, to be closer to the people. They are also the first place to go when you have a health problem and need professional assistance. In primary care centres there are family doctors, paediatricians, nurses, psychologists, dentists and social workers among other specialties.</p>\r\n\r\n<p>This health centre has many medical specialties, but they also give a lot of importance to preventive medicine and the promotion of health in the neighbourhood. The doctors and nurses organize campaigns and workshops for the community; visit their homes in order to understand the social and economic root of health issues, and to help more effectively. The &ldquo;Centro de Atenci&oacute;n Primaria&rdquo; (Basic Health Care Centre) has a comprehensive health concept that goes beyond the biological fact of the illness. Health is understood as a process affected by various causes, including poverty.&nbsp;Therefore, the doctors mainly promote community participation in preventing and finding solutions.</p>\r\n\r\n<p>This health centre was founded in 1941 by a group of neighbors of the town of Ramos Mejia, in the outskirts of Buenos Aires city. They realized about of the lack of medical attention and started to work only by donations and little fees charged to the patients. During the last economic crisis in Argentina the centre was about to close, if it wasn&rsquo;t for the commitment of the neighbors. Today the medical centre keeps working in the same way. The doctors work there for a minimal salary and they are committed and very aware of the importance of their help.</p>\r\n\r\n<p>The centre provides professionals in several medical specialties: pediatrics, gynecology, dentistry, orthopedics, kinesiology, orthopedics, cardiology, clinical medicine, psychiatry and psychology. Also two nurses of the town help the doctors and the volunteers that go there interested in knowing their way of working.</p>",
-        "needs": "medical equipment, food parcels, emergency equipment",
+        "needs": "<ul>\r\n\t<li>Medical equipment</li>\r\n\t<li>Food parcels</li>\r\n\t<li>Emergency equipment</li>\r\n\t<li>Health and safety awareness campaigns</li>\r\n</ul>",
         "image_url": null,
         "image": "arg-med-001.png"
     }
@@ -21,8 +21,8 @@
         "location": "La Cumbre",
         "pin_id": "arg-wil-001",
         "name": "Monkey and Primate Rescue",
-        "description": "<p>This&nbsp;Centre has been successfully running the monkey rehabilitation programme for over 20 years and it is the first and only centre for rehabilitation of primates in Argentina; and the only one which works to rehabilitate howler monkeys in the world. The centre consists of various stages of physical, psychological and social rehabilitation or as they say &ldquo;We teach the monkeys to be monkeys again&rdquo;. The centre works with orphaned monkeys turned &ldquo;mistakenly&rdquo; into pets. All have been taken from their natural habitats to satisfy the pet trade and to be held as exhibits in zoos. All the monkeys have come from voluntary hand-ins, seizures by the government, zoo&rsquo;s etc from all over the country.</p>\r\n\r\n<p>Unfortunately, the pet trade still exits in South America and although howler monkeys are a protected species in Argentina, enforcement of this status is not effective. It is now listed in CITES (Convention on International Trade in Endangered Species) as &lsquo;vulnerable&rsquo;. Continued hunting for the bush meat and pet trades and habitat destruction ensure that numbers in the wild are still declining rapidly. The &ldquo;Refugio Del Caraya&rdquo; was the first place in Argentina where the Black Howler Monkeys bred successfully outside their native habitat. This species is considered worldwide &ldquo;difficult to maintain in captivity&rdquo; &ndash; generally it does not survive and/or reproduce in zoos. There are more than 100 monkeys which live free in 9 sectors within the refuge.</p>\r\n\r\n<p>There are also a few monkeys that cannot live with other monkeys or prefer to be alone or with humans.</p>\r\n\r\n<p>There are three key challenges facing Howler Monkeys in Argentina at present, all of which are sadly contributing to their decline:</p>\r\n\r\n<ul style=\"margin-left:40px\">\r\n\t<li>Their <strong>natural environment is declining</strong> at an alarming rate due to forestry and agricultural activities. This reduces the natural habitat in which they can live.</li>\r\n\t<li><strong>Poaching </strong>is also widespread, with many baby monkeys being illegally separated from their mothers and sold on as pets. It is estimated that, sadly, only one baby out of every six that are captured survives.</li>\r\n\t<li>Out of the <strong>monkeys that are kept as pets</strong>, many are mistreated and eventually abandoned &ndash; leaving them extremely vulnerable in the wild.</li>\r\n</ul>\r\n\r\n<p>The monkeys that are fortunate enough to be rescued are brought into the Centre, often in a terrible condition. Many are malnourished, and unable to fend for themselves after being separated from their mother. The work of this project is absolutely vital in ensuring the monkey population in Argentina does not decline any further.</p>\r\n\r\n<p>The project has <strong>three main aims</strong> &ndash; to <strong>rescue</strong>, <strong>rehabilitate </strong>and eventually <strong>release </strong>the monkeys back into the wild, so that they are self-sufficient. Some monkeys are unfortunately unable to be rehabilitated due to their condition and, because of this they are cared for permanently at the Centre.</p>\r\n\r\n<p>&nbsp;</p>",
-        "needs": "food, fencing, equipment",
+        "description": "<p>This&nbsp;Centre has been successfully running the monkey rehabilitation programme for over 20 years and it is the first and only centre for rehabilitation of primates in Argentina; and the only one which works to rehabilitate howler monkeys in the world. The centre consists of various stages of physical, psychological and social rehabilitation or as they say &ldquo;We teach the monkeys to be monkeys again&rdquo;. The centre works with orphaned monkeys turned &ldquo;mistakenly&rdquo; into pets. All have been taken from their natural habitats to satisfy the pet trade and to be held as exhibits in zoos. All the monkeys have come from voluntary hand-ins, seizures by the government, zoo&rsquo;s etc from all over the country.</p>\r\n\r\n<p>Unfortunately, the pet trade still exits in South America and although howler monkeys are a protected species in Argentina, enforcement of this status is not effective. It is now listed in CITES (Convention on International Trade in Endangered Species) as &lsquo;vulnerable&rsquo;. Continued hunting for the bush meat and pet trades and habitat destruction ensure that numbers in the wild are still declining rapidly. The &ldquo;Refugio Del Caraya&rdquo; was the first place in Argentina where the Black Howler Monkeys bred successfully outside their native habitat. This species is considered worldwide &ldquo;difficult to maintain in captivity&rdquo; &ndash; generally it does not survive and/or reproduce in zoos. There are more than 100 monkeys which live free in 9 sectors within the refuge.</p>\r\n\r\n<p>There are also a few monkeys that cannot live with other monkeys or prefer to be alone or with humans.</p>\r\n\r\n<p>There are three key challenges facing Howler Monkeys in Argentina at present, all of which are sadly contributing to their decline:</p>\r\n\r\n<ul style=\"margin-left:40px\">\r\n\t<li>Their <strong>natural environment is declining</strong> at an alarming rate due to forestry and agricultural activities. This reduces the natural habitat in which they can live.</li>\r\n\t<li><strong>Poaching </strong>is also widespread, with many baby monkeys being illegally separated from their mothers and sold on as pets. It is estimated that, sadly, only one baby out of every six that are captured survives.</li>\r\n\t<li>Out of the <strong>monkeys that are kept as pets</strong>, many are mistreated and eventually abandoned &ndash; leaving them extremely vulnerable in the wild.</li>\r\n</ul>\r\n\r\n<p>The monkeys that are fortunate enough to be rescued are brought into the Centre, often in a terrible condition. Many are malnourished, and unable to fend for themselves after being separated from their mother. The work of this project is absolutely vital in ensuring the monkey population in Argentina does not decline any further.</p>\r\n\r\n<p>The project has <strong>three main aims</strong> &ndash; to <strong>rescue</strong>, <strong>rehabilitate </strong>and eventually <strong>release </strong>the monkeys back into the wild, so that they are self-sufficient. Some monkeys are unfortunately unable to be rehabilitated due to their condition and, because of this they are cared for permanently at the Centre.</p>",
+        "needs": "<ul>\r\n\t<li>Food for the primates</li>\r\n\t<li>Fencing equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
         "image_url": null,
         "image": "arg-wil-001.png"
     }
@@ -36,7 +36,7 @@
         "pin_id": "au-wil-001",
         "name": "Wildlife Rehabilitation Sanctuary",
         "description": "<p>This sanctuary provides a refuge for rehabilitated but un-releasable injured and orphaned animals. It also protects an ancient Aboriginal landscape where you can see Aboriginal sites that show evidence of Australia&rsquo;s original people, including hand-stencilled caves and sandstone engravings. The Sanctuary was established to protect animals that come into care, breed endangered animals for release back into the wild and to provide an experiential learning space for students. This is a place where visitors can immerse themselves in the animals&#39; world and understand why and how to save their homes, food and wildlife corridors. The project is based on Darkinjung and Guringai land in a rich Aboriginal landscape. Ancient knowledge teaches how to care for the country. Animals can look after themselves, as long as their habitat is healthy.</p>\r\n\r\n<p>The project&nbsp;was started, owned and&nbsp;run by a husband and wife team with a passion for the native wildlife.&nbsp; Along with their fantastic team of Rangers, they help protect the wildlife and ancient land where their sanctuary is situated.&nbsp;</p>",
-        "needs": "veterinary equipment, food, fencing equipment to keep out foxes",
+        "needs": "<ul>\r\n\t<li>Food for all wildllife species</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
         "image_url": null,
         "image": "au-wil-001.png"
     }
@@ -50,7 +50,7 @@
         "pin_id": "au-mar-001",
         "name": "Dolphin Conservation",
         "description": "<p>This is a non-profit organisation committed to dolphin research, education, conservation and tourism. &nbsp;Facing Koombana Bay to the North. the centre enables people to interact with Bottlenose dolphins in a variety of ways. There are up to 100 dolphins living in the Bay and groups of them regularly visit the shallow waters in front of the DDC (known as the Interactive Zone). It was opened in 1994, and is the first of its kind dedicated entirely to dolphin research.</p>\r\n\r\n<p>During the mid-1960&rsquo;s, a local resident, began feeding the dolphins from a small jetty near her home on the Leschenault Inlet (directly south of the centre). Unfortunately, she passed away in the early 70&#39;s ceasing any regular feeding of the dolphins she befriended. Some dolphins continued to be fed by the public from areas nearby. However, it wasn&#39;t until 1989 that a dolphin specialist was hired by the newly established&nbsp;Trust to continue this tradition and begin feeding and studying the local dolphins of Koombana Bay.</p>\r\n\r\n<p>From this work came the establishment of the Interaction Zone in 1990, and the Centre in 1994, to allow tourists and members of the community to interact, understand and enjoy the group of five to six dolphins that regularly visit this zone. Direct interaction with these magnificent creatures is a very positive way to encourage continued marine awareness and education.</p>\r\n\r\n<p>It is not clear why the dolphins continue to visit the Zone today however research does suggest that the small amount of food they receive as a reward for their visit is not the only attraction. There are many dolphins that visit the Zone regularly that do not receive any fish and many of them stay for extended periods of time for interaction with the human visitors. Sick and injured dolphins also treat the beach as a haven, with some repeatedly visiting during periods of illness or injury.</p>",
-        "needs": "food, boating supplies, education materials",
+        "needs": "<ul>\r\n\t<li>Food</li>\r\n\t<li>Boating supplies</li>\r\n\t<li>Environmental Education materials</li>\r\n</ul>",
         "image_url": null,
         "image": "au-mar-001.png"
     }
@@ -64,7 +64,7 @@
         "pin_id": "au-edu-001",
         "name": "School for Refugee Children",
         "description": "<p>The Intensive English Centre&rsquo;s exist at various schools within Perth and were set up to allow refugee children from war-torn countries (such as Sudan, Somalia, Afghanistan and Iraq) the opportunity to adapt to the Australian schooling system and learn English. As well as teaching children from the IEC Centre, they also support continued Education and integration of these childre into mainstream education, which is a mixture of previous IEC students and Australian children.<br />\r\n<br />\r\nThe standard of the children&rsquo;s English in the IEC Centre is mixed depending on background and age. Some children will have a very basic knowledge of English, so this programme&#39;s&nbsp;integration process is vital to their future&#39;s.<br />\r\n<br />\r\nAt all schools there are a number of teachers or assistant teachers who originate from the same countries as the children involved in the IEC programme. The advantage of such teaching assistants is that they speak the children&rsquo;s native language which is very beneficial in the classroom situation as many of the children are learning the basics.</p>",
-        "needs": "School supplies, reading materials, stationary",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
         "image_url": null,
         "image": "au-edu-001.png"
     }
@@ -78,7 +78,7 @@
         "pin_id": "au-wil-002",
         "name": "Wildlife Rescue Centre",
         "description": "<p>This project makes a real contribution to the conservation of Australia&rsquo;s distinct and wonderful wildlife. The centre takes part in many breeding programs of some of the most endangered Australian native animals, releasing them into the wild to ensure the survival of these rare and beautiful animals.</p>\r\n\r\n<p>This centre also provides a refuge for rehabilitated but un-releasable injured and orphaned animals. Park rangers take care of general animal care to help with the crucial maintenance of the enclosures to keep the animals safe from predators; and also general park care work to preserve the healthy habitat for the animals.&nbsp;</p>\r\n\r\n<p>Much of the animal care work they do involves cleaning, feeding and maintaining the animals&rsquo; enclosures and their natural habitats, as well as vital veterinary services for sick or injured animals that are rescued.</p>\r\n\r\n<p>The Park was established in 1979 and has remained family owned and run for more than 39 years. &nbsp;It is a registered member of the &ldquo;Zoo Aquarium Association&rdquo; which means that they cooperate to plan and manage the populations of wildlife that they hold in ways that improve their sustainability and their conservation value. &nbsp;This is important as part of their ongoing commitment to a sustainable future and they are also &ldquo;Eco Certified in Ecotourism&rdquo;.</p>",
-        "needs": "Fencing equipment, animal food",
+        "needs": "<ul>\r\n\t<li>Food for all wildllife species</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
         "image_url": null,
         "image": "au-wil-002.png"
     }
@@ -92,7 +92,7 @@
         "pin_id": "au-wil-003",
         "name": "Animal Rehabilitation Centre",
         "description": "<p>The project houses a wildlife veterinary hospital and wildlife rehabilitation centre, and as such, is off-limits to the general public. Minimum exposure to human beings ensures that the animals in care recover more swiftly, suffer less stress and are less susceptible to human conditioning and dependence.</p>\r\n\r\n<p>Unlike zoos or wildlife parks (which are stocked with domesticated, permanent animals) wildlife rehabilitation centres generally offer a &#39;hands off&#39; wildlife experience. Staff and volunteers&nbsp;help nurture sick and injured wildlife and return them to the wild. This process is crucial for their long-term survival and a privilege to experience.</p>\r\n\r\n<p><span style=\"color:black\">The centre operates from a converted house situated south of Perth in the suburbs.</span></p>\r\n\r\n<p><span style=\"color:black\">The organisation has two important priorities.</span></p>\r\n\r\n<ol>\r\n\t<li><span style=\"color:black\">The first is the provision of medical care and rehabilitation services for over 3350 injured, sick, orphaned native wildlife each year. Located in the south metropolitan region of Perth WA, Native ARC receives injured wildlife from a variety of sources including the public, veterinarian clinics, local councils, rangers and other wildlife centres.</span></li>\r\n\t<li><span style=\"color:black\">The second is the provision of information/education on the importance of biodiversity and environmental sustainability to support the conservation of native flora and fauna. These services are provided to the general public, schools, tertiary and training institutions.</span></li>\r\n</ol>\r\n\r\n<p><span style=\"color:black\">The Centre is a registered charity, and licensed in Western Australia under the Charitable Collections Act 1946.</span></p>",
-        "needs": "veterinary equipment, food, staff, fencing",
+        "needs": "<ul>\r\n\t<li>Food for all wildllife species</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
         "image_url": null,
         "image": "au-wil-003.png"
     }
@@ -106,8 +106,694 @@
         "pin_id": "au-wild-004",
         "name": "Wildlife Rehabilitation Sanctuary",
         "description": "<p>This&nbsp;community-based, volunteer-run organisation is dedicated to educating the community about wildlife and ecosystems. Their mission&nbsp;is to provide a partnership with the community, promoting understanding of the flora and fauna of the Australian South West,&nbsp; and an integrated resource centre showcasing environmental stewardship and sustainability.</p>\r\n\r\n<p>The park has over 60 varieties of Australian native birds and marsupials. A popular activity in the park is hand feeding the free range kangaroos that are roaming and entering into the large free flight aviary (for the brave) to hand feed the parrots.&nbsp;The park is an asset to Bunbury and the South West as it is a great tourist attraction as well as benefiting the community and schools.</p>\r\n\r\n<p>It also attracts visitors from all over the world so by hosting international volunteers. They hope to provide an opportunity to enhance their knowledge and awareness of&nbsp;cultural differences, exchange ideas and in turn, make the place more culturally sensitive and an enjoyable environment in which to work and visit.&nbsp;</p>\r\n\r\n<p>They also participates in a variety of structured workplace learning programmes including, disability services and other community work programmes.</p>",
-        "needs": "Food, Fencing equipment, veterinary equipment",
+        "needs": "<ul>\r\n\t<li>Food for all wildllife species</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
         "image_url": null,
         "image": "au-wil-004.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 9,
+    "fields": {
+        "category": 4,
+        "country": 3,
+        "location": "Ubud",
+        "pin_id": "bal-com-001",
+        "name": "Kindergarten for poor communities",
+        "description": "<p>This&nbsp;kindergarten for the poor community is based in the culturally rich town of Ubud, offering a free service to the local children, who are right at the start of their learning journey and are all mainly from the villages surrounding the town.</p>\r\n\r\n<p>The ages of the children range between 4 -5 years old, and without this center they would be left to their own devices, bheing exposed to poverty and crime. The center offers a safe environment for them to just be kids. They also are taught&nbsp;basic English words and phrases through fun activities like songs and games.</p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for educational enrichment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Books</li>\r\n\t<li>School maintenance costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "bal-com-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 10,
+    "fields": {
+        "category": 5,
+        "country": 3,
+        "location": "Ubud",
+        "pin_id": "bal-edu-001",
+        "name": "Primary school for poor community",
+        "description": "<p>The children in Bali are in desperate need of two types of teachers, those with experience and those without, we have found both can make very significant and worthwhile contributions.</p>\r\n\r\n<p>They have a thirst for education. Even though the Primary school is free, the parents have to take care of the books and the uniform. Most of the parents are farmers and can&rsquo;t afford the finances of high school for their children. This is a very rewarding experience for you and the children are really happy to be able to learn from you.</p>\r\n\r\n<p>The assistance we provide are for schools&nbsp;in poor physical condition with classrooms unusable because of leaking roofs and broken furnishings.Your donation will be a huge benefit to the school and community.</p>",
+        "needs": "<ul>\r\n\t<li>To encourage and inspire these children into future education.</li>\r\n\t<li>To ensure each child is confident and articulate in both spoken and written English.</li>\r\n\t<li>To teach games &amp; songs.</li>\r\n\t<li>To encourage the kids in learning though fun.</li>\r\n</ul>",
+        "image_url": null,
+        "image": "bal-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 11,
+    "fields": {
+        "category": 3,
+        "country": 3,
+        "location": "Nusa Penida Island",
+        "pin_id": "bal-mar-001",
+        "name": "Turtle Conservation and Rehabilitation",
+        "description": "<p>The Sea Turtle is a charismatic megafaunas though 6 out of the 7 turtle species are still either critically endangered or on the IUCN Red list of 2013. The Turtle conservation project is based on the famous charming Island of Nusa Penida just off the coast of Bali.</p>\r\n\r\n<p>The project raises awareness of this highly endangered species, which is estimated to have existed since the time of dinosaurs some 110 million years ago.</p>\r\n\r\n<p>Apart from the above, they also take part in:</p>\r\n\r\n<ul style=\"margin-left:40px\">\r\n\t<li>Cleaning the beach</li>\r\n\t<li>Making garbage bins for local areas</li>\r\n\t<li>Implementing Turtles/Environment campaigns for local area</li>\r\n\t<li>Releasing injured turtles after treatment and clean private beach</li>\r\n\t<li>Turtles site construction work: such as extra turtle tank or wall, painting the walls etc.</li>\r\n\t<li>Collecting turtle information such as length of carapace, size of flippers, checking its weight etc.</li>\r\n\t<li>Creating Turtle Education/Material/Lessons and Activities for local students at school/project site</li>\r\n</ul>",
+        "needs": "<ul>\r\n\t<li>Collecting data on the turtle population of Nusa Penida</li>\r\n\t<li>Identifying different turtle species &ndash; there are 7 different types</li>\r\n\t<li>Collecting eggs for research and monitoring nests</li>\r\n\t<li>Overseeing the safety of the hatchlings as they migrate to sea (Hatchlings must pass through an obstacle course of predators in order to get safely to sea)</li>\r\n</ul>",
+        "image_url": null,
+        "image": "bal-mar-001.jpg"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 12,
+    "fields": {
+        "category": 4,
+        "country": 4,
+        "location": "Florianopolis",
+        "pin_id": "bra-com-001",
+        "name": "Creche for poor community children",
+        "description": "<p>This&nbsp;wonderful cr&egrave;che and makes the children&rsquo;s needs a priority. The center focusses on teh fact that children are constantly learning through everything they do, so they are constantly providing activities and enrichment.</p>\r\n\r\n<p>Due to the level of poverty, these children would otherwise be exposed to harsh conditions in the communities, whilst their parents are out working or seeking work.</p>\r\n\r\n<p>There are 120 children at the cr&egrave;che from 1 to 5 years of age and their purpose is to provide an innovative way to educate the children with activities such as educational games, recreational activities and playing a musical instrument, sports, arts, etc.&nbsp;</p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for educational enrichment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Books</li>\r\n\t<li>Center maintenance costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "bra-com-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 13,
+    "fields": {
+        "category": 4,
+        "country": 4,
+        "location": "Florianopolis",
+        "pin_id": "bra-com-002",
+        "name": "Community sports programme",
+        "description": "<p>This project<span style=\"color:black\">&nbsp;has been </span><span style=\"color:black\">running for more than 10 years and their focus is on helping children from local communities, taking them out of the streets and giving them better opportunities through arts and sports. During the 10 years of existence, the institute has benefit around 35.000 children with its projects!</span></p>\r\n\r\n<p><span style=\"color:black\">One of the projects developed by the institute is called <em>&ldquo;Driblando a Vida&rdquo;</em>, which consists of football lesson for children in different parts of the city.&nbsp;Children do not need to pay anything to attend the lessons, but they must attend school regularly and have good grades. Around 350 children aged between 6 and 16 years-old attend the sports sessions. </span></p>\r\n\r\n<p><span style=\"color:black\">Whilst at the project, practicing football, it means they are not in the streets vulnerable and open to all sorts of violence and addictions, which is why these projects are always so important!</span></p>",
+        "needs": "<ul>\r\n\t<li>Sporting equipment</li>\r\n\t<li>Project running costs</li>\r\n\t<li>Additional staff costs (the more staff they can afford, the greater their influence)</li>\r\n\t<li>Transport for the children to get to and from sports&nbsp;matches</li>\r\n</ul>",
+        "image_url": null,
+        "image": "bra-com-002.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 14,
+    "fields": {
+        "category": 5,
+        "country": 4,
+        "location": "Florianopolis",
+        "pin_id": "bra-edu-001",
+        "name": "School for the poorer community",
+        "description": "<p>This private school has been running for more than 15 years and is attended by 280 students. 30% of the students are economically less fortunate and cannot afford education.</p>\r\n\r\n<p style=\"text-align:justify\">The school believes in new ways of Education, so the children do not need to remain inside a classroom listening to a teacher for many hours a day. The innovative proposal in this system is to provide tools for students to look for what they want to learn. The tutors (who have different skills and abilities, such as music, dance, arts, sports) are always there to offer help, although they can suggest topics and activities they know the students are interested in.</p>\r\n\r\n<p style=\"text-align:justify\">This project aims to bring this new way of learning, in which the teachers do not need to go to the front of the class and talk about many issues that most of the students are not even interested in. The main objective of this project is to give as much freedom as possible to the children to find out the issues they are interested to learn.</p>",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Gardening tools</li>\r\n\t<li>Musical instruments</li>\r\n\t<li>Sporting equipment</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "bra-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 15,
+    "fields": {
+        "category": 4,
+        "country": 5,
+        "location": "Samraong",
+        "pin_id": "cam-com-001",
+        "name": "Community Construction Project",
+        "description": "<p>This project aims to improve the quality of life for under&shy;privileged citizens in and around Samraong. The construction projects greatly improve the environment of the poverty-stricken people within this area.</p>\r\n\r\n<p>This project has already built an entire school!&nbsp;The Greenway School was designed, built and completely operated under the guidance of the native Cambodian manager and was opened in 2013, and over three hundred children attend every day.&nbsp;Despite the previous efforts, the work here is far from done and they continue to construct pathways, toilets, walls, decorating&nbsp;walls&nbsp;etc.</p>\r\n\r\n<p>Since the project began its&nbsp;work with the rural community of Samraong in 2008, it&nbsp;has become a figurehead of the local community. Its valuable efforts in developing local schools and hospitals, has had an un-measurable positive effect on the local community.</p>",
+        "needs": "<ul>\r\n\t<li>Building supplies</li>\r\n\t<li>Paint</li>\r\n\t<li>Tools</li>\r\n\t<li>Staff wages assistance</li>\r\n</ul>",
+        "image_url": null,
+        "image": "cam-com-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 16,
+    "fields": {
+        "category": 5,
+        "country": 5,
+        "location": "Samraong",
+        "pin_id": "cam-edu-001",
+        "name": "School for disadvantaged children",
+        "description": "<p>The school is located in the Pul village of Samraong where they teach various subjects to children from poorer backgrounds, who otherwise could not afford education.</p>\r\n\r\n<p>The children themselves come from the Pul village, as well as five other surrounding villages. Their age ranges from 6 to 15 years old and currently possess only a basic level of English.&nbsp;Children attend a regular public school for three hours per day, where they don&rsquo;t get the chance to learn a lot of English. Children from all over, come to this&nbsp;school project during their free time and out&nbsp;of their own accord and truly enjoy their time there!</p>\r\n\r\n<p>It&nbsp;was designed, built and completely operated under the guidance of the native Cambodian manager and was opened in 2013.&nbsp; Since beginning his work with the rural community of Samraong in 2008, he has become a figurehead of the local community. His valuable efforts in developing local schools and hospitals with the help of volunteers, has had an un-measurable positive effect on the local community.</p>\r\n\r\n<p>There are two main objectives at this project. Firstly education, and&nbsp;secondly trying to offer to better future for under-developed children from poor and remote areas. As well as simply offering this education, the school&nbsp;also to promotes and encourages attendance among children who are not currently receiving any schooling by visiting local families and providing support.</p>\r\n\r\n<p>Every day over 400 children arrive at the School eager to learn and are extremely appreciative of those who can assist them with their educational development!</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "cam-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 18,
+    "fields": {
+        "category": 4,
+        "country": 5,
+        "location": "Banteay Chhmar",
+        "pin_id": "cam-com-002",
+        "name": "Temple Reconstruction & Conservation",
+        "description": "<p style=\"text-align:justify\">The aims and objectives of this project are to help preserve the history and attract more tourism to the area to boost the local economy.</p>\r\n\r\n<p style=\"text-align:justify\">The commune of Banteay Chhmar (in Banteay Chhmar Province) contains 14 villages and there are 4 villages around the temple with 6,312 people. The name was taken from the large temple, called Banteay Chhmar, which translates to Small Base.</p>\r\n\r\n<p style=\"text-align:justify\">The massive temple of Banteay Chhmar, along with its satellite shrines and reservoir (baray), comprises one of the most important and least understood archaeological complexes from Cambodia&#39;s Angkor period. There are 9 other smaller temples around the&nbsp; Banteay&nbsp; Chhmar temple. They all are mostly hidden in the forest and covered with small bushes and trees because of the lack of conservation from the local people and the authorities.</p>\r\n\r\n<p style=\"text-align:justify\">Banteay Chhmar is one of the main tourist destinations in Banteay Meanchey Province, but not many people have explored those small satellite temples around this temple, despite them being really beautiful and having a rather secret history.</p>\r\n\r\n<p style=\"text-align:justify\">This project is very&nbsp;important to the local people in this area to preserve&nbsp;their heritage and boost tourism to grow the country&#39;s economy.&nbsp;</p>",
+        "needs": "<ul>\r\n\t<li>Building supplies</li>\r\n\t<li>Paint</li>\r\n\t<li>Tools</li>\r\n\t<li>Gardening implements, trees and shrubs</li>\r\n\t<li>Staff wages assistance</li>\r\n</ul>",
+        "image_url": null,
+        "image": "cam-com-002.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 19,
+    "fields": {
+        "category": 4,
+        "country": 6,
+        "location": "Fengyan",
+        "pin_id": "chi-com-001",
+        "name": "Kindergarten Project for poor communities",
+        "description": "<p>The kindergarten is located at Lian Hua,and offers a safe environment for children around&nbsp;4/6 years old. They are mainly from the poor villages in and around the area.</p>\r\n\r\n<p>The ages of the children range between 4 -5 years old, and without this center they would be left to their own devices, bheing exposed to poverty and crime. The center offers a safe environment for them to just be kids. They also are taught&nbsp;basic English words and phrases through fun activities like songs and games.</p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for educational enrichment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Books</li>\r\n\t<li>School maintenance costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "chi-com-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 20,
+    "fields": {
+        "category": 2,
+        "country": 6,
+        "location": "Chengdu",
+        "pin_id": "chi-wil-001",
+        "name": "Panda Conservation and Rehabilitation",
+        "description": "<p style=\"text-align:justify\">The project is based at Bifengxia Giant Panda base, a branch of the China Conservation &amp; Research Centre for Giant Pandas and is one of the largest of its kind. It started working in 2003 and suddenly grew in 2008 when Pandas were relocated here from Wolong Panda base, which was devastated in an earthquake that year.</p>\r\n\r\n<p style=\"text-align:justify\">Since the move, the panda population here has more than doubled - which is an amazing achievement. A big share of pandas you might see outside China have normally originated from this reserve. The base is now looking to releasing the panda into the wild, fulfilling its long term ambition.</p>\r\n\r\n<p style=\"text-align:justify\">They focus on rehabilitaiton with intent to release, education and awareness.</p>",
+        "needs": "<ul>\r\n\t<li>Food for the Pandas</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "chi-wil-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 21,
+    "fields": {
+        "category": 4,
+        "country": 7,
+        "location": "Esparza",
+        "pin_id": "cos-com-001",
+        "name": "Childcare Centre for poor community",
+        "description": "<p style=\"text-align:justify\"><span style=\"color:#333333\">The childcare programme serves to help children to have fun and to learn English, in a safe, clean environment.</span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#333333\">Esparza is a medium-sized agricultural town nestled amongst the mountains above Rio Barranca, in the Central Pacific Coast area of Costa Rica. The area was first settled by the Chorotega and Huetar peoples. The Chorotega people fled from Mexico 1,500 years ago and brought their traditions with them. </span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#333333\">The children attending are from poorer agricultural backgrounds, and the center provides a safe haven whilst their parents work during the day.</span></p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for educational enrichment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Books</li>\r\n\t<li>School maintenance costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "cos-com-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 23,
+    "fields": {
+        "category": 5,
+        "country": 7,
+        "location": "Esparza",
+        "pin_id": "cos-edu-001",
+        "name": "Support Community Schools",
+        "description": "<p>Costa Rica relies heavily on tourism, and tourism relies on locals speaking popular tourist languages. Private schools are often bilingual, but expensive, and children in government schools are left behind.</p>\r\n\r\n<p>This programme is specifically designed to support the poorer communities that cannot afford to attend private schools. It&nbsp;gives&nbsp;the children a chance to improve their prospects in government schools by broadening their cultural horizons and giving them the confidence to use and practice a foreign language.</p>\r\n\r\n<p>The local government and Educational Supervisor are fully behind this project.&nbsp;Some of the larger schools have English teachers, but the teachers themselves often struggle. The project involves funding paid volunteer students to teach English at the school for a few months at a time.</p>",
+        "needs": "<p>As the volunteers attending the school to help are flying over from various countries (and often cannot afford flights and living costs whilst there), your donation will help fund many of these costs, enabling the school to have more international assistance.</p>",
+        "image_url": null,
+        "image": "cos-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 24,
+    "fields": {
+        "category": 1,
+        "country": 8,
+        "location": "San Cristobal Island",
+        "pin_id": "ecu-env-001",
+        "name": "Conservation in the Galapagos Islands",
+        "description": "<p style=\"text-align:justify\"><span style=\"color:black\">This project&#39;s aim is to provide a place on San Cristobal where the land is restored in its most natural habitat after having been destroyed by agriculture for the past decades; a place where a realistic utopia can take place; a place where nature and human beings can learn from each other. </span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:black\">The initiator of this project is a local Galapagos family with a great heart for all arts and a belief that when the people that live on the Galapagos Islands have more feelings with and knowledge about their island, great problems will be solved. One of the major problems they see in their daily lives on the island is that even though people on the Galapagos live in a unique place in the world, unfortunately the educational system is not a focus point. Children grow up on the Galapagos with little dreams and so with project opens this world of dreams for them. </span></p>\r\n\r\n<p style=\"text-align:justify\">The Galapagos Islands is a unique place in this world, with a fragile eco-system that faces many challenges, among which the quick spreading invasive plant species that destroy the local habitat. The most common ones are blackberry, guava and elder. They cover extensive areas of the islands and represent a real threat to the native and endemic flora and fauna of the Galapagos. They are not only found on privately owned lands, which only constitute a small percentage of the island, but also in the National Park area.</p>\r\n\r\n<p style=\"text-align:justify\">Some of the amazing work the project does:</p>\r\n\r\n<ul>\r\n\t<li><span style=\"color:black\">Reforestation &ndash; eliminate introduced/invasive plant species and then restore native and endemic species. </span></li>\r\n\t<li><span style=\"color:black\">Identifying and logging fauna</span></li>\r\n\t<li><span style=\"color:black\">Identifying native and endemic species </span></li>\r\n\t<li><span style=\"color:black\">Recycled Construction Projects</span></li>\r\n\t<li style=\"text-align: left;\"><span style=\"color:black\">Improve trails and paths around the plots of the lands. </span></li>\r\n\t<li><span style=\"color:black\">Working together with the institution MAG on <em>mingas </em>on nearby farms </span></li>\r\n\t<li><span style=\"color:black\">Work in the plant nursery either on the land or in the Galapagos National Park. Grow and nurture native plants in the nursery and then move them to their permanent locations. </span></li>\r\n\t<li><span style=\"color:black\">Community Work -Painting Schools, beach cleaning, etc. </span></li>\r\n\t<li><span style=\"color:black\">Help to grow and cut down plants used as food for the Galapagos National Park tortoise breeding centres. </span></li>\r\n\t<li><span style=\"color:black\">Working with the national park and the Consejo de Gobierno on water system measurements </span></li>\r\n</ul>",
+        "needs": "<ul>\r\n\t<li>Environmental Education materials</li>\r\n\t<li>Gardening and Lanscaping equipment</li>\r\n\t<li>Staff wages assistance</li>\r\n</ul>",
+        "image_url": null,
+        "image": "ecu-env-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 25,
+    "fields": {
+        "category": 6,
+        "country": 8,
+        "location": "Quito",
+        "pin_id": "ecu-med-001",
+        "name": "Community Children's Hospital",
+        "description": "<p>This&nbsp;<span style=\"color:black\">public children&rsquo;s hospital in Quito, treats children aged from newborns to 15 years old.&nbsp;The hospital was founded in 1948 and has been saving children&rsquo;s lives for over 60 years.</span></p>\r\n\r\n<p><span style=\"color:black\">Children from all over Ecuador come here to receive medical treatment and according to recent statistics over 140,000 patients are treated every year. The hospital attends to medical emergencies as well as providing long-term care for those who are extremely ill.&nbsp;&nbsp;As it is a public hospital, most of the children who receive treatment come from poor families and although it is state-funded there is not enough money to provide free treatment for all and parents have to find a way of covering their child&rsquo;s medical costs.&nbsp; </span></p>\r\n\r\n<p style=\"margin-left:-1px; margin-right:1px; text-align:justify\"><span style=\"color:black\">When patients have travelled a long distance for treatment, one of the parents is allowed to stay in the hospital in the same room with their child. The hospital offers lunch to some parents, but unfortunately there isn&rsquo;t enough food for all of them. The hospital also has some private rooms but as there aren&rsquo;t enough social workers have to decide which parents can stay there. </span></p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for entertainment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Medical supplies</li>\r\n\t<li>Assistance with patient transport needs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "ecu-med-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 26,
+    "fields": {
+        "category": 4,
+        "country": 8,
+        "location": "Quito",
+        "pin_id": "ecu-com-001",
+        "name": "Street Kids Project",
+        "description": "<p style=\"margin-left:-1px; margin-right:6px; text-align:justify\">The project has been running for many years and has helped a lot of families get off the streets, find somewhere to live and when possible a job. Most importantly the project is now in its second phase of working with the children of the original street dwellers.&nbsp;</p>\r\n\r\n<p style=\"margin-left:-1px; margin-right:6px; text-align:justify\">Today the centre helps over 250 children and their families, although they do not all come to the centre at the same time. Many of these children have had a bad start to life such as being born to drug addicted parents, living on the streets, subjected to violence, abuse or neglect, made to work selling sweets in the street etc.</p>\r\n\r\n<p style=\"margin-left:-1px; margin-right:6px; text-align:justify\">The aim is to stress the importance of education as a way of breaking the circle and ensuring that these children do not fall for the same way of life and temptations that their parents did before them. With the help of funding and sponsors, the project pays to send the children to school and help out with any costs that the family may not be able to cover like school uniforms, books, materials etc.&nbsp;&nbsp;&nbsp;</p>\r\n\r\n<p style=\"margin-left:-1px; text-align:justify\">It also provides help and support to the children&rsquo;s family who come from poor, vulnerable and often broken backgrounds. One of the main problems facing those who have left behind their addictions and life on the street is finding employment due to their lack of education and skills.&nbsp; As a result the project has created a carpentry work shop as well as a bakery that young people and adults can come and receive training and various courses.</p>",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Food for children&#39;s lunches</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "ecu-com-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 27,
+    "fields": {
+        "category": 2,
+        "country": 8,
+        "location": "Quito",
+        "pin_id": "ecu-wil-001",
+        "name": "Wildlife Rescue, Rehabilitation & Release",
+        "description": "<p><span style=\"color:black\">T</span><span style=\"color:black\">he Centre is located in the Ecuadorian rainforest founded in 2006 with the aim of protecting the wildlife of the Amazon region through the rescue and rehabilitation of local flora and fauna. </span></p>\r\n\r\n<p><span style=\"color:black\">T</span><span style=\"color:black\">he animals at the centre have all been abused, neglected or abandoned. Some of the animals were orphaned when their parents were killed by </span>hunters, others&nbsp; were rescued from animal dealers who were trying to traffic the animals out of the country and others have been removed from families who had kept these animals in captivity.&nbsp;Unfortunately the majority have suffered some sort of physical or psychological abuse. Some of the animals have been handed over to the care of the centre by Government authorities who have rescued or taken custody&nbsp; of&nbsp; the&nbsp; animals;&nbsp; others&nbsp; have&nbsp; arrived&nbsp; at&nbsp; the centre by voluntary means from families who have realised&nbsp; that&nbsp; wild&nbsp; animals&nbsp; are&nbsp; not&nbsp; to&nbsp; be&nbsp; kept&nbsp; as domestic pets.</p>\r\n\r\n<p style=\"text-align:justify\">There are currently at least 40 different species of animals at the centre which include: ocelot, tayra, capibara, parrots, monkeys, tortoises, caimans amongst others.</p>\r\n\r\n<p style=\"text-align:justify\">The centre is also open for <span style=\"color:black\">t</span><span style=\"color:black\">ourists to visit charging a small entrance fee that is the centre&rsquo;s main source of income.&nbsp; &nbsp;As animal welfare is not a high priority for many Ecuadorians, the background and mistreatment of each animal is explained to tourists, with the idea being to educate local and foreign visitors about animal protection issues. In general the visits are not guided, but tourists can read about each animal at the information sign at the cages.</span></p>",
+        "needs": "<ul>\r\n\t<li>Food for all wildllife species</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "ecu-wil-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 28,
+    "fields": {
+        "category": 5,
+        "country": 9,
+        "location": "Accra",
+        "pin_id": "gha-edu-001",
+        "name": "Community School Project",
+        "description": "<p>The project is a a mixed gender pre-school (kindergarten), primary and junior secondary school in Accra. The school is funded privately and is located in the Kwabenya region of Accra. There are approx 120 students at the school with about 30-35 students in each of the three grades.&nbsp;</p>\r\n\r\n<p>There are about 18 teachers of which 6 are English teachers, although basic.</p>\r\n\r\n<p>Facilities and equipment are very basic at the school &ndash; blackboard, library, printers, communal area for breaks, western style toilets. The school is always in need of&nbsp;assistance to improve the environment for the children.</p>",
+        "needs": "<ul>\r\n\t<li style=\"text-align:justify\">School supplies</li>\r\n\t<li style=\"text-align:justify\">Reading materials</li>\r\n\t<li style=\"text-align:justify\">Stationary</li>\r\n\t<li style=\"text-align:justify\">Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "gha-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 29,
+    "fields": {
+        "category": 5,
+        "country": 9,
+        "location": "Accra",
+        "pin_id": "gha-edu-002",
+        "name": "General Schools Assistance",
+        "description": "<p>Ghana is a generally poorer African Country. Our project raises funds that are spread across various schools in the area to ensure that they have the neccessary resources to keep educating the youth of Accra and surrounding regions.</p>\r\n\r\n<p>The schools are a mixture of State and Private, primary and secondary. However. with&nbsp;regard to their State/Private status, the<br />\r\nsystem is very different to that in the Western world, and some of the private schools are actually significantly poorer&nbsp;than the State schools.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "gha-edu-002.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 30,
+    "fields": {
+        "category": 4,
+        "country": 9,
+        "location": "Accra",
+        "pin_id": "gha-com-001",
+        "name": "Human Rights Law Project",
+        "description": "<p>This non-profit organisation believe that securing basic human rights in Ghana requires an effective frontline organisation equipped with essential advocacy and research skills, and legal expertise in dealing with individuals whose activities result in human rights violations in the country.</p>\r\n\r\n<p>Their mission is to ensure the realisation, respect, promotion and protection of the rights of all people living in Ghana in accordance with Ghanaian law and international standards. As well as increasing human rights awareness and the adoption of a sustainable human rights culture by public officers in Ghana.</p>\r\n\r\n<p>Since 2008, the project has grown to become a respected human rights organisation, both within Ghana as well as globally. Within the human rights field, the work they primarily focuses on three main areas; research, advocacy and the provision of free legal aid services. Specifically, they conducts human rights advocacy and research; protects and promotes women and children&rsquo;s rights; promotes and advocates reproductive health rights; initiates and supports public interest litigation; protects the rights persons living with HIV/AIDS; monitors and advocates for democratic policing; conducts prison advocacy to protect the rights of prisoners; monitors and evaluates compliance with international human rights standards and works to educate and create awareness on human rights.</p>\r\n\r\n<p>The Objectives of the Centre are to:</p>\r\n\r\n<p>Conduct human rights advocacy and research</p>\r\n\r\n<ul style=\"margin-left:40px\">\r\n\t<li>Protect and promote women and children&rsquo;s rights</li>\r\n\t<li>Promote and advocate reproductive health rights initiate and support public interest litigation Monitor and advocate democratic policing</li>\r\n\t<li>Conduct prison visits and advocate the rights of prisoners</li>\r\n\t<li>Monitor and evaluate compliance with international, regional and national human rights</li>\r\n\t<li>standards</li>\r\n\t<li>Educate and create awareness about human rights</li>\r\n\t<li>Offer human rights training for Ministries, Departments and Agencies (MDAs), Security</li>\r\n\t<li>Agencies and Civil Society Organizations.</li>\r\n</ul>",
+        "needs": "<ul>\r\n\t<li>Education and Awareness campaigns</li>\r\n\t<li>Support and Counselling</li>\r\n\t<li>Legal and Court fees</li>\r\n</ul>",
+        "image_url": null,
+        "image": "gha-com-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 31,
+    "fields": {
+        "category": 6,
+        "country": 10,
+        "location": "Madurai",
+        "pin_id": "ind-med-001",
+        "name": "Care in a Children's Hospital",
+        "description": "<p>This non profit charitable foundation&#39;s mission is to work with competence, compassion and commitment for the sick and the needy, to help the female infanticide and abandoned children first to survive, and then to ensure the right of the child to a family.</p>\r\n\r\n<p>Their work so far, has saved the lives of over 1,000 children. These children would otherwise have been killed in the womb or soon after their birth.</p>\r\n\r\n<p>The hospitals vision is to build a child friendly society where even severely disadvantaged children develop their full potential as individuals as members of their families and communities, and to address the physical, mental and social wellbeing of the community through comprehensive health care and allied services.</p>\r\n\r\n<p>They have an adoption policy and the aim is to support the children until they have been adopted.</p>\r\n\r\n<p>There are approximately 24 underprivileged children at the orphanage, mainly girls, from little new born babies up until the age of 4.</p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for educational enrichment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Medical equipment</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "ind-med-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 32,
+    "fields": {
+        "category": 5,
+        "country": 10,
+        "location": "Madurai",
+        "pin_id": "ind-edu-001",
+        "name": "School for disadvantaged children",
+        "description": "<p>We work with different types of schools in Madurai, mainly Nursery, Primary and Secondary schools. Some of the schools are very poor private schools and others are more well off public schools, all of different religions.</p>\r\n\r\n<p>In many of the schools we work with, materials and resources may be scarce, but the enthusiasm of the students and colleagues more than makes up for any hardships.</p>\r\n\r\n<p>We continually provide support and funding to ensure that as many schools can benefit and progress in supporting proper education for their students.</p>\r\n\r\n<p>&nbsp;</p>",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "ind-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 33,
+    "fields": {
+        "category": 4,
+        "country": 10,
+        "location": "Udaipur",
+        "pin_id": "ind-com-001",
+        "name": "Community Outreach Center",
+        "description": "<p>Educational support will be given to children in a kindergarten and young girls at a community school in Udaipur. The aim is to help the children grow their confidence and learn better English which will help them in many ways in the future and also to provide a global platform for the students of Udaipur by interacting in English and to share the best practices in the education system.</p>\r\n\r\n<p>The schools try to provide the best possible education to children of tuk-tuk (autorickshaw) drivers, house and office maids, and unskilled labourers. The teachers of the school are capable of translating Basic English.</p>\r\n\r\n<p>At the community outreach centre there are about 30 children attending the programme. The children are all girls between the ages of 10 to 16 years. These children live at the hostel facility available at the school as they come from very far off villages. Most of their families live in far off under-developed villages having odd jobs for their living and earn very little to support their families and to provide education for their little ones.</p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for educational enrichment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Reading materials</li>\r\n\t<li>School maintenance costs</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "ind-com-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 34,
+    "fields": {
+        "category": 4,
+        "country": 11,
+        "location": "Majunga",
+        "pin_id": "mad-com-001",
+        "name": "Community Kindergarten",
+        "description": "<p>This kindergarten for the poor community is based in the Majunga, offering a free service to the local children, who are right at the start of their learning journey and are all mainly from the villages surrounding the town.</p>\r\n\r\n<p>The center has very little in terms of educational material and infrastructure, yet they continue to help children from all over at no cost. With your support, they can grow and help more local children.</p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for educational enrichment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Books</li>\r\n\t<li>School maintenance costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "mad-com-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 35,
+    "fields": {
+        "category": 5,
+        "country": 11,
+        "location": "Mahajanga",
+        "pin_id": "mad-edu-001",
+        "name": "Rural School Development",
+        "description": "<p>This project supports local rural schools around Mahajanga. These schools have practically no resources, yet do the amazing work of continutally&nbsp;educating the community.</p>\r\n\r\n<p>In many of the schools we work with, materials and resources may be scarce, but the enthusiasm of the students and colleagues more than makes up for any hardships.</p>\r\n\r\n<p>We continually provide support and funding to ensure that as many schools can benefit and progress in supporting proper education for their students.</p>",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "mad-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 36,
+    "fields": {
+        "category": 4,
+        "country": 12,
+        "location": "Borneo",
+        "pin_id": "mal-com-001",
+        "name": "Care in Poor Communities",
+        "description": "<p>This publicly funded residential home near Kota Kinabalu offering care for the underprivileged and helpless community. It serves as a shelter to abused women and children, victims of rape and children with mental and physical disabilities.</p>\r\n\r\n<p>Some of the children have multiple disabilities and need close attention most of the time. There is a varied range of disabilities including; Cerebral Palsy, Epilepsy, Attention Deficit Disorder, Learning difficulties, Paralysis and Deafness. The children are given the necessary care and love (some on a one-to-one basis) according to their physical and emotional needs &ndash; bathing/washing them, feeding and general care (e.g washing of clothes, room cleaning and sweeping, cooking and playing).</p>\r\n\r\n<p>The home is constantly alive with the caregivers tending to the needs of the 43 residents, 33 of which are either orphaned, abandoned or have no proper home.</p>\r\n\r\n<p>&nbsp;</p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for educational enrichment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Books</li>\r\n\t<li>School maintenance costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "mal-com-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 37,
+    "fields": {
+        "category": 2,
+        "country": 12,
+        "location": "Sandakan",
+        "pin_id": "mal-wil-001",
+        "name": "Orangutan Rescue & Rehabilitation",
+        "description": "<p>The Centre is run by the Sabah Wildlife Department. The centre and was open in 1964 and has since successfully rehabilitated hundreds of Orangutans.</p>\r\n\r\n<p>The Rehabilitation Centre rescues abandoned, injured or orphaned Orangutans, as well as releasing animals from captivity. Owning a pet Orang-Utan is strictly forbidden, but this doesn&#39;t stop people penning them up and mistreating them. The Rehabilitation Centre also rescues these animals, which are usually disease-ridden and sometimes injured as well.</p>\r\n\r\n<p>Once it has rescued an animal, it treats its injuries and nurses it back to full fitness and health. Often the animals, particularly any orphaned babies, have to be taught how to fend for themselves and survive in the Wild. Once it&#39;s been taught how to climb and forage for food, it is usually released into the surrounding forest.</p>\r\n\r\n<p>For a while the animals often come back to the Centre to get &#39;free meals&#39;; until such time they feel totally at home in the forest.While Orangutan rehabilitation is still the primary goal at the center, they also concentrate on public education and awareness on conservation.</p>",
+        "needs": "<ul>\r\n\t<li>Food for the Orangutans</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Bottles and forumla for baby Orangutans</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "mal-wil-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 38,
+    "fields": {
+        "category": 5,
+        "country": 12,
+        "location": "Boreo",
+        "pin_id": "mal-edu-001",
+        "name": "Schools for underprivileged communities",
+        "description": "<p>The school has primary school students aged from 6&ndash;12 and secondary school students aged from 13-17 (pre-University) age.</p>\r\n\r\n<p>They have very few resources, yet do the amazing work of continually educating the community.</p>\r\n\r\n<p>In many of the schools we work with, materials and resources may be scarce, but the enthusiasm of the students and colleagues more than makes up for any hardships.</p>\r\n\r\n<p>We continually provide support and funding to ensure that as many schools can benefit and progress in supporting proper education for their students.</p>",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "mal-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 39,
+    "fields": {
+        "category": 2,
+        "country": 12,
+        "location": "Sabah",
+        "pin_id": "mal-wil-002",
+        "name": "Wildlife Rescue Center",
+        "description": "<p>This wildlife park rescues local wildlife, provides veterinary assistance, rehabilitates and releases them back into the wild.</p>\r\n\r\n<p >Their main aims are to:</p>\r\n\r\n<ul>\r\n\t<li>Increase Public Awareness</li>\r\n\t<li>Provide World Class animal facilities and enclosures</li>\r\n\t<li>Start an environmental education programme</li>\r\n\t<li>Make captive breeding of endangered species possible</li>\r\n\t<li>Allow research activities to take place</li>\r\n</ul>\r\n\r\n<p>focus on providing animals with enclosures which imitate natural conditions</p>\r\n\r\n<p>Some of the native species at the Wildlife Park include Orang-utans, Proboscis Monkeys, Pygmy Elephants (including two very charming baby Elephants) and a Pygmy Rhino. On top of this the Wildlife Park has Tigers, a Clouded Leopard, Gibbons, Otters, Sun Bears, Giant Tortoise, Mouse Deer, Ostrich, Civets and a fantastic Aviary complete with talking birds which allows the visitor a taste of life deep within the rainforest.</p>",
+        "needs": "<ul>\r\n\t<li>Food for all wildllife species</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "mal-wil-002.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 40,
+    "fields": {
+        "category": 5,
+        "country": 13,
+        "location": "Errachidia",
+        "pin_id": "mor-edu-001",
+        "name": "School for disadvantaged children",
+        "description": "<p>We mainly work with a non-government school, which provides education to children from poor backgrounds.</p>\r\n\r\n<p>Each school accommodates around 70 students, ranging from 8 to 20 years teaching both males and females. They provide education to children from poor backgrounds all year around, as many cannot afford to travel back to their home cities.</p>\r\n\r\n<p>The schools often only have very basic facilities, and we endeavour to assist them in building a computer room. library and other facilities that will help with education growth.</p>",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Computer equipment</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "mor-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 41,
+    "fields": {
+        "category": 4,
+        "country": 14,
+        "location": "Kathmandu",
+        "pin_id": "nep-com-001",
+        "name": "Orphanage in Poor Community",
+        "description": "<p>This project works with underprivileged children, and often these children have been left homeless on the streets of Kathmandu. The age range at this orphanage is quite large; between 4 to 17 years old.</p>\r\n\r\n<p>The children&rsquo;s level of spoken English is relatively good, however, their reading and writing skills are very much at beginner level, which is one of the things that the project assists with.</p>\r\n\r\n<p>The orphanage also has many running costs, which they struggle to afford.</p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for educational enrichment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Books</li>\r\n\t<li>Maintenance costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "nep-com-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 42,
+    "fields": {
+        "category": 6,
+        "country": 14,
+        "location": "Kathmandu",
+        "pin_id": "nep-med-001",
+        "name": "Healthcare for the Underprivileged",
+        "description": "<p>It is estimated that hundreds of thousands of people in Nepal (especially women and children) suffer unnecessarily due to a lack of basic healthcare.</p>\r\n\r\n<p>We&#39;ve partnered with several hospitals (both government-run as well as private clinics) in Kathmandu to support their running costs and assist them in their endeavour to treat the ill and needy.</p>",
+        "needs": "<ul>\r\n\t<li>Medical equipment</li>\r\n\t<li>Food parcels</li>\r\n\t<li>Emergency equipment</li>\r\n\t<li>Health and safety awareness campaigns</li>\r\n</ul>",
+        "image_url": null,
+        "image": "nep-med-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 43,
+    "fields": {
+        "category": 5,
+        "country": 15,
+        "location": "Auckland",
+        "pin_id": "nz-edu-001",
+        "name": "School for the poorer community",
+        "description": "<p>The schools we assist caters for children from a very poor social and economic background in New Zealand.</p>\r\n\r\n<p>In many of the schools we work with, materials and resources may be scarce, but the enthusiasm of the students and colleagues more than makes up for any hardships.</p>\r\n\r\n<p>We continually provide support and funding to ensure that as many schools can benefit and progress in supporting proper education for their students.</p>",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "nz-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 44,
+    "fields": {
+        "category": 1,
+        "country": 16,
+        "location": "Manu",
+        "pin_id": "per-env-001",
+        "name": "Conservation in the Amazon Rainforest",
+        "description": "<p>This amazing project was founded in Peru in 2002 and has since grown to play a vital role in creating a sustainable future for the Manu Biosphere Reserve (MBR) and its inhabitants.</p>\r\n\r\n<p>Through developing business, philanthropic and educational activities, the project merges sustainability into different activities showing how it is possible to create balance and add value to the environment, society and the economy simultaneously. It has grown to become a leading conservation and sustainable development not-for-profit organisation that undertakes and manages sustainable initiatives within Manu.</p>\r\n\r\n<p>The project is also leading the way with sustainable tourism, volunteering and educational expeditions to Manu. Specialists in operating and managing expeditions for research groups, universities and schools, it also manages and operates the Manu Learning Centre (the MLC), a research and education centre in the Manu Biosphere Reserve. In 2011, the world&#39;s leading sustainability standard, the Rainforest Alliance, officially verified the project for high standards for sustainable tourism at the MLC, an exciting step towards achieving it&#39;s vision.</p>",
+        "needs": "<ul>\r\n\t<li>Boating supplies</li>\r\n\t<li>Environmental Education materials</li>\r\n\t<li>Tools</li>\r\n\t<li>Staff wages assistance</li>\r\n</ul>",
+        "image_url": null,
+        "image": "per-env-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 45,
+    "fields": {
+        "category": 4,
+        "country": 16,
+        "location": "Cajamarca",
+        "pin_id": "per-com-001",
+        "name": "Center for Children with Special Needs",
+        "description": "<p>The center provides a special home for children (and some adults) with physical and mental disabilities that require a high level of care and assistance.</p>\r\n\r\n<p>There are around 30-40 children and adults at the center at any given time.&nbsp;The majority of these children are from the streets and have either been abandoned by their families or have lost their parents due to misfortunes and, as such, are highly at risk of exploitation, child abuse and extreme poverty.</p>\r\n\r\n<p>The main&nbsp;goal of the project is working toward maximising what these children can do on their own, with the hope that one day they are able to get jobs and live fulfilling lives.</p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for educational enrichment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Books</li>\r\n\t<li>Medical equipment</li>\r\n</ul>",
+        "image_url": null,
+        "image": "per-com-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 46,
+    "fields": {
+        "category": 2,
+        "country": 17,
+        "location": "Stanford",
+        "pin_id": "sa-wil-001",
+        "name": "Big Cat Rescue Sanctuary",
+        "description": "<p>This non-profit sanctuary was built to home any captive-bred big cats, to ensure that they will be protected and prosper for the rest of their lives.</p>\r\n\r\n<p>It is situated on a 40 Hectare piece of paradise, filled with lots of large trees, a natural spring and amazing 360 degree mountain views and operates completely environmentally friendly.</p>\r\n\r\n<p>One of the sanctuary's main purposes is to be an educational platform to create awareness about conditions big cats face in captivity, and how animal welfare and enrichment play a vital role in giving them the best captive life possible. The project is a true& sanctuary where no cub petting, breeding or trading takes place, and the main purpose is for the welfare of these magnificent animals.</p>",
+        "needs": "<ul>\r\n\t<li>Food for the Big Cats</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "sa-wil-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 47,
+    "fields": {
+        "category": 3,
+        "country": 17,
+        "location": "Kleinbaai",
+        "pin_id": "sa-mar-001",
+        "name": "Marine Conservation Project",
+        "description": "<p>This project facilitates and operates a range of projects, designed to improve knowledge and protection of local marine species.</p>\r\n\r\n<p>The main projects are:</p>\r\n\r\n<ul>\r\n\t<li>the endangered African Penguin whose numbers are at an all-time low;</li>\r\n\t<li>the world&rsquo;s densest populations of the vulnerable Great White Shark</li>\r\n\t<li>the globally important breeding and calving grounds of the Southern Right Whale.</li>\r\n</ul>\r\n\r\n<p>Their research helps to identify the origin, the cause and possible solutions marine conservation issues. Solutions are implemented, policies changed and legislation adapted to ensure the ongoing sustainability of the marine ecosystem.</p>",
+        "needs": "<ul>\r\n\t<li>Food for marine species</li>\r\n\t<li>Boating supplies</li>\r\n\t<li>Environmental Education materials</li>\r\n</ul>",
+        "image_url": null,
+        "image": "sa-mar-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 48,
+    "fields": {
+        "category": 6,
+        "country": 17,
+        "location": "Cape Town",
+        "pin_id": "sa-med-001",
+        "name": "Children's Hospital",
+        "description": "<p>The Red Cross Children's Hospital is the only comprehensive hospital dedicated exclusively to children in sub-Saharan Africa. Internationally it is regarded as the 'one-stop shop' for excellence in child health care and treatment.</p>\r\n\r\n<p>Established in 1956, from funds raised by the Red Cross Society and Cape Provincial Administration, the Hospital has become a major centre for paediatric medicine and surgery in Africa. The Red Cross treats up to 300,000 children each year, from throughout South Africa and beyond its borders.</p>\r\n\r\n<p>The Hospital focuses on the medical needs of each and every tiny patient, irrespective of parent's income, race, gender, religion or place of residence.</p>\r\n\r\n<p >The Hospital is affiliated to the University of Cape Town and is a leading teaching and research institution. The first liver and heart transplants on children in South Africa were performed in this hospital, as well as other groundbreaking achievements.</p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for educational enrichment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Books</li>\r\n\t<li>Maintenance costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "sa-med-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 49,
+    "fields": {
+        "category": 3,
+        "country": 17,
+        "location": "Kleinbaai",
+        "pin_id": "sa-mar-002",
+        "name": "Great White Shark Conservation",
+        "description": "<p>This is a world-leading organisation focusing on Great White Shark Research, Conservation and Education. The organisation was founded in 1989 as a research organisation carrying the name South Africa White Shark Research Institute.</p>\r\n\r\n<p>150,000,000 to 200,000,000 sharks are killed each year by humans just for their fins. On top of that 16 Billion fish are discarded each year; a lot of this is made up of sharks. They are, as a result, in danger of extinction. Great White Sharks are the last wild predator on earth that we cannot tame; from that point of view alone it deserves our respect and attention.</p>\r\n\r\n<p>The organisation has grown immensely over the years and also offers numerous social upliftment programmes such as Swop Shop, a vegetable garden for kids and 21 Days for the Ocean which runs in September every year. It also does regular school talks in their area and runs a successful volunteer programme working with sharks and taking and entering basic visual data.</p>",
+        "needs": "<ul>\r\n\t<li>Food</li>\r\n\t<li>Research equipment</li>\r\n\t<li>Boating supplies</li>\r\n\t<li>Environmental Education materials</li>\r\n</ul>",
+        "image_url": null,
+        "image": "sa-mar-002.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 50,
+    "fields": {
+        "category": 5,
+        "country": 17,
+        "location": "Knysna",
+        "pin_id": "sa-edu-001",
+        "name": "Township School Support",
+        "description": "<p>Many of South Africa&#39;s disadvantaged communities live in townships, or shanty towns. The areas usually have extreme poverty and the children have limited access to proper education.</p>\r\n\r\n<p>We support various township schools across the country and provide neccesary funding that they do not receive from the government in order to function adequately.</p>\r\n\r\n<p>We continually provide support and funding to ensure that as many schools can benefit and progress in supporting proper education for their students.</p>",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "sa-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 51,
+    "fields": {
+        "category": 2,
+        "country": 17,
+        "location": "Limpopo",
+        "pin_id": "sa-wil-002",
+        "name": "Lion Rescue & Rehabilitation",
+        "description": "<p>Currently there 1000&#39;s of lions living in canned-hunting facilities throughout South Africa, which are predominantly stocked by the &#39;cub-petting&#39; trade. Majority of these facilities are over-stocked, with lions living in cramped and horrendous conditions.</p>\r\n\r\n<p>Working in conjunction with wildlife professionals and support from local authorities, the project has taken over a previous breeding and hunting facility, along with 90 lions that were living in dire conditions. Found starving and extremely thin, the initial priority has been to feed and allow the lions to get back to their optimal weight and health.</p>\r\n\r\n<p>They are also erecting much larger enclosures and semi-wild enclosures (wild camps), which are enormous compared to what the lions have had to live in previously. The lions will be undergoing their rehabilitation in a safe sanctuary setting, with some of them starting out in smaller camps, to familiarise themselves with their new surroundings.</p>\r\n\r\n<p>As these lions have been captive bred, they are familiar with human interaction. Sadly, in the petting trade, cubs are generally taken away from their mothers at around 3 weeks old and will never see her again. Humans (usually paying guests) are used as 'surrogate mothers' to the cubs. This, along with the fact that the lion industry has irresponsibly bred lions so badly, means that the gene pool/quality is adversely affected, and they can never be released back into natural wild areas. The reason for this is that if they were to breed with wild lions, this would have disastrous consequences for the future of wild lion populations.</p>\r\n\r\n<p>Hence, the end-goal aim of this project is to rehabilitate these lions back into a safe, semi-wild environment, using the huge camps as semi-free-roaming areas for rescued lions to live out their years in a safer and more natural environment.</p>",
+        "needs": "<ul>\r\n\t<li>Food for the lions</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "sa-wil-002.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 52,
+    "fields": {
+        "category": 2,
+        "country": 18,
+        "location": "Kandy",
+        "pin_id": "sl-wil-001",
+        "name": "Elephant Rescue Sanctuary",
+        "description": "<p>This project rescues elephants from captivity, rehabilitates them and provides a safe sanctuary for them to live in.</p>\r\n\r\n<p>The reality of the welfare of domesticated elephants is often a sad one. Around 75% of these elephants in Sri Lanka are forced to work from early morning right through until the evening. These beautiful creatures spend all day uprooting trees and pulling logs with little food, water and shade.</p>\r\n\r\n<p>In addition to this, a further 20% of domesticated elephants spend their days kept in a tourist riding facility, continuously carrying tourists to make money for their owners. Often a basket is placed on the back of the elephant which allows up to 6-10 tourists to ride at any one time. This is often the case in particularly touristic places.</p>\r\n\r\n<p>This initiative doesn&rsquo;t only help the elephants, they also create employment within local communities.</p>",
+        "needs": "<ul>\r\n\t<li>Food for the elephants</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "sl-wil-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 53,
+    "fields": {
+        "category": 5,
+        "country": 18,
+        "location": "Kandy",
+        "pin_id": "sl-edu-001",
+        "name": "School for Buddhist Monk Children",
+        "description": "<p>The main objective of this programme is to provide a good English education for local Monk students, particularly for those who are unable to afford the payments for private English classes.</p>\r\n\r\n<p>Generally, the ages range from 4 years old to approximately 8 years old and the school has very basic facilities and requires constant funding to ensure the proper education of it's children.</p>",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "sl-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 54,
+    "fields": {
+        "category": 3,
+        "country": 18,
+        "location": "Ambalangoda",
+        "pin_id": "sl-mar-001",
+        "name": "Turtle Conservation and Rehabilitation",
+        "description": "<p>The Turtle Conservation project works towards preventing the extinction of sea turtles, which are currently classed as a critically endangered species.</p>\r\n\r\n<p>The aim is to habilitate and hopefully release them back into the sea.</p>\r\n\r\n<p>Many turtles fall victim to the practices of commercial fishing and are in need of veterinary care. Protecting nests and rescuing eggs to bring to the safety of our hatchery, are daily activities where our volunteers make a substantial difference.</p>",
+        "needs": "<ul>\r\n\t<li>Food for the turtles</li>\r\n\t<li>Aquarium equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "sl-mar-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 55,
+    "fields": {
+        "category": 5,
+        "country": 19,
+        "location": "Singburi",
+        "pin_id": "tha-edu-001",
+        "name": "School for the poorer community",
+        "description": "<p>The aims and objectives fall under the jurisdiction of the Thai government. In recent years, the government has placed a continued emphasis on the teaching of the English language. Despite this, English literacy rates in Thailand remain one the lowest in Asia.</p>\r\n\r\n<p>This programme consists of working with students at various schools teaching English classes. We have strong relationships with several primary and secondary schools and the age of students may be between 4 and 18 years old.</p>\r\n\r\n<p>In many of the schools we work with, materials and resources may be scarce, but the enthusiasm of the students and colleagues more than makes up for any hardships.</p>\r\n\r\n<p>We continually provide support and funding to ensure that as many schools can benefit and progress in supporting proper education for their students.</p>",
+        "needs": "<ul>\r\n\t<li>School supplies</li>\r\n\t<li>Reading materials</li>\r\n\t<li>Stationary</li>\r\n\t<li>Extra tutor support</li>\r\n</ul>",
+        "image_url": null,
+        "image": "tha-edu-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 56,
+    "fields": {
+        "category": 2,
+        "country": 19,
+        "location": "Surin",
+        "pin_id": "tha-wil-001",
+        "name": "Elephant Rescue Sanctuary",
+        "description": "<p>There are over 200 elephants registered in the Surin province,and the vast majority of them are& trapped in the unfortunate trade of street begging.</p>\r\n\r\n<p>This is a terrible life for elephants that require literally hundreds of kilos of fresh vegetables and clean water daily. Street begging reduces an elephant's life expectancy by at least 50%. Despite differences in opinion on other matters, all elephant conservation organizations agree that street begging is wrong.</p>\r\n\r\n<p>The Surin government approached this NGO Project to help develop sustainable elephant-based tourism in Surin and to build a safe environment for elephants.</p>\r\n\r\n<p>With their support, the Project's goal is to establish sustainable managed elephant tourism as an alternative to both street begging, and to other forms of tourism, such as circuses and elephant rides.</p>\r\n\r\n<p>The project currently looks after up to 200 elephants and always needs funding assistance to ensure they have sufficient requirements to care for them.</p>",
+        "needs": "<ul>\r\n\t<li>Food for the elephants</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "tha-wil-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 57,
+    "fields": {
+        "category": 2,
+        "country": 20,
+        "location": "Florida",
+        "pin_id": "usa-wil-001",
+        "name": "Wild Mustang Rescue & Rehabilitation",
+        "description": "<p>This non-profit organisation is dedicated to the welfare, rescue and preservation of America&'s wild horses, the Mustangs.</p>\r\n\r\n<p>They receive mustangs which have been taken from the wild and from there, ended up in neglectful or abusive situations. The project rehabilitates these wild horses so they have a chance of being adopted into good homes and have a dignified life after being taken from the wild.</p>\r\n\r\n<p>Currently there are over 40,000 horses awaiting adoption. The ones that don�t get adopted are put down. A lot of people think they can adopt a wild horse and tame it themselves - but they cannot. The result is that these horses end up in abusive and neglectful environments.</p>\r\n\r\n<p>The Centre also rescues Mustangs from such situations and illegal slaughter houses. The horses, who are often at the brink of death when they reach the Centre, are nursed back to health and then trained with positive reinforcement and love, in order to become adoptable.</p>",
+        "needs": "<ul>\r\n\t<li>Food for the horses</li>\r\n\t<li>Fencing and enclosure equipment</li>\r\n\t<li>Veterinary costs</li>\r\n\t<li>Maintenance of the center</li>\r\n\t<li>Assistance with staff salaries and running costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "usa-wil-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 58,
+    "fields": {
+        "category": 6,
+        "country": 21,
+        "location": "Livingstone",
+        "pin_id": "zam-med-001",
+        "name": "Community Healthcare for the Underprivileged",
+        "description": "<p>This small medical clinic is based about 30km just outside of Livingstone town centre on farmland out in the bush and is currently being run by some Missionaries.</p>\r\n\r\n<p>They have managed to convert one of the out buildings into a medical centre enabling them to do some tremendous work in helping the local communities.</p>\r\n\r\n<p>Although the Clinic is fairly small the work they have been able to do has been extremely beneficial to the local villagers. The Clinic consists of 2 exam rooms, 1 private room for serious cases and two small wards with 3-4 beds in each, one for men and one for women. They are also looking into obtaining some ultrasound equipment to enable them to monitor pregnancies more efficiently. They have also set up an HIV referral Clinic open every Thursday. They also provide a truck which goes round to all the local villages to collect patients for treatment.</p>\r\n\r\n<p>Many of their cases generally involve pregnancies, snake bites and testing for Malaria or HIV. For those who may have broken bones, they need to be referred to the hospital in Livingstone town centre, although they are able to stitch up minor wounds at the Clinic. Currently the HIV centre has 5-6 patients.</p>",
+        "needs": "<ul>\r\n\t<li>Medical equipment</li>\r\n\t<li>Food parcels for patients</li>\r\n\t<li>Emergency equipment</li>\r\n\t<li>Health and safety awareness campaigns</li>\r\n</ul>",
+        "image_url": null,
+        "image": "zam-med-001.png"
+    }
+}, {
+    "model": "projects.project",
+    "pk": 59,
+    "fields": {
+        "category": 4,
+        "country": 21,
+        "location": "Livingstone",
+        "pin_id": "zam-com-001",
+        "name": "School for orphans in Poor Community",
+        "description": "<p>Although the school is fairly poor, the enthusiasm of the staff and children is remarkable and they have made every effort to make the school look bright and cheerful.</p>\r\n\r\n<p>The children's level of spoken English is relatively good, however, their reading and writing skills are very much at beginner level, which is one of the things that the project assists with.</p>\r\n\r\n<p>The orphanage also has many running costs, which they struggle to afford.</p>",
+        "needs": "<ul>\r\n\t<li>Toys and games for educational enrichment</li>\r\n\t<li>Blankets, bottles and food for the kids</li>\r\n\t<li>Books</li>\r\n\t<li>Maintenance costs</li>\r\n</ul>",
+        "image_url": null,
+        "image": "zam-edu-001.png"
     }
 }]
