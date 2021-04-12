@@ -221,6 +221,11 @@ form {
     color: var(--logo-green);
 }
 
+#cke_id_description,
+#cke_id_needs {
+    width: 100% !important;
+}
+
 /* Project form image submit */
 .btn-file {
     position: relative;

@@ -24,6 +24,7 @@
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'edit_project' project.id %}" class="form" enctype="multipart/form-data">
                     {% csrf_token %}
+                    {{ form.media }}
                     {% for field in form %}
                         {% if field.name != 'image' %}
                             {{ field | as_crispy_field }}
