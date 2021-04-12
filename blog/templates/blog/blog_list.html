@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section id="blogList">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <h2>Blog Posts</h2>
+
+                {% for list in blog_list %}
+                <div class="col">
+                    {{ list }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
