@@ -3,7 +3,7 @@ from __future__ import absolute_import
 from django import forms
 from django.db import models
 
-from .widgets import CKEditorWidget
+from richtext.widgets import CKEditorWidget
 
 
 class RichTextField(models.TextField):

@@ -1,5 +1,5 @@
 from django.db import models
-from ckeditor.fields import RichTextField
+from richtext.fields import RichTextField
 
 
 class Category(models.Model):

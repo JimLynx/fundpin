@@ -13,7 +13,7 @@ from django.utils.safestring import mark_safe
 from django.utils.translation import get_language
 from js_asset import JS, static
 
-from .configs import DEFAULT_CONFIG
+from richtext.configs import DEFAULT_CONFIG
 
 
 class LazyEncoder(DjangoJSONEncoder):
