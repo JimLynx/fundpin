@@ -22,6 +22,12 @@ let homeSwiper = new Swiper('.swiper-container.main-swiper', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        renderBullet: function (index, className) {
+            if (index < 8) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            }
+            return '';
+        }
     },
 });
 
@@ -51,6 +57,12 @@ let featuredProjectSwiper = new Swiper('.swiper-container.featured-project-swipe
     pagination: {
         el: '.swiper-pagination',
         clickable: false,
+        renderBullet: function (index, className) {
+            if (index < 8) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            }
+            return '';
+        }
     },
     loop: true,
     breakpoints: {
@@ -81,6 +93,12 @@ let featuredBlogSwiper = new Swiper('.swiper-container.featured-blog-swiper', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        renderBullet: function (index, className) {
+            if (index < 8) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            }
+            return '';
+        }
     },
     loop: true,
     breakpoints: {
