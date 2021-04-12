@@ -592,6 +592,48 @@ form.subscribe-form button:hover {
     color: #fff;
 }
 
+/* --- Social Login buttons */
+.btn-facebook,
+.google,
+.btn-github {
+    width: 180px;
+    height: 35px
+}
+
+.btn-facebook {
+    color: #3b5998 !Important;
+    background-color: var(--off-white);
+
+    border: 1px solid #3b5998;
+    ;
+}
+
+.btn-facebook:hover {
+    background-color: #3b5998;
+    color: var(--off-white) !important;
+}
+
+.btn-github:hover {
+    background-color: var(--p-dark-grey);
+    color: var(--off-white) !important;
+}
+
+.google {
+    text-transform: none;
+}
+
+.google img {
+    width: 20px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+}
+
+.btn-github {
+    color: var(--p-dark-grey) !important;
+    background-color: var(--off-white);
+    border: 1px solid var(--p-dark-grey);
+}
+
 /* --- MEDIA QUERIES --- */
 
 @media (min-width: 576px) {
