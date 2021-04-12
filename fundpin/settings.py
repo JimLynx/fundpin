@@ -59,6 +59,8 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
+    'richtext',
+    'blog',
 
     # other
     'ckeditor',
@@ -66,7 +68,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'storages',
     'django_extensions',
-    'richtext',
 
 ]
 
