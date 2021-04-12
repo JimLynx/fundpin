@@ -1,9 +1,8 @@
 DEFAULT_CONFIG = {
     "skin": "moono-lisa",
-    "toolbar_Basic": [["Source", "-", "Bold", "Italic"]],
-    "toolbar_Full": [
+    # custom toolbar
+    "toolbar_FundPin": [
         [
-            "Styles",
             "Format",
             "Bold",
             "Italic",
@@ -13,18 +12,22 @@ DEFAULT_CONFIG = {
             "Undo",
             "Redo",
         ],
-        ["Link", "Unlink", "Anchor"],
         {'name': 'paragraph',
-         'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
-                   'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-',]},
-        ["Image", "Table", "HorizontalRule"],
-        ["TextColor", "BGColor"],
-        ["Smiley", "SpecialChar"],
+         'items': [
+             'NumberedList',
+             'BulletedList',
+             '-',
+             'Outdent',
+             'Indent',
+             '-',
+         ]
+         },
+        ["Link", "Unlink", "Anchor"],
         ["Source"],
     ],
-    "toolbar": "Full",
-    "height": 291,
-    "width": 835,
+
+    "toolbar": "FundPin",
+    "height": 250,
     "filebrowserWindowWidth": 940,
     "filebrowserWindowHeight": 725,
 }
