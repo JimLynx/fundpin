@@ -2,24 +2,47 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
 {% endblock %}
 
 {% block content %}
 
 <section id="blogList">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-10 offset-1">
+            <div class="col-12">
                 <h2>Blog Posts</h2>
 
-                {% for list in blog_list %}
-                <div class="col">
-                    {{ list }}
-                </div>
+                {% for blog in blogs %}
+                    {% if blog.status != 0 %}
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- title -->
+                            <a href="{% url 'blog_description' blog.id %}">
+                                <h5>{{ blog.title }}</h5>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <!-- image -->
+                            <img src="https://images.unsplash.com/photo-1533787896899-91b040188f57?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1320&q=80" alt="">
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <!-- truncated 'intro' content -->
+                            <p>{{ blog.content|truncatewords:10|safe}}</p>
+                        </div>
+                        <div class="col-12">
+                            <!-- author & date created -->
+                            <div class="text-muted ml-auto">
+                                by <span class="font-italic">{{ blog.author }}</span> on {{ blog.created_on.date }}
+                            </div>
+                        </div>
+                        <div class="hr-dark w-100"></div>
+                    </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
+    </div>
     </div>
 </section>
 

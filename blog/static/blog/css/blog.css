@@ -2,3 +2,11 @@
 #blogDescription {
     min-height: 60vh;
 }
+
+#blogList img {
+    width: 100%;
+}
+
+#blogDescription img {
+    width: 100%;
+}
