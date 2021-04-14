@@ -1,9 +1,9 @@
 DEFAULT_CONFIG = {
     "skin": "moono-lisa",
+    "paragraph": 'JustifyLeft',
     # custom toolbar
     "toolbar_FundPin": [
         [
-            "Format",
             "Bold",
             "Italic",
             "Underline",
@@ -14,6 +14,8 @@ DEFAULT_CONFIG = {
         ],
         {'name': 'paragraph',
          'items': [
+             'JustifyLeft',
+             '-',
              'NumberedList',
              'BulletedList',
              '-',
