@@ -15,10 +15,10 @@ def blog_list(request):
     return render(request, template, context)
 
 
-def blog_description(request, blog_id):
+def blog_description(request, slug):
     """ return index pageblog description page for each blog """
 
-    blog_description = get_object_or_404(Post, pk=blog_id)
+    blog_description = get_object_or_404(Post, slug=slug)
 
     template = 'blog/blog_description.html'
     context = {

@@ -415,7 +415,7 @@
                             <div class="swiper-slide">
                                 <h4>{{ blog.title }}</h4>
                                 <p>{{ blog.content|truncatewords:10|safe}}</p>
-                                <a href="{% url 'blog_description' blog.id %}" class="btn btn-primary blog-read-more-btn">
+                                <a href="{% url 'blog_description' blog.slug %}" class="btn btn-primary blog-read-more-btn">
                                     Read More...</a>
                             </div>
                         {% endif %}
