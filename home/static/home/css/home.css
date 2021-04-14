@@ -180,12 +180,23 @@ body {
 }
 
 /* BLOG SECTION */
+#featured-blogs h2 {
+    color: var(--off-white);
+}
+
 #featured-blogs .swiper-slide {
-    /* text-align: center; */
-    /* font-size: 18px; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    height: 230px;
+}
+
+#featured-blogs .swiper-slide h4 {
+    color: var(--logo-green);
+}
+
+.blog-read-more-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
 }
 
 /* CONTACT SECTION */
@@ -320,7 +331,6 @@ body {
         height: 70vh;
     }
 
-
     .slide-text-wrapper {
         margin: auto 25px 25px;
         font-size: 1.1rem;
@@ -341,6 +351,10 @@ body {
         height: 275px;
         float: left;
         margin: 5px 20px 20px 0;
+    }
+
+    #featured-blogs .swiper-slide {
+        height: 270px;
     }
 }
 
@@ -380,6 +394,10 @@ body {
     .support-block {
         height: 150px;
         width: 150px;
+    }
+
+    #featured-blogs .swiper-slide {
+        height: 300px;
     }
 
     .mailing-form,
