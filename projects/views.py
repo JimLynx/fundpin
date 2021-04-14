@@ -56,6 +56,7 @@ def all_projects(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    template = 'projects/projects.html'
     context = {
         'projects': projects,
         'search_term': query,
@@ -64,17 +65,18 @@ def all_projects(request):
         'current_sorting': current_sorting,
     }
 
-    return render(request, 'projects/projects.html', context)
+    return render(request, template, context)
 
 
 def project_description(request, project_id):
     """ A view to show individual projects """
     project = get_object_or_404(Project, pk=project_id)
 
+    template = 'projects/project_description.html'
     context = {
         'project': project,
     }
-    return render(request, 'projects/project_description.html', context)
+    return render(request, template, context)
 
 
 @login_required
@@ -145,5 +147,6 @@ def delete_project(request, project_id):
 
     project = get_object_or_404(Project, pk=project_id)
     project.delete()
+
     messages.success(request, 'The selected Project has been deleted!')
     return redirect(reverse('projects'))
