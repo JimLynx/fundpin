@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -10,12 +10,17 @@
 <section id="blogDescription">
     <div class="container">
         <div class="row">
-            <div class="col-10 offset-1">
-                <h2>Blog Description</h2>
-
-                    <h5>{{ blog_description.title|safe }}</h5>
-                    <p>{{ blog_description.content|safe }}</p>
-
+            <div class="col-12 col-md-8 offset-md-2">
+                <h2>{{ blog_description.title|safe }}</h2>
+                <img class="float-left"
+                    src="https://images.unsplash.com/photo-1533787896899-91b040188f57?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1320&q=80"
+                    alt="">
+                <p>{{ blog_description.content|safe }}</p>
+                <!-- author & date created -->
+                <div class="text-muted mb-3">
+                    Posted by <span class="font-italic">{{ blog_description.author }}</span> on
+                    {{ blog_description.created_on.date }}
+                </div>
             </div>
         </div>
     </div>
