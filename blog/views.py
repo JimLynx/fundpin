@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib import messages
+from django.utils.safestring import mark_safe
 from blog.models import Post, Comment
 from .forms import CommentForm
 
@@ -20,7 +22,8 @@ def blog_description(request, slug):
     """ return blog description page for each blog """
 
     blog_description = get_object_or_404(Post, slug=slug)
-    comments = blog_description.comments.filter(active=True).order_by("-created_on")
+    comments = blog_description.comments.filter(
+        active=True).order_by("-created_on")
     new_comment = None
 
     if request.method == 'POST':
@@ -29,8 +32,14 @@ def blog_description(request, slug):
             new_comment = comment_form.save(commit=False)
             new_comment.post = blog_description
             new_comment.save()
+            messages.success(request, (mark_safe("Thank you, your comment was succcessfully submitted."
+                                                "<br><br>It is awaiting admin approval (which can take up to 48 hours), "
+                                                "so please check back later.")))
             comment_form = CommentForm()
-            return redirect('blog_description', slug=blog_description.slug)
+            return redirect(reverse('blog_description', args=[blog_description.slug]))
+        else:
+            messages.error(
+                request, 'Failed to add comment. Please ensure the form is valid.')
     else:
         comment_form = CommentForm()
 
