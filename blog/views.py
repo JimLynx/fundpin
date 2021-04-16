@@ -58,7 +58,21 @@ def blog_description(request, slug):
 def add_blog(request):
     """ Add a new blog post """
 
-    form = BlogForm()
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site admin can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = BlogForm(request.POST, request.FILES)
+        if form.is_valid():
+            blog_description = form.save()
+            messages.success(request, 'Successfully added a new Blog Post.')
+            return redirect(reverse('blog_description', args=[blog_description.slug]))
+        else:
+            messages.error(
+                request, 'Failed to add a Blog Post. Please ensure the form is valid.')
+    else:
+        form = BlogForm()
 
     template = 'blog/add_blog.html'
     context = {
