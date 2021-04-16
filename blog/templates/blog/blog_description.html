@@ -11,28 +11,38 @@
 <section id="blogDescription">
     <div class="container">
         <div class="row">
+
             <!-- Blog Description -->
             <div class="col-12 col-md-8 offset-md-2">
-                <!-- Blog Title -->
-                <h2>{{ blog_description.title|safe }}</h2>
-                <!-- Blog Image -->
-                <img class="float-left"
-                    src="https://images.unsplash.com/photo-1533787896899-91b040188f57?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1320&q=80"
-                    alt="">
-                <!-- Blog Description -->
-                <p>{{ blog_description.content|safe }}</p>
-                <!-- author & date created -->
-                <div class="text-muted mb-3">
-                    Posted by <span class="font-italic">{{ blog_description.author }}</span> on
-                    {{ blog_description.created_on.date }}
+                <div class="clearfix">
+                    <!-- Blog Title -->
+                    <h2>{{ blog_description.title|safe }}</h2>
+                    <!-- Blog Image -->
+                    {% if blog_description.image %}
+                    <a href="{{ blog_description.image.url }}" target="_blank">
+                        <img src="{{ blog_description.image.url }}" class="p-detail-img" alt="{{ blog_description.title }}">
+                    </a>
+                    {% else %}
+                    <a href="" class="blog-link">
+                        <img src="{{ MEDIA_URL }}noimage.png" class="p-detail-img" alt="{{ blog_description.title }}">
+                    </a>
+                    {% endif %}
+                    <!-- Blog Description -->
+                    <p>{{ blog_description.content|safe }}</p>
+                    <!-- author & date created -->
+                    <div class="text-muted my-3">
+                        Posted by <span class="font-italic">{{ blog_description.author }}</span> on
+                        {{ blog_description.created_on.date }}
+                    </div>
+                    <div class="hr-dark w-100 my-4"></div>
                 </div>
-                <div class="hr-dark w-100 my-4"></div>
             </div>
         </div>
+
         <!-- Blog Comments -->
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2">
-                <h5>This post has {{ comments.count }} comments</h5>
+                <h5 class="mb-3">This post has {{ comments.count }} comment(s)</h5>
                 {% for comment in comments %}
                 <div class="comments">
                     <!-- comment author & date -->
@@ -46,6 +56,7 @@
                     <div class="w-100">
                         {{ comment.body }}
                     </div>
+                    <br>
                 </div>
                 {% endfor %}
                 <!-- New comment form -->
@@ -56,11 +67,20 @@
                     {% csrf_token %}
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
-
             </div>
         </div>
     </div>
 </section>
 
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            let file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`);
+        });
+    </script>
 {% endblock %}
