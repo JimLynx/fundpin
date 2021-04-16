@@ -104,7 +104,7 @@
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                                 <a href="{% url 'add_project' %}" class="dropdown-item">Project Management</a>
-                                <a href="" class="dropdown-item">Blog Management</a>
+                                <a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a>
                                 <div class="hr-dark"></div>
                             {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
