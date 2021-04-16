@@ -1,5 +1,11 @@
-from .models import Comment
 from django import forms
+from .models import Comment, Post
+
+
+class BlogForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = '__all__'
 
 
 class CommentForm(forms.ModelForm):

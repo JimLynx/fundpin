@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.utils.safestring import mark_safe
 from blog.models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, BlogForm
 
 
 def blog_list(request):
@@ -33,8 +34,8 @@ def blog_description(request, slug):
             new_comment.post = blog_description
             new_comment.save()
             messages.success(request, (mark_safe("Thank you, your comment was succcessfully submitted."
-                                                "<br><br>It is awaiting admin approval (which can take up to 48 hours), "
-                                                "so please check back later.")))
+                                                 "<br><br>It is awaiting admin approval (which can take up to 48 hours), "
+                                                 "so please check back later.")))
             comment_form = CommentForm()
             return redirect(reverse('blog_description', args=[blog_description.slug]))
         else:
@@ -50,4 +51,18 @@ def blog_description(request, slug):
         'new_comment': new_comment,
         'comment_form': comment_form
     }
+    return render(request, template, context)
+
+
+@login_required
+def add_blog(request):
+    """ Add a new blog post """
+
+    form = BlogForm()
+
+    template = 'blog/add_blog.html'
+    context = {
+        'form': form,
+    }
+
     return render(request, template, context)
