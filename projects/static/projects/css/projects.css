@@ -175,7 +175,7 @@
     width: 20px;
 }
 
-.info-icon {
+.p-details-wrapper .info-icon {
     width: 40px;
     position: absolute;
     top: 0;
@@ -277,7 +277,7 @@ form {
         height: 16.5rem;
     }
 
-    .info-icon {
+    .p-details-wrapper .info-icon {
         width: 50px;
         right: 15px;
     }
@@ -313,7 +313,7 @@ form {
         z-index: -1;
     }
 
-    .info-icon {
+    .p-details-wrapper .info-icon {
         width: 65px;
     }
 
@@ -325,7 +325,7 @@ form {
 @media (min-width: 992px) {
 
     .p-detail-mh {
-        max-height: 21rem;
+        max-height: 26rem;
     }
 }
 
