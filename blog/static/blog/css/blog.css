@@ -30,3 +30,20 @@
     margin-right: 20px;
     box-shadow: var(--box-shadow);
 }
+
+/* Delete Confirmation Modal */
+.modal-dialog {
+    width: fit-content;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-content {
+    border: 1px solid var(--logo-green);
+}
+
+.modal-content p {
+    color: var(--logo-green);
+}

@@ -111,3 +111,18 @@ def edit_blog(request, slug):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_blog(request, slug):
+    """ Delete an existing blog post """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site admin can do that.')
+        return redirect(reverse('home'))
+
+    blog = get_object_or_404(Post, slug=slug)
+    blog.delete()
+
+    messages.success(request, 'The selected blog post has successfully been deleted.')
+    return redirect(reverse('blog'))

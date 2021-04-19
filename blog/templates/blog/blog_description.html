@@ -3,47 +3,56 @@
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
 {% endblock %}
 
 {% block content %}
 
 <section id="blogDescription">
     <div class="container">
-        <div class="row">
+        <!-- Blog Title -->
+        <h2>{{ blog_description.title|safe }}</h2>
 
-            <!-- Blog Description -->
-            <div class="col-12 col-md-8 offset-md-2">
-                <div class="clearfix">
-                    <!-- Blog Title -->
-                    <h2>{{ blog_description.title|safe }}</h2>
-                    <!-- Blog Image -->
-                    {% if blog_description.image %}
+        <div class="row">
+            <div class="col-12 text-center">
+                {% if request.user.is_superuser %}
+                    <a class="btn btn-info mr-2" href="{% url 'edit_blog' blog_description.slug %}">Update</a>
+                    <a class="btn btn-danger ml-2" <a href="#blogDeleteModal" class="btn btn-danger ml-2 trigger-btn"
+                        data-toggle="modal">Delete</a>
+                {% endif %}
+            </div>
+        </div>
+        <!-- Blog Description -->
+        <div class="col-12 col-md-8 offset-md-2">
+            <div class="clearfix">
+
+                <!-- Blog Image -->
+                {% if blog_description.image %}
                     <a href="{{ blog_description.image.url }}" target="_blank">
                         <img src="{{ blog_description.image.url }}" class="p-detail-img" alt="{{ blog_description.title }}">
                     </a>
-                    {% else %}
+                {% else %}
                     <a href="" class="blog-link">
                         <img src="{{ MEDIA_URL }}noimage.png" class="p-detail-img" alt="{{ blog_description.title }}">
                     </a>
-                    {% endif %}
-                    <!-- Blog Description -->
-                    <p>{{ blog_description.content|safe }}</p>
-                    <!-- author & date created -->
-                    <div class="text-muted my-3">
-                        Posted by <span class="font-italic">{{ blog_description.author }}</span> on
-                        {{ blog_description.created_on.date }}
-                    </div>
-                    <div class="hr-dark w-100 my-4"></div>
+                {% endif %}
+                <!-- Blog Description -->
+                <p>{{ blog_description.content|safe }}</p>
+                <!-- author & date created -->
+                <div class="text-muted my-3">
+                    Posted by <span class="font-italic">{{ blog_description.author }}</span> on
+                    {{ blog_description.created_on.date }}
                 </div>
+                <div class="hr-dark w-100 my-4"></div>
             </div>
         </div>
+    </div>
 
-        <!-- Blog Comments -->
-        <div class="row">
-            <div class="col-12 col-md-8 offset-md-2">
-                <h5 class="mb-3">This post has {{ comments.count }} comment(s)</h5>
-                {% for comment in comments %}
+    <!-- Blog Comments -->
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-2">
+            <h5 class="mb-3">This post has {{ comments.count }} comment(s)</h5>
+            {% for comment in comments %}
                 <div class="comments">
                     <!-- comment author & date -->
                     <div class="text-muted">
@@ -58,27 +67,50 @@
                     </div>
                     <br>
                 </div>
-                {% endfor %}
-                <!-- New comment form -->
-                <div class="hr-dark w-100 my-4"></div>
-                <h3>Leave a comment</h3>
-                <form method="post">
-                    {{ comment_form|crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
+            {% endfor %}
+            <!-- New comment form -->
+            <div class="hr-dark w-100 my-4"></div>
+            <h3>Leave a comment</h3>
+            <form method="post">
+                {{ comment_form|crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
+    </div>
     </div>
 </section>
 
+<!-- Delete Confirm modal -->
+<div class=" modal fade px-2 pt-3" id="blogDeleteModal" tabindex="-1" role="dialog" aria-labelledby="blogDeleteModal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md modal-notify modal-danger mx-auto" role="document">
+        <div class="modal-content text-center">
+            <div class="modal-header d-flex justify-content-center">
+                <p class="h6 my-2">Are you sure you want to DELETE this Blog Post?</p>
+            </div>
+            <i class="fas fa-exclamation-circle text-danger my-2"> This action cannot be undone!</i>
+            <div class="modal-body">
+                <div class="modal-footer flex-center">
+                    <button class="btn btn-outline-secondary mr-auto" type="button" data-dismiss="modal">
+                        <i class="fas fa-times animated rotateIn"></i>
+                        Cancel
+                    </button>
+                    <a class="btn btn-outline-danger" href="{% url 'delete_blog' blog_description.slug %}" type="button">
+                        Confirm Deletion
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
+{{ block.super }}
     <script type="text/javascript">
-        $('#new-image').change(function() {
+        $('#new-image').change(function () {
             let file = $('#new-image')[0].files[0];
             $('#filename').text(`Image will be set to: ${file.name}`);
         });
