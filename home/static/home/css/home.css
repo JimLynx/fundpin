@@ -14,6 +14,7 @@ body {
     background-size: cover;
     width: 95%;
     height: 60vh;
+    box-shadow: var(--box-shadow);
 }
 
 #mainCarousel .swiper-container-horizontal>.swiper-pagination-bullets,
@@ -27,31 +28,31 @@ body {
 }
 
 .hero-slide {
-    background: url(https://images.unsplash.com/photo-1588442025058-dffe84001858?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1196&q=80);
+    background: url(/static/images/main-carousel/hero-slide.png);
 }
 
 .eco-slide {
-    background: url(https://images.unsplash.com/photo-1420745981456-b95fe23f5753?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+    background: url(/static/images/main-carousel/eco-slide.png);
 }
 
 .community-slide {
-    background: url(https://images.unsplash.com/photo-1473605768212-7e1f2c756179?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+    background: url(/static/images/main-carousel/community-slide.png);
 }
 
 .wildlife-slide {
-    background: url(https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80);
+    background: url(/static/images/main-carousel/wildlife-slide.png);
 }
 
 .education-slide {
-    background: url(https://images.unsplash.com/photo-1473649085228-583485e6e4d7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1489&q=80);
+    background: url(/static/images/main-carousel/education-slide.png);
 }
 
 .marine-slide {
-    background: url(https://images.unsplash.com/photo-1602587557695-9fa83da489c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+    background: url(/static/images/main-carousel/marine-slide.png);
 }
 
 .health-slide {
-    background: url(https://images.unsplash.com/photo-1459183885421-5cc683b8dbba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+    background: url(/static/images/main-carousel/health-slide.png);
 }
 
 .slide-text-wrapper {
@@ -327,7 +328,7 @@ body {
     }
 
     #mainCarousel .swiper-slide {
-        width: 80%;
+        width: 70%;
         height: 70vh;
     }
 
@@ -379,6 +380,10 @@ body {
     .about-wrapper p {
         font-size: 1.2rem;
     }
+
+    #featured-blogs .swiper-slide {
+        height: 240px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -397,11 +402,17 @@ body {
     }
 
     #featured-blogs .swiper-slide {
-        height: 300px;
+        height: 260px;
     }
 
     .mailing-form,
     .mailing-text {
         width: 75%;
+    }
+}
+
+@media (min-width: 1500px) {
+    #featured-blogs .swiper-slide {
+        height: 210px;
     }
 }
