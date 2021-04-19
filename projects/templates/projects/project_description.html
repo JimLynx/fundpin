@@ -32,8 +32,11 @@
                         <img src="{{ project.image.url }}" class="p-detail-img" alt="{{ project.name }}">
                     </a>
                     {% else %}
-                    <a href="" class="project-link">
-                        <img src="{{ MEDIA_URL }}noimage.png" class="p-detail-img" alt="{{ project.name }}">
+                    <a href="">
+                        <img src="{{ MEDIA_URL }}noimage.png" class="d-lg-none p-detail-img" alt="{{ project.name }}">
+                    </a>
+                    <a href="">
+                        <img src="{{ MEDIA_URL }}noimage-lg.png" class="d-none d-lg-block p-detail-img" alt="{{ project.name }}">
                     </a>
                     {% endif %}
                 </div>
