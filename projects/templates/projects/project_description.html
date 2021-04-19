@@ -17,7 +17,8 @@
             <div class="col-12 text-center">
                 {% if request.user.is_superuser %}
                 <a class="btn btn-info mr-2" href="{% url 'edit_project' project.id %}">Update</a>
-                <a class="btn btn-danger ml-2" href="{% url 'delete_project' project.id %}">Delete</a>
+                <a class="btn btn-danger ml-2" <a href="#projectDeleteModal" class="btn btn-danger ml-2 trigger-btn"
+                    data-toggle="modal">Delete</a>
                 {% endif %}
             </div>
         </div>
@@ -186,6 +187,30 @@
         </div>
     </div>
 </section>
+
+<!-- Delet Confirm modal -->
+<div class=" modal fade px-2 pt-3" id="projectDeleteModal" tabindex="-1" role="dialog" aria-labelledby="projectDeleteModal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md modal-notify modal-danger mx-auto" role="document">
+        <div class="modal-content text-center">
+            <div class="modal-header d-flex justify-content-center">
+                <p class="h6 my-2">Are you sure you want to DELETE this Project?</p>
+            </div>
+            <i class="fas fa-exclamation-circle text-danger my-2"> This action cannot be undone!</i>
+            <div class="modal-body">
+                <div class="modal-footer flex-center">
+                    <button class="btn btn-outline-secondary mr-auto" type="button" data-dismiss="modal">
+                        <i class="fas fa-times animated rotateIn"></i>
+                        Cancel
+                    </button>
+                    <a class="btn btn-outline-danger" href="{% url 'delete_project' project.id %}" type="button">
+                        Confirm Deletion
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 

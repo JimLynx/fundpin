@@ -187,6 +187,23 @@
     margin: auto;
 }
 
+/* Delete Confirmation Modal */
+.modal-dialog {
+    width: fit-content;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-content {
+    border: 1px solid var(--logo-green);
+}
+
+.modal-content p {
+    color: var(--logo-green);
+}
+
 /* Map */
 /* ============= placeholder values ============= TBA */
 #map {

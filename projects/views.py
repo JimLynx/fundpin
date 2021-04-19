@@ -148,5 +148,5 @@ def delete_project(request, project_id):
     project = get_object_or_404(Project, pk=project_id)
     project.delete()
 
-    messages.success(request, 'The selected Project has been deleted!')
+    messages.success(request, 'The selected project has successfully been deleted.')
     return redirect(reverse('projects'))
