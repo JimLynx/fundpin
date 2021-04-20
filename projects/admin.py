@@ -10,8 +10,9 @@ class ProjectAdmin(admin.ModelAdmin):
         'category',
         'location',        
         'image',
+        'is_featured',
     )
-
+    list_editable=['is_featured']
     ordering = ('country',)
 
 
