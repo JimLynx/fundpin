@@ -214,33 +214,33 @@ TBA =========>
 
 #### Page Structure
 
-![page structure diagram](static/wireframes/page-structure.png)
+![page structure diagram](docs/wireframes/page-structure.png)
 
 #### Wireframes
 
 ##### Anonymous Users
 
-- [HOME Page](static/wireframes/home-wireframe.pdf)
-- [PROJECTS Page](static/wireframes/project-list-wireframe.pdf)
-- [PROJECT DETAILS Page](static/wireframes/project-detail-wireframe.pdf)
-- [REGISTER Page](static/wireframes/register-wireframe.pdf)
-- [LOGIN Page](static/wireframes/login-wireframe.pdf)
-- [BLOG Page](static/wireframes/blog-list-wireframe.pdf)
-- [BLOG DETAILS Page](static/wireframes/blog-detail-wireframe.pdf)
-- [CONTACT Page](static/wireframes/contact-wireframe.pdf)
+- [HOME Page](docs/wireframes/home-wireframe.pdf)
+- [PROJECTS Page](docs/wireframes/project-list-wireframe.pdf)
+- [PROJECT DETAILS Page](docs/wireframes/project-detail-wireframe.pdf)
+- [REGISTER Page](docs/wireframes/register-wireframe.pdf)
+- [LOGIN Page](docs/wireframes/login-wireframe.pdf)
+- [BLOG Page](docs/wireframes/blog-list-wireframe.pdf)
+- [BLOG DETAILS Page](docs/wireframes/blog-detail-wireframe.pdf)
+- [CONTACT Page](docs/wireframes/contact-wireframe.pdf)
 
 ##### Registered Users (including all above)
 
-- [PROFILE Page](static/wireframes/profile-wireframe.pdf)
-- [DONATION BASKET Page](static/wireframes/basket-wireframe.pdf)
-- [DONATION CONFIRMATION Page](static/wireframes/donation-confirmation-wireframe.pdf)
+- [PROFILE Page](docs/wireframes/profile-wireframe.pdf)
+- [DONATION BASKET Page](docs/wireframes/basket-wireframe.pdf)
+- [DONATION CONFIRMATION Page](docs/wireframes/donation-confirmation-wireframe.pdf)
 
 ##### SuperUser (including all above)
 
-- [ADD PROJECT Page](static/wireframes/add-project-wireframe.pdf)
-- [EDIT PROJECT Page](static/wireframes/edit-project-wireframe.pdf)
-- [ADD BLOG Page](static/wireframes/add-blog-wireframe.pdf)
-- [EDIT BLOG Page](static/wireframes/edit-blog-wireframe.pdf)
+- [ADD PROJECT Page](docs/wireframes/add-project-wireframe.pdf)
+- [EDIT PROJECT Page](docs/wireframes/edit-project-wireframe.pdf)
+- [ADD BLOG Page](docs/wireframes/add-blog-wireframe.pdf)
+- [EDIT BLOG Page](docs/wireframes/edit-blog-wireframe.pdf)
 
 The layout has been kept consistent throughout site by visually grouping elements in order of importance.
 
