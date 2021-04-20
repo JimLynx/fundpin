@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -14,43 +14,45 @@
         <h2>{{ blog_description.title|safe }}</h2>
 
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12 col-md-8 offset-md-2 text-center">
                 {% if request.user.is_superuser %}
-                    <a class="btn btn-info mr-2" href="{% url 'edit_blog' blog_description.slug %}">Update</a>
-                    <a class="btn btn-danger ml-2" <a href="#blogDeleteModal" class="btn btn-danger ml-2 trigger-btn"
-                        data-toggle="modal">Delete</a>
+                <a class="btn btn-info mr-2" href="{% url 'edit_blog' blog_description.slug %}">
+                    Update
+                </a>
+                <a class="btn btn-danger ml-2" href="#blogDeleteModal" class="btn btn-danger ml-2 trigger-btn"
+                    data-toggle="modal">
+                    Delete
+                </a>
+                <div class="hr-dark my-3"></div>
                 {% endif %}
             </div>
         </div>
-        <!-- Blog Description -->
-        <div class="col-12 col-md-8 offset-md-2">
-            <div class="clearfix">
 
-                <!-- Blog Image -->
-                {% if blog_description.image %}
-                    <a href="{{ blog_description.image.url }}" target="_blank">
-                        <img src="{{ blog_description.image.url }}" class="p-detail-img" alt="{{ blog_description.title }}">
-                    </a>
-                {% else %}
-                    <a href="" class="blog-link">
-                        <img src="{{ MEDIA_URL }}noimage.png" class="p-detail-img" alt="{{ blog_description.title }}">
-                    </a>
-                {% endif %}
-                <!-- Blog Description -->
-                <p>{{ blog_description.content|safe }}</p>
-                <!-- author & date created -->
-                <div class="text-muted my-3">
-                    Posted by <span class="font-italic">{{ blog_description.author }}</span> on
-                    {{ blog_description.created_on.date }}
-                </div>
-                <div class="hr-dark w-100 my-4"></div>
+        <div class="col-12 col-md-8 offset-md-2">
+            <!-- Blog Image -->
+            {% if blog_description.image %}
+                <a href="{{ blog_description.image.url }}" target="_blank">
+                    <img src="{{ blog_description.image.url }}" alt="{{ blog_description.title }}">
+                </a>
+            {% else %}
+                <a href="" class="blog-link">
+                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_description.title }}">
+                </a>
+            {% endif %}
+            <!-- Blog Description -->
+            <p>{{ blog_description.content|safe }}</p>
+            <!-- author & date created -->
+            <div class="text-muted my-3">
+                Posted by <span class="font-italic">{{ blog_description.author }}</span> on
+                {{ blog_description.created_on.date }}
             </div>
+            <div class="hr-dark w-100 my-4"></div>
         </div>
 
         <!-- Blog Comments -->
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2">
-                <h5 class="mb-3">This post has {{ comments.count }} comment(s)</h5>
+                <p class="mb-3 font-italic">This post has <strong>{{ comments.count }}</strong> comment(s)</p>
                 {% for comment in comments %}
                     <div class="comments">
                         <!-- comment author & date -->
@@ -68,12 +70,12 @@
                     </div>
                 {% endfor %}
                 <!-- New comment form -->
-                <div class="hr-dark w-100 my-4"></div>
+                <!-- <div class="hr-dark w-100 my-4"></div> -->
                 <h3>Leave a comment</h3>
                 <form method="post">
                     {{ comment_form|crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Post Comment</button>
                 </form>
             </div>
         </div>
