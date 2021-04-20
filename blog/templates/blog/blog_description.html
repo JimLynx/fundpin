@@ -46,39 +46,37 @@
                 <div class="hr-dark w-100 my-4"></div>
             </div>
         </div>
-    </div>
 
-    <!-- Blog Comments -->
-    <div class="row">
-        <div class="col-12 col-md-8 offset-md-2">
-            <h5 class="mb-3">This post has {{ comments.count }} comment(s)</h5>
-            {% for comment in comments %}
-                <div class="comments">
-                    <!-- comment author & date -->
-                    <div class="text-muted">
-                        Comment by <span class="font-italic">{{ comment.name }}</span> on
-                        <span class=" text-muted">
-                            {{ comment.created_on.date }}
-                        </span>
+        <!-- Blog Comments -->
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2">
+                <h5 class="mb-3">This post has {{ comments.count }} comment(s)</h5>
+                {% for comment in comments %}
+                    <div class="comments">
+                        <!-- comment author & date -->
+                        <div class="text-muted">
+                            Comment by <span class="font-italic">{{ comment.name }}</span> on
+                            <span class=" text-muted">
+                                {{ comment.created_on.date }}
+                            </span>
+                        </div>
+                        <!-- comment content -->
+                        <div class="w-100">
+                            {{ comment.body }}
+                        </div>
+                        <br>
                     </div>
-                    <!-- comment content -->
-                    <div class="w-100">
-                        {{ comment.body }}
-                    </div>
-                    <br>
-                </div>
-            {% endfor %}
-            <!-- New comment form -->
-            <div class="hr-dark w-100 my-4"></div>
-            <h3>Leave a comment</h3>
-            <form method="post">
-                {{ comment_form|crispy }}
-                {% csrf_token %}
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+                {% endfor %}
+                <!-- New comment form -->
+                <div class="hr-dark w-100 my-4"></div>
+                <h3>Leave a comment</h3>
+                <form method="post">
+                    {{ comment_form|crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
-    </div>
-    </div>
 </section>
 
 <!-- Delete Confirm modal -->
@@ -96,7 +94,8 @@
                         <i class="fas fa-times animated rotateIn"></i>
                         Cancel
                     </button>
-                    <a class="btn btn-outline-danger" href="{% url 'delete_blog' blog_description.slug %}" type="button">
+                    <a class="btn btn-outline-danger" href="{% url 'delete_blog' blog_description.slug %}"
+                        type="button">
                         Confirm Deletion
                     </a>
                 </div>
@@ -105,14 +104,4 @@
     </div>
 </div>
 
-{% endblock %}
-
-{% block postloadjs %}
-{{ block.super }}
-    <script type="text/javascript">
-        $('#new-image').change(function () {
-            let file = $('#new-image')[0].files[0];
-            $('#filename').text(`Image will be set to: ${file.name}`);
-        });
-    </script>
 {% endblock %}
