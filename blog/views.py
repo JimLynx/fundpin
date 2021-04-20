@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils.safestring import mark_safe
+from django.core.paginator import Paginator
+
 from blog.models import Post, Comment
 from .forms import CommentForm, BlogForm
 
@@ -10,6 +12,11 @@ def blog_list(request):
     """ return blog list page """
 
     blog_list = Post.objects.all()
+
+    # pagination
+    paginator = Paginator(blog_list, 5)
+    page = request.GET.get('page')
+    blog_list = paginator.get_page(page)
 
     template = 'blog/blog_list.html'
     context = {
