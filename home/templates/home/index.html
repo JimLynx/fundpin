@@ -355,9 +355,11 @@
                 <div class="swiper-wrapper">
                     <!-- get all projects -->
                     {% for project in projects %}
+                        {% if project.is_featured == True %}
                     <div class="swiper-slide">
                         {% include 'projects/project_cards.html' %}
                     </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
                 <div class="swiper-pagination"></div>
