@@ -7,10 +7,12 @@ class PostAdmin(admin.ModelAdmin):
         'title',
         'slug',
         'status',
+        'is_featured',
         'created_on',
         'image',
     )
     list_filter = ("status",)
+    list_editable=('status', 'is_featured')
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
 
