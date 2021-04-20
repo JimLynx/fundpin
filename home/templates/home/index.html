@@ -411,7 +411,7 @@
                 <div class="swiper-wrapper">
                     <!-- get all blog posts -->
                     {% for blog in blogs %}
-                        {% if blog.status != 0 %}
+                        {% if blog.status == 1 and blog.is_featured == True %}
                             <div class="swiper-slide">
                                 <h4>{{ blog.title }}</h4>
                                 <p>{{ blog.content|truncatewords:10|safe}}</p>
