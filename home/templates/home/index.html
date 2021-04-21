@@ -250,32 +250,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-6 col-sm-4 col-md-2 p-2">
-                    <div class="lead-in-block"><img src="{% static 'images/svg/eco-icon.svg' %}" alt="eco leaf icon">
+                    <div class="lead-in-block">
+                        <img src="{% static 'images/svg/eco-icon.svg' %}" alt="eco leaf icon">
                         Environment
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-2 p-2">
-                    <div class="lead-in-block"><img src="{% static 'images/svg/paw-icon.svg' %}" alt="paw icon">
+                    <div class="lead-in-block">
+                        <img src="{% static 'images/svg/paw-icon.svg' %}" alt="paw icon">
                         Wildlife
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-2 p-2">
-                    <div class="lead-in-block"><img src="{% static 'images/svg/marine-icon.svg' %}" alt="waves icon">
+                    <div class="lead-in-block">
+                        <img src="{% static 'images/svg/marine-icon.svg' %}" alt="waves icon">
                         Marine
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-2 p-2">
-                    <div class="lead-in-block"><img src="{% static 'images/svg/vol-icon.svg' %}" alt="hand and heart icon">
+                    <div class="lead-in-block">
+                        <img src="{% static 'images/svg/vol-icon.svg' %}" alt="hand and heart icon">
                         Community
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-2 p-2">
-                    <div class="lead-in-block"><img src="{% static 'images/svg/edu-icon.svg' %}" alt="education hat icon">
+                    <div class="lead-in-block">
+                        <img src="{% static 'images/svg/edu-icon.svg' %}" alt="education hat icon">
                         Education
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-2 p-2">
-                    <div class="lead-in-block"><img src="{% static 'images/svg/health-icon.svg' %}" alt="medical bag icon">
+                    <div class="lead-in-block">
+                        <img src="{% static 'images/svg/health-icon.svg' %}" alt="medical bag icon">
                         Health
                     </div>
                 </div>
@@ -356,9 +362,9 @@
                     <!-- get all projects -->
                     {% for project in projects %}
                         {% if project.is_featured == True %}
-                    <div class="swiper-slide">
-                        {% include 'projects/project_cards.html' %}
-                    </div>
+                            <div class="swiper-slide">
+                                {% include 'projects/project_cards.html' %}
+                            </div>
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -371,34 +377,40 @@
             <h2>We Support</h2>
             <div class="row">
                 <div class="col-6 col-sm-4 col-md-2 p-2">
-                    <div class="support-block"><img
-                            src="https://www.varierfurniture.com/var/ezwebin_site/storage/images/media/files/logos/wwf-logo/1265672-2-eng-GB/wwf-logo_imagelarge.jpg"
-                            alt="wwf logo"></div>
+                    <div class="support-block">
+                        <img src="https://www.varierfurniture.com/var/ezwebin_site/storage/images/media/files/logos/wwf-logo/1265672-2-eng-GB/wwf-logo_imagelarge.jpg"
+                            alt="wwf logo">
+                        </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-2 p-2">
-                    <div class="support-block"><img
-                            src="https://media-exp1.licdn.com/dms/image/C4D0BAQEBvamJYDNoOQ/company-logo_200_200/0/1580748071969?e=2159024400&v=beta&t=EQeP8ASdB-0tjouKYDEW3SNwM8HjiNacUmwk5yEKoCo"
-                            alt="unicef logo"></div>
+                    <div class="support-block">
+                        <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQEBvamJYDNoOQ/company-logo_200_200/0/1580748071969?e=2159024400&v=beta&t=EQeP8ASdB-0tjouKYDEW3SNwM8HjiNacUmwk5yEKoCo"
+                            alt="unicef logo">
+                        </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-2 p-2">
-                    <div class="support-block"><img
-                            src="https://pbs.twimg.com/profile_images/739570043298582531/mT7uAQAf.jpg" alt="wwf logo">
+                    <div class="support-block">
+                        <img src="https://pbs.twimg.com/profile_images/739570043298582531/mT7uAQAf.jpg" 
+                            alt="wwf logo">
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-2 p-2">
-                    <div class="support-block"><img
-                            src="https://i1.wp.com/1.bp.blogspot.com/-Rn14uUNNpes/Xfe538C6VsI/AAAAAAAAWho/ZVSsDMhxaQUPDMhC5Fm7WRiJRXsokDYvQCLcBGAsYHQ/s1600/Jane%2BGoodall%2BInstitute.png?ssl=1"
-                            alt="wwf logo"></div>
+                    <div class="support-block">
+                        <img src="https://i1.wp.com/1.bp.blogspot.com/-Rn14uUNNpes/Xfe538C6VsI/AAAAAAAAWho/ZVSsDMhxaQUPDMhC5Fm7WRiJRXsokDYvQCLcBGAsYHQ/s1600/Jane%2BGoodall%2BInstitute.png?ssl=1"
+                            alt="wwf logo">
+                        </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-2 p-2">
-                    <div class="support-block"><img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw4DT-yVsJT-jc0YQaNq_EGLbveBEbG5Mulw&usqp=CAU"
-                            alt="unicef logo"></div>
+                    <div class="support-block">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw4DT-yVsJT-jc0YQaNq_EGLbveBEbG5Mulw&usqp=CAU"
+                            alt="unicef logo">
+                        </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-2 p-2">
-                    <div class="support-block"><img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-5LhUuNiTFqtwUja6FbpMegVMqWl6UPzOA&usqp=CAU"
-                            alt="unicef logo"></div>
+                    <div class="support-block">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-5LhUuNiTFqtwUja6FbpMegVMqWl6UPzOA&usqp=CAU"
+                            alt="unicef logo">
+                        </div>
                 </div>
             </div>
         </div>
@@ -418,12 +430,12 @@
                                 <h4>{{ blog.title }}</h4>
                                 <p>{{ blog.content|truncatewords:10|safe}}</p>
                                 <a href="{% url 'blog_description' blog.slug %}" class="btn btn-primary blog-read-more-btn">
-                                    Read More...</a>
+                                    Read More...
+                                </a>
                             </div>
                         {% endif %}
                     {% endfor %}
                 </div>
-
                 <div class="swiper-pagination"></div>
             </div>
         </div>
@@ -446,85 +458,69 @@
             <div class="row m-0">
                 <div class="col-12 col-lg-6 p-0">
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-1.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-1.png' %}" 
                             alt="African girl">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-2.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-2.png' %}" 
                             alt="African Rhinoceros">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-3.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-3.png' %}" 
                             alt="Wheatfield">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-4.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-4.png' %}" 
                             alt="Indian Family">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-5.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-5.png' %}"
                             alt="Mountain and beach scene">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-6.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-6.png' %}"
                             alt="Giraffe in African savanna">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-7.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-7.png' %}" 
                             alt="African Elepnat">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-8.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-8.png' %}"
                             alt="African child with football">
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 p-0">
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-9.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-9.png' %}" 
                             alt="Penguin on beach">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-10.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-10.png' %}"
                             alt="Malachite Kingfisher on small branch">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-11.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-11.png' %}"
                             alt="Dolphins swimming over waves">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-12.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-12.png' %}" 
                             alt="Herd of Wildebeest">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-13.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-13.png' %}"
                             alt="Indonesian woman with child on back">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-14.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-14.png' %}"
                             alt="Thailand mountain farms">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-15.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-15.png' %}" 
                             alt="Desert sand dune">
                     </div>
                     <div class="base-wrap">
-                        <img class="base-img"
-                            src="{% static 'images/base-grid/base-16.png' %}"
+                        <img class="base-img" src="{% static 'images/base-grid/base-16.png' %}" 
                             alt="Herd of African Zebra">
                     </div>
                 </div>
