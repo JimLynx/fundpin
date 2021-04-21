@@ -311,6 +311,27 @@ input[name='q']::placeholder {
     text-decoration: none;
 }
 
+/* --- PAGINATION --- */
+.page_number {
+    display: flex;
+    justify-content: center;
+    color: var(--logo-green);
+}
+
+.page-link {
+    color: var(--logo-green);
+}
+
+.page-link:hover {
+    color: var(--p-dark-grey)
+}
+
+.page-item.active .page-link {
+    color: var(--off-white);
+    background-color: var(--logo-green);
+    border-color: var(--logo-green);
+}
+
 /* --- FOOTER --- */
 
 footer {
