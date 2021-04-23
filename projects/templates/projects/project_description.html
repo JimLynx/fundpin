@@ -26,8 +26,8 @@
             </div>
         </div>
 
-        <!-- project image -->
         <div class="row my-3">
+            <!-- project image -->
             <div class="project-info col-12 col-md-7 col-lg-4">
                 <div class="border-wrap-img">
                     {% if project.image %}
@@ -46,7 +46,7 @@
             </div>
 
             <!-- project details -->
-            <div class="project-info col-12 col-md-5 col-lg-4">
+            <div class="project-info col-12 col-sm-6 col-md-5 col-lg-4">
                 <div class="border-outer">
                     <div class="border-inner">
                         <div class="p-details-wrapper">
@@ -83,7 +83,7 @@
                 </div>
             </div>
             <!-- project map -->
-            <div class="project-info col-4">
+            <div class="project-info col-12 col-sm-6 col-md-12 col-lg-4">
                 <div class="border-outer">
                     <div class="border-inner">
                         <div id="map"></div>
@@ -91,7 +91,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- project description -->
         <div class="row">
@@ -243,8 +242,6 @@
         }).addTo(projectMap);
 
         let marker = L.marker(['{{ project.latitude }}', '{{ project.longitude }}']).addTo(projectMap);
-        marker.bindPopup("{{ project.name }}").openPopup();
-
-
+        marker.bindPopup("<small class='text-muted'>{{ project.name }}<small>").openPopup();
     </script>
 {% endblock %}

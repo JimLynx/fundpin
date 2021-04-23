@@ -210,9 +210,20 @@
 
 /* Map */
 
-#map    {
+#map {
+    min-height: 180px;
     height: 100%;
     width: 100%;
+}
+
+/* override leaflet css */
+.leaflet-top {
+    top: unset !important;
+    bottom: 40px;
+}
+
+.leaflet-left .leaflet-control {
+    margin-left: 5px !important;
 }
 
 /* Donation form */
