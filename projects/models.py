@@ -33,19 +33,20 @@ class Country(models.Model):
 
     def __str__(self):
         """
-        string method to return category name 
+        string method to return country name 
         """
         return self.name
 
     def get_friendly_name(self):
         """
-        string method to return category friendly name 
+        string method to return country friendly name 
         """
         return self.friendly_name
 
 
 class Project(models.Model):
-    pin_id = models.CharField(max_length=20, null=True, blank=False, unique=True)
+    pin_id = models.CharField(max_length=20, null=True,
+                              blank=False, unique=True)
     category = models.ForeignKey(
         'Category', null=True, on_delete=models.SET_NULL)
     country = models.ForeignKey(
@@ -54,14 +55,14 @@ class Project(models.Model):
     name = models.CharField(max_length=254)
     description = RichTextField(blank=False, null=True)
     needs = RichTextField(blank=False, null=True)
-    longitude = models.FloatField(max_length=20, null=True)
-    latitude = models.FloatField(max_length=20, null=True)
+    longitude = models.DecimalField(max_digits=9, decimal_places=6, null=True)
+    latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True)
     is_featured = models.BooleanField(default=False)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         """
-        string method to return category name 
+        string method to return project name 
         """
         return self.name
