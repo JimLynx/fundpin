@@ -295,3 +295,6 @@ else:
 
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 
+# Leaflet maps
+LEAFLET_API_KEY = os.environ.get('LEAFLET_API_KEY')
+

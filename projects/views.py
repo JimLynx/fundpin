@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -71,10 +72,11 @@ def all_projects(request):
 def project_description(request, project_id):
     """ A view to show individual projects """
     project = get_object_or_404(Project, pk=project_id)
-
+    leaflet_accessToken = settings.LEAFLET_API_KEY
     template = 'projects/project_description.html'
     context = {
         'project': project,
+        'leaflet_accessToken': leaflet_accessToken,
     }
     return render(request, template, context)
 
