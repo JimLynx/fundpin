@@ -8,11 +8,11 @@ class ProjectAdmin(admin.ModelAdmin):
         'pin_id',
         'name',
         'category',
-        'location',        
+        'location',
         'image',
         'is_featured',
     )
-    list_editable=['is_featured']
+    list_editable = ['is_featured']
     ordering = ('country',)
 
 

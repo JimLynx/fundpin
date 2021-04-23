@@ -45,8 +45,9 @@ class Country(models.Model):
 
 
 class Project(models.Model):
-    pin_id = models.CharField(max_length=20, null=True,
-                              blank=False, unique=True)
+    pin_id = models.CharField(
+        max_length=20, null=True,
+        blank=False, unique=True)
     category = models.ForeignKey(
         'Category', null=True, on_delete=models.SET_NULL)
     country = models.ForeignKey(
@@ -55,8 +56,12 @@ class Project(models.Model):
     name = models.CharField(max_length=254)
     description = RichTextField(blank=False, null=True)
     needs = RichTextField(blank=False, null=True)
-    latitude = models.DecimalField(max_digits=22, decimal_places=16, null=True, blank=False)
-    longitude = models.DecimalField(max_digits=22, decimal_places=16, null=True, blank=False)
+    latitude = models.DecimalField(
+        max_digits=22, decimal_places=16,
+        null=True, blank=False)
+    longitude = models.DecimalField(
+        max_digits=22, decimal_places=16,
+        null=True, blank=False)
     is_featured = models.BooleanField(default=False)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
