@@ -54,6 +54,8 @@ class Project(models.Model):
     name = models.CharField(max_length=254)
     description = RichTextField(blank=False, null=True)
     needs = RichTextField(blank=False, null=True)
+    longitude = models.FloatField(max_length=20, null=True)
+    latitude = models.FloatField(max_length=20, null=True)
     is_featured = models.BooleanField(default=False)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
