@@ -3,6 +3,9 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'projects/css/projects.css' %}" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
 {% endblock %}
 
 {% block content %}
@@ -12,8 +15,8 @@
         <!-- Project Title -->
         <h2>{{ project.name|upper }}</h2>
 
+        <!-- Update/Delete Project -->
         <div class="row">
-
             <div class="col-12 text-center">
                 {% if request.user.is_superuser %}
                 <a class="btn btn-info mr-2" href="{% url 'edit_project' project.id %}">Update</a>
@@ -25,7 +28,7 @@
 
         <!-- project image -->
         <div class="row my-3">
-            <div class="p-detail-mh col-12 col-md-7 col-lg-8 mt-3">
+            <div class="project-info col-12 col-md-7 col-lg-4">
                 <div class="border-wrap-img">
                     {% if project.image %}
                     <a href="{{ project.image.url }}" target="_blank">
@@ -43,7 +46,7 @@
             </div>
 
             <!-- project details -->
-            <div class="p-detail-mh col-12 col-md-5 col-lg-4 mt-3">
+            <div class="project-info col-12 col-md-5 col-lg-4">
                 <div class="border-outer">
                     <div class="border-inner">
                         <div class="p-details-wrapper">
@@ -79,12 +82,20 @@
                     </div>
                 </div>
             </div>
+            <!-- project map -->
+            <div class="project-info col-4">
+                <div class="border-outer">
+                    <div class="border-inner">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+
 
         <!-- project description -->
         <div class="row">
-            <div class="col-12  my-3">
-
+            <div class="col-12 my-3">
                 <p>{{ project.description|safe }}</p>
             </div>
         </div>
@@ -104,13 +115,6 @@
         <div class="hr-dark"></div>
     </div>
 </section>
-
-<!-- location map -->
-<div id="projectMap" class="py-3">
-    <div class="container">
-        <div id="map">placeholder - MAP</div>
-    </div>
-</div>
 
 <!-- donation form section -->
 <section id="projectDonation" class="pt-2">
@@ -219,5 +223,22 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript" src="{% static 'projects/js/donationform.js' %}"></script>
+    <script>
+        let projectMap = L.map('map').setView([51.505, -0.09], 13);
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: ''
+        }).addTo(projectMap);
+    </script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script type="text/javascript" src="{% static 'projects/js/donationform.js' %}"></script>
+
 {% endblock %}
