@@ -241,5 +241,10 @@
             zoomOffset: -1,
             accessToken: '{{ leaflet_accessToken }}',
         }).addTo(projectMap);
+
+        let marker = L.marker(['{{ project.latitude }}', '{{ project.longitude }}']).addTo(projectMap);
+        marker.bindPopup("{{ project.name }}").openPopup();
+
+
     </script>
 {% endblock %}
