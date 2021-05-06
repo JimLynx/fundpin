@@ -33,6 +33,10 @@
 }
 
 /* --- GENERAL ---*/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--off-white);
     color: var(--bg-grey);
@@ -347,8 +351,8 @@ input[name='q']::placeholder {
 .facebook-this:hover,
 .tweet-this:hover,
 .mail-this:hover {
-    transition: all .2s ease-in-out; 
-    transform: scale(1.2); 
+    transition: all .2s ease-in-out;
+    transform: scale(1.2);
     font-weight: bolder;
 }
 
