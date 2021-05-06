@@ -188,7 +188,7 @@
 
 .needs-wrapper {
     width: fit-content;
-    margin: auto;
+    margin-left: 25px;
 }
 
 /* Delete Confirmation Modal */
