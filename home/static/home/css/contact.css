@@ -9,6 +9,12 @@
     height: 120px;
 }
 
+#ContactFormMessage {
+    overflow-y: scroll;
+    max-height: 150px;
+    min-height: 150px;
+}
+
 /* --- MEDIA QUERIES --- */
 
 @media (min-width: 768px) {
