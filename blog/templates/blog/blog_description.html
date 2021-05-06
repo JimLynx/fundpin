@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load social_share %}
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
@@ -46,11 +47,13 @@
                 Posted by <span class="font-italic">{{ blog_description.author }}</span> on
                 {{ blog_description.created_on.date }}
             </div>
-            <p>Like this Blog Post? Share on:</p>
-            <div class="fb-share-button" data-href="https://fundpin.herokuapp.com/" data-layout="button_count" data-size="small">
-                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
-                    Share
-                </a>
+            
+            <!-- social media share buttons -->
+            <p>Like this Blog Post? Feel free to share it via:</p>
+            <div class="social-share-buttons col-12 d-flex p-0">
+                {% post_to_facebook object_or_url "Facebook" %}
+                {% post_to_twitter "Check out this awesome Blog Post! {{ blog_description.title|safe }} @" object_or_url "Twitter" %}
+                {% send_email blog_description.title "Check out this awesome Blog Post! {{ blog_description.title|safe }} project, which you can view at " object_or_url "Email" %}
             </div>
             <div class="hr-dark w-100 my-4"></div>
         </div>
@@ -75,6 +78,7 @@
                         <br>
                     </div>
                 {% endfor %}
+
                 <!-- New comment form -->
                 <!-- <div class="hr-dark w-100 my-4"></div> -->
                 <h3>Leave a comment</h3>
