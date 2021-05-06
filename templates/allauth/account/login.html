@@ -24,20 +24,20 @@
 
     <div class="socialaccount_providers">
         <div class="row">
-            <!-- github login -->
-            <div class="col-12 my-2">
-                <a id="github-button" href="{% provider_login_url "github" %}"
-                    class="btn btn-block btn-github mx-auto text-left">
-                    <i class="fa fa-github fa-lg mr-2"></i>
-                    Login with GitHub
-                </a>
-            </div>
             <!-- facebook login -->
             <div class="col-12 my-2">
                 <a href="{% provider_login_url "facebook" method="oauth2" %}"
                     class="btn btn-block btn-facebook mx-auto text-left">
                     <i class="fa fa-facebook fa-lg mr-2"></i>
                     Login with Facebook
+                </a>
+            </div>
+            <!-- github login -->
+            <div class="col-12 my-2">
+                <a id="github-button" href="{% provider_login_url "github" %}"
+                    class="btn btn-block btn-github mx-auto text-left">
+                    <i class="fa fa-github fa-lg mr-2"></i>
+                    Login with GitHub
                 </a>
             </div>
             <!-- google login -->
