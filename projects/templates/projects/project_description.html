@@ -99,12 +99,12 @@
                 <p>{{ project.description|safe }}</p>
             </div>
         </div>
-        <div class="hr-dark"></div>
+        <!-- <div class="hr-dark"></div> -->
 
         <!-- project needs -->
         <div class="row">
             <div class="col-12 my-3">
-                <div class="h5 text-center my-3">
+                <div class="h5">
                     Just <strong>some</strong> of the ways that your donation will help!
                 </div>
                 <div class="needs-wrapper">
@@ -112,18 +112,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- social media share buttons -->
         <p>Help raise awareness for this project by sharing via:</p>
-        <!-- <div class="fb-share-button" data-href="https://fundpin.herokuapp.com/" data-layout="button_count" data-size="small">
-            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
-                Share
-            </a>
-        </div> -->
-        <div class="col-12 d-flex">
+        <div class="social-share-buttons col-12 d-flex p-0">
             {% post_to_facebook object_or_url "Facebook" %}
             {% post_to_twitter "Please help me support the {{ project.name }} project in {{ project.country.friendly_name }} @" object_or_url "Twitter" %}
             {% send_email project.name "Please support this incredible {{ project.name }} project, which you can view at " object_or_url "Email" %}
         </div>
-        <div class="hr-dark"></div>
     </div>
 </section>
 
@@ -240,6 +236,7 @@
     crossorigin=""></script>
     <script type="text/javascript" src="{% static 'projects/js/donationform.js' %}"></script>
 
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=60939b58ccbbe50012c02b53&product=inline-share-buttons" async="async"></script>
     <script>
         let projectMap = L.map('map').setView(['{{ project.latitude }}', '{{ project.longitude }}'], 6)
 

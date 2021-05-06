@@ -332,6 +332,48 @@ input[name='q']::placeholder {
     border-color: var(--logo-green);
 }
 
+/* --- SOCIAL SHARE BUTTONS --- */
+
+.social-share-buttons {
+    align-items: flex-end;
+}
+
+.social-share-buttons a {
+    color: var(--off-white);
+    margin: auto;
+    text-decoration: none;
+}
+
+.facebook-this:hover,
+.tweet-this:hover,
+.mail-this:hover {
+    transition: all .2s ease-in-out; 
+    transform: scale(1.2); 
+    font-weight: bolder;
+}
+
+.facebook-this,
+.tweet-this,
+.mail-this {
+    height: fit-content;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.facebook-this {
+    background-color: #4267B2;
+}
+
+.tweet-this {
+    background-color: #1DA1F2;
+}
+
+.mail-this {
+    background-color: var(--p-dark-grey)
+}
+
 /* --- FOOTER --- */
 
 footer {
