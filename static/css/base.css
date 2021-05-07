@@ -91,6 +91,17 @@ section {
     margin: 10px auto;
 }
 
+.btn-customGreen {
+    color: var(--off-white);
+    background-color: var(--logo-green);
+    border-color: var(--logo-green);
+}
+
+.btn-customGreen:hover {
+    color: var(--logo-green);
+    background-color: var(--off-white);
+}
+
 /* --- NAVIGATION --- */
 
 #navBar {

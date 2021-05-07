@@ -4,117 +4,116 @@
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
 {% endblock %}
 
 {% block content %}
 
-<section id="blogDescription">
-    <div class="container">
-        <!-- Blog Title -->
-        <h2>{{ blog_description.title|safe }}</h2>
+    <section id="blogDescription">
+        <div class="container">
+            <!-- Blog Title -->
+            <h2>{{ blog_description.title|safe }}</h2>
 
-        <div class="row">
-            <div class="col-12 col-md-8 offset-md-2 text-center">
-                {% if request.user.is_superuser %}
-                <a class="btn btn-info mr-2" href="{% url 'edit_blog' blog_description.slug %}">
-                    Update
-                </a>
-                <a class="btn btn-danger ml-2" href="#blogDeleteModal" class="btn btn-danger ml-2 trigger-btn"
-                    data-toggle="modal">
-                    Delete
-                </a>
-                <div class="hr-dark my-3"></div>
-                {% endif %}
-            </div>
-        </div>
-
-        <div class="col-12 col-md-8 offset-md-2">
-            <!-- Blog Image -->
-            {% if blog_description.image %}
-                <a href="{{ blog_description.image.url }}" target="_blank">
-                    <img src="{{ blog_description.image.url }}" alt="{{ blog_description.title }}">
-                </a>
-            {% else %}
-                <a href="" class="blog-link">
-                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_description.title }}">
-                </a>
-            {% endif %}
-            <!-- Blog Description -->
-            <p>{{ blog_description.content|safe }}</p>
-            <!-- author & date created -->
-            <div class="text-muted my-3">
-                Posted by <span class="font-italic">{{ blog_description.author }}</span> on
-                {{ blog_description.created_on.date }}
-            </div>
-            
-            <!-- social media share buttons -->
-            <p>Like this Blog Post? Feel free to share it via:</p>
-            <div class="social-share-buttons col-12 d-flex p-0">
-                {% post_to_facebook object_or_url "Facebook" %}
-                {% post_to_twitter "Check out this awesome Blog Post! {{ blog_description.title|safe }} @" object_or_url "Twitter" %}
-                {% send_email blog_description.title "Check out this awesome Blog Post! {{ blog_description.title|safe }} project, which you can view at " object_or_url "Email" %}
-            </div>
-            <div class="hr-dark w-100 my-4"></div>
-        </div>
-
-        <!-- Blog Comments -->
-        <div class="row">
-            <div class="col-12 col-md-8 offset-md-2">
-                <p class="mb-3 font-italic">This post has <strong>{{ comments.count }}</strong> comment(s)</p>
-                {% for comment in comments %}
-                    <div class="comments">
-                        <!-- comment author & date -->
-                        <div class="text-muted">
-                            Comment by <span class="font-italic">{{ comment.name }}</span> on
-                            <span class=" text-muted">
-                                {{ comment.created_on.date }}
-                            </span>
-                        </div>
-                        <!-- comment content -->
-                        <div class="w-100">
-                            {{ comment.body }}
-                        </div>
-                        <br>
-                    </div>
-                {% endfor %}
-
-                <!-- New comment form -->
-                <!-- <div class="hr-dark w-100 my-4"></div> -->
-                <h3>Leave a comment</h3>
-                <form method="post">
-                    {{ comment_form|crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-primary">Post Comment</button>
-                </form>
-            </div>
-        </div>
-</section>
-
-<!-- Delete Confirm modal -->
-<div class=" modal fade px-2 pt-3" id="blogDeleteModal" tabindex="-1" role="dialog" aria-labelledby="blogDeleteModal"
-    aria-hidden="true">
-    <div class="modal-dialog modal-md modal-notify modal-danger mx-auto" role="document">
-        <div class="modal-content text-center">
-            <div class="modal-header d-flex justify-content-center">
-                <p class="h6 my-2">Are you sure you want to DELETE this Blog Post?</p>
-            </div>
-            <i class="fas fa-exclamation-circle text-danger my-2"> This action cannot be undone!</i>
-            <div class="modal-body">
-                <div class="modal-footer flex-center">
-                    <button class="btn btn-outline-secondary mr-auto" type="button" data-dismiss="modal">
-                        <i class="fas fa-times animated rotateIn"></i>
-                        Cancel
-                    </button>
-                    <a class="btn btn-outline-danger" href="{% url 'delete_blog' blog_description.slug %}"
-                        type="button">
-                        Confirm Deletion
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2 text-center">
+                    {% if request.user.is_superuser %}
+                    <a class="btn btn-info mr-2" href="{% url 'edit_blog' blog_description.slug %}">
+                        Update
                     </a>
+                    <a class="btn btn-danger ml-2" href="#blogDeleteModal" class="btn btn-danger ml-2 trigger-btn"
+                        data-toggle="modal">
+                        Delete
+                    </a>
+                    <div class="hr-dark my-3"></div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8 offset-md-2">
+                <!-- Blog Image -->
+                {% if blog_description.image %}
+                    <a href="{{ blog_description.image.url }}" target="_blank">
+                        <img src="{{ blog_description.image.url }}" alt="{{ blog_description.title }}">
+                    </a>
+                {% else %}
+                    <a href="">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_description.title }}">
+                    </a>
+                {% endif %}
+                <!-- Blog Description -->
+                <p>{{ blog_description.content|safe }}</p>
+                <!-- author & date created -->
+                <div class="text-muted my-3">
+                    Posted by <span class="font-italic">{{ blog_description.author }}</span> on
+                    {{ blog_description.created_on.date }}
+                </div>
+                <!-- social media share buttons -->
+                <p>Like this Blog Post? Feel free to share it via:</p>
+                <div class="social-share-buttons col-12 d-flex p-0">
+                    {% post_to_facebook object_or_url "Facebook" %}
+                    {% post_to_twitter "Check out this awesome Blog Post! {{ blog_description.title|safe }} @" object_or_url "Twitter" %}
+                    {% send_email blog_description.title "Check out this awesome Blog Post! {{ blog_description.title|safe }}, which you can view at " object_or_url "Email" %}
+                </div>
+                <div class="hr-dark w-100 my-4"></div>
+            </div>
+            <!-- Blog Comments -->
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2">
+                    <p class="mb-3 font-italic">This post has <strong>{{ comments.count }}</strong> comment(s)</p>
+                    {% for comment in comments %}
+                        <div class="comments">
+                            <!-- comment author & date -->
+                            <div class="text-muted">
+                                Comment by <span class="font-italic">{{ comment.name }}</span> on
+                                <span class=" text-muted">
+                                    {{ comment.created_on.date }}
+                                </span>
+                            </div>
+                            <!-- comment content -->
+                            <div class="w-100">
+                                {{ comment.body }}
+                            </div>
+                            <br>
+                        </div>
+                    {% endfor %}
+                    <!-- New comment form -->
+                    <!-- <div class="hr-dark w-100 my-4"></div> -->
+                    <h3>Leave a comment</h3>
+                    <form method="post">
+                        {{ comment_form|crispy }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-customGreen">Post Comment</button>
+                    </form>
+                </div>
+            </div>
+    </section>
+
+    <!-- Delete Confirm modal -->
+    <div class=" modal fade px-2 pt-3" id="blogDeleteModal" tabindex="-1" role="dialog" aria-labelledby="blogDeleteModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md modal-notify modal-danger mx-auto" role="document">
+            <div class="modal-content text-center">
+                <div class="modal-header d-flex justify-content-center">
+                    <p class="h6 my-2">
+                        Are you sure you want to DELETE this Blog Post?
+                    </p>
+                </div>
+                <i class="fas fa-exclamation-circle text-danger my-2"> This action cannot be undone!</i>
+                <div class="modal-body">
+                    <div class="modal-footer flex-center">
+                        <button class="btn btn-outline-secondary mr-auto" type="button" data-dismiss="modal">
+                            <i class="fas fa-times animated rotateIn"></i>
+                            Cancel
+                        </button>
+                        <a class="btn btn-outline-danger" href="{% url 'delete_blog' blog_description.slug %}"
+                            type="button">
+                            Confirm Deletion
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}
 

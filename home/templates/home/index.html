@@ -429,7 +429,7 @@
                             <div class="swiper-slide">
                                 <h4>{{ blog.title }}</h4>
                                 <p>{{ blog.content|truncatewords:10|safe}}</p>
-                                <a href="{% url 'blog_description' blog.slug %}" class="btn btn-primary blog-read-more-btn">
+                                <a href="{% url 'blog_description' blog.slug %}" class="btn btn-customGreen blog-read-more-btn">
                                     Read More...
                                 </a>
                             </div>
@@ -447,8 +447,7 @@
             <div class="jumbotron text-center">
                 <p>Get in touch directly or subscribe to our monthly newsletter for exciting project updates!</p>
                 <div class="hr-dark my-4"></div>
-                <a class="btn contact-btn btn-lg" href="#" role="button">Contact Us</a>
-                <a class="btn contact-btn btn-lg" href="#" role="button">Newsletter</a>
+                <a class="btn contact-btn btn-lg" href="{% url 'contact' %}" role="button">Contact Us</a>
             </div>
         </div>
     </section>
