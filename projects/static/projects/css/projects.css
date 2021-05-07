@@ -84,7 +84,7 @@
     border: 1px solid var(--p-light-grey);
     display: block;
     padding: 0.4rem 0.6rem;
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
 
     font-size: 0.8rem;
     -webkit-backface-visibility: hidden;

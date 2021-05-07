@@ -197,7 +197,7 @@ section {
 
 #navSearchForm a:hover {
     /* transform: scale(1.1); 
-    border-radius: 10px; */
+    border-radius: .5rem; */
 }
 
 input[name='q']::placeholder {
@@ -535,7 +535,7 @@ form.subscribe-form button:hover {
     text-align: center;
     background: bisque;
     padding: 8px;
-    border-radius: 15px;
+    border-radius: .5rem;
     opacity: .7;
     z-index: 2;
 }

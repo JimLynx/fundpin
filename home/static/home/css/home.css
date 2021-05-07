@@ -62,7 +62,7 @@ body {
     align-self: center;
     padding: 1rem;
     margin: auto .5rem;
-    border-radius: 8px;
+    border-radius: .5rem;
 }
 
 .home-slide-btn span {
@@ -70,9 +70,10 @@ body {
 }
 
 .home-slide-btn a {
-    background-color: var(--p-warn);
+    background-color: var(--logo-green);
     padding: 6px;
-    color: var(--p-light-grey);
+    color: var(--off-white);
+    border-radius: .5rem;
 }
 
 .home-slide-btn a:hover {
