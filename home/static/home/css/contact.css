@@ -4,6 +4,10 @@
     padding: 1rem;
 }
 
+.contactForm-row {
+    border: 1px solid var(--logo-green);
+}
+
 .contact-image {
     object-fit: cover;
     height: 120px;
