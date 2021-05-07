@@ -247,8 +247,8 @@ form {
     width: 100%;
 }
 
-#add_project h5,
-#edit_project h5 {
+#add_project .h5,
+#edit_project .h5 {
     color: var(--logo-green);
 }
 

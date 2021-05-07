@@ -3,195 +3,184 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'projects/css/projects.css' %}" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
+    <link rel="stylesheet" href="{% static 'projects/css/projects.css' %}" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
 {% endblock %}
 
 {% block content %}
 
-<section id="projectDescription">
-    <div class="container">
-        <!-- Project Title -->
-        <h2>{{ project.name|upper }}</h2>
-
-        <!-- Update/Delete Project -->
-        <div class="row">
-            <div class="col-12 text-center">
-                {% if request.user.is_superuser %}
-                <a class="btn btn-info mr-2" href="{% url 'edit_project' project.id %}">Update</a>
-                <a class="btn btn-danger ml-2" <a href="#projectDeleteModal" class="btn btn-danger ml-2 trigger-btn"
-                    data-toggle="modal">Delete</a>
-                {% endif %}
-            </div>
-        </div>
-
-        <div class="row my-3">
-            <!-- project image -->
-            <div class="project-info col-12 col-md-7 col-lg-4">
-                <div class="border-wrap-img">
-                    {% if project.image %}
-                    <a href="{{ project.image.url }}" target="_blank">
-                        <img src="{{ project.image.url }}" class="p-detail-img" alt="{{ project.name }}">
-                    </a>
-                    {% else %}
-                    <a href="">
-                        <img src="{{ MEDIA_URL }}noimage.png" class="d-lg-none p-detail-img" alt="{{ project.name }}">
-                    </a>
-                    <a href="">
-                        <img src="{{ MEDIA_URL }}noimage-lg.png" class="d-none d-lg-block p-detail-img" alt="{{ project.name }}">
-                    </a>
+    <section id="projectDescription">
+        <div class="container">
+            <!-- Project Title -->
+            <h2>{{ project.name|upper }}</h2>
+            <!-- Update/Delete Project -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    {% if request.user.is_superuser %}
+                    <a class="btn btn-info mr-2" href="{% url 'edit_project' project.id %}">Update</a>
+                    <a class="btn btn-danger ml-2" <a href="#projectDeleteModal" class="btn btn-danger ml-2 trigger-btn"
+                        data-toggle="modal">Delete</a>
                     {% endif %}
                 </div>
             </div>
-
-            <!-- project details -->
-            <div class="project-info col-12 col-sm-6 col-md-5 col-lg-4">
-                <div class="border-outer">
-                    <div class="border-inner">
-                        <div class="p-details-wrapper">
-                            <div class="d-flex justify-content-center w-100 my-3">
-                                <img class="info-icon" src="{% static 'images/svg/info-icon.svg' %}" alt="info icon">
-                            </div>
-                            <div class="d-flex">
-                                <h5>
-                                    <img src="{% static 'images/svg/globe-icon.svg' %}" alt="globe icon">
-                                    <a class="ml-1"
-                                        href="{% url 'projects' %}?country={{ project.country.name }}">{{ project.country.friendly_name }}
-                                    </a>
-                                </h5>
-                            </div>
-
-                            <div class=" align-self-center">
-                                <div class="text-muted mb-2">
-                                    <i class="fas fa-map-marker-alt fa-fw mr-2"></i>
-                                    {{ project.location }}
+            <div class="row my-3">
+                <!-- project image -->
+                <div class="project-info col-12 col-md-7 col-lg-4">
+                    <div class="border-wrap-img">
+                        {% if project.image %}
+                        <a href="{{ project.image.url }}" target="_blank">
+                            <img src="{{ project.image.url }}" class="p-detail-img" alt="{{ project.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img src="{{ MEDIA_URL }}noimage.png" class="d-lg-none p-detail-img" alt="{{ project.name }}">
+                        </a>
+                        <a href="">
+                            <img src="{{ MEDIA_URL }}noimage-lg.png" class="d-none d-lg-block p-detail-img"
+                                alt="{{ project.name }}">
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- project details -->
+                <div class="project-info col-12 col-sm-6 col-md-5 col-lg-4">
+                    <div class="border-outer">
+                        <div class="border-inner">
+                            <div class="p-details-wrapper">
+                                <div class="d-flex justify-content-center w-100 my-3">
+                                    <img class="info-icon" src="{% static 'images/svg/info-icon.svg' %}" alt="info icon">
                                 </div>
-                                <div class="text-muted mb-2"><i class="fas fa-tag fa-fw mr-2"></i>
-                                    {{ project.category.friendly_name }}
+                                <div class="d-flex">
+                                    <h5>
+                                        <img src="{% static 'images/svg/globe-icon.svg' %}" alt="globe icon">
+                                        <a class="ml-1"
+                                            href="{% url 'projects' %}?country={{ project.country.name }}">{{ project.country.friendly_name }}
+                                        </a>
+                                    </h5>
                                 </div>
-                                <div class="text-muted mb-2">
-                                    <i class="fas fa-map-pin fa-fw mr-2"></i>
-                                    {{ project.pin_id }}
+                                <div class=" align-self-center">
+                                    <div class="text-muted mb-2">
+                                        <i class="fas fa-map-marker-alt fa-fw mr-2"></i>
+                                        {{ project.location }}
+                                    </div>
+                                    <div class="text-muted mb-2"><i class="fas fa-tag fa-fw mr-2"></i>
+                                        {{ project.category.friendly_name }}
+                                    </div>
+                                    <div class="text-muted mb-2">
+                                        <i class="fas fa-map-pin fa-fw mr-2"></i>
+                                        {{ project.pin_id }}
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="align-text-bottom">
-                                <a class="btn btn-primary my-3" href="#projectDonation">Fund this Project!</a>
+                                <div class="align-text-bottom">
+                                    <a class="btn btn-primary my-3" href="#projectDonation">Fund this Project!</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- project map -->
-            <div class="project-info col-12 col-sm-6 col-md-12 col-lg-4">
-                <div class="border-outer">
-                    <div class="border-inner">
-                        <div id="map"></div>
+                <!-- project map -->
+                <div class="project-info col-12 col-sm-6 col-md-12 col-lg-4">
+                    <div class="border-outer">
+                        <div class="border-inner">
+                            <div id="map"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- project description -->
-        <div class="row">
-            <div class="col-12 my-3">
-                <p>{{ project.description|safe }}</p>
-            </div>
-        </div>
-        <!-- <div class="hr-dark"></div> -->
-
-        <!-- project needs -->
-        <div class="row">
-            <div class="col-12 my-3">
-                <div class="h5">
-                    Just <strong>some</strong> of the ways that your donation will help!
-                </div>
-                <div class="needs-wrapper">
-                    {{ project.needs|safe }}
+            <!-- project description -->
+            <div class="row">
+                <div class="col-12 my-3">
+                    <p>{{ project.description|safe }}</p>
                 </div>
             </div>
+            <!-- <div class="hr-dark"></div> -->
+            <!-- project needs -->
+            <div class="row">
+                <div class="col-12 my-3">
+                    <div class="h5">
+                        Just <strong>some</strong> of the ways that your donation will help!
+                    </div>
+                    <div class="needs-wrapper">
+                        {{ project.needs|safe }}
+                    </div>
+                </div>
+            </div>
+            <!-- social media share buttons -->
+            <p>Help raise awareness for this project by sharing via:</p>
+            <div class="social-share-buttons col-12 d-flex p-0">
+                {% post_to_facebook object_or_url "Facebook" %}
+                {% post_to_twitter "Please help me support the {{ project.name }} project in {{ project.country.friendly_name }} @" object_or_url "Twitter" %}
+                {% send_email project.name "Please support this incredible {{ project.name }} project, which you can view at " object_or_url "Email" %}
+            </div>
         </div>
+    </section>
 
-        <!-- social media share buttons -->
-        <p>Help raise awareness for this project by sharing via:</p>
-        <div class="social-share-buttons col-12 d-flex p-0">
-            {% post_to_facebook object_or_url "Facebook" %}
-            {% post_to_twitter "Please help me support the {{ project.name }} project in {{ project.country.friendly_name }} @" object_or_url "Twitter" %}
-            {% send_email project.name "Please support this incredible {{ project.name }} project, which you can view at " object_or_url "Email" %}
-        </div>
-    </div>
-</section>
-
-<!-- donation form section -->
-<section id="projectDonation" class="pt-2">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="border-outer">
-                    <div class="border-inner">
-                        <div class="d-none d-md-block col-md-5">
-                            <img class="w-100" src="{% static 'images/donate-form.png' %}" alt="donation form image">
-                        </div>
-                        <!-- Donation form col -->
-                        <div class="col-12 col-md-7 mt-3">
-                            <div class="donation-wrapper mx-auto py-3">
-                                <!-- pre-determined options -->
-                                <h4 id="donateProject" class="text-center my-3">Fund this project</h4>
-                                <div class="mb-2 p-3">
-
-                                    <!-- ===== Amount Options ===== -->
-                                    <!-- preset amounts -->
-                                    <label class="font-weight-bold" for="presetAmount">Choose an amount (&euro;)</label>
-                                    <select class="form-control" id="presetAmount">
-                                        <option value="0" selected>Choose..</option>
-                                        <option value="10">&euro; 10</option>
-                                        <option value="50">&euro; 50</option>
-                                        <option value="100">&euro; 100</option>
-                                        <option value="250">&euro; 250</option>
-                                    </select>
-
-                                    <div class="my-3 text-center font-weight-bold"><strong>~ OR ~</strong></div>
-
-                                    <!-- user amount input -->
-                                    <label class="font-weight-bold" for="userAmount">Enter own amount (&euro;)</label>
-                                    <input class="form-control" id="userAmount" type="number" min="0" step="10" value=""
-                                        placeholder="0" />
-
-                                    <div class="hr-dark my-5"></div>
-                                    <!-- display amount total -->
-                                    <p class="font-weight-bold display-amount-wrapper">
-                                        Total to Donate:
-                                        <span>&euro;</span><span id="displayAmount">0</span><span>.00</span>
-                                    </p>
-                                    <!-- donation form -->
-                                    <form id="DonationOptionForm" action="{% url 'add_to_cart' project.id %}"
-                                        method="POST">
-                                        {% csrf_token %}
-                                        <!-- Total -->
-
-                                        <input class="donationTotal form-control mb-3"
-                                            id="donation_amount_{{ project.id }}" name="donation_amount" type="hidden"
-                                            value="" data-item_id="{{ project.id }}" readonly />
-
-                                        <!-- submit buttons -->
-                                        <div class="row">
-                                            <div class="col-12 col-sm-6 order-2 order-sm-1">
-                                                <!-- back to projects button -->
-                                                <a href="{% url 'projects' %}" class="w-100 btn btn-outline-dark my-2">
-                                                    Back to Projects
-                                                </a>
+    <!-- donation form section -->
+    <section id="projectDonation" class="pt-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="border-outer">
+                        <div class="border-inner">
+                            <div class="d-none d-md-block col-md-5">
+                                <img class="w-100" src="{% static 'images/donate-form.png' %}" alt="donation form image">
+                            </div>
+                            <!-- Donation form col -->
+                            <div class="col-12 col-md-7 mt-3">
+                                <div class="donation-wrapper mx-auto py-3">
+                                    <!-- pre-determined options -->
+                                    <h4 id="donateProject" class="text-center my-3">Fund this project</h4>
+                                    <div class="mb-2 p-3">
+                                        <!-- ===== Amount Options ===== -->
+                                        <!-- preset amounts -->
+                                        <label class="font-weight-bold" for="presetAmount">Choose an amount (&euro;)</label>
+                                        <select class="form-control" id="presetAmount">
+                                            <option value="0" selected>Choose..</option>
+                                            <option value="10">&euro; 10</option>
+                                            <option value="50">&euro; 50</option>
+                                            <option value="100">&euro; 100</option>
+                                            <option value="250">&euro; 250</option>
+                                        </select>
+                                        <div class="my-3 text-center font-weight-bold"><strong>~ OR ~</strong></div>
+                                        <!-- user amount input -->
+                                        <label class="font-weight-bold" for="userAmount">Enter own amount (&euro;)</label>
+                                        <input class="form-control" id="userAmount" type="number" min="0" step="10" value=""
+                                            placeholder="0" />
+                                        <div class="hr-dark my-5"></div>
+                                        <!-- display amount total -->
+                                        <p class="font-weight-bold display-amount-wrapper">
+                                            Total to Donate:
+                                            <span>&euro;</span><span id="displayAmount">0</span><span>.00</span>
+                                        </p>
+                                        <!-- donation form -->
+                                        <form id="DonationOptionForm" action="{% url 'add_to_cart' project.id %}"
+                                            method="POST">
+                                            {% csrf_token %}
+                                            <!-- Total -->
+                                            <input class="donationTotal form-control mb-3"
+                                                id="donation_amount_{{ project.id }}" name="donation_amount" type="hidden"
+                                                value="" data-item_id="{{ project.id }}" readonly />
+                                            <!-- submit buttons -->
+                                            <div class="row">
+                                                <div class="col-12 col-sm-6 order-2 order-sm-1">
+                                                    <!-- back to projects button -->
+                                                    <a href="{% url 'projects' %}" class="w-100 btn btn-outline-dark my-2">
+                                                        Back to Projects
+                                                    </a>
+                                                </div>
+                                                <div class="col-12 col-sm-6 order-1 order-sm-2">
+                                                    <!-- submit donation button -->
+                                                    <input id="donationSubmit" type="submit"
+                                                        class="w-100 btn btn-primary my-2" value="Confirm Amount"
+                                                        disabled />
+                                                </div>
                                             </div>
-                                            <div class="col-12 col-sm-6 order-1 order-sm-2">
-                                                <!-- submit donation button -->
-                                                <input id="donationSubmit" type="submit"
-                                                    class="w-100 btn btn-primary my-2" value="Confirm Amount"
-                                                    disabled />
-                                            </div>
-                                        </div>
-                                        <!-- request.path attribute to submit redirect_url to current URL -->
-                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                    </form>
+                                            <!-- request.path attribute to submit redirect_url to current URL -->
+                                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -199,47 +188,47 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Delete Confirm modal -->
-<div class=" modal fade px-2 pt-3" id="projectDeleteModal" tabindex="-1" role="dialog" aria-labelledby="projectDeleteModal"
-    aria-hidden="true">
-    <div class="modal-dialog modal-md modal-notify modal-danger mx-auto" role="document">
-        <div class="modal-content text-center">
-            <div class="modal-header d-flex justify-content-center">
-                <p class="h6 my-2">Are you sure you want to DELETE this Project?</p>
-            </div>
-            <i class="fas fa-exclamation-circle text-danger my-2"> This action cannot be undone!</i>
-            <div class="modal-body">
-                <div class="modal-footer flex-center">
-                    <button class="btn btn-outline-secondary mr-auto" type="button" data-dismiss="modal">
-                        <i class="fas fa-times animated rotateIn"></i>
-                        Cancel
-                    </button>
-                    <a class="btn btn-outline-danger" href="{% url 'delete_project' project.id %}" type="button">
-                        Confirm Deletion
-                    </a>
+    <!-- Delete Confirm modal -->
+    <div class=" modal fade px-2 pt-3" id="projectDeleteModal" tabindex="-1" role="dialog"
+        aria-labelledby="projectDeleteModal" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-notify modal-danger mx-auto" role="document">
+            <div class="modal-content text-center">
+                <div class="modal-header d-flex justify-content-center">
+                    <p class="h6 my-2">
+                        Are you sure you want to DELETE this Project?
+                    </p>
+                </div>
+                <i class="fas fa-exclamation-circle text-danger my-2"> This action cannot be undone!</i>
+                <div class="modal-body">
+                    <div class="modal-footer flex-center">
+                        <button class="btn btn-outline-secondary mr-auto" type="button" data-dismiss="modal">
+                            <i class="fas fa-times animated rotateIn"></i>
+                            Cancel
+                        </button>
+                        <a class="btn btn-outline-danger" href="{% url 'delete_project' project.id %}" type="button">
+                            Confirm Deletion
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
-
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
     <script type="text/javascript" src="{% static 'projects/js/donationform.js' %}"></script>
-
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=60939b58ccbbe50012c02b53&product=inline-share-buttons" async="async"></script>
+    <script type="text/javascript"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=60939b58ccbbe50012c02b53&product=inline-share-buttons"
+        async="async"></script>
     <script>
         let projectMap = L.map('map').setView(['{{ project.latitude }}', '{{ project.longitude }}'], 6)
-
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             minZoom: 2,
@@ -249,7 +238,6 @@
             zoomOffset: -1,
             accessToken: '{{ leaflet_accessToken }}',
         }).addTo(projectMap);
-
         let marker = L.marker(['{{ project.latitude }}', '{{ project.longitude }}']).addTo(projectMap);
         marker.bindPopup("<small class='text-muted'>{{ project.name }}<small>").openPopup();
     </script>
