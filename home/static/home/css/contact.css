@@ -13,10 +13,10 @@
     height: 120px;
 }
 
-#ContactFormMessage {
+#contactForm textarea {
     overflow-y: scroll;
-    max-height: 150px;
-    min-height: 150px;
+    max-height: 100px;
+    min-height: 100px;
 }
 
 /* --- MEDIA QUERIES --- */

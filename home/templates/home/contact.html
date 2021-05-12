@@ -11,35 +11,16 @@
     <div class="container">
         <h2>Get in touch!</h2>
         <div class="row contactForm-row mx-1">
-            <div class="d-none d-sm-block col-sm-5 p-0">
+            <div class="d-none d-md-block col-md-5 p-0">
                 <img class="contact-image w-100 h-100 p-3"
                     src="{% static 'images/contact-img.png' %}"
                     alt="Giraffe face">
             </div>
-            <div class="col-12 col-sm-7">
-                <!-- Credit: form adapted from MDBootstap template  -->
+            <div class="col-12 col-md-7">
                 <!-- Contact form -->
-                <form class="text-center p-3" action="#!">
-                    <!-- Name -->
-                    <input type="text" id="ContactFormName" class="form-control mb-4" placeholder="Name" required />
-                    <!-- Email -->
-                    <input type="email" id="ContactFormEmail" class="form-control mb-4"
-                        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-                        placeholder="E-mail" required />
-                    <!-- Subject -->
-                    <input type="text" id="ContactFormSubject" class="form-control mb-4" placeholder="Subject"
-                        required />
-                    <!-- Message -->
-                    <div class="form-group">
-                        <textarea class="form-control rounded-0" id="ContactFormMessage" rows="3" placeholder="Message"
-                            required /></textarea>
-                    </div>
-                    <!-- Copy -->
-                    <div class="custom-control custom-checkbox mb-4">
-                        <input type="checkbox" class="custom-control-input" id="ContactReceipt">
-                        <label class="custom-control-label" for="ContactReceipt">
-                            Send me a copy of this message</label>
-                    </div>
+                <form class="p-3" id="contactForm" action="{% url 'contact' %}" method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}
                     <!-- Send button -->
                     <button class="btn btn-block btn-customGreen" type="submit">Send</button>
                 </form>
