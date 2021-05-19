@@ -362,6 +362,7 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 - [Favicon](https://favicon.io/favicon-converter/) - Favicon Generator
 - [Adobe Photoshop CS6](https://www.adobe.com/ie/products/photoshop.html) - Image manipulation and colour corrections
 - [Swiper JS](https://swiperjs.com/) for image carousels
+- [PDF Tools](https://tools.pdf24.org/en/) for wireframe PDF compression
 
 > [Back to Top](#table-of-contents)  
 
