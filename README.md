@@ -17,7 +17,7 @@ FundPIN (Fund Projects In Need) is dedicated to networking, supporting, and rais
 ---
 <img src="https://res.cloudinary.com/jimlynx/image/upload/v1592513512/LIONS/Untitled_Design_sonyub.jpg" alt="responsive screens"/>
 
-[Live Site](------------------)
+[Live Site](https://fundpin.herokuapp.com/)
 
 **Please note**: To open any links in this document in a new browser tab, please press `CTRL + Click`.
 
@@ -31,7 +31,7 @@ FundPIN (Fund Projects In Need) is dedicated to networking, supporting, and rais
 - [Strategy](#strategy)
 - [Scope](#scope)
   - [Existing Features](#existing-features)
-  - [Features Left to Implement](#features-left-to-implement)
+  - [Future Features to Implement](#future-features-to-implement)
 - [Structure](#structure)
 - [Database](#database)
 - [Data Schema](#data-schema)
@@ -177,9 +177,9 @@ Provide MVP with relevant categories, project listings and detail pages, with pl
 
 ##### Stretch Goals
 
-#### Features Left to Implement
+#### Future Features to Implement
 
-TBA =========>
+- Project submissions form and functionality to enable potential NGO's to submit projects for review.
 
 ### Structure
 
@@ -218,6 +218,8 @@ TBA =========>
 
 #### Wireframes
 
+[BASE TEMPLATE](docs/wireframes/base-template.pdf) - Detail for Navigation and Footer for all site pages.
+
 ##### Anonymous Users
 
 - [HOME Page](docs/wireframes/home-wireframe.pdf)
@@ -232,7 +234,7 @@ TBA =========>
 ##### Registered Users (including all above)
 
 - [PROFILE Page](docs/wireframes/profile-wireframe.pdf)
-- [DONATION BASKET Page](docs/wireframes/basket-wireframe.pdf)
+- [DONATION CART Page](docs/wireframes/cart-wireframe.pdf)
 - [DONATION CONFIRMATION Page](docs/wireframes/donation-confirmation-wireframe.pdf)
 
 ##### SuperUser (including all above)
@@ -375,6 +377,7 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 ### Known Issues
 
 - On user logout, cart data does not persist and session is cleared on logging back in. On further investigating, allowing the persistent data could cause security vulnerabilities so this has been excluded from this project.
+- The Facebook 'Share' button returns the home url of the site, and not the specific project or blog page as intented. However, through the same package [django_social_share](https://pypi.org/project/django-social-share/), the Twitter and Email options return the correct results. I have tried many fixes to this, yet have not found a resolve and have decided to leave this as an existing issue to be resolved in further development after submission.
 
 > [Back to Top](#table-of-contents)  
 
@@ -489,7 +492,6 @@ All content is self-written by site creator.
 - CSS Radial gradient for instagram colours from [CodePen by Thomas Rye](https://codepen.io/thomasrye/pen/VaRoYv)
 - Inspiration for Navbar mobile side menu from [W3Schools](https://www.w3schools.com/howto/howto_js_sidenav.asp)
 - CSS for hiding scrollbars on all browsers from [W3Schools](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
-- Contact page form adapted from [MDBootstrap](https://mdbootstrap.com/docs/b4/jquery/forms/basic/) template
 - Project cards, on Projects page, customized from Codepen by [Tenzing Gaychey](https://codepen.io/tgaychey/pen/PROMVy)
 - Checkout payment overlay animation customised from [Codepen](https://codepen.io/yumeeeei/pen/BQPmpX) by [@yumeeeei](https://codepen.io/yumeeeei)
 - Google Login button from [Stack Overflow](https://stackoverflow.com/a/59119994)
