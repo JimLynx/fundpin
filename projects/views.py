@@ -71,6 +71,7 @@ def all_projects(request):
 
 def project_description(request, project_id):
     """ A view to show individual projects """
+
     project = get_object_or_404(Project, pk=project_id)
     leaflet_accessToken = settings.LEAFLET_API_KEY
     template = 'projects/project_description.html'
@@ -84,6 +85,7 @@ def project_description(request, project_id):
 @login_required
 def add_project(request):
     """ Add a new project """
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only site admin can do that.')
         return redirect(reverse('home'))
@@ -150,5 +152,6 @@ def delete_project(request, project_id):
     project = get_object_or_404(Project, pk=project_id)
     project.delete()
 
-    messages.success(request, 'The selected project has successfully been deleted.')
+    messages.success(
+        request, 'The selected project has successfully been deleted.')
     return redirect(reverse('projects'))
