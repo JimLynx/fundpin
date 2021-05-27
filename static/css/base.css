@@ -530,14 +530,15 @@ footer .social-icons {
     position: fixed;
     right: 10px;
     bottom: 10vh;
-    color: darkred;
+    color: var(--logo-green);
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    background: bisque;
-    padding: 8px;
-    border-radius: .5rem;
-    opacity: .7;
+    background: var(--p-light-grey);
+    padding: 6px;
+    border-radius: .3rem;
+    border: 1px solid var(--logo-green);
+    opacity: .8;
     z-index: 2;
 }
 
@@ -594,7 +595,6 @@ footer .social-icons {
         transform: translate(1px, -2px) rotate(-1deg);
     }
 }
-
 /* === end back to top button === */
 
 /* === toast messages === */
