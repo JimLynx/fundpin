@@ -237,9 +237,14 @@
                     <p class="subscribe-text">
                         Join our mailing list for project updates!
                     </p>
-                    <form class="subscribe-form mb-3" action="">
-                        <input type="text" placeholder="Email Address..." name="subscribe">
-                        <button type="submit">
+                    <!-- mailchimp subscription form -->
+                    <form action="https://herokuapp.us1.list-manage.com/subscribe/post?u=dfda6f251ecc4b14ba92129c8&amp;id=c5c26dcd6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate d-flex subscribe-form mb-3" target="_blank" novalidate>
+                        {% csrf_token %}
+                        <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email Address" required>
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_dfda6f251ecc4b14ba92129c8_c5c26dcd6d" tabindex="-1" value="">
+                        </div>
+                        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn contact-btn">
                             <i class="fa fa-envelope"></i>
                         </button>
                     </form>
