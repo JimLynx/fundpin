@@ -88,6 +88,10 @@ body {
 
 /* LEAD-IN SECTION */
 
+#lead-in a {
+    text-decoration: none;
+}
+
 .lead-in-block {
     display: flex;
     flex-direction: column;
