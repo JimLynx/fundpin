@@ -23,22 +23,14 @@ class CommentAdmin(admin.ModelAdmin):
         'body',
         'post',
         'created_on',
-        'active',
     )
     list_filter = (
-        'active',
         'created_on',
     )
     search_fields = (
         'name',
-        'email',
         'body',
     )
-    actions = ['approve_comments']
-
-    def approve_comments(self, request, blog_description):
-        blog_description.update(active=True)
-
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Comment, CommentAdmin)
