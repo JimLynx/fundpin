@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.safestring import mark_safe
 from django.core.paginator import Paginator
 
-from blog.models import Post, Comment
+from blog.models import Post
 from .forms import CommentForm, BlogForm
 
 
@@ -30,20 +30,19 @@ def blog_description(request, slug):
     """ return blog description page for each blog """
 
     blog_description = get_object_or_404(Post, slug=slug)
-    comments = blog_description.comments.filter(
-        active=True).order_by("-created_on")
+    comments = blog_description.comments.order_by("-created_on")
     new_comment = None
 
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             new_comment = comment_form.save(commit=False)
+            new_comment.name = request.user
             new_comment.post = blog_description
             new_comment.save()
-            messages.success(request, (mark_safe("Thank you, your comment was succcessfully submitted."
-                                                 "<br><br>It is awaiting admin approval (which can take up to 48 hours), "
-                                                 "so please check back later.")))
+            messages.success(request, ("Thank you, your comment was succcessfully posted."))
             comment_form = CommentForm()
+
             return redirect(reverse('blog_description', args=[blog_description.slug]))
         else:
             messages.error(

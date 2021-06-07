@@ -36,6 +36,10 @@ h3 {
     margin-right: 20px;
 }
 
+#div_id_body label {
+    visibility: hidden;
+}
+
 .blog-list-wrapper {
     border: 1px solid var(--logo-green);
     width: 100%;

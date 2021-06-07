@@ -76,14 +76,19 @@
                             <br>
                         </div>
                     {% endfor %}
+                    <div class="hr-dark w-100 my-4"></div>
                     <!-- New comment form -->
-                    <!-- <div class="hr-dark w-100 my-4"></div> -->
-                    <h3>Leave a comment</h3>
-                    <form method="post">
-                        {{ comment_form|crispy }}
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-customGreen">Post Comment</button>
-                    </form>
+                    {% if user.is_authenticated %}
+                        <h3>Leave a comment</h3>
+                        <em>You are commenting as <strong>{{ request.user }}</strong></em>
+                        <form method="post">
+                            {{ comment_form|crispy }}
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-customGreen">Post Comment</button>
+                        </form>
+                        {% else %}
+                        <p>If you would you like to comment on this post, please <a href="{% url 'account_signup' %}">SIGN UP</a> for a FundPIN account.</p>
+                    {% endif %}
                 </div>
             </div>
     </section>
