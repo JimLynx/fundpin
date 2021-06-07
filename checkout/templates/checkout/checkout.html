@@ -76,8 +76,16 @@
                                 Complete Payment
                                 <i class="fas fa-lock"></i>
                             </button>
-                            <p class="my-3">Your card will be charged: <strong>&euro;{{ total|floatformat:2 }}</strong>
+                            <p class="my-3">
+                                Your card will be charged: <strong>&euro;{{ total|floatformat:2 }}</strong>
                             </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <small><em>
+                                FundPIN will retain 5% of the total amount donated (<strong>&euro;{{ charges|floatformat:2 }}</strong>), to ensure ongoing support for our projects.
+                            </em></small>
                         </div>
                     </div>
                 </form>

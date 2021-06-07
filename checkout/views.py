@@ -99,6 +99,7 @@ def checkout(request):
 
         current_cart = cart_contents(request)
         total = current_cart['total']
+        charges = total*0.05
 
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
@@ -134,6 +135,7 @@ def checkout(request):
 
     template = 'checkout/checkout.html'
     context = {
+        'charges': charges,
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
