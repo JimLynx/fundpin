@@ -180,6 +180,10 @@ Provide MVP with relevant categories, project listings and detail pages, with pl
 #### Future Features to Implement
 
 - Project submissions form and functionality to enable potential NGO's to submit projects for review.
+- Implement pre-population of slug field when adding a new blog post.
+- Implement Lazyload, specifically on home page, to decrease load times.
+- Implement Pagination on Project page.
+- Facebook Login - see [Project barriers and solutions](#project-barriers-and-solutions) for more detials.
 
 ### Structure
 
@@ -189,13 +193,13 @@ The overall structure is aimed at ease of navigation to each section and provide
 
 The content has been laid out in an intuiitive way, providing a good flow of information, with the main landing page diving clear direction to browsing the projects on the projects page.
 
-Clear feedback is provided to the user after each interaction, using the messages function in Django (success messages, error pages, clear direction)
+Clear feedback is provided to the user after each interaction, using the messages function in Django (success, info and error, providing the user with clear direction)
 
 #### Information Architecture
 
 TBA =========> navigational SCHEMA. ![Site Info Schema]()  
 
-The main organising principle for the user is the type of project, yet the Country that the project is based in is an important factor so this has been incporporated as a top-level category in the search function.
+The main organising principle for the user is the type of project, yet the Country that the project is based in is an important factor so this has been incorporated as a top-level category in the search ability.
 
 - Search by Keyword
 - Search by Project Type
@@ -203,12 +207,20 @@ The main organising principle for the user is the type of project, yet the Count
 
 #### Database
 
-Development - SQLite3
-Production - Heroku Postgres
+[SQLite3](https://www.sqlite.org/index.html) used in Development, which comes as default with Django installation.
+[Heroku Postgres](https://www.heroku.com/postgres) used in Production as site is deployed on [Heroku](https://www.heroku.com/)
 
 #### Data Schema
 
-TBA =========>
+I've used [DBDiagram](https://dbdiagram.io/) to draw up a Database Schema, which shows the relationships between models.
+
+Country
+
+Category
+
+Project
+
+User
 
 ### Skeleton
 
@@ -373,6 +385,7 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 - On setting the RichText editor for the project descriptions to 'justify text', this was applying an inline style to the rendered paragraph text from the database, which meant that the paragraphs could not be text-aligned with with css. Overcame this by leaving all paragraph text as default and custom to allow ability to align from custom css styling.
 - Toasts were not showing up from django-allauth, but fine on the site for custom alerts. Created branch *allauth-toasts* to try and resolve this issue. Narrowed this down to the jQuery show/hide not being called for defauly django toasts. Resolved by adding the toasts show/hide jQuery script to the index.html postloadjs block as this was being overwritten by the swiper carousel and custom script.
 - Although a users billing details are saved correctly on the profile, and update as expected, the checkout form is not pre-populating the saved info. Resolved after finding that this was a minor issue anad I'd duplicated the order_form variable in checkout views.py, which was clearing the form after save.
+- The Facebook Login functionality has been working, but due to various emails from Facebook regarding requirements for GDPR, Privacy Policy and more, I have decided to omit the Facebook Login feature due these extra requirements being out of the scope of this project (as a 'for educational purposes' only site). Once the site is built for a real-world applciation, the Facebook funtionality can be reimplemented.
 - Webhooks and signals not working as they should. Created branch *webhooks* to work on a resolve. => IN PROGRESS
 
 ### Known Issues
@@ -387,8 +400,8 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 ### Version Control
 
 - Used Git for version control.
-- User-confirmation branch for implementing and testing confirmation modal dialogues.
-- The branch was then merged with the main branch after any conflicts were addressed.
+- Various branches were created for features.
+- The branches were then merged with the main branch once any conflicts were resolved.
 
 ### Development Environment
 
@@ -502,7 +515,7 @@ All content is self-written by site creator.
 I would like to thank:
 
 - My mentor, **Aaron Sinnott** for his guidance and advice.
-- **[Tim Nelson](https://github.com/TravelTimN)**, **[Bim Williams](https://github.com/mrbim)**, **[John Traas](https://github.com/Jays-T)**, **[Anthony O'Brien](https://github.com/auxfuse)** and **[Sean Murphy](https://github.com/nazarja)** for always being open to discussing, helping and generally being awesome people.
+- **[Tim Nelson](https://github.com/TravelTimN)**, **[Bim Williams](https://github.com/mrbim)**, **[John Traas](https://github.com/Jays-T)**, **[Anthony O'Brien](https://github.com/auxfuse)**, **[Daisy Mc Girr](https://github.com/Daisy-McG)** and **[Sean Murphy](https://github.com/nazarja)** for always being open to discussing, helping and generally being awesome people.
 - Help with JS storing CTA banner in local storage after close [Sean Murphy](https://github.com/nazarja)
 - Assistance from [Sean Murphy](https://github.com/nazarja) and [John Traas](https://github.com/Jays-T), for helping me to refactor my JavaScript to get a total from inputs on the donation form.
 - Everyone in Tutor support for always being patient and friendly when approaching with assistance during course material.
@@ -511,6 +524,6 @@ I would like to thank:
 
 ## Support
 
-For any issue resolution or assistance, please email  Jim Morel :e-mail: jim.lynx@gmail.com :e-mail:
+For any issue resolution or assistance, please email :e-mail: [Jim Morel](jim.lynx@gmail.com) :e-mail:
 
 > [Back to Top](#table-of-contents)  
