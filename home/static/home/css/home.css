@@ -60,7 +60,7 @@ body {
     background: #0000009c;
     color: var(--off-white);
     align-self: center;
-    padding: 1rem;
+    padding: 0 .3rem .3rem .3rem;
     margin: auto .5rem;
     border-radius: .5rem;
 }
@@ -299,7 +299,7 @@ body {
 
 @media (min-width: 576px) {
     .slide-text-wrapper {
-        padding: 2rem;
+        padding: 1rem;
         margin: auto 1rem;
     }
 
@@ -338,7 +338,7 @@ body {
     }
 
     .slide-text-wrapper {
-        margin: auto 25px 25px;
+        margin: auto 25px;
         font-size: 1.1rem;
     }
 

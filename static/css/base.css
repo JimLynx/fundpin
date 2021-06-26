@@ -267,7 +267,7 @@ input[name='q']::placeholder {
     text-decoration: none;
     display: block;
     transition: 0.5s;
-    width: 80%;
+    width: 90%;
 }
 
 .sidenav a:hover,
