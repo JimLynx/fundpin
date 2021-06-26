@@ -15,10 +15,10 @@ let homeSwiper = new Swiper('.swiper-container.main-swiper', {
         modifier: 1,
         slideShadows: true,
     },
-    // autoplay: {
-    //     delay: 4500,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -42,10 +42,10 @@ let aboutSwiper = new Swiper('.swiper-container.about-swiper', {
         shadowOffset: 20,
         shadowScale: 0.94,
     },
-    //     autoplay: {
-    //     delay: 2000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
     pagination: false,
 });
 
@@ -68,21 +68,17 @@ let featuredProjectSwiper = new Swiper('.swiper-container.featured-project-swipe
     breakpoints: {
         576: {
             slidesPerView: 2,
-            // spaceBetween: 10,
         },
         768: {
             slidesPerView: 3,
-            // spaceBetween: 10,
         },
         1024: {
             slidesPerView: 4,
         },
         1200: {
             slidesPerView: 5,
-            // spaceBetween: 10,
         },
     },
-    // pagination: true,
 });
 
 // home-page: featured blogs carousel
