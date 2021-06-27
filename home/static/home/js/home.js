@@ -42,10 +42,6 @@ let aboutSwiper = new Swiper('.swiper-container.about-swiper', {
         shadowOffset: 20,
         shadowScale: 0.94,
     },
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
     pagination: false,
 });
 
@@ -65,6 +61,10 @@ let featuredProjectSwiper = new Swiper('.swiper-container.featured-project-swipe
         }
     },
     loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
     breakpoints: {
         576: {
             slidesPerView: 2,
@@ -97,6 +97,10 @@ let featuredBlogSwiper = new Swiper('.swiper-container.featured-blog-swiper', {
         }
     },
     loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
     breakpoints: {
         575: {
             slidesPerView: 2,
