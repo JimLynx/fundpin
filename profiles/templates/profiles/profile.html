@@ -45,7 +45,7 @@
                             <!-- order confirmation page -->
                             <div class="col-12 col-lg-8 my-2">
                                 <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
-                                    View order confirmation details
+                                    View donation confirmation details
                                 </a>
                             </div>
                         </div>
@@ -57,8 +57,8 @@
                                 <small>
                                     <ol class="pl-5">
                                         {% for item in order.lineitems.all %}
-                                        <li class="">
-                                            {{ item.project.name }} in {{ item.project.country.friendly_name }}
+                                        <li>
+                                            {{ item.project.name }} in {{ item.project.country.friendly_name }} - &euro;{{ item.lineitem_total }}
                                         </li>
                                         {% endfor %}
                                     </ol>
