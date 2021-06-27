@@ -433,11 +433,9 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 > [Back to Top](#table-of-contents)  
 
-## Deployment
-
 ### Local Installation
 
-#### 1. Cloning the project
+#### 1. Clone the project
 
 - The code can be run locally through clone or download from the repository on [GitHub](https://github.com/JimLynx/fundpin).
 - You can do this by opening the repository, clicking on the Code' button and selecting either 'clone or download'.
@@ -458,11 +456,44 @@ In the Terminal window:
 
 #### 3. Create Environmental Variables
 
-TBA =========>
+- For sensitive information/passwords, create an `env.py` file to store these as environmental variables.
+
+```python
+import os
+
+os.environ['DEVELOPMENT'] = 'True'
+
+# Django Secret key - ensure you remove it 
+# from main>settings.py before pushing to your repository
+os.environ['SECRET_KEY'] = '<your value>'
+
+# stripe
+os.environ['STRIPE_PUBLIC_KEY'] ='<your value>'
+os.environ['STRIPE_SECRET_KEY'] ='<your value>'
+os.environ['STRIPE_WH_SECRET'] = '<your value>'
+
+# DB
+os.environ['DATABASE_URL'] ='<your value>'
+
+# AWS S3
+os.environ['AWS_ACCESS_KEY_ID'] = '<your value>'
+os.environ['AWS_SECRET_ACCESS_KEY'] = '<your value>'
+
+# Email
+os.environ['DEFAULT_FROM_EMAIL'] = '<your value>'
+os.environ['EMAIL_HOST_USER'] = '<your value>'
+os.environ['EMAIL_HOST_PASSWORD'] = '<your value>'
+
+# Leaflet maps
+os.environ['LEAFLET_API_KEY'] = '<your value>'
+
+```
+
+This file is added to the `.gitignore` file detailed below.
 
 #### 4. Create a .gitignore file
 
-- Create a file called **.gitignore** in the root directory and ensure it contains the following git exclusions:
+- Create a file called `.gitignore` in the root directory and ensure it contains the following git exclusions:
 
 ```text
     core.Microsoft*
@@ -481,19 +512,60 @@ TBA =========>
 
 - Install project requirements by typing `pip install -r requirements.txt`
 
-#### 6. Deploy locally
+#### 6. Migrate
+
+- Apply model migrations useing `python manage.py migrate`
+
+#### 7. Create a SuperUser account
+
+- Type `python manage.py createsuperuser` and following the username and passwords prompts from the terminal.
+
+#### 8. Deploy locally
 
 - To run the project locally, in the terminal type `python manage.py runserver`
 - This will open a localhost address, which is provided in the CLI.
-- Either copy and paste the url shown below into a new browser tab, or hover over it and click *follow link*
+- Either copy and paste the url (provided in the terminal) into a new browser tab, or hover over it and click *follow link*
 
-#### 7. Remote Deployment on Heroku
+## Deployment
+
+This project has been deployed to [HEROKU](https://www.heroku.com/)
+
+Media files are hosted on AWS S3 Bucket, and instructions can be found [HERE](https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html)
+
+### Deployment Instructions
+
+1. [Sign up](https://signup.heroku.com/login) for an account on Heroku or [Log in](https://id.heroku.com/login) with your existing account.
+
+2. Click on the 'New' dropdown box and 'Create new app'
+![Create app on Heroku screenshot](docs/deployment/1-create-app.png)
+
+3. Name your app, choose the appropriate region and submit.
+![Naming app screenshot](docs/deployment/2-name-app.png)
+
+4. On the Resources tab , search for Heroku Postgres Database and add (*a free Hoby Dev account can be used*).
+
+5. Postgres requires dj_database_url, and psycopg2, which will be installed when the requirements.txt dependencies are installed as explained earlier.
+
+6. Click on the Deploy tab and select the GitHub option, then choose you GitHub account and saeerch for the repository to connect to (*You can enter a keyword in the input to search for*). Once confirmed, press 'Connect'.
+![Connect GitHub sceenshot](docs/deployment/3-connect-github.png)
+
+7. Under Manual deploy, choose your main (or sometime called master) branch to deploy to and press 'Deploy Branch'
+![Manual deploy screenshot](docs/deployment/4-manual-deploy.png)
+
+8. Once the build has completed, under Automatic deploys, choose your main (or sometime called master) branch and press 'Enable Automatic Deploys'
+![Automatic deploy screenshot](docs/deployment/5-auto-deploy.png)
+
+9. Click on the Settings tab and then the 'Reveal Config Vars' button to reveal the Environmental Variables
+![Config Vars reveal button screenshot](docs/deployment/6-reveal-vars.png)
+
+10. Enter your Environmental variables and values with the following fields:
+![Config Vars screenshot](docs/deployment/7-config-vars.png)
 
 > [Back to Top](#table-of-contents)  
 
 ## Testing
 
-TBA =========> Testing documentation can be found on a separate document [HERE](static/testing/TESTING.md)
+Testing documentation can be found on a separate document [HERE](docs/TESTING.md)
 
 ## Credits
 
