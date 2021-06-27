@@ -104,11 +104,11 @@ FundPIN (Fund Projects In Need) is dedicated to networking, supporting, and rais
 | Anonymous user       | search for projects;                                                     | quickly browse which projects are available to support        |
 | Anonymous user       | filter my search results;                                                | search by country and/or project type                         |
 | Anonymous user       | read details about projects;                                             | understand the history, details and needs of the project      |
-| Anonymous user       | read details of what percentage of donations the projects receive        | feel confident, knowing where my donation will end up         |
+| Anonymous user       | read details of what percentage of donations FundPIN retains             | feel confident, knowing where my donation will end up         |
 | Anonymous user       | access contact details;                                                  | get in touch with any questions                               |
 | Anonymous user       | access social media of the company;                                      | join social media forums for news and updates                 |
 | Anonymous user       | register for a user profile account by choosing a username and password; | store details of my saved projects and donation history       |
-| Anonymous user       | register for a user profile account using my social media login details; | store details of my saved projects and donation history       |
+| Anonymous user       | register for a user profile account using my social media login details; | Allow a quick way to log in and create a profile              |
 |          ---         |                                    ---                                   |                              ---                              |
 | Registered user      | log in and log out of my profile account;                                | Safeguard my information whilst not active on the site        |
 | Registered user      | update my details                                                        | update address and other details in case they change          |
@@ -183,7 +183,9 @@ Provide MVP with relevant categories, project listings and detail pages, with pl
 - Implement pre-population of slug field when adding a new blog post.
 - Implement Lazyload, specifically on home page, to decrease load times.
 - Implement Pagination on Project page.
-- Facebook Login - see [Project barriers and solutions](#project-barriers-and-solutions) for more detials.
+- Facebook Login - see [Project barriers and solutions](#project-barriers-and-solutions) for more detials on why this is currently not implemented.
+- Implement further communication to the user via email for order invoices & confirmation.
+- Further development of Profile page to include profile image, pinned projects for future donations and additional fields/better constructed layout.
 
 ### Structure
 
@@ -210,17 +212,37 @@ The main organising principle for the user is the type of project, yet the Count
 [SQLite3](https://www.sqlite.org/index.html) used in Development, which comes as default with Django installation.
 [Heroku Postgres](https://www.heroku.com/postgres) used in Production as site is deployed on [Heroku](https://www.heroku.com/)
 
-#### Data Schema
+#### Apps and Models used
 
-I've used [DBDiagram](https://dbdiagram.io/) to draw up a Database Schema, which shows the relationships between models.
+- Projects App
 
-Country
+  - The **Project model** stores information about the projects.
 
-Category
+  - The **Country model** stores information about the countries and is used in the Project model as a specific category.
 
-Project
+  - The **Category model** stores information about the categories and is used in the Project model as a specific category.
 
-User
+- Profiles App
+
+  - The **UserProfile** model stores information about registered users, including donation order history.
+
+- Checkout App
+
+  - The **Order** model stores information about each donation order placed.
+
+  - The **OrderLineItem** model stores information from the order, used in calculation in the Order model.
+
+- Blog App
+
+  - The **Post** model stores information about the Blog post.
+
+  - The **Comments** model stores information used in the Comment Form, using Django's auth's **User** model as a Foreign Key to allow only Registered users to post comments.
+
+#### Model Relationship Data Schema
+
+I've used [DBDiagram](https://dbdiagram.io/) to draw up a Database Schema, which shows the relationships between the models.
+
+![DB Schema](docs/db-schema.png)
 
 ### Skeleton
 
@@ -230,7 +252,7 @@ User
 
 #### Wireframes
 
-[BASE TEMPLATE](docs/wireframes/base-template.pdf) - Detail for Navigation and Footer for all site pages.
+[BASE TEMPLATE](docs/wireframes/base-template.pdf) - Detail for Navigation and Footer for **all** site pages.
 
 ##### Anonymous Users
 
