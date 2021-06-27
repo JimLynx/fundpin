@@ -5,7 +5,6 @@
 }
 
 .order-history {
-    /* height of profile form + submit button */
     max-height: 355px;
     overflow-y: auto;
 }
@@ -25,4 +24,29 @@
 
 #id_default_country option:first-child {
     color: #aab7c4;
+}
+
+.order-history-details {
+    border: 1px solid green;
+    padding: .5rem;
+    /* margin: 10px; */
+}
+
+
+@media (min-width: 992px) {
+    .order-num {
+        width: 25%;
+    }
+
+    .order-date {
+        width: 25%;
+    }
+
+    .order-project {
+        width: 40%;
+    }
+
+    .order-total {
+        width: 10%;
+    }
 }

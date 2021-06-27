@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -10,25 +10,78 @@
     <div class="container">
         <h2>{{ profile }}'s Profile</h2>
 
-    <div class="row">
-        <div class="col-12 col-lg-6">
-            <p class="text-muted">Default Billing Information</p>
-            <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button class="btn btn-primary text-uppercase float-right">Update Information</button>
-            </form>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <p class="text-muted">Billing Information</p>
+                <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="btn btn-primary text-uppercase float-right">Update</button>
+                </form>
+            </div>
         </div>
-        <div class="col-12 col-lg-6">
-            <p class="text-muted">Order History</p>
+        <div class="row mt-3">
+            <div class="col-12">
+                <p class="text-muted">Donation History</p>
+                {% for order in orders %}
+                <div class="row order-history-details my-3 mx-0">
+                        <div class="col-12 col-lg-8">
+                            <div class="row">
+                            <!-- order date -->
+                            <div class="col-12 col-lg-4 my-2">
+                                <span class="font-weight-bold">Date: </span><small>{{ order.date.date }}</small>
+                            </div>
+                            <!-- order number -->
+                            <div class="col-12 col-lg-8 my-2">
+                                <span class="font-weight-bold">Order No.: </span><small class="text-break">{{ order.order_number }}</small>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- donation total -->
+                            <div class="col-12 col-lg-4 my-2">
+                                <span class="font-weight-bold">Donation Total: </span><small>&euro;{{ order.total }}</small>
+                            </div>
+                            <!-- order confirmation page -->
+                            <div class="col-12 col-lg-8 my-2">
+                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                                    View order confirmation details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 my-2">
+                        <!-- projects -->
+                            <span class="font-weight-bold">Projects donated to: </span>
+                                <small>
+                                    <ol class="pl-5">
+                                        {% for item in order.lineitems.all %}
+                                        <li class="">
+                                            {{ item.project.name }} in {{ item.project.country.friendly_name }}
+                                        </li>
+                                        {% endfor %}
+                                    </ol>
+                                </small>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- <div class="col-12">
+            <p class="text-muted">Donation History</p>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless">
                     <thead>
                         <tr>
-                            <th>Order Number</th>
-                            <th>Date</th>
-                            <th>Projects</th>
-                            <th>Order Total</th>
+                            <th class="order-num">Order Number</th>
+                            <th class="order-date">Date</th>
+                            <th class="order-project">Projects</th>
+                            <th class="order-total">Order Total</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,7 +90,7 @@
                                 <td>
                                     <a href="{% url 'order_history' order.order_number %}"
                                     title="{{ order.order_number }}">
-                                        {{ order.order_number|truncatechars:6 }}
+                                        {{ order.order_number|truncatechars:10 }}
                                     </a>
                                 </td>
                                 <td>{{ order.date }}</td>
@@ -56,12 +109,14 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
-</section>
+        </div> -->
+
+
+<!-- </div>
+</section> -->
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+<script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
