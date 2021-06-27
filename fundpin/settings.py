@@ -30,8 +30,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['fundpin.herokuapp.com', 'localhost', '127.0.0.1', 'localhost:8000']
-
+ALLOWED_HOSTS = [
+    'fundpin.herokuapp.com',
+    'localhost', 
+    '127.0.0.1',
+    'localhost:8000'
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -67,7 +71,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'storages',
     'django_extensions',
-
 ]
 
 MIDDLEWARE = [
@@ -246,7 +249,6 @@ STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
-
 # email authentication
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -260,8 +262,5 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
-
 # Leaflet maps
 LEAFLET_API_KEY = os.environ.get('LEAFLET_API_KEY')
-
