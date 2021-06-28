@@ -36,30 +36,7 @@
 </head>
 
 <body>
-    <!-- Facebook login SDK -->
-    <script>
-        window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '453881672513473',
-            cookie     : true,
-            xfbml      : true,
-            version    : 'v10.0'
-        });
-            
-        FB.AppEvents.logPageView();   
-            
-        };
-    
-        (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
     <header>
-
         <!-- Search Form -->
         <div class="collapse position-absolute w-100" id="navSearchCollapse">
             <form method="GET" action="{% url 'projects' %}" id="navSearchForm">
@@ -80,7 +57,6 @@
                 </a>
             </form>
         </div>
-
         <!-- Navbar -->
         <nav id="navBar" class="navbar-expand-lg navbar-light p-0">
             <div class="navbar">
@@ -157,7 +133,6 @@
             <i id="closeBanner" class="d-flex far fa-times-circle text-muted"></i>
         </div>
     </header>
-
     <!-- display messages from Django block -->
     {% if messages %}
         <div class="toast-wrapper" aria-live="polite" aria-atomic="true">
@@ -289,7 +264,7 @@
         </div>
     </footer>
 
-    <!----------- Back to Top button ------------>
+    <!-- Back to Top button -->
     <a href="#" id="back-to-top">
         <i class="fas fa-sort-up"></i>
         <i class="fab fa-octopus-deploy fa-2x"></i>
