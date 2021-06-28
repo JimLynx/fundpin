@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+    <section id="error500">
+        <div class="container text-center">
+            <h2>500 - Internal Server Error</h2>
+            <p class="my-3">Oh no something broke, but don't worry it's not your fault, its ours!</p>
+            <p>While we attempt to fix this, feel free to continue browsing the amazing projects we support</p>
+            <img class="p-3" src="{{ MEDIA_URL }}500-image.jpg" alt="Rabbit staring at camera">
+            <div class="my-3 text-center">
+                <a href="{% url 'home' %}" class="btn btn-customGreen">
+                    <i class="fas fa-chevron-left mr-2" aria-hidden="true"></i>
+                    Take me back!
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
