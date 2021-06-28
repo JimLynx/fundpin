@@ -711,6 +711,12 @@ footer .social-icons {
     min-height: 60vh;
 }
 
+#error404 img,
+#error500 img {
+    width: 80%;
+}
+
+
 /* --- MEDIA QUERIES --- */
 
 @media (min-width: 576px) {
