@@ -663,7 +663,7 @@ footer .social-icons {
     color: #fff;
 }
 
-/* --- Social Login buttons */
+/* === Social Login buttons === */
 .btn-facebook,
 .google,
 .btn-github {
@@ -703,6 +703,12 @@ footer .social-icons {
     color: var(--p-dark-grey) !important;
     background-color: var(--off-white);
     border: 1px solid var(--p-dark-grey);
+}
+
+/* === Errorpage === */
+#error404,
+#error500 {
+    min-height: 60vh;
 }
 
 /* --- MEDIA QUERIES --- */

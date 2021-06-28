@@ -2,12 +2,16 @@
 {% load static %}
 
 {% block content%}
-    <section id="404-error">
+    <section id="error404">
         <div class="container">
-            <h2>404</h2>
-            <p>Sorry, the page you tried to access does not exist</p>
-            <div class="my-5">
-                <a href="{% url 'projects' %}" class="btn btn-block btn-customGreen">back to Projects</a>
+            <h2 class="text-center">404 - Page Not Found</h2>
+            <p>Oops! Seems the page you tried to access does not exist.</p>
+            <img src="{{ MEDIA_URL }}404-image.jpg" alt="Monkey staring at camera">
+            <div class="my-5 text-center">
+                <a href="{% url 'home' %}" class="btn btn-customGreen">
+                    <i class="fas fa-chevron-left mr-2" aria-hidden="true"></i>
+                    Take me back!
+                </a>
             </div>
         </div>
     </section>
