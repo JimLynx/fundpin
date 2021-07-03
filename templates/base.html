@@ -44,11 +44,11 @@
                 <input id="navSearchInput" name="q" type="text" class="form-control flex-grow-1"
                     placeholder="Search..." />
                 <!-- search button -->
-                <a onclick="document.getElementById('navSearchForm').submit()"
+                <button onclick="document.getElementById('navSearchForm').submit()" value="button"
                     class="nav-link d-flex justify-content-center align-items-center py-2" type="submit">
                     <i class="fas fa-search d-lg-none" aria-hidden="true"></i>
                     <i class="d-none d-lg-flex fas fa-search fa-lg" aria-hidden="true"></i>
-                </a>
+                </button>
                 <!-- close button -->
                 <a class="nav-link closeNavSearch d-flex justify-content-center align-items-center py-2"
                     data-target="#navSearchCollapse" data-toggle="collapse">
@@ -73,53 +73,55 @@
                 {% include 'includes/desktop_nav.html' %}
                 <!-- Main nav icons -->
                 <div class="nav-icons col-8 col-sm-9 col-lg-4 col-xl-3 d-flex align-items-center justify-content-end">
-                    <!-- search icon -->
-                    <li class="list-inline-item">
-                        <a class="nav-link" href="#navSearchCollapse" data-toggle="collapse">
-                            <div class="text-center">
-                                <i class="fas fa-search d-lg-none" aria-hidden="true"></i>
-                                <i class="d-none d-lg-block fas fa-search fa-lg" aria-hidden="true"></i>
-                            </div>
-                        </a>
-                    </li>
-                    <!-- profile  -->
-                    <li class="list-inline-item">
-                        <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <div class="text-center">
-                                <i class="fas fa-user d-lg-none" aria-hidden="true"></i>
-                                <i class="d-none d-lg-block fas fa-user fa-lg" aria-hidden="true"></i>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_project' %}" class="dropdown-item">Project Management</a>
-                                    <a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a>
-                                    <div class="hr-dark"></div>
-                                {% endif %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
-                    <!-- Donation cart  -->
-                    <li class="list-inline-item">
-                        <a class="nav-link" href="{% url 'view_cart' %}">
-                            <div class="text-center">
-                                <i class="fas fa-shopping-cart d-lg-none" aria-hidden="true"></i>
-                                <i class="d-none d-lg-block fas fa-shopping-cart fa-lg" aria-hidden="true"></i>
-                                {% if cart_items %}
-                                    <span class="badge badge-danger"
-                                        id='cartCount'>{{ request.session.cart.keys|length }}
-                                    </span>
+                    <ul>
+                        <!-- search icon -->
+                        <li class="list-inline-item">
+                            <a class="nav-link" href="#navSearchCollapse" data-toggle="collapse">
+                                <div class="text-center">
+                                    <i class="fas fa-search d-lg-none" aria-hidden="true"></i>
+                                    <i class="d-none d-lg-block fas fa-search fa-lg" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- profile  -->
+                        <li class="list-inline-item">
+                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <div class="text-center">
+                                    <i class="fas fa-user d-lg-none" aria-hidden="true"></i>
+                                    <i class="d-none d-lg-block fas fa-user fa-lg" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <a href="{% url 'add_project' %}" class="dropdown-item">Project Management</a>
+                                        <a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a>
+                                        <div class="hr-dark"></div>
+                                    {% endif %}
+                                        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                    {% else %}
+                                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                                 {% endif %}
                             </div>
-                        </a>
-                    </li>
+                        </li>
+                        <!-- Donation cart  -->
+                        <li class="list-inline-item">
+                            <a class="nav-link" href="{% url 'view_cart' %}">
+                                <div class="text-center">
+                                    <i class="fas fa-shopping-cart d-lg-none" aria-hidden="true"></i>
+                                    <i class="d-none d-lg-block fas fa-shopping-cart fa-lg" aria-hidden="true"></i>
+                                    {% if cart_items %}
+                                        <span class="badge badge-danger"
+                                            id='cartCount'>{{ request.session.cart.keys|length }}
+                                        </span>
+                                    {% endif %}
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <!-- mobile nav -->
                 {% include 'includes/mobile_nav.html' %}
@@ -164,7 +166,7 @@
     {% block content %}
     {% endblock %}
 
-    <!-- === Footer === -->
+    <!-- Footer -->
     <footer>
         <div class="container-fluid">
             <div class="row">

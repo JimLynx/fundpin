@@ -195,7 +195,8 @@ section {
     border-bottom: 1px solid var(--logo-green);
 }
 
-#navSearchForm a {
+#navSearchForm button,
+#navSearchForm a  {
     height: 60px;
     width: 60px;
     color: var(--off-white);
@@ -203,6 +204,7 @@ section {
     cursor: pointer;
     align-self: center;
     text-align: center;
+    border: none;
     transition: all .2s ease-in-out;
 }
 
