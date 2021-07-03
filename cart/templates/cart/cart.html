@@ -42,7 +42,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
     // remove cart item
     $('.remove-donation').click(function (e) {
         let csrfToken = "{{ csrf_token }}";
