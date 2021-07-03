@@ -29,14 +29,13 @@
             <!-- Category -->
             {% if project.category %}
             <li>
-                <i class="fas fa-tag fa-fw mr-1"></i>
+                <i class="fas fa-tag fa-fw mr-2"></i>
                 {{ project.category.friendly_name }}
             </li>
             {% endif %}
         </ul>
         <div class="project-details-wrapper">
-            <div class="project-card-excerpt">{{ project.description|truncatewords:20|safe }}
-            </div>
+            <div class="project-card-excerpt">{{ project.description|truncatewords:20|safe }}</div>
             <a href="{% url 'project_description' project.id %}" class="btn project-card-btn">
                 Read more
                 <i class="fas fa-long-arrow-alt-right"></i>
