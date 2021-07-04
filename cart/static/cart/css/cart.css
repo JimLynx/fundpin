@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 #donation-cart {
     background-color: var(--p-light-grey);
     color: var(--p-dark-grey);
@@ -6,6 +13,7 @@
 
 .no-donation-img {
     max-height: 220px;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -13,6 +21,7 @@
     border: 1px solid var(--logo-green);
     margin: 0px;
     padding: 10px;
+    -webkit-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
 }
 
@@ -21,11 +30,15 @@
     position: absolute;
     bottom: 0;
     right: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out
 }
 
 .remove-donation:hover {
     text-decoration: none;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
     font-weight: 500;
 }
@@ -41,15 +54,14 @@
         position: absolute;
         bottom: 0;
     }
+
     .remove-donation {
         right: 18px;
     }
 
     .no-donation-img {
+        max-height: -webkit-fit-content;
+        max-height: -moz-fit-content;
         max-height: fit-content;
     }
 }
-
-
-
-

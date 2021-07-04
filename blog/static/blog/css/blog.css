@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 #blogList,
 #blogDescription {
     min-height: 60vh;
@@ -21,17 +28,23 @@ h3 {
 #blogList img {
     width: 100%;
     max-height: 180px;
+    -o-object-fit: cover;
     object-fit: cover;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
 }
 
 .blog-list-img {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
 }
 
 #blogDescription img {
     width: 100%;
     max-height: 500px;
+    -o-object-fit: cover;
     object-fit: cover;
     margin-right: 20px;
 }
@@ -51,6 +64,8 @@ h3 {
 
 /* Delete Confirmation Modal */
 .modal-dialog {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 

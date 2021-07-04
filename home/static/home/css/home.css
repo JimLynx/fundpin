@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 body {
     background-color: var(--bg-grey);
 }
@@ -14,6 +21,7 @@ body {
     background-size: cover;
     width: 95%;
     height: 60vh;
+    -webkit-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
 }
 
@@ -56,9 +64,13 @@ body {
 }
 
 .slide-text-wrapper {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     background: #0000009c;
     color: var(--off-white);
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     padding: 0 .3rem .3rem .3rem;
     margin: auto .5rem;
@@ -93,9 +105,18 @@ body {
 }
 
 .lead-in-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border: 2px solid var(--logo-green);
     color: var(--p-dark-grey);
@@ -125,6 +146,8 @@ body {
 }
 
 .about-wrapper {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -138,8 +161,14 @@ body {
 }
 
 .about-slide div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 100%;
     background-color: var(--off-white);
@@ -166,6 +195,8 @@ body {
 }
 
 #featured-projects .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -234,9 +265,18 @@ body {
 }
 
 .support-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: var(--p-light-grey);
     background: transparent;
@@ -250,6 +290,7 @@ body {
     height: inherit;
     padding: 10px;
     border: 1px solid var(--logo-green);
+    -webkit-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
 }
 
@@ -271,6 +312,7 @@ body {
 }
 
 .base-wrap:nth-child(odd) {
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
 
@@ -314,6 +356,7 @@ body {
 
     #contact .row {
         padding: 1rem;
+        -webkit-box-shadow: 0 6px 13px -2px rgba(0, 0, 0, 0.2);
         box-shadow: 0 6px 13px -2px rgba(0, 0, 0, 0.2);
     }
 
