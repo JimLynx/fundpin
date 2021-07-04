@@ -155,6 +155,114 @@ When the Admin/Superuser account is logged into:
 
 ## Code Validation
 
+### HTML
+
+All HTML templates checked with [Nu Html Checker](https://validator.w3.org/nu/?#textarea) by direct input.
+
+General:
+
+- **Error**: No p element in scope but a p end tag seen. This stems from text addition by the user/superuser using the richtext editor's WYSIWYG formatting for project descriptions and blog entries. => **Resolved**: This can safely be ignored, as the result will always be dependant on the user/superuser's input and does not affect the visual outcome of the HTML for other users once the form is submitted.
+
+- **Warning**: The type attribute is unnecessary for JavaScript resources. => **Resolved**: Removed all `type="text/javascript"` instances as this is default for HTML5 and unnecessary.
+
+`base.html`
+
+- **Error**: Bad value submit for attribute type on element `a`: Subtype missing. (search button) => **Resolved**: changed `a` element to a `button` element.
+
+- **Error**: Element `li` not allowed as child of element div in this context. (nav icons) => **Resolved**: Add missing `ul` to wrap `li`.
+
+`index.html`
+
+- **Error**: End tag section seen, but there were open elements. (Featured projects section) => **Resolved**: Fix missing closing div
+
+- **Warning**: Section lacks heading. Consider using h2-h6 elements (lead-in section) => **Resolved**: Ignored as no heading is neccessary.
+
+- **Warning**: The type attribute is unnecessary for JavaScript resources. => **Resolved**: Ignored.
+
+`contact.html`
+
+- No errors
+
+`project_description.html`
+
+- **Error**: Attribute readonly not allowed on element input at this point. (donation form) => **Resolved**: Removed readonly attribute as `type` is already set to hidden.
+
+- **Error**: Bad value button for attribute type on element a: Subtype missing. (delete confirm modal) => **Resolved**: Remove `type` attribute. Tested delte button on modal and confirmed working as expected.
+
+`add_project.html`
+
+- **Error**: Duplicate attribute id. => **Unresolved**: `id="id_image"` is generated in the same input as `id="new-image"`, presumably by the JavaScript. As this is working fine, I've decided to leave this for now due to time-constraints of the project and added to bugs/issues to resolve.
+
+`edit_project.html`
+
+- **Error**: Quote `"` in attribute name. Probable cause: Matching quote missing somewhere earlier. => **Resolved**: Minor fix on class attribute.
+
+- **Error**: Duplicate attribute id. => **Unresolved**: `id="id_image"` is generated in the same input as `id="new-image"`, presumably by the JavaScript. As this is working fine, I've decided to leave this for now due to time-constraints of the project and added to bugs/issues to resolve.
+
+- **Error**: Element p not allowed as child of element strong in this context. => **Resolved**: Corrected misplacement of `p` and `strong` elements in the `custom_clearable_file_input.html` file.
+
+`blog_list.html`
+
+- no errors
+
+`blog_description.html`
+
+- **Error**: End tag section seen, but there were open elements. (blog description section) => **Resolved**: Fix missing closing div.
+
+- **Error**: Bad value button for attribute type on element a: Subtype missing. => **Resolved**: Remove `type="button"` attribute.
+
+- **Error**: Duplicate attribute class. => **Resolved**: Removed duplicate code.
+
+- **Error**: No p element in scope but a p end tag seen. => **Resolved**: Caused by user's input into Richtext editor field, safely ignored.
+
+`add_blog.html`
+
+- **Error**: Duplicate attribute id. => **Unresolved**: `id="id_image"` is generated in the same input as `id="new-image"`, presumably by the JavaScript. As this is working fine, I've decided to leave this for now due to time-constraints of the project and added to bugs/issues to resolve.
+
+- **Error**: Element p not allowed as child of element strong in this context. => **Resolved**: Corrected misplacement of `p` and `strong` elements in the `custom_clearable_file_input.html` file.
+
+`edit_blog.html`
+
+- **Error**: Duplicate attribute id. => **Unresolved**: `id="id_image"` is generated in the same input as `id="new-image"`, presumably by the JavaScript. As this is working fine, I've decided to leave this for now due to time-constraints of the project and added to bugs/issues to resolve.
+
+`cart.html`
+
+- **Error**: Duplicate ID in remove_(itemid) => **Unresolved**: Unable to find cause, but presumed to be from the `update_remove_donation.html`template. Due to time-constraints, this has been added to bugs/issues to resolve
+
+`checkout.html`
+
+- **Error**: Attribute href not allowed on element button at this point. => **Resolved**: Removed unnecessary href.
+
+`checkout_success.html`
+
+- No errors
+
+`profile.html`
+
+- **Error**: Element ol not allowed as child of element small in this context. => **Resolved**: Moved `small` element inside `ol` element.
+
+`login.html`, `logout.html` and `signup.html`
+
+- No errors
+
+### CSS
+
+Parsed all css code through [Autoprefixer](https://autoprefixer.github.io/) and tested validation via [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/validator)
+
+`base.css`, `home.css`, `contact.css`, `projects.css`, `profile.css`, `checkout.css`, `cart.css` and `blog.css`
+
+- No errors found
+
+### JAVASCRIPT
+
+-
+
+### PYTHON
+
+-
+
 ## Manual Site Testing
 
 ## Deployment
+
+
