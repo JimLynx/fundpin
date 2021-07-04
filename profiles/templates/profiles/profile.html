@@ -25,22 +25,23 @@
                 <p class="text-muted">Donation History</p>
                 {% for order in orders %}
                 <div class="row order-history-details my-3 mx-0">
-                        <div class="col-12 col-lg-8">
-                            <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <div class="row">
                             <!-- order date -->
                             <div class="col-12 col-lg-4 my-2">
                                 <span class="font-weight-bold">Date: </span><small>{{ order.date.date }}</small>
                             </div>
                             <!-- order number -->
                             <div class="col-12 col-lg-8 my-2">
-                                <span class="font-weight-bold">Order No.: </span><small class="text-break">{{ order.order_number }}</small>
+                                <span class="font-weight-bold">Order No.: </span><small
+                                    class="text-break">{{ order.order_number }}</small>
                             </div>
                         </div>
-
                         <div class="row">
                             <!-- donation total -->
                             <div class="col-12 col-lg-4 my-2">
-                                <span class="font-weight-bold">Donation Total: </span><small>&euro;{{ order.total }}</small>
+                                <span class="font-weight-bold">Donation Total:
+                                </span><small>&euro;{{ order.total }}</small>
                             </div>
                             <!-- order confirmation page -->
                             <div class="col-12 col-lg-8 my-2">
@@ -50,19 +51,17 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-12 col-lg-4 my-2">
                         <!-- projects -->
-                            <span class="font-weight-bold">Projects donated to: </span>
-                                <small>
-                                    <ol class="pl-5">
-                                        {% for item in order.lineitems.all %}
-                                        <li>
-                                            {{ item.project.name }} in {{ item.project.country.friendly_name }} - &euro;{{ item.lineitem_total }}
-                                        </li>
-                                        {% endfor %}
-                                    </ol>
-                                </small>
+                        <span class="font-weight-bold">Projects donated to: </span>
+                        <ol class="pl-5">
+                            {% for item in order.lineitems.all %}
+                            <li>
+                                <small>{{ item.project.name }} in {{ item.project.country.friendly_name }} -
+                                    &euro;{{ item.lineitem_total }}</small>
+                            </li>
+                            {% endfor %}
+                        </ol>
                     </div>
                 </div>
                 {% endfor %}
@@ -71,49 +70,6 @@
     </div>
 </section>
 
-
-<!-- <div class="col-12">
-            <p class="text-muted">Donation History</p>
-            <div class="order-history table-responsive">
-                <table class="table table-sm table-borderless">
-                    <thead>
-                        <tr>
-                            <th class="order-num">Order Number</th>
-                            <th class="order-date">Date</th>
-                            <th class="order-project">Projects</th>
-                            <th class="order-total">Order Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for order in orders %}
-                            <tr>
-                                <td>
-                                    <a href="{% url 'order_history' order.order_number %}"
-                                    title="{{ order.order_number }}">
-                                        {{ order.order_number|truncatechars:10 }}
-                                    </a>
-                                </td>
-                                <td>{{ order.date }}</td>
-                                <td>
-                                    <ul class="list-unstyled">
-                                        {% for item in order.lineitems.all %}
-                                            <li class="small">
-                                                {{ item.project.name }} in {{ item.project.country }}
-                                            </li>
-                                        {% endfor %}
-                                    </ul>
-                                </td>
-                                <td>&euro;{{ order.total }}</td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div> -->
-
-
-<!-- </div>
-</section> -->
 {% endblock %}
 
 {% block postloadjs %}

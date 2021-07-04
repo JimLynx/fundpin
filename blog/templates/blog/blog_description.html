@@ -20,7 +20,7 @@
                     <a class="btn btn-info mr-2" href="{% url 'edit_blog' blog_description.slug %}">
                         Update
                     </a>
-                    <a class="btn btn-danger ml-2" href="#blogDeleteModal" class="btn btn-danger ml-2 trigger-btn"
+                    <a href="#blogDeleteModal" class="btn btn-danger ml-2 trigger-btn"
                         data-toggle="modal">
                         Delete
                     </a>
@@ -91,6 +91,7 @@
                     {% endif %}
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- Delete Confirm modal -->
@@ -110,8 +111,7 @@
                             <i class="fas fa-times animated rotateIn"></i>
                             Cancel
                         </button>
-                        <a class="btn btn-outline-danger" href="{% url 'delete_blog' blog_description.slug %}"
-                            type="button">
+                        <a class="btn btn-outline-danger" href="{% url 'delete_blog' blog_description.slug %}">
                             Confirm Deletion
                         </a>
                     </div>
