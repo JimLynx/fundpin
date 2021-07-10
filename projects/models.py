@@ -13,13 +13,13 @@ class Category(models.Model):
 
     def __str__(self):
         """
-        string method to return category name 
+        string method to return category name
         """
         return self.name
 
     def get_friendly_name(self):
         """
-        string method to return category friendly name 
+        string method to return category friendly name
         """
         return self.friendly_name
 
@@ -33,13 +33,13 @@ class Country(models.Model):
 
     def __str__(self):
         """
-        string method to return country name 
+        string method to return country name
         """
         return self.name
 
     def get_friendly_name(self):
         """
-        string method to return country friendly name 
+        string method to return country friendly name
         """
         return self.friendly_name
 
@@ -68,6 +68,6 @@ class Project(models.Model):
 
     def __str__(self):
         """
-        string method to return project name 
+        string method to return project name
         """
         return self.name

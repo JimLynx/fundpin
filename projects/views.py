@@ -98,7 +98,9 @@ def add_project(request):
             return redirect(reverse('project_description', args=[project.id]))
         else:
             messages.error(
-                request, 'Failed to add a project. Please ensure the form is valid.')
+                request,
+                'Failed to add a project. Please ensure the form is valid.'
+            )
     else:
         form = ProjectForm()
 
@@ -127,7 +129,9 @@ def edit_project(request, project_id):
             return redirect(reverse('project_description', args=[project.id]))
         else:
             messages.error(
-                request, 'Failed to update the project. Please ensure the form is valid.')
+                request,
+                'Failed to update project. Please ensure the form is valid.'
+            )
     else:
         form = ProjectForm(instance=project)
         messages.info(request, f'You are editing {project.name}')
