@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.utils.safestring import mark_safe
+# from django.utils.safestring import mark_safe
 from django.core.paginator import Paginator
 
 from blog.models import Post
@@ -40,13 +40,17 @@ def blog_description(request, slug):
             new_comment.name = request.user
             new_comment.post = blog_description
             new_comment.save()
-            messages.success(request, ("Thank you, your comment was succcessfully posted."))
+            messages.success(
+                request, ("Thank you, your comment was successfully posted."))
             comment_form = CommentForm()
 
-            return redirect(reverse('blog_description', args=[blog_description.slug]))
+            return redirect(reverse(
+                'blog_description',
+                args=[blog_description.slug]))
         else:
             messages.error(
-                request, 'Failed to add comment. Please ensure the form is valid.')
+                request,
+                'Failed to add comment. Please ensure the form is valid.')
     else:
         comment_form = CommentForm()
 
@@ -73,10 +77,12 @@ def add_blog(request):
         if form.is_valid():
             blog_description = form.save()
             messages.success(request, 'Successfully added a new Blog Post.')
-            return redirect(reverse('blog_description', args=[blog_description.slug]))
+            return redirect(
+                reverse('blog_description', args=[blog_description.slug]))
         else:
             messages.error(
-                request, 'Failed to add a Blog Post. Please ensure the form is valid.')
+                request,
+                'Failed to add a Blog Post. Please ensure the form is valid.')
     else:
         form = BlogForm()
 
@@ -100,12 +106,13 @@ def edit_blog(request, slug):
     if request.method == 'POST':
         form = BlogForm(request.POST, request.FILES, instance=blog)
         if form.is_valid():
-            blog_description = form.save()
+            form.save()
             messages.success(request, 'Successfully updated Blog Post.')
             return redirect(reverse('blog_description', args=[blog.slug]))
         else:
             messages.error(
-                request, 'Failed to edit Blog Post. Please ensure the form is valid.')
+                request,
+                'Failed to edit Blog Post. Please ensure the form is valid.')
     else:
         form = BlogForm(instance=blog)
         messages.info(request, f'You are editing {blog.title}')
@@ -131,5 +138,6 @@ def delete_blog(request, slug):
     blog.delete()
 
     messages.success(
-        request, 'The selected blog post has successfully been deleted.')
+        request, 'The selected blog post has '
+        'successfully been deleted.')
     return redirect(reverse('blog'))

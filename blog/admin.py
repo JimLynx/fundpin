@@ -12,7 +12,7 @@ class PostAdmin(admin.ModelAdmin):
         'image',
     )
     list_filter = ("status",)
-    list_editable=('status', 'is_featured')
+    list_editable = ('status', 'is_featured')
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
 
@@ -31,6 +31,7 @@ class CommentAdmin(admin.ModelAdmin):
         'name',
         'body',
     )
+
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Comment, CommentAdmin)
