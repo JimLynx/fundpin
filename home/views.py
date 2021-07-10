@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from projects.models import Project
 from blog.models import Post
-from django.shortcuts import render, redirect
 
 from django.conf import settings
 from django.http import HttpResponse
@@ -40,8 +39,10 @@ def contact(request):
                           [settings.DEFAULT_FROM_EMAIL])
             except BadHeaderError:
                 return HttpResponse('Invalid header found!')
-            messages.success(request, (f'Thank you for contacting FundPIN, your message has been sent! \
-                We will respond to you as soon as possible.'))
+            messages.success(request, (
+                f'Thank you for contacting FundPIN, '
+                ' your message has been sent! '
+                'We will respond to you as soon as possible.'))
             return redirect('home')
 
     template = 'home/contact.html'
