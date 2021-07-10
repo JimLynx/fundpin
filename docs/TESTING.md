@@ -255,11 +255,31 @@ Parsed all css code through [Autoprefixer](https://autoprefixer.github.io/) and 
 
 ### JAVASCRIPT
 
--
+- All files and scripts passed through [Shint](https://jshint.com/) and all passed with a few exceptions:
+  - `stripe_elements.js` returned undefined variables `Stripe`and `$`, which can be ignored as these are built into Stripe.
+  - `home.js` returned warnings for undefined variables, but safely ignored due to required use by SwiperJS.
+  - `donationform.js` - warnings ignored:
+    - line 16 - Misleading line break before '?'; readers may interpret this as an expression boundary.
+    - line 17 - Expected an assignment or function call and instead saw an expression.
+  - `script.js` returns unused variables `openNav` and `closeNav`, but these are being called in `mobile_nav.html`template.
+  - sort script in `projects.html` returns undefined variables `sort` and `direction`, but these are defined in the if statement.
+  - script tags containing JQuery return undefined variable `$`, which can be ignored as this is standard JQuery format.
+  - warnings for use of `const`, `let` and `arrow functions` only available in ES6 - Safely ignored.
 
 ### PYTHON
 
--
+- Installed [flake8](https://flake8.pycqa.org/en/latest/) to check errors on all Python files.
+- Passed all Python files through [pep8online](http://pep8online.com/) to check [PEP8](https://www.python.org/dev/peps/pep-0008/) compliance.
+- All files passed, but the following ignored:
+  - `settings.py` in fundpin app - lines too long on 183, 186, 189 and 192
+  - `settings.py` in fundpin app - line 18 "'env' imported but unused"
+  - `views.py` in checkout app - line too long on line 78
+  - `webhooks.py` in checkout app - line too long on line 41
+  - `webhooks.py` in checkout app - line 26 and 29 "local variable 'e' is assigned but never used"
+  - `webhook_handler.py` in checkout app - line too long on line 131
+  - `webhook_handler.py` in checkout app - line 55 "local variable 'total' is assigned but never used"
+  - `webhook_handler.py` in checkout app - line 123 "undefined name 'Decimal'"
+  - `views.py` in home app - line 43 f-string is missing placeholders - Researched online and definitive answer not found. Line seems correct and works as expected.
 
 ## Manual Site Testing
 
