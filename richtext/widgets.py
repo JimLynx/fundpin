@@ -88,15 +88,15 @@ class CKEditorWidget(forms.Textarea):
                         dictionary type."
                 )
 
-        extra_plugins = extra_plugins or self.config.pop("extra_plugins", None) or []
+        extra_plugins = extra_plugins or self.config.pop(
+            "extra_plugins", None) or []
 
         if extra_plugins:
             self.config["extraPlugins"] = ",".join(extra_plugins)
 
         self.external_plugin_resources = (
-            external_plugin_resources
-            or self.config.pop("external_plugin_resources", None)
-            or []
+            external_plugin_resources or
+            self.config.pop("external_plugin_resources", None) or []
         )
 
     def render(self, name, value, attrs=None, renderer=None):
@@ -119,7 +119,8 @@ class CKEditorWidget(forms.Textarea):
                     "value": conditional_escape(force_str(value)),
                     "id": final_attrs["id"],
                     "config": json_encode(self.config),
-                    "external_plugin_resources": json_encode(external_plugin_resources),
+                    "external_plugin_resources": json_encode(
+                        external_plugin_resources),
                 },
             )
         )
@@ -127,7 +128,8 @@ class CKEditorWidget(forms.Textarea):
     def build_attrs(self, base_attrs, extra_attrs=None, **kwargs):
         """
         Helper function for building an attribute dictionary.
-        This is combination of the same method from Django<=1.10 and Django1.11+
+        This is combination of the same method from Django
+        <=1.10 and Django1.11+
         """
         attrs = dict(base_attrs, **kwargs)
         if extra_attrs:

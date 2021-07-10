@@ -10,7 +10,8 @@ class RichTextField(models.TextField):
     def __init__(self, *args, **kwargs):
         self.config_name = kwargs.pop("config_name", "default")
         self.extra_plugins = kwargs.pop("extra_plugins", [])
-        self.external_plugin_resources = kwargs.pop("external_plugin_resources", [])
+        self.external_plugin_resources = kwargs.pop(
+            "external_plugin_resources", [])
         super(RichTextField, self).__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
