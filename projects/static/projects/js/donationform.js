@@ -14,7 +14,7 @@ const updateUserDonation = (e, option) => {
 
     option === 'preset'
         ? userAmount.value = ""
-        : presetAmount.selectedIndex = "0"
+        : presetAmount.selectedIndex = "0";
 
     // get total value from user entered option
     donationTotal.value = e.target.value;
@@ -31,13 +31,13 @@ const updateUserDonation = (e, option) => {
 
     // get total and return as HTML string 
     document.getElementById('displayAmount').innerHTML = donationTotal.value;
-}
+};
 
 // prevent form submitting if total is zero
 const submitForm = (e) => {
     if (donationTotal.value === "0" || donationTotal.value === "") {
         e.preventDefault();
     } else {
-        form.submit()
+        form.submit();
     }
-}
+};

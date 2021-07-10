@@ -13,7 +13,7 @@ const setScrollListener = () => {
         // change donation banner to fixed after 100px Y-axis
         const cta = document.querySelector('#ctaBanner');
         if (window.scrollY >= 100) {
-            cta.style.position = 'fixed'
+            cta.style.position = 'fixed';
         } else {
             cta.style.position = 'static';
         }
@@ -25,7 +25,7 @@ const setScrollListener = () => {
             btt.style.display = 'none';
         }
     });
-}
+};
 
 // close donation banner on button click and store in local 
 const closeBanner = () => {
@@ -37,7 +37,7 @@ const closeBanner = () => {
             show: false
         }));
     };
-}
+};
 
 // check local storage and if banner close instance is there,
 // keep until page refresh
@@ -55,13 +55,13 @@ function init() {
         else {
             setScrollListener();
             closeBanner();
-        };
+        }
     }
     // if not there set into localStorage
     else {
         localStorage.setItem('show-cta-banner', JSON.stringify({
             show: true
-        }))
+        }));
         setScrollListener();
         closeBanner();
     }
@@ -70,6 +70,6 @@ function init() {
         localStorage.setItem('show-cta-banner', JSON.stringify({
             show: true
         }));
-    }
+    };
 }
 init();

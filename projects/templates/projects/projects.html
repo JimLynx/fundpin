@@ -85,8 +85,8 @@
     <script>
         // capture the change event from the source selector 
         $('#sort-selector').change(function () {
-            let selector = $(this)
-            let currentUrl = new URL(window.location)
+            let selector = $(this);
+            let currentUrl = new URL(window.location);
             let selectedVal = selector.val();
 
             if (selectedVal != 'reset') {
@@ -94,11 +94,11 @@
                 let direction = selectedVal.split('_')[1];
                 currentUrl.searchParams.set('sort', sort);
                 currentUrl.searchParams.set('direction', direction);
-                window.location.replace(currentUrl)
+                window.location.replace(currentUrl);
             } else {
                 currentUrl.searchParams.delete('sort', sort);
                 currentUrl.searchParams.delete('direction', direction);
             }
-        })
+        });
     </script>
 {% endblock %}
