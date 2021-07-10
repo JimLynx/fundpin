@@ -1,4 +1,7 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect,
+    HttpResponse, get_object_or_404
+)
 from django.contrib import messages
 from projects.models import Project
 
@@ -17,7 +20,11 @@ def add_to_cart(request, item_id):
     cart = request.session.get('cart', {})
 
     cart[item_id] = donation_amount
-    messages.success(request, f'Your donation of \u20ac{donation_amount} for the {project.name} project has been added!')
+    messages.success(
+        request,
+        f'Your donation of \u20ac{donation_amount} for the {project.name} '
+        'project has been added!'
+        )
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -31,7 +38,10 @@ def remove_from_cart(request, item_id):
         cart = request.session.get('cart', {})
 
         cart.pop(item_id)
-        messages.success(request, f'You\'ve removed your donation for the {project.name} project')
+        messages.success(
+            request,
+            f'You\'ve removed your donation for the {project.name} project'
+            )
         request.session['cart'] = cart
         return HttpResponse(status=200)
 
