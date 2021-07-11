@@ -8,7 +8,7 @@ SUPPORTING PROJECTS IN NEED
 
 Around the world there are groups and individuals who work tirelessly and selflessly towards supporting impoverished communities, protecting natural wildlife and sustaining our environmental resources.
 
-One of the main sources of income for these incredible endeavours has been from the International Volunteer platform, which grew rapidly in popularity in the mid-90's. Volunteer Organisations offered a structured way for people to travel to far-out destinations for a set fee, which enabled the orginations to thrive and grow. The knock-on effect was that these organisations were able to assist more projects as they grew by provinding funding to them for each volunteer they send. The immense benefit to the projects was not only in the form of financial support, but provided physical presence of volunteers to assist with various tasks, which the projects could otherwise not afford to hire staff for.
+One of the main sources of income for these incredible endeavours has been from the International Volunteer platform, which grew rapidly in popularity in the mid-90's. Volunteer Organisations offered a structured way for people to travel to far-out destinations for a set fee, which enabled the organisations to thrive and grow. The knock-on effect was that these organisations were able to assist more projects as they grew by providing funding to them for each volunteer they send. The immense benefit to the projects was not only in the form of financial support, but provided physical presence of volunteers to assist with various tasks, which the projects could otherwise not afford to hire staff for.
 
 The onset of the COVID crisis in early 2020 brought international travel to an abrupt halt, and as a result, a huge majority of Volunteer Organisations stopped operating. This, of course, meant that the projects' main source of income ceased almost immediately and significantly impeded the projects' ability to run effectively.
 
@@ -160,7 +160,7 @@ Provide MVP with relevant categories, project listings and detail pages, with pl
 #### Existing Features
 
 - Fully responsive website across all popular devices, using Bootstrap Grid and custom media queries
-- Vivid and emotive images in interative carousels to elicit a positive response
+- Vivid and emotive images in interactive carousels to elicit a positive response
 - Intuitive and responsive Navigation menu
 - About section on Home page to read company details and donation policies
 - Search function with filtering
@@ -181,7 +181,7 @@ Provide MVP with relevant categories, project listings and detail pages, with pl
 - Implement pre-population of slug field when adding a new blog post.
 - Implement Lazyload, specifically on home page, to decrease load times.
 - Implement Pagination on Project page.
-- Facebook Login - see [Project barriers and solutions](#project-barriers-and-solutions) for more detials on why this is currently not implemented.
+- Facebook Login - see [Project barriers and solutions](#project-barriers-and-solutions) for more details on why this is currently not implemented.
 - Implement further communication to the user via email for order invoices & confirmation.
 - Further development of Profile page to include profile image, pinned projects for future donations and additional fields/better constructed layout.
 - Loyalty app to earn PINS in profiles
@@ -277,7 +277,7 @@ I've used [DBDiagram](https://dbdiagram.io/) to draw up a Database Schema, which
 
 The layout has been kept consistent throughout site by visually grouping elements in order of importance.
 
-- Top Navigation bar - Menu with links pointing to each page, inluding:
+- Top Navigation bar - Menu with links pointing to each page, including:
   - Searching via keywords/phrases
   - Searching by Country filter
   - Searching by Project Type filter  
@@ -438,6 +438,7 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 - [Adobe Photoshop CS6](https://www.adobe.com/ie/products/photoshop.html) - Image manipulation and colour corrections
 - [Swiper JS](https://swiperjs.com/) for image carousels
 - [PDF Tools](https://tools.pdf24.org/en/) for wireframe PDF compression
+- [Am I Responsive](http://ami.responsivedesign.is/) - Site mockup generator.
 
 > [Back to Top](#table-of-contents)  
 
@@ -446,17 +447,17 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 ### Project barriers and solutions
 
 - On setting the RichText editor for the project descriptions to 'justify text', this was applying an inline style to the rendered paragraph text from the database, which meant that the paragraphs could not be text-aligned with with css. Overcame this by leaving all paragraph text as default and custom to allow ability to align from custom css styling.
-- Toasts were not showing up from django-allauth, but fine on the site for custom alerts. Created branch *allauth-toasts* to try and resolve this issue. Narrowed this down to the jQuery show/hide not being called for defauly django toasts. Resolved by adding the toasts show/hide jQuery script to the index.html postloadjs block as this was being overwritten by the swiper carousel and custom script.
-- Although a users billing details are saved correctly on the profile, and update as expected, the checkout form is not pre-populating the saved info. Resolved after finding that this was a minor issue anad I'd duplicated the order_form variable in checkout views.py, which was clearing the form after save.
-- The Facebook Login functionality has been working, but due to various emails from Facebook regarding requirements for GDPR, Privacy Policy and more, I have decided to omit the Facebook Login feature due these extra requirements being out of the scope of this project (as a 'for educational purposes' only site). Once the site is built for a real-world applciation, the Facebook funtionality can be reimplemented.
+- Toasts were not showing up from django-allauth, but fine on the site for custom alerts. Created branch *allauth-toasts* to try and resolve this issue. Narrowed this down to the jQuery show/hide not being called for default django toasts. Resolved by adding the toasts show/hide jQuery script to the index.html postloadjs block as this was being overwritten by the swiper carousel and custom script.
+- Although a users billing details are saved correctly on the profile, and update as expected, the checkout form is not pre-populating the saved info. Resolved after finding that this was a minor issue and I'd duplicated the order_form variable in checkout views.py, which was clearing the form after save.
+- The Facebook Login functionality has been working, but due to various emails from Facebook regarding requirements for GDPR, Privacy Policy and more, I have decided to omit the Facebook Login feature due these extra requirements being out of the scope of this project (as a 'for educational purposes' only site). Once the site is built for a real-world application, the Facebook functionality can be re-implemented.
 - Webhooks and signals not working as they should. Created branch *webhooks* to work on a resolve. => Resolved - Webhooks seem to be returning correct messages.
 
 ### Known Issues
 
 - On user logout, cart data does not persist and session is cleared on logging back in. On further investigating, allowing the persistent data could cause security vulnerabilities so this has been excluded from this project.
-- The Facebook 'Share' button returns the home url of the site, and not the specific project or blog page as intented. However, through the same package [django_social_share](https://pypi.org/project/django-social-share/), the Twitter and Email options return the correct results. I have tried many fixes to this, yet have not found a resolve and have decided to leave this as an existing issue to be resolved in further development after submission.
-- During HTML validation, recieved: "**Error**: Duplicate attribute id." => **Unresolved**: `id="id_image"` is generated in the same input as `id="new-image"`, presumably by the JavaScript. As this is working fine, I've decided to leave this as a future bug fix for now due to time-constraints.
-- During HTML validation, recieved: "**Error**: Duplicate ID in remove_(itemid)" => **Unresolved**: Unable to find cause, but presumed to be from the `update_remove_donation.html`template. As this is working fine, I've decided to leave this as a future bug fix for now due to time-constraints.
+- The Facebook 'Share' button returns the home url of the site, and not the specific project or blog page as intended. However, through the same package [django_social_share](https://pypi.org/project/django-social-share/), the Twitter and Email options return the correct results. I have tried many fixes to this, yet have not found a resolve and have decided to leave this as an existing issue to be resolved in further development after submission.
+- During HTML validation, received: "**Error**: Duplicate attribute id." => **Unresolved**: `id="id_image"` is generated in the same input as `id="new-image"`, presumably by the JavaScript. As this is working fine, I've decided to leave this as a future bug fix for now due to time-constraints.
+- During HTML validation, received: "**Error**: Duplicate ID in remove_(itemid)" => **Unresolved**: Unable to find cause, but presumed to be from the `update_remove_donation.html`template. As this is working fine, I've decided to leave this as a future bug fix for now due to time-constraints.
 - Email confirmation of purchase order is not going through after checkout success. Webhooks seem to be working and unsure why the email is not sending. Due to time-constraints, this issue will be resolved at a later date after project submission.
 - If keyword is entered in the Search bar, it returns all words that that keyword is part of - i.e if entering a search for 'lion' then the word 'bil**lion**' is returned. Due to time-constraints, this issue will be resolved at a later date after project submission.
 
@@ -591,8 +592,8 @@ Media files are hosted on AWS S3 Bucket, and instructions can be found [HERE](ht
 
 5. Postgres requires dj_database_url, and psycopg2, which will be installed when the requirements.txt dependencies are installed as explained earlier.
 
-6. Click on the Deploy tab and select the GitHub option, then choose you GitHub account and saeerch for the repository to connect to (*You can enter a keyword in the input to search for*). Once confirmed, press 'Connect'.
-![Connect GitHub sceenshot](docs/deployment/3-connect-github.png)
+6. Click on the Deploy tab and select the GitHub option, then choose you GitHub account and search for the repository to connect to (*You can enter a keyword in the input to search for*). Once confirmed, press 'Connect'.
+![Connect GitHub screenshot](docs/deployment/3-connect-github.png)
 
 7. Under Manual deploy, choose your main (or sometime called master) branch to deploy to and press 'Deploy Branch'
 ![Manual deploy screenshot](docs/deployment/4-manual-deploy.png)
@@ -619,7 +620,7 @@ Testing documentation can be found on a separate document [HERE](docs/TESTING.md
 - [Code Institute Course Content](https://courses.codeinstitute.net/) - Main source of fundamental knowledge, particularly the Boutique Ado mini-project.
 - Code Institute **SLACK Community** - Main source of assistance.
 - [Stack Overflow](https://stackoverflow.com/) - General resource.
-- [Youtube](https://www.youtube.com/) - General resource.
+- [YouTube](https://www.youtube.com/) - General resource.
 - [CSS-Tricks](https://css-tricks.com/) - General resource.
 - [W3.CSS](https://www.w3schools.com/w3css/4/w3.css) - General resource.
 - [CommonMark](https://commonmark.org/help/) - For Markdown language reference.
@@ -643,7 +644,7 @@ All content is self-written by site creator.
 
 - CSS Radial gradient for instagram colours from [CodePen by Thomas Rye](https://codepen.io/thomasrye/pen/VaRoYv)
 - Inspiration for Navbar mobile side menu from [W3Schools](https://www.w3schools.com/howto/howto_js_sidenav.asp)
-- CSS for hiding scrollbars on all browsers from [W3Schools](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
+- CSS for hiding scroll-bars on all browsers from [W3Schools](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
 - Project cards, on Projects page, customized from Codepen by [Tenzing Gaychey](https://codepen.io/tgaychey/pen/PROMVy)
 - Checkout payment overlay animation customised from [Codepen](https://codepen.io/yumeeeei/pen/BQPmpX) by [@yumeeeei](https://codepen.io/yumeeeei)
 - Google Login button from [Stack Overflow](https://stackoverflow.com/a/59119994)
