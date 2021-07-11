@@ -20,7 +20,7 @@
 - Bootstrap Grid has been used to layout the main responsive design
 - Custom media queries in external CSS files ensures fine responsive details
 - Focussed responsive design on popular mobile, table and laptop/desktop dimensions:
-  - Mobiles: iphone5(320px) | Samsung S5 (360px) | iPhone 6/7/8/X (375px) | iPhone 6/7/8 Plus (414px)
+  - Mobiles: iPhone5(320px) | Samsung S5 (360px) | iPhone 6/7/8/X (375px) | iPhone 6/7/8 Plus (414px)
   - Tablets: iPad (768px) | iPad Pro (1024px)
   - Desktops: Laptop (1200px) | Large Desktop screen (1920px)
 
@@ -34,9 +34,9 @@
 
 #### filter my search results
 
-- Naviation dropdown sections for Project and Country allows easy navigation for firstlevel search.
+- Navigation dropdown sections for Project and Country allows easy navigation for first-level search.
 - A second-level search filter appears on both Project and Country pages with a familiar drop-down filter for Alphabetical filtering of Name, Type and Country.
-- User is continually informed on how mnay results each level of search displays.
+- User is continually informed on how many results each level of search displays.
 
 #### read details about projects
 
@@ -74,7 +74,7 @@
 
 #### update my details
 
-- The user's Profile page (accessed by the Profile icon in the nvaigation menu) allows the user to edit and save phone number and address details.
+- The user's Profile page (accessed by the Profile icon in the navigation menu) allows the user to edit and save phone number and address details.
 
 #### store my address for later use
 
@@ -98,7 +98,7 @@
 
 #### store my choices in checkout
 
-- Whilst navigating the site, users (including anonymous users) can add donations to differnet projects to their donation cart, which are all stored in the checkout whilst browsing the site. The stored data is only accessible during hte session and clears if the user logs out.
+- Whilst navigating the site, users (including anonymous users) can add donations to different projects to their donation cart, which are all stored in the checkout whilst browsing the site. The stored data is only accessible during hte session and clears if the user logs out.
 
 #### Make secure payments
 
@@ -118,11 +118,11 @@ When the Admin/Superuser account is logged into:
 
 #### update project listings
 
-- On each project page, additonal button is visible to the Superuser to Update a project.
+- On each project page, additional button is visible to the Superuser to Update a project.
 
 #### delete existing project listings
 
-- On each project page, additonal button is visible to the Superuser to Delete a project. Before deletion, added notificaiton in form of a confirmation modal appears.
+- On each project page, additional button is visible to the Superuser to Delete a project. Before deletion, added notification in form of a confirmation modal appears.
 
 #### create blogs
 
@@ -130,17 +130,17 @@ When the Admin/Superuser account is logged into:
 
 #### update blog entries
 
-- On each blog post page, additonal button is visible to the Superuser to Update a blog post.
+- On each blog post page, additional button is visible to the Superuser to Update a blog post.
 
 #### delete blog entries
 
-- On each blog post page, additonal button is visible to the Superuser to Delete a blog post. Before deletion, added notificaiton in form of a confirmation modal appears.
+- On each blog post page, additional button is visible to the Superuser to Delete a blog post. Before deletion, added notification in form of a confirmation modal appears.
 
 ## Responsive Tests
 
 - DevTools - Devices tested across a range of widths:
 
-  - Mobiles: iphone5(320px) | Samsung S5 (360px) | iPhone 6/7/8/X (375px) | iPhone 6/7/8 Plus (414px)
+  - Mobiles: iPhone5(320px) | Samsung S5 (360px) | iPhone 6/7/8/X (375px) | iPhone 6/7/8 Plus (414px)
   - Tablets: iPad (768px) | iPad Pro (1024px)
   - Desktops: Laptop (1200px) | Large Desktop screen (1920px)
 
@@ -163,7 +163,7 @@ All HTML templates checked with [Nu Html Checker](https://validator.w3.org/nu/?#
 
 General:
 
-- **Error**: No p element in scope but a p end tag seen. This stems from text addition by the user/superuser using the richtext editor's WYSIWYG formatting for project descriptions and blog entries. => **Resolved**: This can safely be ignored, as the result will always be dependant on the user/superuser's input and does not affect the visual outcome of the HTML for other users once the form is submitted.
+- **Error**: No p element in scope but a p end tag seen. This stems from text addition by the user/superuser using the Richtext editor's WYSIWYG formatting for project descriptions and blog entries. => **Resolved**: This can safely be ignored, as the result will always be dependant on the user/superuser's input and does not affect the visual outcome of the HTML for other users once the form is submitted.
 
 - **Warning**: The type attribute is unnecessary for JavaScript resources. => **Resolved**: Removed all `type="text/javascript"` instances as this is default for HTML5 and unnecessary.
 
@@ -177,7 +177,7 @@ General:
 
 - **Error**: End tag section seen, but there were open elements. (Featured projects section) => **Resolved**: Fix missing closing div
 
-- **Warning**: Section lacks heading. Consider using h2-h6 elements (lead-in section) => **Resolved**: Ignored as no heading is neccessary.
+- **Warning**: Section lacks heading. Consider using h2-h6 elements (lead-in section) => **Resolved**: Ignored as no heading is necessary.
 
 - **Warning**: The type attribute is unnecessary for JavaScript resources. => **Resolved**: Ignored.
 
@@ -189,7 +189,7 @@ General:
 
 - **Error**: Attribute readonly not allowed on element input at this point. (donation form) => **Resolved**: Removed readonly attribute as `type` is already set to hidden.
 
-- **Error**: Bad value button for attribute type on element a: Subtype missing. (delete confirm modal) => **Resolved**: Remove `type` attribute. Tested delte button on modal and confirmed working as expected.
+- **Error**: Bad value button for attribute type on element a: Subtype missing. (delete confirm modal) => **Resolved**: Remove `type` attribute. Tested delete button on modal and confirmed working as expected.
 
 `add_project.html`
 
@@ -257,7 +257,7 @@ Parsed all css code through [Autoprefixer](https://autoprefixer.github.io/) and 
 
 ### JAVASCRIPT
 
-- All files and scripts passed through [Shint](https://jshint.com/) and all passed with a few exceptions:
+- All files and scripts passed through [JShint](https://jshint.com/) and all passed with a few exceptions:
   - `stripe_elements.js` returned undefined variables `Stripe`and `$`, which can be ignored as these are built into Stripe.
   - `home.js` returned warnings for undefined variables, but safely ignored due to required use by SwiperJS.
   - `donationform.js` - warnings ignored:
@@ -288,7 +288,7 @@ Parsed all css code through [Autoprefixer](https://autoprefixer.github.io/) and 
 ### Navigation
 
 - Clicked on all links in Navigation menu main headings and confirmed user is directed to the desired page.
-- Clicked on all Project and Country links in dropdown menues and confirmed user is directed to the filtered result on each.
+- Clicked on all Project and Country links in dropdown menus and confirmed user is directed to the filtered result on each.
 - Clicked on Logo, and Home link in the menu, from all pages and reached expected result of user being returned to the home page.
 - Clicked on all links in Footer 'Quick Links' list and confirmed user is directed to the desired page.
 - Clicked on each Social Media icon in the Footer and each opens relevant external page in a new browser tab.
@@ -298,7 +298,8 @@ Parsed all css code through [Autoprefixer](https://autoprefixer.github.io/) and 
 ### Search Bar
 
 - Clicked on the Search icon in the navigation menu and Search bar opens correctly.
-- Entered keyword and the cards of projects with that keyword are filtered and displayed.
+- Clicked 'Cancel' button and search bar closes as expected.
+- Entered keyword and pressed green search icon. The cards of projects with that keyword are filtered and displayed.
 - Bug found whereby keyword entered is also displayed if part if another word - i.e. If entering 'lion', then 'billion' is also picked up - mentioned on README under Known Issues.
 
 ### Register page
@@ -334,11 +335,11 @@ Parsed all css code through [Autoprefixer](https://autoprefixer.github.io/) and 
 - Clicked on 'Read more' buttons and each takes the user to the desired project description page.
 - Clicked on 'Read more' buttons in 'Featured Blog' section and each takes the user to the desired blog description page.
 - Clicked on 'Contact Us' button in 'Keep in Touch' section and each takes the user to the Contact page.
-- Checked all slideshow operations (auto scroll and option to drag left/right) and all working as expeted.
+- Checked all slideshow operations (auto scroll and option to drag left/right) and all working as expected.
 
 ### All Projects page
 
-- Checked all 'Sort by' filters options in the filter menu and all resturn the correct filtering result.
+- Checked all 'Sort by' filters options in the filter menu and all return the correct filtering result.
 - Hovered over project cards and lead-in information and 'Read more' button appears as expected.
 - Clicked on 'Read more' buttons and each takes the user to the desired project description page.
 
@@ -356,14 +357,14 @@ Parsed all css code through [Autoprefixer](https://autoprefixer.github.io/) and 
   - Clicked on 'Enter own amount' input's increment and decrement options:
     - Each work as desired with an increase/decrease step in multiples of 10.
     - On decreasing the value, the minimum is Zero (0) and no negative values can be selected.
-  - Clicked again on 'Choose an amount'and the 'Enter own amount' input is overridden.
+  - Clicked again on 'Choose an amount' and the 'Enter own amount' input is overridden.
   - Clicked on 'Back to projects' button and this returns the user to the 'All projects' page.
   - Entered an amount and clicked the Submit button:
     - User is directed to the top of the current page.
-    - Cart icon in the nvaigation menu displays correct number of items in the cart.
-    - Django success message displayed, informing the user of cart additon, information of the project donated to and a 'Secure Checkout' button.
+    - Cart icon in the navigation menu displays correct number of items in the cart.
+    - Django success message displayed, informing the user of cart addition, information of the project donated to and a 'Secure Checkout' button.
     - Django success message also displays information on previously added project donations that are already in the cart.
-  - Clicked 'Secure Checkout' button in succes message popup, which directs to the cart page and shows current cart items.
+  - Clicked 'Secure Checkout' button in success message popup, which directs to the cart page and shows current cart items.
   - Clicked cart icon in the Navigation menu, which directs to the cart page and shows current cart items.
 - Once logged in as a Superuser, the 'Update' and 'Delete' buttons are visible.
   - Update button redirects to Update project page as expected and shows desired Django info message.
@@ -375,7 +376,7 @@ Parsed all css code through [Autoprefixer](https://autoprefixer.github.io/) and 
 
 - Clicked on the Profile icon in the navigation menu and confirmed that the 'Add Project' option is only visible when logged in as a SuperUser.
 - Clicked 'Add Project' from the dropdown and redirected to the Add Project page.
-- Tested form by clicking the 'Add Pproject' button with no form entries, resulting in page refresh, correct error message for required fields and form is not submitted.
+- Tested form by clicking the 'Add Project' button with no form entries, resulting in page refresh, correct error message for required fields and form is not submitted.
 - Tested functionality of 'Select an Image' button, which opens up the file upload from local machine option.
 - Filled in form correctly with all fields and clicked 'Add Project' button. Redirected to the new project page with success message.
 - Filled in the form again and checked the 'is featured' checkbox, and the project is added to the 'Featured Projects' slideshow on the Home page.
@@ -420,7 +421,7 @@ Parsed all css code through [Autoprefixer](https://autoprefixer.github.io/) and 
 ### Profile page
 
 - Tested billing info form inputs and country dropdown and all working as expected.
-- Changed info and clicked on 'Update' button and changes are corectly saved to the database and displayed to the user.
+- Changed info and clicked on 'Update' button and changes are correctly saved to the database and displayed to the user.
 - Clicked on 'View donation confirmation' links (in the list of saved previous donations)
   - Correctly directs to the Donation Confirmation page for each item.
   - Displays Django info message with order details.
@@ -434,8 +435,8 @@ Parsed all css code through [Autoprefixer](https://autoprefixer.github.io/) and 
 ### Blog Description page
 
 - Clicked on Social Media share buttons, and all open up relevant sharing (external link) options in a new browser tab. (_The Facebook button does not open relevant page, but rather shares the main site url - mentioned in README under 'Known Issues'_).
-- Clicked 'Post a Comment' button with no text in the textfield, and correct error message displays for the required field.
-- Entered a comment/text in the textfield and clicked 'Post a Comment' button.
+- Clicked 'Post a Comment' button with no text in the text field, and correct error message displays for the required field.
+- Entered a comment/text in the text field and clicked 'Post a Comment' button.
   - page refreshes, and the number of comments increments as expected, as well as the username, comment and date appearing correctly.
   - Django success message is displayed, including a list of orders currently on the cart.
 - Once logged in as a Superuser, the 'Update' and 'Delete' buttons are visible.
@@ -476,3 +477,4 @@ Parsed all css code through [Autoprefixer](https://autoprefixer.github.io/) and 
 ## Deployment
 
 - All tests above carried out on the [deployed url](https://fundpin.herokuapp.com/) to confirm the site is working as expected.
+- Debug set to False in `settings.py` for final production push.
