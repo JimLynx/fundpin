@@ -33,7 +33,7 @@ FundPIN (Fund Projects In Need) is dedicated to networking, supporting, and rais
   - [Existing Features](#existing-features)
   - [Future Features to Implement](#future-features-to-implement)
 - [Structure](#structure)
-- [Database](#database)
+- [Databases](#databases)
 - [Data Schema](#data-schema)
 - [Skeleton](#skeleton)
 - [Wireframes](#wireframes)
@@ -159,23 +159,21 @@ Provide MVP with relevant categories, project listings and detail pages, with pl
 
 #### Existing Features
 
-- Fully responsive website across all popular devices, using Bootstrap Grid and custom media queries.
-- Vivid and emotive images in interative carousels to elicit a positive response.
-- Intuitive and responsive Navigation menu.
-- About section on Home page to read company details and donation policies.
-- Search function with filtering.
-- Project detail pages.
+- Fully responsive website across all popular devices, using Bootstrap Grid and custom media queries
+- Vivid and emotive images in interative carousels to elicit a positive response
+- Intuitive and responsive Navigation menu
+- About section on Home page to read company details and donation policies
+- Search function with filtering
+- Project detail pages
+- Blog detail pages
 - Login page with form
 - Login with Social Media options
-- Profile/account page.
+- Profile/account page
 - Checkout page
-- Footer element with quick links, social media icon links and company contact details.
+- Footer element with quick links, social media icon links and Subscribe to newsletter.
 - Newsletter Subscription link from footer.
-- Project management page for adding, updating and deleting projects.
-- Blog management page for adding, updating and deleting blog entries.
-- Loyalty app to earn PINS in profiles
-
-##### Stretch Goals
+- Ability for Superuser to add, update and delete projects.
+- Ability for Superuser to add, update and delete blog entries.
 
 #### Future Features to Implement
 
@@ -186,6 +184,7 @@ Provide MVP with relevant categories, project listings and detail pages, with pl
 - Facebook Login - see [Project barriers and solutions](#project-barriers-and-solutions) for more detials on why this is currently not implemented.
 - Implement further communication to the user via email for order invoices & confirmation.
 - Further development of Profile page to include profile image, pinned projects for future donations and additional fields/better constructed layout.
+- Loyalty app to earn PINS in profiles
 
 ### Structure
 
@@ -193,13 +192,11 @@ The overall structure is aimed at ease of navigation to each section and provide
 
 #### Interaction Design
 
-The content has been laid out in an intuiitive way, providing a good flow of information, with the main landing page diving clear direction to browsing the projects on the projects page.
+The content has been laid out in an intuitive way, providing a good flow of information, with the main landing page diving clear direction to browsing the projects on the projects page.
 
 Clear feedback is provided to the user after each interaction, using the messages function in Django (success, info and error, providing the user with clear direction)
 
 #### Information Architecture
-
-TBA =========> navigational SCHEMA. ![Site Info Schema]()  
 
 The main organising principle for the user is the type of project, yet the Country that the project is based in is an important factor so this has been incorporated as a top-level category in the search ability.
 
@@ -207,10 +204,10 @@ The main organising principle for the user is the type of project, yet the Count
 - Search by Project Type
 - Search by Country
 
-#### Database
+#### Databases
 
-[SQLite3](https://www.sqlite.org/index.html) used in Development, which comes as default with Django installation.
-[Heroku Postgres](https://www.heroku.com/postgres) used in Production as site is deployed on [Heroku](https://www.heroku.com/)
+- [SQLite3](https://www.sqlite.org/index.html) used in Development, which comes as default with Django installation.
+- [Heroku Postgres](https://www.heroku.com/postgres) used in Production as site is deployed on [Heroku](https://www.heroku.com/)
 
 #### Apps and Models used
 
@@ -250,11 +247,11 @@ I've used [DBDiagram](https://dbdiagram.io/) to draw up a Database Schema, which
 
 ![page structure diagram](docs/wireframes/page-structure.png)
 
-#### Wireframes
+### Wireframes
 
 [BASE TEMPLATE](docs/wireframes/base-template.pdf) - Detail for Navigation and Footer for **all** site pages.
 
-##### Anonymous Users
+#### Anonymous Users
 
 - [HOME Page](docs/wireframes/home-wireframe.pdf)
 - [PROJECTS Page](docs/wireframes/project-list-wireframe.pdf)
@@ -265,13 +262,13 @@ I've used [DBDiagram](https://dbdiagram.io/) to draw up a Database Schema, which
 - [BLOG DETAILS Page](docs/wireframes/blog-detail-wireframe.pdf)
 - [CONTACT Page](docs/wireframes/contact-wireframe.pdf)
 
-##### Registered Users (including all above)
+#### Registered Users (including all above)
 
 - [PROFILE Page](docs/wireframes/profile-wireframe.pdf)
 - [DONATION CART Page](docs/wireframes/cart-wireframe.pdf)
 - [DONATION CONFIRMATION Page](docs/wireframes/donation-confirmation-wireframe.pdf)
 
-##### SuperUser (including all above)
+#### SuperUser (including all above)
 
 - [ADD PROJECT Page](docs/wireframes/add-project-wireframe.pdf)
 - [EDIT PROJECT Page](docs/wireframes/edit-project-wireframe.pdf)
@@ -354,8 +351,54 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 ### Dependencies
 
-- [Autopep8](https://pypi.org/project/autopep8/) Python Code formatter
+- [autopep8](https://pypi.org/project/autopep8/) Python Code formatter
 - [MarkupSafe](https://pypi.org/project/MarkupSafe/) Implements a text object that escapes characters so it is safe to use in HTML and XML
+- [asgiref](https://pypi.org/project/asgiref/) - ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and positioned as an asynchronous successor to WSGI.
+- [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - Python SDK for AWS. It allows you to directly create, update, and delete AWS resources from your Python scripts.
+- [botocore](https://botocore.amazonaws.com/v1/documentation/api/latest/index.html) - The low-level, core functionality of boto 3.
+- [certifi](https://pypi.org/project/certifi/) - Provides Mozilla’s carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates.
+- [cffi](https://cffi.readthedocs.io/en/latest/) - C Foreign Function Interface for Python. Interact with almost any C code from Python.
+- [chardet](https://pypi.org/project/chardet/) - Universal Character Encoding Detector.
+- [cryptography](https://pypi.org/project/cryptography/) - Package which provides cryptographic recipes and primitives to Python developers.
+- [defusedxml](https://pypi.org/project/defusedxml/) - Contains several Python-only workarounds and fixes for denial of service and other vulnerabilities in Python's XML libraries.
+- [dj-database-url](https://pypi.org/project/dj-database-url/) - Utility to help you load your database into your dictionary from the DATABASE_URL environment variable. Heroku uses environment variables for your database and other addons.
+- [Django](https://www.djangoproject.com/) - High-level Python web framework that enables rapid development of secure and maintainable websites.
+- [django-allauth](https://django-allauth.readthedocs.io/en/latest/) - Integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication.
+- [django-ckeditor](https://pypi.org/project/django-ckeditor/) - Provides a RichTextField and CKEditorWidget utilizing CKEditor with image upload and browsing support included.
+- [django-countries](https://pypi.org/project/django-countries/) - A Django application that provides country choices for use with forms, flag icons static files, and a country field for models.
+- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - application that helps to manage Django forms. It allows adjusting forms' properties (such as method, send button or CSS classes) on the backend without having to re-write them in the template.
+- [django-extensions](https://django-extensions.readthedocs.io/en/latest/) - A collection of custom extensions for the Django Framework.
+- [django-js-asset](https://pypi.org/project/django-js-asset/) - To insert a script tag via forms.Media containing additional attributes.
+- [django-libs](https://pypi.org/project/django-libs/) - A collection of things that we re-use in every Django project, such as custom middlewares, templates, templatetags, test mixins etc.
+- [django-social-share](https://pypi.org/project/django-social-share/) - Templatetags for 'tweet this' and 'share on facebook'.
+- [django-storages](https://pypi.org/project/django-storages/) - A a project to provide a variety of storage backends in a single library.
+- [flake8](https://flake8.pycqa.org/en/latest/) - A great toolkit for checking your code base against coding style (PEP8), programming errors and to check cyclomatic complexity.
+- [gunicorn](https://docs.gunicorn.org/en/stable/) - An application server for running your python application instance.
+- [idna](https://pypi.org/project/idna/) - Support for the Internationalised Domain Names in Applications (IDNA) protocol.
+- [jmespath](https://pypi.org/project/jmespath/) - JMESPath (pronounced “james path”) allows you to declaratively specify how to extract elements from a JSON document.
+- [mccabe](https://pypi.org/project/mccabe/) - Complexity checker for Python.
+- [oauthlib](https://oauthlib.readthedocs.io/en/latest/) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic for Python 3.6+.
+- [Pillow](https://pypi.org/project/Pillow/) - Python Imaging Library adds image processing capabilities to your Python interpreter. Adds support for opening, manipulating, and saving images.
+- [psycopg2-binary](https://pypi.org/project/psycopg2-binary/) - PostgreSQL database adapter for the Python programming language.
+- [pycodestyle](https://pypi.org/project/pycodestyle/) - Python style guide checker.
+- [pycparser](https://pypi.org/project/pycparser/) - Complete parser of the C language, written in pure Python using the PLY parsing library.
+- [pyflakes](https://pypi.org/project/pyflakes/) - Analyzes programs and detects various errors.
+- [PyJWT](https://pypi.org/project/PyJWT/) - Python library which allows you to encode and decode JSON Web Tokens.
+- [pyOpenSSL](https://pypi.org/project/pyOpenSSL/) - Wrapper around (a subset of) the OpenSSL library.
+- [python-dateutil](https://pypi.org/project/python-dateutil/) - Provides powerful extensions to the standard datetime module, available in Python.
+- [python-http-client](https://pypi.org/project/python-http-client/) - Quickly and easily access any RESTful or RESTful-like API.
+- [python3-openid](https://pypi.org/project/python3-openid/) - Set of Python packages to support use of the OpenID decentralized identity system.
+- [pytz](https://pypi.org/project/pytz/) - This library allows accurate and cross platform timezone calculations using Python 2.4 or higher.
+- [requests](https://pypi.org/project/requests/) - Requests is a simple, yet elegant HTTP library.
+- [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) -  Provides first-class OAuth library support for Requests.
+- [s3transfer](https://pypi.org/project/s3transfer/) - Python library for managing Amazon S3 transfers.
+- [six](https://pypi.org/project/six/) - Python 2 and 3 compatibility library.
+- [sqlparse](https://pypi.org/project/sqlparse/) - Non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
+- [starkbank-ecdsa](https://pypi.org/project/starkbank-ecdsa/) - A lightweight and fast pure Python ECDSA security.
+- [stripe](https://pypi.org/project/stripe/) - A Python library for Stripe’s API.
+- [toml](https://pypi.org/project/toml/) - A Python library for parsing and creating TOML (Tom's Obvious, Minimal Language), a data serialisation language designed to be a minimal configuration file format that's easy to read due to obvious semantics.
+- [urllib3](https://pypi.org/project/urllib3/) - Powerful, user-friendly HTTP client for Python.
+- [Werkzeug](https://pypi.org/project/Werkzeug/) - Comprehensive WSGI (Web Server Gateway Interface) web application library.
 
 ### Tools
 
@@ -385,10 +428,8 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 - HTML - [W3C](https://validator.w3.org/) - Markup Validation
 - CSS - [W3C](https://jigsaw.w3.org/css-validator/) - Jigsaw CSS Validation
 - JavaScript - [JSHINT](https://jshint.com/) - JavaScript code warning & error check
-- Python - [Pyton Tester](https://extendsclass.com/python-tester.html) Python code syntax checker
+- Python - [PEP8](http://pep8online.com/) Python code syntax checker
 - [Autoprefixer](https://autoprefixer.github.io/) Parses CSS and adds vendor prefixes.
-- [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly) Mobile-friendly check on site.
-- [Website Page Test](https://www.webpagetest.org/) Runs a website speed test from multiple locations around the globe using real browsers (IE and Chrome) and at real consumer connection speeds.
 - [Online-Spellcheck](https://www.online-spellcheck.com/) Online spelling and grammar checks for site and README content.
 
 ### Other
@@ -416,8 +457,8 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 - The Facebook 'Share' button returns the home url of the site, and not the specific project or blog page as intented. However, through the same package [django_social_share](https://pypi.org/project/django-social-share/), the Twitter and Email options return the correct results. I have tried many fixes to this, yet have not found a resolve and have decided to leave this as an existing issue to be resolved in further development after submission.
 - During HTML validation, recieved: "**Error**: Duplicate attribute id." => **Unresolved**: `id="id_image"` is generated in the same input as `id="new-image"`, presumably by the JavaScript. As this is working fine, I've decided to leave this as a future bug fix for now due to time-constraints.
 - During HTML validation, recieved: "**Error**: Duplicate ID in remove_(itemid)" => **Unresolved**: Unable to find cause, but presumed to be from the `update_remove_donation.html`template. As this is working fine, I've decided to leave this as a future bug fix for now due to time-constraints.
-- Email confirmation of purchase order is not going through after checkout success. Webhooks see, to be working and unsure why the email is not sending. Due to time-constraints, this issue will be resolved at a later date after project submission.
-- If keyword is entered in the Search bar, it returns all words that that keyword is part of - i.e if entering a search for 'lion' then the word 'bil**lion**' is returned.
+- Email confirmation of purchase order is not going through after checkout success. Webhooks seem to be working and unsure why the email is not sending. Due to time-constraints, this issue will be resolved at a later date after project submission.
+- If keyword is entered in the Search bar, it returns all words that that keyword is part of - i.e if entering a search for 'lion' then the word 'bil**lion**' is returned. Due to time-constraints, this issue will be resolved at a later date after project submission.
 
 > [Back to Top](#table-of-contents)  
 
@@ -576,7 +617,7 @@ Testing documentation can be found on a separate document [HERE](docs/TESTING.md
 ### Resources
 
 - [Code Institute Course Content](https://courses.codeinstitute.net/) - Main source of fundamental knowledge, particularly the Boutique Ado mini-project.
-- Code Institute **SLACK Community** - Main source of assistance
+- Code Institute **SLACK Community** - Main source of assistance.
 - [Stack Overflow](https://stackoverflow.com/) - General resource.
 - [Youtube](https://www.youtube.com/) - General resource.
 - [CSS-Tricks](https://css-tricks.com/) - General resource.
@@ -584,7 +625,6 @@ Testing documentation can be found on a separate document [HERE](docs/TESTING.md
 - [CommonMark](https://commonmark.org/help/) - For Markdown language reference.
 - [Colour Palette - Coolors.co](https://coolors.co)
 - [TinyPNG](https://tinypng.com/) - Efficient compression of images for site.
-- [Am I Responsive](http://ami.responsivedesign.is/) - Responsive website mockup image generator.
 - [Balsamiq](https://balsamiq.com/wireframes/) - Wireframing design tool.
 
 ### Media
