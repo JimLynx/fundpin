@@ -4,7 +4,7 @@
 > - [Responsive Tests](#responsive-tests)
 > - [Code Validation](#code-validation)
 > - [Manual Site Testing](#manual-site-testing)
-> - [Deployment](#deployment)  
+> - [Deployment](#deployment)
 
 ## User Stories
 
@@ -24,7 +24,7 @@
   - Tablets: iPad (768px) | iPad Pro (1024px)
   - Desktops: Laptop (1200px) | Large Desktop screen (1920px)
 
-#### read about the company details,goals and aims
+#### read about the company details, goals and aims
 
 - Incorporated a brief, yet descriptive 'About Us' section on the home page.
 
@@ -50,7 +50,7 @@
 
 #### access contact details
 
-- Contact number displayed on Contact Page.
+- Contact number displayed on Contact page.
 - Contact form on contact page allows user to get in touch.
 
 #### access social media of the company
@@ -94,7 +94,7 @@
 
 #### review my donation choices at checkout
 
-- before confirming and paying for the donation(s), user has the ability to review and delete any donations added to their cart.
+- Before confirming and paying for the donation(s), user has the ability to review and delete any donations added to their cart.
 
 #### store my choices in checkout
 
@@ -106,7 +106,7 @@
 
 #### Receive email confirmation of my donation payment
 
-- XXXXXXXXXX email not sent XXXXXXXXXXX
+- Emails are not being sent, and this has been added as a Known Issue to the README document.
 
 ### Site admin/superuser
 
@@ -139,16 +139,18 @@ When the Admin/Superuser account is logged into:
 ## Responsive Tests
 
 - DevTools - Devices tested across a range of widths:
+
   - Mobiles: iphone5(320px) | Samsung S5 (360px) | iPhone 6/7/8/X (375px) | iPhone 6/7/8 Plus (414px)
   - Tablets: iPad (768px) | iPad Pro (1024px)
   - Desktops: Laptop (1200px) | Large Desktop screen (1920px)
 
 - Viewed on physical devices:
+
   - Mobiles: small phone (320px) | large phone (414px)
   - Tablets: large tablet (768px)
   - Desktops: Medium laptop (1366px) | Large Desktop screen (1920px)
 
-- Viewed site on above range (including Responsive mode) on various browsers: >   - Google Chrome
+- Viewed site on above range (including Responsive mode) on various browsers: > - Google Chrome
   - Firefox
   - Opera
   - Safari
@@ -227,7 +229,7 @@ General:
 
 `cart.html`
 
-- **Error**: Duplicate ID in remove_(itemid) => **Unresolved**: Unable to find cause, but presumed to be from the `update_remove_donation.html`template. Due to time-constraints, this has been added to bugs/issues to resolve
+- **Error**: Duplicate ID in remove\_(itemid) => **Unresolved**: Unable to find cause, but presumed to be from the `update_remove_donation.html`template. Due to time-constraints, this has been added to bugs/issues to resolve
 
 `checkout.html`
 
@@ -283,6 +285,194 @@ Parsed all css code through [Autoprefixer](https://autoprefixer.github.io/) and 
 
 ## Manual Site Testing
 
+### Navigation
+
+- Clicked on all links in Navigation menu main headings and confirmed user is directed to the desired page.
+- Clicked on all Project and Country links in dropdown menues and confirmed user is directed to the filtered result on each.
+- Clicked on Logo, and Home link in the menu, from all pages and reached expected result of user being returned to the home page.
+- Clicked on all links in Footer 'Quick Links' list and confirmed user is directed to the desired page.
+- Clicked on each Social Media icon in the Footer and each opens relevant external page in a new browser tab.
+- Confirmed that Subscribe link works correctly, redirecting the user to MailChimp after entering email address and submitting the form.
+- Confirmed that the 'back to top' button returns user to the top of the page once clicked (on all pages).
+
+### Search Bar
+
+- Clicked on the Search icon in the navigation menu and Search bar opens correctly.
+- Entered keyword and the cards of projects with that keyword are filtered and displayed.
+- Bug found whereby keyword entered is also displayed if part if another word - i.e. If entering 'lion', then 'billion' is also picked up - mentioned on README under Known Issues.
+
+### Register page
+
+- Clicked on Profile icon in the navigation menu and selected Register option, which redirects to the Registration/Sign Up page.
+- Link to Login page working correctly when clicking 'sign in here' link, redirecting to the Login/Sign In page.
+- Clicked 'Sign Up' button with no details and correct error message is returned for required inputs.
+- Filled in form correctly and clicked 'Sign Up' button. Received email with confirmation link.
+- Once clicked, I was redirected to the 'Confirm Email' page.
+- Clicked on 'Confirm' button and redirected to the Log In/Sign In page with Django success message informing confirmation of email address.
+
+### Login page
+
+- Clicked on Profile icon in the navigation menu and selected Login option, which redirects to the Login page.
+- Clicked 'Log in with GitHub' button and user is prompted to log in with GitHub credentials. Tested with own account and working as expected.
+- Clicked 'Log in with Google' button and user is prompted to log in with Google credentials. Tested with own account and working as expected.
+- Clicked 'Sign Up' link and correctly redirected to Register/Sign Up page.
+- Clicked 'Sign In' button with no details and correct error message is returned for required inputs.
+- Entered correct, registered username and password, and clicked 'Sign In' button. Django success message returned, informing the user is logged in, and returned to the Home page.
+
+### Logout page
+
+- Clicked on Profile icon in the navigation menu and selected Logout option, which redirects to the Logout/Sign Out page.
+- Clicked the 'Cancel' button and returned to the Home page, and not logged out.
+- Clicked the 'Sign Out' button and returned to the Home page, with Django success message that user is logged/signed out of the profile account.
+
+### Home page
+
+- Clicked on 'Donate' button in all slideshow images and each takes user to the specified filtered category page.
+- Clicked on Category icons under the slideshow and each takes user to the specified filtered category page.
+- Clicked on each 'Supporter' icon in the 'We Support' section and each opens relevant external page in a new browser tab.
+- Hovered over project cards in 'Featured Project' section information and 'Read more' button appears as expected.
+- Clicked on 'Read more' buttons and each takes the user to the desired project description page.
+- Clicked on 'Read more' buttons in 'Featured Blog' section and each takes the user to the desired blog description page.
+- Clicked on 'Contact Us' button in 'Keep in Touch' section and each takes the user to the Contact page.
+- Checked all slideshow operations (auto scroll and option to drag left/right) and all working as expeted.
+
+### All Projects page
+
+- Checked all 'Sort by' filters options in the filter menu and all resturn the correct filtering result.
+- Hovered over project cards and lead-in information and 'Read more' button appears as expected.
+- Clicked on 'Read more' buttons and each takes the user to the desired project description page.
+
+### Project Description page
+
+- Clicked on the image, which opens the image preview in new browser tab.
+- Clicked on the 'Country' tag, which opens the filtered Project page for the relevant country.
+- Clicked on the 'Category' tag, which opens the filtered Project page for the relevant category.
+- Clicked on 'Fund this Project' button, which scrolls user down to donation form section.
+- Clicked and drag/zoom inside map section and working as expected. Pin displays project name and on correct coordinates.
+- Clicked on Social Media share buttons, and all open up relevant sharing (external link) options in a new browser tab. (_The Facebook button does not open relevant page, but rather shares the main site url - mentioned in README under 'Known Issues'_).
+- Donation form:
+  - Clicked on 'Choose an amount' and confirmed user can select a pre-determined amount from the dropdown which appears.
+  - Clicked on 'Enter own amount' and confirmed user can enter an own amount and the 'Choose an amount' input is overridden.
+  - Clicked on 'Enter own amount' input's increment and decrement options:
+    - Each work as desired with an increase/decrease step in multiples of 10.
+    - On decreasing the value, the minimum is Zero (0) and no negative values can be selected.
+  - Clicked again on 'Choose an amount'and the 'Enter own amount' input is overridden.
+  - Clicked on 'Back to projects' button and this returns the user to the 'All projects' page.
+  - Entered an amount and clicked the Submit button:
+    - User is directed to the top of the current page.
+    - Cart icon in the nvaigation menu displays correct number of items in the cart.
+    - Django success message displayed, informing the user of cart additon, information of the project donated to and a 'Secure Checkout' button.
+    - Django success message also displays information on previously added project donations that are already in the cart.
+  - Clicked 'Secure Checkout' button in succes message popup, which directs to the cart page and shows current cart items.
+  - Clicked cart icon in the Navigation menu, which directs to the cart page and shows current cart items.
+- Once logged in as a Superuser, the 'Update' and 'Delete' buttons are visible.
+  - Update button redirects to Update project page as expected and shows desired Django info message.
+  - Delete button opens confirmation modal once clicked.
+    - Cancel button (or clicking outside the modal) works as expected, closing the modal and cancelling the operation.
+    - Delete button deletes project from database and returns Django success message.
+
+### Add Project page
+
+- Clicked on the Profile icon in the navigation menu and confirmed that the 'Add Project' option is only visible when logged in as a SuperUser.
+- Clicked 'Add Project' from the dropdown and redirected to the Add Project page.
+- Tested form by clicking the 'Add Pproject' button with no form entries, resulting in page refresh, correct error message for required fields and form is not submitted.
+- Tested functionality of 'Select an Image' button, which opens up the file upload from local machine option.
+- Filled in form correctly with all fields and clicked 'Add Project' button. Redirected to the new project page with success message.
+- Filled in the form again and checked the 'is featured' checkbox, and the project is added to the 'Featured Projects' slideshow on the Home page.
+- Filled in the form using an existing 'PIN ID' and error message is returned informing the user that the ID already exists, and the form is not submitted.
+- Confirmed that all details entered, including image, is displayed in the new project added.
+
+### Edit Project page
+
+- The Edit Project page is a duplicate template of the Add Blog page. Tested all mentioned above for the Add Project page with same results.
+- Clicked on the 'Update' button with all fields correctly filled in, page refreshes with updated entries and success message is returned.
+- Tested the 'Remove' checkbox on the image field, which correctly updates the Project and removes the image.
+
+### Cart page
+
+- Clicked on 'Remove donation' button and Django success message displayed:
+  - Informing the user of cart item deletion.
+  - Current cart info is updated in this message.
+  - Cart icon number display updates correctly.
+- Removed all items in cart and default image with message to user, informing nothing is in the car, is displayed.
+- Re-added multiple donations to the cart:
+  - Donation amounts of each donation display correctly.
+  - Total of all donations displays correctly.
+  - Donation summary number displays correct amount of items in the cart.
+- Clicked 'Secure Payment' button, which redirects to the Checkout page.
+
+### Checkout page
+
+- Tested form validity, by clicking the 'Complete Payment' button and correct errors returned if all required fields are not correctly filled in.
+- Clicked 'Adjust cart' button, which redirects back to the cart and retains items in the cart.
+- Correctly filled in form (with test credit card details) and clicked 'Complete Payment' button:
+  - Loading screen loads as expected.
+  - Donation confirmation (checkout success) page is displayed with correct information about the purchase.
+  - Django success message displays success message, order number and that an email has been sent.
+  - Email is not received by the user - Added to README under Known Issues.
+- Tested 'save billing information to my profile' checkbox by changing information, selecting the box (confirming checked) and confirmed that this changes the amended information on the Profile page.
+
+### Donation Confirmation page
+
+- Info correctly displayed about the transaction made.
+- Clicked 'Back to projects' button and redirects correctly to 'all projects' page
+
+### Profile page
+
+- Tested billing info form inputs and country dropdown and all working as expected.
+- Changed info and clicked on 'Update' button and changes are corectly saved to the database and displayed to the user.
+- Clicked on 'View donation confirmation' links (in the list of saved previous donations)
+  - Correctly directs to the Donation Confirmation page for each item.
+  - Displays Django info message with order details.
+
+### Blog page
+
+- Tested pagination functionality by adding more test blogs. Page numbers and arrows (left and right) work correctly and as expected.
+- Clicked on 'Read more' button for each blog, which returns the correct Blog Description page for each.
+- Once logged in as a Superuser, the 'Add Blog' button is visible. Clicking this redirects to the Add blog page.
+
+### Blog Description page
+
+- Clicked on Social Media share buttons, and all open up relevant sharing (external link) options in a new browser tab. (_The Facebook button does not open relevant page, but rather shares the main site url - mentioned in README under 'Known Issues'_).
+- Clicked 'Post a Comment' button with no text in the textfield, and correct error message displays for the required field.
+- Entered a comment/text in the textfield and clicked 'Post a Comment' button.
+  - page refreshes, and the number of comments increments as expected, as well as the username, comment and date appearing correctly.
+  - Django success message is displayed, including a list of orders currently on the cart.
+- Once logged in as a Superuser, the 'Update' and 'Delete' buttons are visible.
+  - Update button redirects to Update Blog page as expected and shows desired Django info message.
+  - Delete button opens confirmation modal once clicked.
+    - Cancel button (or clicking outside the modal) works as expected, closing the modal and cancelling the operation.
+    - Delete button deletes blog from database and returns Django success message.
+
+### Add Blog page
+
+- Clicked on the Profile icon in the navigation menu and confirmed that the 'Add Blog Post' option is only visible when logged in as a SuperUser.
+- Clicked 'Add Blog' from the dropdown and redirected to the Add Blog page.
+- Tested form by clicking the 'Add Blog' button with no form entries, resulting in page refresh, correct error message for required fields and form is not submitted.
+- Tested functionality of 'Select an Image' button, which opens up the file upload from local machine option.
+- Filled in form correctly with all fields (selecting 'Published' from the 'Status' dropdown) and clicked 'Add Blog' button. Redirected to the new blog page with success message.
+- Filled in the form and selected 'Draft' from the 'Status' dropdown. Once submitted, the new Blog post is not visible until set to 'Published' from the Admin page.
+- Filled in the form and checked the 'is featured' checkbox, and the blog is added to the 'Featured Blogs' slideshow on the Home page.
+- Confirmed that all details entered, including image, is displayed in the new blog post added.
+
+### Edit Blog page
+
+- The Edit Blog page is a duplicate template of the Add Blog page. Tested all mentioned above for the Add Blog page with same results.
+- Clicked on the 'Update' button with all fields correctly filled in, page refreshes with updated entries and success message is returned.
+- Tested the 'Remove' checkbox on the image field, which correctly updates the Blog Post and removes the image.
+
+### Contact page
+
+- Tested form by clicking the 'Send' button with no form entries, resulting in page refresh, correct error message for required fields and form is not submitted.
+- Filled in form correctly with all fields and pressed 'Send' button. Redirected to Home page with success message that email has been sent.
+- Confirmed that email functionality is working and email is received by user.
+
+### Error pages
+
+- Entered incorrect url suffix and redirected to the '404 Error' page as expected.
+- Clicked on the 'Take me Back' button which successfully takes me back to the 'Home' page.
+- 500 Error page is assumed to be correct. as styled the same as the 404 page, including the same link back to the home page.
+
 ## Deployment
 
-
+- All tests above carried out on the [deployed url](https://fundpin.herokuapp.com/) to confirm the site is working as expected.
