@@ -95,8 +95,8 @@
                             <div class="dropdown-menu" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
-                                        <a href="{% url 'add_project' %}" class="dropdown-item">Project Management</a>
-                                        <a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a>
+                                        <a href="{% url 'add_project' %}" class="dropdown-item">Add Project</a>
+                                        <a href="{% url 'add_blog' %}" class="dropdown-item">Add Blog Post</a>
                                         <div class="hr-dark"></div>
                                     {% endif %}
                                         <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
