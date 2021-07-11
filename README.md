@@ -15,7 +15,7 @@ The onset of the COVID crisis in early 2020 brought international travel to an a
 FundPIN (Fund Projects In Need) is dedicated to networking, supporting, and raising funds for non-profit organisations worldwide by providing an online platform, whereby users can find projects they are interested in supporting, donate to them directly through the site, and get updates on the progression and status of each.
 
 ---
-<img src="https://res.cloudinary.com/jimlynx/image/upload/v1592513512/LIONS/Untitled_Design_sonyub.jpg" alt="responsive screens"/>
+![DB Schema](static/images/site-mockup.png)
 
 [Live Site](https://fundpin.herokuapp.com/)
 
@@ -239,7 +239,7 @@ The main organising principle for the user is the type of project, yet the Count
 
 I've used [DBDiagram](https://dbdiagram.io/) to draw up a Database Schema, which shows the relationships between the models.
 
-![DB Schema](docs/db-schema.png)
+![DB Schema](static/images/db-schema.png)
 
 ### Skeleton
 
