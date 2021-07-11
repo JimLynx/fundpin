@@ -100,7 +100,7 @@ FundPIN (Fund Projects In Need) is dedicated to networking, supporting, and rais
 |          ---         |                                    ---                                   |                              ---                              |
 | Anonymous user       | easily navigate the site;                                                | find what I am looking for quickly                            |
 | Anonymous user       | view the site on all screen sizes;                                       | visit the site using my mobile and/or tablet device           |
-| Anonymous user       | read about the company details,goals and aims;                           | gain confidence that I am supporting a viable endeavour       |
+| Anonymous user       | read about the company details, goals and aims;                          | gain confidence that I am supporting a viable endeavour       |
 | Anonymous user       | search for projects;                                                     | quickly browse which projects are available to support        |
 | Anonymous user       | filter my search results;                                                | search by country and/or project type                         |
 | Anonymous user       | read details about projects;                                             | understand the history, details and needs of the project      |
@@ -414,8 +414,10 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 - On user logout, cart data does not persist and session is cleared on logging back in. On further investigating, allowing the persistent data could cause security vulnerabilities so this has been excluded from this project.
 - The Facebook 'Share' button returns the home url of the site, and not the specific project or blog page as intented. However, through the same package [django_social_share](https://pypi.org/project/django-social-share/), the Twitter and Email options return the correct results. I have tried many fixes to this, yet have not found a resolve and have decided to leave this as an existing issue to be resolved in further development after submission.
-- During HTML validation, recieved "**Error**: Duplicate attribute id." => **Unresolved**: `id="id_image"` is generated in the same input as `id="new-image"`, presumably by the JavaScript. As this is working fine, I've decided to leave this as a future bug fix for now due to time-constraints.
-- During HTML validation, recieved  "**Error**: Duplicate ID in remove_(itemid)" => **Unresolved**: Unable to find cause, but presumed to be from the `update_remove_donation.html`template. As this is working fine, I've decided to leave this as a future bug fix for now due to time-constraints.
+- During HTML validation, recieved: "**Error**: Duplicate attribute id." => **Unresolved**: `id="id_image"` is generated in the same input as `id="new-image"`, presumably by the JavaScript. As this is working fine, I've decided to leave this as a future bug fix for now due to time-constraints.
+- During HTML validation, recieved: "**Error**: Duplicate ID in remove_(itemid)" => **Unresolved**: Unable to find cause, but presumed to be from the `update_remove_donation.html`template. As this is working fine, I've decided to leave this as a future bug fix for now due to time-constraints.
+- Email confirmation of purchase order is not going through after checkout success. Webhooks see, to be working and unsure why the email is not sending. Due to time-constraints, this issue will be resolved at a later date after project submission.
+- If keyword is entered in the Search bar, it returns all words that that keyword is part of - i.e if entering a search for 'lion' then the word 'bil**lion**' is returned.
 
 > [Back to Top](#table-of-contents)  
 
@@ -516,7 +518,7 @@ This file is added to the `.gitignore` file detailed below.
 
 #### 6. Migrate
 
-- Apply model migrations useing `python manage.py migrate`
+- Apply model migrations using `python manage.py migrate`
 
 #### 7. Create a SuperUser account
 
@@ -544,7 +546,7 @@ Media files are hosted on AWS S3 Bucket, and instructions can be found [HERE](ht
 3. Name your app, choose the appropriate region and submit.
 ![Naming app screenshot](docs/deployment/2-name-app.png)
 
-4. On the Resources tab , search for Heroku Postgres Database and add (*a free Hoby Dev account can be used*).
+4. On the Resources tab, search for Heroku Postgres Database and add (*a free Hoby Dev account can be used*).
 
 5. Postgres requires dj_database_url, and psycopg2, which will be installed when the requirements.txt dependencies are installed as explained earlier.
 
