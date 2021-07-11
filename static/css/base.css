@@ -825,24 +825,10 @@ footer .social-icons {
 }
 
 /* === Social Login buttons === */
-.btn-facebook,
 .google,
 .btn-github {
     width: 180px;
     height: 35px
-}
-
-.btn-facebook {
-    color: #3b5998 !Important;
-    background-color: var(--off-white);
-
-    border: 1px solid #3b5998;
-    ;
-}
-
-.btn-facebook:hover {
-    background-color: #3b5998;
-    color: var(--off-white) !important;
 }
 
 .btn-github:hover {
@@ -864,6 +850,11 @@ footer .social-icons {
     color: var(--p-dark-grey) !important;
     background-color: var(--off-white);
     border: 1px solid var(--p-dark-grey);
+}
+
+.socialaccount_providers a {
+    width: 75%;
+    text-align-last: center;
 }
 
 /* === Errorpage === */
